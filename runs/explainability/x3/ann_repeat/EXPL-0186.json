@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.082).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probability values.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector values; no localization map is supplied, so nothing in image A can confirm or refute them."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "These measurements suggest the image is not heavily manipulated.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "The stated inference runs against its own premise: high localized manipulation probabilities are offered as reason to conclude the image is not heavily manipulated, and no visual observation is given in support."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The explanation names three grid cells (top-left, top-center, bottom-right) but says nothing about what is in them, so their correctness cannot be evaluated; all three cells do contain content (sky and a raised hand; the skater's capped head against a pale building; plaza paving with the board tail and a foreground ledge). No object is named and no observation of the airborne skateboarder scene is offered, and the conclusion is drawn contradictorily from high localized probabilities."
+}

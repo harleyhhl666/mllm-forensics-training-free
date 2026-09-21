@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.040).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not observable in image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The bottom-center region has a high probability of being real (0.89).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported per-region statistic; no mask supplied and no visible content named."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This suggests the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-center cell is plain grey platform paving crossed by the diagonal yellow safety line, with the platform edge and ballast at its right margin; it contains no feature that could establish or rule out alteration."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is a British mainline station platform with double-headed Class 47 locomotives on the left and an EMU at a modern canopy on the right. The explanation names the bottom-center region but describes nothing in it, so region and object correctness are not assessable."
+}

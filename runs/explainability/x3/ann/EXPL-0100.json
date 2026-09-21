@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization measurements indicate areas of concern in the 'center-right' region.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask in Image C and the outline in Image D lie in the middle row, predominantly in the center-right cell."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "Those areas have high mean and maximum probabilities of manipulation.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric probability values are not observable; Image C is a binary mask with no probability information."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "The areas of concern are significant in extent.",
+   "claim_type": "other",
+   "support": "partially_supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The marked region is a thin fragmented horizontal band covering only about 3% of the frame, so 'significant areas' overstates its extent, though it is a clearly delineated region."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "These findings suggest digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Content inside the marked band differs between A and B: A/D show a white coach with a yellow-green stripe behind the stone wall where B shows the pale rack-railway train with overhead catenary."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Region is correctly named and an A-versus-B content difference is visible there, supporting the general alteration conclusion. The explanation names no object, texture or lighting evidence, and describes the region as 'significant areas' when the annotation is a thin narrow band. Numeric scores are not auditable from the images."
+}

@@ -1,0 +1,27 @@
+{
+ "phase": "T2_stage_b",
+ "n_inferences": 1104,
+ "minutes": 49.7,
+ "mean_seconds": 2.68,
+ "peak_GB": {
+  "0": 17.12
+ },
+ "nvidia_used_MiB": {
+  "0": 16,
+  "1": 16,
+  "2": 16,
+  "3": 16,
+  "4": 16,
+  "5": 16,
+  "6": 17754
+ },
+ "stage_a_source": "/mnt/disk3/borui/fevi/runs/trufor_mllm_stageA/stage_a.jsonl",
+ "protocol_sha1": "3a9bb651dcded055f0e82bd6bce7ef2fda09f11b",
+ "model_path": "/home/borui/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5",
+ "decoding": {
+  "do_sample": false,
+  "temperature": 0.0,
+  "max_new_tokens": 320,
+  "repetition_penalty": 1.0
+ }
+}

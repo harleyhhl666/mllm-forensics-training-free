@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector output; not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE A differs from IMAGE B inside the marked area: the left giraffe's head/neck carriage and pattern detail are not the same, and measurable differences are confined to that silhouette."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a grid location in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in IMAGE C covers a tall shape split about 64% center and 36% center-left; IMAGE D outlines the left giraffe's head, neck and foreleg there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The center region has a high probability of being authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The centre region is exactly the annotated region and the only place IMAGE A departs from IMAGE B, so the supplied evidence points the opposite way."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "Names the right location but converts a 1.000 manipulation score into a claim of authenticity and asserts the marked centre region is unmanipulated, which contradicts both the annotation and the A/B difference. The two halves of the sentence are also internally inconsistent with the cited metric."
+}

@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is relatively low (0.347).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from the photograph."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the center.",
+   "claim_type": "location",
+   "support": "uncertain",
+   "evidence_basis": "none",
+   "brief_justification": "No mask is supplied for this unit, so the presence and placement of a detector region cannot be verified. The center cell holds the glassy wave face with the board's nose intruding."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a small area ratio (0.003) with a mean probability of 0.821.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector statistics; not observable in the image."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests minimal evidence of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "visible_real_image",
+   "brief_justification": "No seam, halo or implausible shadow is apparent, but the frame is dominated by fast-moving water, spray and blown highlights, so subtle alteration could not be reliably seen either way."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The visual content appears consistent with a natural scene of surfing.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_real_image",
+   "brief_justification": "The image plainly shows a surfer crouched in a tube-riding stance on a white shortboard inside a barrelling wave; the scene description is accurate."
+  }
+ ],
+ "region_correct": "uncertain",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "The one descriptive claim - that the content is a surfing scene - is correct and checkable. The rest rests on detector numbers with no mask available, so the region and the alteration judgement cannot be confirmed from what is visible."
+}

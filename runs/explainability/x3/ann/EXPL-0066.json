@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.197).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector score is metadata not present or verifiable in the photograph itself."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probabilities.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector output value for unspecified regions; no mask or heatmap is supplied and the value is not observable in the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced regions lie in the bottom-left, bottom-center and bottom-right of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "All three bottom cells contain identifiable content: the left giraffe's legs, the wooden feeder post base and the right giraffe's forelegs, its hind legs and tail, over a bare dirt pad and a band of grass and shrubs."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests the image is not significantly manipulated.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The visible bottom band shows continuous ground texture, consistent soft overcast shadows under hooves and post, and no seam or cloned patch; but blur, haze and JPEG mottling in the foliage prevent ruling out subtle edits, and the cited numbers are not verifiable."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Two giraffes meeting over a wooden feeding platform in an enclosure. The three named bottom cells are real and content-bearing, but the explanation never says what is in them or what is anomalous, so region naming is all that can be confirmed. The reasoning 'localized regions show high probabilities, suggesting the image is not significantly manipulated' is ambiguous about what the probabilities measure and does not follow as stated."
+}

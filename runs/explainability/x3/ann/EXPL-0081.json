@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.477.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not checkable from the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "0.477 is below the threshold for significant digital alteration.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about a scoring threshold, not about image content."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell contains the surfer's doubled-over torso in a yellow jersey and the tail of the near-vertical board; no mask is supplied to confirm the measured region."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That center region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An unquantified measurement value that image A cannot confirm."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The tool is confident in the authenticity of the central part of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "An interpretation of tool output; the central subject shows no visible anomaly, but authenticity is not judgeable from the visible frame."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Purely score-based; no image content is described. The reasoning is internally inconsistent in treating a high localized manipulation probability as tool confidence in authenticity. Image A is a bordered, watermarked surf-contest photograph ('Zack Gingg' credit and a green 'STB' mark) of a surfer in a yellow jersey with his board thrown vertical in whitewater. The overlaid border, credit and watermark are clearly added graphics, which the explanation does not mention; the photographic content itself shows no visible seam or lighting contradiction."
+}

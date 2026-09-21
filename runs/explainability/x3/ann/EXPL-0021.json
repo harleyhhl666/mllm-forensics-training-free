@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.111).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not checkable from the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with high probabilities are very small.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A claim about mask geometry; no mask was supplied, so size cannot be verified."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not indicate significant tampering.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No region is identified in the image, so I cannot inspect the area referred to. Nothing I can see in the scene shows an evident tampering artifact, but the claim is not checkable as stated."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall visual evidence supports the authenticity of the photograph.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The dense railway scene is geometrically and tonally coherent with consistent directional light, but coherent appearance does not by itself establish authenticity and no specific visual evidence is cited."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "The explanation appeals to 'overall visual evidence' but cites no observable feature of image A: no object, location, texture or lighting detail. There is nothing to contradict, and nothing to confirm."
+}

@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.961.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector output; no score is visible in or derivable from the supplied images, so it asserts nothing checkable against the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is very high, indicating a strong likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "An interpretation of an unverifiable number; the images give no basis to confirm or refute the stated likelihood."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white rectangle lies entirely inside the center-right cell, and IMAGE D outlines the same area."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That localized region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates a detector value not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The high localized probability suggests the presence of a real object in that area.",
+      "claim_type": "other",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The marked region does contain an object (the pitcher's glove), but nothing in the imagery or annotation links a localization probability to an object being 'real'; the inference itself has no visual support."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "This suggests the image is real.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Conclusion contradicts the same text's own premise of strong alteration likelihood and rests on no observable evidence; the annotation marks a region of interest rather than indicating authenticity."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The named region matches the annotated region. The explanation names no object, texture, lighting or boundary evidence; it consists of detector numbers plus an inference that reverses its own premise (very high alteration score, yet concluding the image is real), so the substantive conclusion is unsupported by the supplied visual evidence."
+}

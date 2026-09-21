@@ -1,0 +1,61 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.956.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A numeric detector value; not checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score is very high.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A characterisation of an unverifiable number."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "This indicates a strong likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "A mask region exists in the top-center and A and B differ subtly in the glaze appearance there, but at this resolution and with the heavy blur/compression I cannot reliably confirm an alteration."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is a localized region with a high probability score in the top-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The white rectangle in IMAGE C is anchored in the top-center cell (spilling into top-right and slightly into center); IMAGE D outlines the same area."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The existence of that localized region suggests the image is not entirely manipulated.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "An inference about detector behaviour rather than a checkable visual assertion; the mask being local is consistent with it, but the statement asserts nothing observable about the pixels."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "The area identified with high confidence could be a natural part of the image.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "The outlined object is an ordinary glazed doughnut that looks broadly consistent with its neighbours, but I cannot judge reliably whether it is unedited; this claim also contradicts the earlier alteration claim."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "uncertain",
+ "confidence": "medium",
+ "notes": "The stated region matches the mask, but the explanation names no object and argues both that alteration is strongly likely and that the flagged area may be natural, which is self-contradictory. No texture, lighting or boundary anomaly is asserted, and the visible A-vs-B difference in the outlined glazed doughnut is too subtle at this resolution to adjudicate."
+}

@@ -1,0 +1,86 @@
+PHASE T2 — TruFor -> MLLM STAGE-B FINAL VERDICT
+rows 1104  complete sources 184  bootstrap 10000 seed 20260918
+
+==========================================================================================
+1. INTEGRITY
+  parse failures         : 0/1104
+  missing verdicts       : 0/1104
+  per-condition counts   : {'fake_T0_notool': 184, 'fake_T1_correct': 184, 'fake_T2_wrong': 184, 'real_T0_notool': 184, 'real_T1_correct': 184, 'real_T2_wrong': 184}
+  unique coco_id         : 184
+  n_samples == n_coco_id : True
+  protocol sha1          : 3a9bb651dcded055f0e82bd6bce7ef2fda09f11b
+  Stage-A source         : stage_a.jsonl (read-only)
+
+==========================================================================================
+2. PRIMARY — RECALL / FPR / SPECIFICITY / YOUDEN J
+  condition             recall           95% CI     FPR           95% CI    spec       J          J 95% CI
+  T0 no-tool             0.201 [0.147,0.261]    0.125 [0.076,0.174]    0.875   0.076 [+0.022,+0.130]
+  T1 correct TruFor      0.804 [0.745,0.859]    0.011 [0.000,0.027]    0.989   0.793 [+0.734,+0.848]
+  T2 donor TruFor        0.717 [0.652,0.783]    0.011 [0.000,0.027]    0.989   0.707 [+0.641,+0.772]
+
+  FAKE RECALL contrasts
+    T1 - T0     +0.603  [+0.516,+0.685] EXCLUDES zero   p=6.501e-26
+    T2 - T0     +0.516  [+0.440,+0.592] EXCLUDES zero   p=1.355e-25
+    T1 - T2     +0.087  [+0.005,+0.168] EXCLUDES zero   p=0.04794
+
+  REAL FPR contrasts
+    T1 - T0     -0.114  [-0.168,-0.065] EXCLUDES zero   p=1.943e-05
+    T2 - T0     -0.114  [-0.168,-0.065] EXCLUDES zero   p=1.943e-05
+    T1 - T2     +0.000  [-0.022,+0.022] includes zero   p=1
+
+  YOUDEN J contrasts
+    T1 - T0     +0.717  [+0.630,+0.799] EXCLUDES zero
+    T2 - T0     +0.630  [+0.554,+0.707] EXCLUDES zero
+    T1 - T2     +0.087  [+0.005,+0.168] EXCLUDES zero
+
+==========================================================================================
+3. STANDALONE TRUFOR vs MLLM-INTEGRATED
+  TruFor standalone (frozen feasibility, 200 sources,
+    same sd2-sp domain, threshold-free):
+      AUROC      0.9845 CI [0.9700,0.9951]
+      TPR@5%FPR  0.955
+      TPR@10%FPR 0.965
+      implied J at the 5% operating point  +0.905
+      implied J at the 10% operating point +0.865
+
+  MLLM binary verdicts on this set (184 sources):
+      T0 no-tool           recall 0.201  FPR 0.125  J +0.076
+      T1 correct TruFor    recall 0.804  FPR 0.011  J +0.793
+      T2 donor TruFor      recall 0.717  FPR 0.011  J +0.707
+
+  best MLLM condition by J: T1 correct TruFor  J +0.793
+  J difference vs TruFor standalone @5% FPR: -0.112
+  NOTE: the MLLM emits a binary verdict, TruFor a continuous score, so
+  this compares the MLLM's single operating point against TruFor's ROC
+  points. It is a like-for-like comparison of DECISION quality, not of
+  AUROC. Sample sets differ (184 vs 200 sources, same domain and
+  generator) -> same-domain comparison, not exact paired.
+
+  -> INTEGRATION REDUCES the discrimination already present in the
+     external tool.
+
+==========================================================================================
+4. DOES THE STAGE-A GROUNDING CARRY INTO THE VERDICT?
+  T1 correct TruFor    recall | Stage-A hit GT  0.800 (n=115)   | Stage-A missed  0.839 (n=56)   diff -0.039
+  T2 donor TruFor      recall | Stage-A hit GT  0.790 (n=105)   | Stage-A missed  0.636 (n=66)   diff +0.154
+
+==========================================================================================
+5. VERDICT BY TAMPER RATIO (descriptive)
+  quartile cuts 0.0149 / 0.0383 / 0.1089
+  band     n      T0 rec      T1 rec      T2 rec      T0 fpr      T1 fpr      T2 fpr
+  q1      46       0.130       0.804       0.717       0.152       0.000       0.022
+  q2      46       0.087       0.935       0.717       0.065       0.043       0.022
+  q3      46       0.152       0.739       0.587       0.087       0.000       0.000
+  q4      46       0.435       0.739       0.848       0.196       0.000       0.000
+
+==========================================================================================
+6. PRE-REGISTERED CASE JUDGEMENT
+  recall  T1-T0 +0.603 sig   T2-T0 +0.516 sig   T1-T2 +0.087 sig
+  FPR     T1-T0 -0.114 ns   T2-T0 -0.114 ns   T1-T2 +0.000 ns
+  J       T1-T0 +0.717 sig
+
+  -> CASE C: stronger forensic evidence changes MLLM integration
+     behaviour qualitatively; T1 improves recall and J with a real
+     correct-vs-donor distinction.
+
+7. RUNTIME  1104 inf  49.7 min  mean 2.68s  peak {'0': 17.12}

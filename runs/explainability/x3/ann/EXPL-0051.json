@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.477).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not verifiable from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region in the center has a mean probability of 0.843.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric measurement for an unsupplied region."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced region is the center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell holds the surfer's tucked torso in the yellow jersey and the board's graphic tail; with no mask, the measured region cannot be verified."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "0.843 is not extremely high.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A characterisation of a number, not a checkable statement about the image."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "Visual inspection reveals no obvious signs of digital alteration such as unnatural artifacts.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The photographic content shows no seam or unnatural boundary, but the frame does carry obvious added graphics — a black border with white keyline, a 'Zack Gingg' credit and a large green 'STB' watermark — which the claim overlooks."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "Visual inspection reveals no inconsistencies in lighting and shadows.",
+      "claim_type": "lighting",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Illumination is uniformly soft and high from the upper right: the yellow jersey and white board deck are the brightest elements, shading under the surfer's chest and arms and the dark wave face all agree with one light direction."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "This explanation goes beyond scores to make two checkable visual claims. The lighting-consistency claim holds: a single soft high-right light source explains the jersey and board highlights, the shading under the surfer and the dark wave face. The 'no unnatural artifacts' claim is only partially supported because the frame plainly contains post-added graphics (decorative border, photographer credit, green 'STB' watermark) plus visible JPEG blockiness and sharpening halos around the board outline. The region and score claims remain unverifiable without a mask."
+}

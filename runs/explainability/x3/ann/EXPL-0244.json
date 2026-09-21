@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.585.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "0.585 is below the threshold for significant digital alteration.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "An interpretive threshold claim about a tool score; nothing visible bears on it, and the stated value is notably high for a 'below threshold' characterisation."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a bird in the water.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A small compact grey-brown bird is present at the pool's shoreline between the giraffes, with a faint reflection beneath it, but it stands on the damp shallow rim rather than in the water."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The setting is natural.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The scene is an open bush waterhole with consistent harsh sunlight and coherent mirror reflections, but 'natural' as a verdict is not reliably decidable from one image."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The presence of the bird and the natural setting suggest the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The existence of a bird and a bush setting is not evidence bearing on whether content was edited; these observations do not support the inference drawn from them."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The referenced region is the bottom-left of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-left cell holds only pale stony foreground and a photographer's watermark; it contains neither the bird nor any giraffe, and no region marking exists in image A to confirm the tool's region."
+    }
+  ],
+  "region_correct": "no",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "A bird does exist but at the water's edge rather than in the water. The dominant subjects of image A - three giraffes drinking - go unmentioned, and the referenced bottom-left cell contains only empty gravel foreground and a watermark, not the bird the explanation cites. The authenticity inference from 'a bird and a natural setting' is a non-sequitur relative to what the image can show."
+}

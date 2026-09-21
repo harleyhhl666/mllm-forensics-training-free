@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is low (0.065).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A reported numeric detector value; nothing visible in the photograph can verify it."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the bottom-center.",
+   "claim_type": "location",
+   "support": "uncertain",
+   "evidence_basis": "none",
+   "brief_justification": "No mask is supplied for this unit, so the existence and placement of a detector region cannot be checked; the bottom-center cell does contain a discrete object, which is consistent but not confirmation."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high probability (0.895).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric confidence value, not checkable from the image."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is an object in the bottom-center that is likely a sticker or note.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_real_image",
+   "brief_justification": "A bright yellow-green hand-lettered paper note reading 'HAVE NO FEAR' is taped to the blue-swirled foreground dome, and it occupies the bottom-center cell."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "Such an object is a common feature in real photographs.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A general statement about photographs in general, not a checkable assertion about this image."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "not_applicable",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "medium",
+ "notes": "The one substantive visual claim - a sticker/note in the bottom-center - is clearly correct: a taped yellow handwritten note sits there in sharp focus. The rest is restated detector numbers plus a generic remark, neither checkable. No mask is available, so the claimed detector region placement itself is uncertain."
+}

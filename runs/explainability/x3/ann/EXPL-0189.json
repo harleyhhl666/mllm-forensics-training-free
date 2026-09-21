@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.269).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probabilities.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Region probability values are not observable in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized regions lie in the top-left, center-left and bottom-center areas of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Those cells contain sky/evergreen foliage, open lawn with the left hose nozzle, and the hydrant's lower barrel and base respectively; without any region marking in image A the tool's regions cannot be confirmed."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The image is not significantly manipulated.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Rests on unverifiable metrics; no visible feature settles it."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A shows a gray/blue fire hydrant in a mown field with a large leafy shrub filling the right side. The explanation names no object or visual feature, so nothing in it can be matched to the visible content."
+}

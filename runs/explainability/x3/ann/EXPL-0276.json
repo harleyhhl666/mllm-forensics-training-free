@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There are localized regions with high mean and max probabilities.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported score values, not visually checkable."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "These indicate significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE A differs from IMAGE B inside the annotated region: the board carried by the kitesurfer has different deck colour, graphics and lettering, while the rest of the frame matches."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The alteration is particularly in the central area of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "About 81% of the annotated mask area falls in the center cell, and IMAGE D outlines the carried board across the centre of the frame."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Both checkable assertions - central location and presence of alteration there - are corroborated by the mask/outline and by the A-versus-B difference in the kiteboard. The 'significant' qualifier is not separately verifiable in degree, but the change is clearly visible. Numeric score values were treated as not_applicable. No object is named and no texture, lighting or boundary anomaly is asserted."
+}

@@ -1,0 +1,122 @@
+TRUFOR SCORE-MAP CAUSAL DECOMPOSITION (2x2, Stage-B only)
+rows 1472  complete sources 184  bootstrap 10000 seed 20260918
+
+============================================================================================
+1. INTEGRITY
+  parse failures          : 0/1472
+  missing verdicts        : 0/1472
+  cells                   : {('fake', 'C00'): 184, ('fake', 'C10'): 184, ('fake', 'C01'): 184, ('fake', 'C11'): 184, ('real', 'C00'): 184, ('real', 'C10'): 184, ('real', 'C01'): 184, ('real', 'C11'): 184}
+  unique coco_id          : 184
+  n_samples == n_sources  : True
+  image counts per condition correct: True
+  score supplied only in C10/C11    : True
+  protocol sha1           : 8f65faf529215262497404328d98faf5392f93f6
+  Stage-A summary used    : NO (absent from all four prompts)
+
+============================================================================================
+2. FOUR CELLS
+  condition            score  map   recall           95% CI     FPR           95% CI   spec       J
+  C00 image only          no   no    0.038 [0.011,0.071]   0.016 [0.000,0.038]  0.984   0.022
+  C10 score only         yes   no    0.755 [0.690,0.815]   0.011 [0.000,0.027]  0.989   0.745
+  C01 map only            no  yes    0.098 [0.054,0.141]   0.033 [0.011,0.060]  0.967   0.065
+  C11 score + map        yes  yes    0.527 [0.457,0.598]   0.011 [0.000,0.027]  0.989   0.516
+
+                      J with CI:
+  C00 image only      +0.022 [+0.005,+0.043]
+  C10 score only      +0.745 [+0.679,+0.804]
+  C01 map only        +0.065 [+0.022,+0.109]
+  C11 score + map     +0.516 [+0.446,+0.587]
+
+============================================================================================
+3. SIMPLE EFFECTS  (effect -> source bootstrap CI -> McNemar p)
+
+  score effect WITHOUT map   (C10 - C00)
+    recall +0.717 [+0.652,+0.783] EXCLUDES zero  p=3.673e-40
+    FPR    -0.005 [-0.027,+0.016] includes zero  p=1
+    J      +0.723 [+0.658,+0.788] EXCLUDES zero
+
+  score effect WITH map   (C11 - C01)
+    recall +0.429 [+0.359,+0.500] EXCLUDES zero  p=3.309e-24
+    FPR    -0.022 [-0.049,+0.000] includes zero  p=0.2188
+    J      +0.451 [+0.375,+0.527] EXCLUDES zero
+
+  map effect WITHOUT score   (C01 - C00)
+    recall +0.060 [+0.027,+0.098] EXCLUDES zero  p=0.003418
+    FPR    +0.016 [-0.005,+0.043] includes zero  p=0.375
+    J      +0.043 [+0.005,+0.082] EXCLUDES zero
+
+  map effect WITH score   (C11 - C10)
+    recall -0.228 [-0.310,-0.147] EXCLUDES zero  p=4.303e-07
+    FPR    +0.000 [-0.016,+0.016] includes zero  p=1
+    J      -0.228 [-0.315,-0.147] EXCLUDES zero
+
+============================================================================================
+4. INTERACTION
+  recall  (C11-C01)-(C10-C00) = -0.288 [-0.370,-0.207] EXCLUDES zero
+  recall  (C11-C10)-(C01-C00) = -0.288 [-0.370,-0.207] EXCLUDES zero
+  FPR     (C11-C01)-(C10-C00) = -0.016 [-0.043,+0.011] includes zero
+  FPR     (C11-C10)-(C01-C00) = -0.016 [-0.043,+0.011] includes zero
+  J       (C11-C01)-(C10-C00) = -0.272 [-0.359,-0.185] EXCLUDES zero
+  (the two algebraic forms are identical by construction for recall/FPR)
+
+============================================================================================
+5. FAKE AND REAL SEPARATELY
+  condition             fake->fake  real->fake
+  C00 image only             7/184       3/184
+  C10 score only           139/184       2/184
+  C01 map only              18/184       6/184
+  C11 score + map           97/184       2/184
+
+  verdict flips vs C00 (fake images):
+    C10: real->fake  132   fake->real    0
+    C01: real->fake   12   fake->real    1
+    C11: real->fake   90   fake->real    0
+  verdict flips vs C00 (real images):
+    C10: real->fake    2   fake->real    3
+    C01: real->fake    4   fake->real    1
+    C11: real->fake    1   fake->real    2
+
+  sanity: in C01 the score is NOT shown; does the verdict still track it?
+    C01 fake: mean actual score when verdict=fake 0.988 (n=18)  vs verdict=real 0.963 (n=166)
+    C00 fake: mean actual score when verdict=fake 0.977 (n=7)  vs verdict=real 0.965 (n=177)
+
+============================================================================================
+6. EXPLANATION AUDIT (deterministic keyword rules; secondary)
+  condition                    score        region           mapsemantic_content   consistency
+  C00 image only               0.000         0.046         0.003         0.696         0.427
+  C10 score only               0.967         0.008         0.000         0.071         0.098
+  C01 map only                 0.000         0.082         0.321         0.541         0.416
+  C11 score + map              0.899         0.027         0.005         0.332         0.245
+
+  coupled region+content mentions (a spatial claim tied to image content):
+    C00 image only      0.024
+    C10 score only      0.000
+    C01 map only        0.011
+    C11 score + map     0.008
+
+  example reasons:
+    C00: The image shows signs of wear and tear consistent with an old photograph, and the clothing and equipment appear authentic to the era.
+    C10: The TruFor image-level manipulation score of 0.999 indicates a high likelihood of digital alteration, suggesting the image has been manipulated.
+    C01: The image shows clear signs of wear and tear, typical of old photographs, and the localized map does not indicate any significant areas of manipulatio
+    C11: The TruFor image-level manipulation score of 0.999 indicates a high likelihood of digital alteration, and the localized map suggests manipulation in t
+
+============================================================================================
+7. PRE-REGISTERED CASE JUDGEMENT
+  score effect  no-map +0.723 EXCLUDES zero   with-map +0.451 EXCLUDES zero
+  map   effect  no-score +0.043 EXCLUDES zero   with-score -0.228 EXCLUDES zero
+  J: C00 +0.022  C10 +0.745  C01 +0.065  C11 +0.516
+
+  -> CASE 4: adding the map interferes with an otherwise useful scalar
+     signal (C10 outperforms C11, or the map raises real FPR).
+
+============================================================================================
+8. CONSISTENCY WITH THE PREVIOUS ROUND (different protocol)
+  prev T0 (with Stage-A summary): recall 0.201 FPR 0.125 J +0.076
+  now  C00 (no summary)         : recall 0.038 FPR 0.016 J +0.022
+  prev T1 correct (score+map+summary): recall 0.804 FPR 0.011 J +0.793
+  now  C11 (score+map, no summary)   : recall 0.527 FPR 0.011 J +0.516
+  NOTE: the previous round fed Stage B a Stage-A summary, so these are
+  different protocols; treat this as a descriptive consistency check, not
+  a paired contrast.
+
+9. RUNTIME  1472 inf  54.0 min  mean 2.19s  peak 17.1 GB

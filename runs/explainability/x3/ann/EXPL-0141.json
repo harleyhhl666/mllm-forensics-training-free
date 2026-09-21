@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.996).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the top-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask's dominant cell is top-right, matching the outlined sprinkled doughnut in IMAGE D, though it extends into center-right."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.958) and a maximum probability (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The doughnut in the annotated area has lavender-tinted icing with sparse rod-shaped sprinkles in IMAGE A but cream icing fully covered in small round nonpareils in IMAGE B, while surrounding doughnuts and the box match."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "medium",
+ "notes": "The top-right location and the alteration claim are both consistent with the evidence: the annotated doughnut's icing and sprinkle appearance differ from IMAGE B. The explanation rests entirely on tool scores, names no object or specific artifact, and 'top-right' understates a mask that also covers much of center-right."
+}

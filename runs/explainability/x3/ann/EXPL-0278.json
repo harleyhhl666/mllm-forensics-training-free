@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.072).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector score is metadata not present or verifiable in the photograph itself."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The grid location in the center has a high mean probability (0.811).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric per-cell detector statistic; not observable in the photograph and no mask is supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The center grid location has a maximum probability of 0.982.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Same: a detector value, not a visual property."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "A center grid cell of the image is identifiable.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The centre ninth holds definite content: the pale shade canopy and its row of thin support poles against the dark treeline, with the tall giraffe's neck entering from the right and the smaller giraffe's head clipping the lower left."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This indicates that the image is likely authentic.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An authenticity verdict is not a checkable observation about the visible content."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Filtered square photo of two giraffes in a dry paddock with a shade sail and pole line. The centre cell is real and content-bearing, but the explanation attaches only numbers to it and never describes anything visible there, so correctness of the region attribution cannot be confirmed. Visible anomalies in the centre area are limited to filter effects: crushed shadows, split toning at the treeline, ringing along the neck/sky edge."
+}

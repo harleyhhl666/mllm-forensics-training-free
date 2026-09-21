@@ -1,0 +1,69 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.975.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "0.975 is very high.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A statement about the score's magnitude, not about the imagery."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "It indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The annotated foreground cow is reddish-brown in IMAGE A but black in IMAGE B, with the background cow unchanged, so content in the marked region has been altered."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is a localized region in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask's largest share is the center cell, though it spreads widely into center-left and bottom-center because the marked animal is large."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "That region has a high mean probability.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "There is a cow in the foreground.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A large grazing cow with horns and a pink ear tag occupies the foreground of IMAGE A and is exactly what the outline in IMAGE D encloses."
+  },
+  {
+   "claim_id": "C7",
+   "claim_text": "That foreground cow is a real (unaltered) part of the image.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The same animal in the same pose is uniformly black in IMAGE B and reddish-brown in IMAGE A, so its appearance has been changed; the annotation marks precisely this animal."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "high",
+ "notes": "The location and the named object are right: the annotated region is the large foreground cow, centred on the center cell. The interpretation is wrong: that cow's coat colour differs between IMAGE A and IMAGE B while the background cow is unchanged, so it is the altered element, not evidence of authenticity. Reading a high manipulation score as authenticity is also internally contradictory."
+}

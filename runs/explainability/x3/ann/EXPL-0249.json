@@ -1,0 +1,37 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is low (0.266).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localized regions show high probability scores.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Probability values are not observable; no location is named in the text, so nothing checkable is asserted about position."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "The image is likely authentic.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The masked bottom-right object differs clearly between A and B: in A the hydrant has a blue barrel with a yellow bonnet and orange-red outlet cap, while in B the same hydrant is uniformly bright yellow with a chrome cap."
+  }
+ ],
+ "region_correct": "not_applicable",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "high",
+ "notes": "The explanation names no location or object, so only its authenticity conclusion is checkable, and that is contradicted by the A-vs-B difference in the masked hydrant. It is also internally odd: it cites 'high probability' localized regions as grounds for authenticity. The metadata cells (bottom-right, center, top-right) only partly match the mask, which covers bottom-right with spill into bottom-center and the lower middle row and does not reach top-right."
+}

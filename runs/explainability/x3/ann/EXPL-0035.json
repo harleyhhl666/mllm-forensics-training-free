@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.072).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The provided localization measurements indicate a very small region with a high probability of manipulation.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes supplied numeric localization output; no mask is provided and the measurement is not visible in the image."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That small high-probability region is likely a false positive.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The region is not located, so nothing specific can be inspected; nothing in the frame reads as an inserted element, but heavy grain, crushed shadows and vignette leave small areas unjudgeable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears consistent and natural.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Content is internally coherent (two giraffes on dry ground, shade canopy, pole and fence line, treeline, cloud-streaked sky). 'Natural' is overstated: the frame carries a strong applied look with heavy corner vignette, teal/amber split toning, added grain and edge softness."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There are no visible signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No compositing cues such as seams, halos from masking, cloned texture or impossible shadows are apparent. But global editing is plainly visible as filtering and grading, and the marked size difference between the two animals plus the very faint shadows are weak depth cues rather than clean confirmation."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No regions or objects named. The false-positive judgement cannot be checked because the region is never localized. Scene consistency is supported at the content level; the 'natural' and 'no visible alteration' wording sits awkwardly with the obvious global filter processing."
+}

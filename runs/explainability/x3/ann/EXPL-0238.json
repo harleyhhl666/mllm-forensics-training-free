@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.347).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not checkable from the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The central region has a high mean probability (0.757).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric measurement for an unsupplied region; nothing visible confirms it."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced region is the center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell holds the ramp's diagonal top edge, the skater's lower legs and the board against bright sky; no mask is available to verify which region was measured."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The silhouette is fully clipped to black, so edge, texture and lighting cues are largely unreadable; authenticity cannot be judged from what is visible."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Score-only reasoning; no image content is described. The inference is internally inconsistent in reading a high localized probability from a manipulation localizer as a high likelihood of authenticity. Image A is a dusk silhouette of a skater at the lip of a concrete transition against a teal/orange sky; because the foreground is crushed to pure black, subtle boundary and texture judgements in the named center region are not reliably possible."
+}

@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.198).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are small and scattered.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the distribution of an unsupplied detector heatmap; not readable from the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is no significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No discontinuous edges, mismatched noise fields, cloned texture patches or lighting inconsistencies are visible; perspective and the diffuse near-vertical shadow direction are consistent throughout, and the regularly repeating paving is a real tiled surface. Confidence is limited by global softness, blown highlights and JPEG smearing in dark foliage."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears consistent and natural.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The scene reads coherently as riders on horses at a riding centre: consistent overcast light and colour temperature, plausible rider-horse geometry, continuous paving, kerb, dirt strip, fence and treeline. Apparent oddities — a half-cropped figure at the right edge, and the left-hand woman seeming to float because her mount is hidden behind the palomino — are framing and occlusion effects."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No regions or objects named. The consistency claim holds up well against visible content and lighting; the no-alteration claim is supported at the level of compositing cues but the image's low resolution, motion blur on the horses' legs and heavy compression leave finer judgements out of reach."
+}

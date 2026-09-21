@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.998.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The surfboard inside the annotated region differs between IMAGE A (dark rail with orange/red rail colouring) and IMAGE B (pale cream/white board), so altered content is present."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's thin white bar has ~40% of its area in the center cell with the remainder just crossing into center-right, bottom-center and bottom-right; IMAGE D's box sits on the centre cell's lower-right part."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean and max probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported score values, not visually checkable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the presence of a specific feature or object there.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The annotated bar encloses a distinct object: the surfboard under the rider's feet."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The image shows a surfer on a wave.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "IMAGE A clearly shows a surfer riding the face of a breaking wave."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location, the presence of an object in the annotated region, and the surfer-on-a-wave description are corroborated. The authenticity conclusion is contradicted by the A-versus-B difference in the board that the annotated bar covers, and reading a 0.998 manipulation score as evidence of authenticity is internally inconsistent. The annotated region straddles four cells, with the center cell the largest share."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.994.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Named detector's numeric output; not observable in or derivable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Nothing observable supports reading a high manipulation score as an authenticity indicator."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The grid location concerned is the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's blob lies in the middle column with roughly three quarters of its area in the center cell (the rest in top-center); IMAGE D outlines the boat's cabin and fenders there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That center location has a high mean probability of 0.936.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is not manipulated in that area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotation marks this area as the region of interest, and its content differs between IMAGE A and IMAGE B (dark hull with cream trim and two red-and-white ball fenders in A versus a red, cream and green painted bow with a black rope fender in B), so calling it unmanipulated has no support."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The named center region matches the bulk of the annotated region (the narrowboat's cabin/fenders), though the mask also clips top-center. Both interpretive claims invert their inputs, reading a high manipulation score and the localized region as evidence of authenticity, and the A/B content difference in that area runs against them."
+}

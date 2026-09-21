@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.994).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score, not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white rectangle sits in the centre cell; IMAGE D's box matches."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.882) and a maximum probability (0.996).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric values, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The region is near the giraffe.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Giraffes are present in the centre of IMAGE A and the annotated box encloses the left-hand one."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Within the marked region IMAGE A shows an anomalous blue-and-white patch with a faint rectangular edge over the giraffe's head, absent in IMAGE B."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Region and object placement match the annotation; the alteration conclusion is backed by a directly visible anomaly in the marked area and an A-vs-B difference. Numeric values unverifiable rather than wrong."
+}

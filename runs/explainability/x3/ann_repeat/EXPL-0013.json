@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region with a high mean probability (0.895) and max probability (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That localized region is in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The animal-shaped white blob in IMAGE C lies almost entirely in the centre cell, with only the leg tips clipping into bottom-centre; IMAGE D confirms the outline sits in the centre."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE B shows two cattle, with one standing exactly in the centre cell; IMAGE A shows only the right-hand animal and empty pasture at that spot, so the content in the marked region has clearly been altered relative to the source."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The alteration likely involves the cow.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The masked silhouette is quadruped-shaped and matches the position of the cow present in IMAGE B but absent in IMAGE A, so the altered content is a cow."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The alteration may instead involve the surrounding area.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A hedged either/or alternative that asserts nothing specific enough to check."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Location matches the mask, and the A-versus-B comparison shows a cow present in the source and absent inside the marked centre region, so both the region and the named object are right. The explanation names no specific visual artefact, only the scores, and hedges the object with 'or the surrounding area'."
+}

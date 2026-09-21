@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not checkable against the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white rectangle falls entirely within the center cell, matching IMAGE D's outline."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.928).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a max probability of 0.998.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "These suggest significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation marks the region, and the glove content in that area differs in appearance between IMAGE A and IMAGE B, but the crop is too small and compressed to judge 'significant' alteration from what is visible; a mask alone cannot establish it."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The localized area likely indicates a manipulated section of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "Hedged restatement; the region is annotated but no anomaly is independently visible at this resolution."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location is correct and matches the mask. The manipulation conclusion rests on unverifiable scores rather than any cited visual cue; the annotated glove region looks different between A and B but is too low-resolution for an independent texture/boundary judgement, so the alteration claims are left uncertain."
+}

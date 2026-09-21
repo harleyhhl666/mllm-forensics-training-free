@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.149).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not checkable against the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates minimal evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No visible alteration evidence is apparent in image A, so the conclusion is consistent with what is visible, but it is drawn from the score rather than from any stated observation."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized regions with higher probabilities do not suggest significant tampering.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to unspecified detector regions; no localization evidence is supplied and no location is named."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall image appears consistent with a natural photograph.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Flash-lit indoor snapshot of two girls holding decorated doughnuts over their faces: harsh on-camera flash with rapid falloff, motion blur on hands, shadow noise and coherent fabric/wood texture, with no visible seams, halos or cut-out edges."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Entirely generic: the explanation names no object or region in the scene, so only its final consistency claim is auditable, and that is consistent with image A. The photograph has genuinely confusing elements (faces hidden behind doughnuts, an awkwardly bent pose, hard-to-attribute hands) but these are ordinary snapshot ambiguities and the explanation makes no claims about them either way."
+}

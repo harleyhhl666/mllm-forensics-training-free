@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.998",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector score is not something the supplied images can confirm or refute."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This score indicates a high likelihood of authenticity",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The masked top-right region in IMAGE A contains a maroon horse with a pale cream mane, whereas IMAGE B shows a glossy pinto/chestnut horse with white belly and leg markings in the same place; the content there has been changed, so the visual evidence does not support an authenticity reading."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the top-right corner",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white blob fills nearly all of the top-right cell (spilling slightly into top-center and upper center-right), and IMAGE D outlines the same area."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That localized region has a high mean and max probability",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported probability statistics are not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "An object is present in that area",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A horse sculpture standing on the giant red chair's seat occupies the outlined top-right region in IMAGES A and D."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The object in that area is real, i.e. not manipulated content",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The horse differs in colour, markings, mane and head pose between IMAGE A and IMAGE B, so the masked object is not unaltered content."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Only the stated location is confirmed by the annotation. The explanation internally conflicts: it cites a very high manipulation score yet reads it as evidence of authenticity, and it treats the masked region as containing a 'real object' although IMAGE A versus IMAGE B shows the horse in that exact region has been replaced. The numeric scores themselves are outside what the images can adjudicate."
+}

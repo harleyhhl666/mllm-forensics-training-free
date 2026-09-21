@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.997.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "A score of 0.997 indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "A near-maximal manipulation score is read as evidence of authenticity, inverting the reported quantity. No supplied evidence supports that reading."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The grid location measurement is in the bottom-center area.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a single rounded blob lying almost entirely in the bottom-center cell; image D outlines the same blob there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Donuts are present on a cooling rack.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Image A shows roughly thirty glazed ring doughnuts resting on a black wire cooling rack with glaze drips fallen through it."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The bottom-center measurement reflects a pattern aligning with the natural distribution of donuts on the rack.",
+      "claim_type": "other",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask is not a repeating or distributional pattern: it is a single compact blob covering roughly 4% of the frame and enclosing exactly one doughnut in the front row. It does not correspond to the layout of the batch."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "This supports the authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The single doughnut inside the outline in image D is smoother and flatter than its neighbours, lacks their specular highlight and film grain, has a soft contour that fuses with the doughnut on its left without a contact shadow, and has a small off-centre hole - a locally altered region rather than support for authenticity."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "Location and the named objects (doughnuts on a cooling rack) are correct, but the interpretation is wrong throughout: the score's meaning is inverted, the compact single-object mask is recharacterised as a distributional pattern, and the flagged region is presented as evidence of authenticity when the outlined doughnut is the one element in the frame that visibly departs from its neighbours in texture, highlight and edge definition."
+}

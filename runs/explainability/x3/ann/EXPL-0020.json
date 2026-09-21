@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.226).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are small.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the tool's localization output; no mask is supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not significantly impact the overall scene.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Their locations are unknown, so their impact cannot be assessed from image A."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The visual content appears consistent and natural.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The waterfront view holds together: uniform light direction and colour temperature across sky, yacht, building, cars and trees; coherent scale between the small runabout, the large yacht, the parked vehicles and the seawall railing; continuous undistorted roofline and horizon."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There are no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No cut-out halos around the yacht's mast and rigging or the tree canopy, no cloned texture, no mismatched blur or noise; haze and noise levels are consistent with a single exposure."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No referenced regions and no named objects. The two image-checkable claims about consistency and absence of obvious alteration are supported by what is visible; the numeric and localization statements are outside what image A can verify."
+}

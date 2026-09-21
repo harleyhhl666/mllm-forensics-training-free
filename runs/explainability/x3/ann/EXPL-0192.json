@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.330).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are small.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Extent of an unsupplied detector heatmap; not visible in the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not significantly affect the overall content.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No region is located, so nothing specific can be checked; the main subjects show no sign of insertion, but most of the frame is heavily defocused, which makes local judgements unreliable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The image appears consistent and natural.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Content and light are coherent: one diffuse rainy-day illumination across boy, pony and background riders, matching colour temperature, rain streaks and water beads on the helmet consistent with each other, and a plausible rider-on-pony geometry."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There are no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No masking halos, cut edges or cloned texture are apparent. The oddities that are visible — the abrupt bottom crop, the blurred purple-jacketed rider merging into the piebald horse, the pony's ears flanking the boy's chest — are crop and bokeh effects, but the extreme background blur prevents ruling out edits there."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No regions or objects named. Consistency and lighting coherence are visibly supported; the shallow depth of field means the majority of the frame carries too little detail to support or refute finer manipulation claims."
+}

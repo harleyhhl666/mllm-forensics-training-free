@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very low (0.022).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates minimal likelihood of digital alteration.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Interpretation of a score, not an observable property."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized regions with higher probabilities are small and scattered.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the tool's localization output; no mask is supplied so region size and spread cannot be seen."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "There is no significant tampering.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No cut-out halos, mismatched blur, cloned repetition, smeared patches or seams are visible; light direction, haze and grain are consistent across the three cattle heads and the misty background. However the heavily darkened upper-left corner and the near-black right-hand animal conceal detail, so the absence of tampering cannot be fully affirmed by eye."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No referenced regions and no named objects. Image A is a low-angle monochrome shot of a pale calf facing the lens, a grey cow nuzzling it and a dark cow at the right edge, in misty pasture. The single image-checkable claim is broadly consistent with what is visible, with dark areas limiting certainty."
+}

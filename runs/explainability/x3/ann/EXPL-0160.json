@@ -1,0 +1,69 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not verifiable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the 'center-left' area.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask blob in IMAGE C sits entirely in the left column with its centroid in the center-left cell; IMAGE D outlines the hydrant there."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.957) and a max probability (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Specific numeric values cannot be checked against the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The hydrant inside the marked region is teal-bonneted with a cream barrel in A but yellow-olive with a blue bonnet and blue caps in B, so the masked content differs."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "There is water flow from the fire hydrant.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A heavy rust-brown jet discharges from the hydrant's open side outlet across the centre of the frame."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "The water flow is a visual anomaly.",
+   "claim_type": "physics",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The plume behaves as a normal high-pressure hydrant flush: it exits the opened outlet, arcs, breaks into spray and floods the gutter, with the removed cap on the ground and a worker holding a hydrant wrench. The same flow appears in IMAGE B, and it lies outside the masked region."
+  },
+  {
+   "claim_id": "C7",
+   "claim_text": "The water flow supports the conclusion of manipulation.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The flow is present in IMAGE B as well and is not inside the annotated region, so it is not evidence of editing."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "partial",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "high",
+ "notes": "Region and the existence of water flow are correct, and the masked hydrant does differ from IMAGE B. However the specific cited evidence — the water flow being anomalous — is unsupported: the plume is physically consistent with a routine hydrant flush, appears in IMAGE B too, and falls outside the annotated region."
+}

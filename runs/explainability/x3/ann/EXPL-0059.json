@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.995).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score, not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white giraffe silhouette is centred in the frame (centre and bottom-centre cells); IMAGE D's outline matches."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.915).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability of 0.997.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The marked area is low-resolution and heavily compressed; a possible difference in the near giraffe's head carriage between A and B cannot be confirmed at this scale, and no seam, texture or lighting artifact is visible to me."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "low",
+  "notes": "The stated centre location matches the annotation. The alteration conclusion is plausible and correctly aimed at the annotated region, but the image detail there is too poor for me to verify an actual difference, so that claim is judged uncertain."
+}

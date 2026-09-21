@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable against the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask blob in IMAGE C and the outline in IMAGE D sit in the center cell."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.895) and max probability (0.997).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable against the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "These indicate significant digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "IMAGE B contains a second cow at exactly the masked center location; IMAGE A shows plain pasture there, so content in that region has been altered."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The alteration likely involves the cow or the surrounding area.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The mask silhouette is quadruped-shaped and coincides with the cow visible in IMAGE B, so the altered content is a cow and its immediate surroundings."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "medium",
+ "notes": "Location and the alteration claim both hold up: the marked center region corresponds to a cow present in IMAGE B and absent in IMAGE A. The explanation is generic (it cites scores rather than visible artifacts) and does not specify the direction of the edit (removal), but nothing it asserts conflicts with the evidence. Score values themselves are unverifiable."
+}

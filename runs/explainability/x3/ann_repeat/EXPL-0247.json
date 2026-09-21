@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 1.000.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Not verifiable as a score reading, but the alteration it asserts is borne out: within the annotated area A shows a dark maroon/rust-brown locomotive while B shows a bright orange one."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "The localization output highlights a region in the center-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single small blob sits entirely in the right column, middle row (center-right); IMAGE D circles a locomotive there."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high mean probability (0.914) and a maximum probability (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric confidence values cannot be verified visually."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests a manipulated area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The masked region's locomotive colour and markings differ clearly between A and B, so altered content there is observable."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Region is correct and the alteration conclusion matches the visible A-vs-B difference in the masked locomotive. However the region is very small (well under 1% of the frame) and at that scale detail is poor; the explanation itself offers only detector numbers, naming no object and no visible texture, boundary or lighting cue."
+}

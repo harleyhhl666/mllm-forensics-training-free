@@ -1,0 +1,38 @@
+[
+ {
+  "model_label": "Qwen2.5-VL-7B-Instruct",
+  "model_path": "/home/borui/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "conditions": [
+   "C_own_real_own"
+  ],
+  "n_inferences": 100,
+  "total_minutes": 5.8,
+  "mean_seconds": 3.1,
+  "peak_GB_per_gpu": {
+   "0": 17.14
+  },
+  "nvidia_used_MiB": {
+   "0": 16688,
+   "1": 18178,
+   "2": 18178,
+   "3": 16844,
+   "4": 17344,
+   "5": 16,
+   "6": 16
+  },
+  "placement": {
+   "single_gpu": "cuda:0"
+  },
+  "prompt_sha1": "cfa6908aaf02a60f71ad74153a0a3df773252b45",
+  "decoding": {
+   "do_sample": false,
+   "temperature": 0.0,
+   "max_new_tokens": 320,
+   "repetition_penalty": 1.0
+  },
+  "min_pixels": 200704,
+  "max_pixels": 802816,
+  "runner_sha1": "f29964698cc41290a180a729cdc06a58f65a6fa5",
+  "config_sha1": "a6dffa803e31c18bf5abe47e8d4a9c7a5f351c31"
+ }
+]

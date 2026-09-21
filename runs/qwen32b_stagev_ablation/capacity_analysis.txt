@@ -1,0 +1,108 @@
+STAGE-V CAPACITY ABLATION — Qwen2.5-VL 7B vs 32B
+bootstrap 10000 resamples, seed 20260918
+
+==========================================================================================
+1. INTEGRITY
+  32B rows                  : 400 (expect 400)
+  7B new C_own rows         : 100 (expect 100)
+  32B parse failures        : 0
+  32B invalid -> State C    : 0
+  7B  parse failures        : 0
+  32B per-condition counts  : {'A_fake_correct': 100, 'B_fake_donor': 100, 'C_legacy_real_fakecounterpart': 100, 'C_own_real_own': 100}
+  32B/7B identical input hashes (A,B,C_legacy): 300/300
+  C_own visualization differs from C_legacy   : 100/100
+  distinct Stage-V prompt hashes across all runs: 1 -> IDENTICAL
+  Analysis A complete sources: 100
+  Analysis B complete sources: 100
+  one variant per coco_id -> cluster bootstrap == paired bootstrap: True
+
+==========================================================================================
+2. ANALYSIS A — STRICT HISTORICAL PAIRING   n=100
+
+  7B
+    condition                            n  matched  mismatch  supported   insuff   A/B/C
+    A  fake + correct ELA              100    0.020     0.980      0.000    1.000   0/2/98
+    B  fake + donor ELA                100    0.000     1.000      0.000    1.000   0/0/100
+    C_legacy real + fake-counterpart ELA 100    0.020     0.980      0.000    1.000   0/2/98
+
+  32B
+    condition                            n  matched  mismatch  supported   insuff   A/B/C
+    A  fake + correct ELA              100    1.000     0.000      0.000    1.000   0/100/0
+    B  fake + donor ELA                100    1.000     0.000      0.000    1.000   0/100/0
+    C_legacy real + fake-counterpart ELA 100    1.000     0.000      0.000    1.000   0/100/0
+
+    paired changes per condition (7B -> 32B):
+      A  fake + correct ELA
+        mismatched->matched  98   matched->mismatched   0   dMatched +0.980 [+0.950,+1.000] p=6.311e-30
+        insuff->supported     0   supported->insuff     0   dSupported +0.000 [+0.000,+0.000] p=1
+      B  fake + donor ELA
+        mismatched->matched 100   matched->mismatched   0   dMatched +1.000 [+1.000,+1.000] p=1.578e-30
+        insuff->supported     0   supported->insuff     0   dSupported +0.000 [+0.000,+0.000] p=1
+      C_legacy real + fake-counterpart ELA
+        mismatched->matched  98   matched->mismatched   0   dMatched +0.980 [+0.950,+1.000] p=6.311e-30
+        insuff->supported     0   supported->insuff     0   dSupported +0.000 [+0.000,+0.000] p=1
+
+    DISCRIMINATION METRICS
+      dMatch  (7B ) = P(matched|correct) - P(matched|donor)  +0.020 [+0.000,+0.050]  n=100
+      dMatch  (32B) = P(matched|correct) - P(matched|donor)  +0.000 [+0.000,+0.000]  n=100
+      dMatch(32B) - dMatch(7B) = -0.020 [-0.050,+0.000] -> includes zero
+      dSupport(7B ) = P(supported|fake-correct) - P(supported|legacy)  +0.000 [+0.000,+0.000]  n=100
+      dSupport(32B) = P(supported|fake-correct) - P(supported|legacy)  +0.000 [+0.000,+0.000]  n=100
+      dSupport(32B) - dSupport(7B) = +0.000 [+0.000,+0.000] -> includes zero
+
+==========================================================================================
+3. ANALYSIS B — SEMANTICALLY CORRECT (primary)   n=100
+
+  7B
+    condition                            n  matched  mismatch  supported   insuff   A/B/C
+    A  fake + correct ELA              100    0.020     0.980      0.000    1.000   0/2/98
+    B  fake + donor ELA                100    0.000     1.000      0.000    1.000   0/0/100
+    C_own  real + its OWN ELA          100    0.030     0.970      0.000    1.000   0/3/97
+
+  32B
+    condition                            n  matched  mismatch  supported   insuff   A/B/C
+    A  fake + correct ELA              100    1.000     0.000      0.000    1.000   0/100/0
+    B  fake + donor ELA                100    1.000     0.000      0.000    1.000   0/100/0
+    C_own  real + its OWN ELA          100    1.000     0.000      0.000    1.000   0/100/0
+
+    paired changes per condition (7B -> 32B):
+      A  fake + correct ELA
+        mismatched->matched  98   matched->mismatched   0   dMatched +0.980 [+0.950,+1.000] p=6.311e-30
+        insuff->supported     0   supported->insuff     0   dSupported +0.000 [+0.000,+0.000] p=1
+      B  fake + donor ELA
+        mismatched->matched 100   matched->mismatched   0   dMatched +1.000 [+1.000,+1.000] p=1.578e-30
+        insuff->supported     0   supported->insuff     0   dSupported +0.000 [+0.000,+0.000] p=1
+      C_own  real + its OWN ELA
+        mismatched->matched  97   matched->mismatched   0   dMatched +0.970 [+0.930,+1.000] p=1.262e-29
+        insuff->supported     0   supported->insuff     0   dSupported +0.000 [+0.000,+0.000] p=1
+
+    DISCRIMINATION METRICS
+      dMatch  (7B ) = P(matched|correct) - P(matched|donor)  +0.020 [+0.000,+0.050]  n=100
+      dMatch  (32B) = P(matched|correct) - P(matched|donor)  +0.000 [+0.000,+0.000]  n=100
+      dMatch(32B) - dMatch(7B) = -0.020 [-0.050,+0.000] -> includes zero
+      dSupport(7B ) = P(supported|fake-correct) - P(supported|real-own)  +0.000 [+0.000,+0.000]  n=100
+      dSupport(32B) = P(supported|fake-correct) - P(supported|real-own)  +0.000 [+0.000,+0.000]  n=100
+      dSupport(32B) - dSupport(7B) = +0.000 [+0.000,+0.000] -> includes zero
+
+==========================================================================================
+4. REAL-OWN STRESS TEST (C_own, semantically correct)
+  7B   n=100  P(matched)=0.030  P(supported)=0.000  P(insufficient)=1.000  A/B/C=0/3/97
+  32B  n=100  P(matched)=1.000  P(supported)=0.000  P(insufficient)=1.000  A/B/C=0/100/0
+  ideal: matched is acceptable, but support should stay mostly insufficient
+
+==========================================================================================
+5. PRE-REGISTERED CASE JUDGEMENT (from Analysis B)
+  P(matched|correct)    7B 0.020 -> 32B 1.000
+  P(matched|donor)      7B 0.000 -> 32B 1.000
+  P(supported|correct)  7B 0.000 -> 32B 0.000
+  P(supported|real-own) 7B 0.000 -> 32B 0.000
+  dMatch   7B +0.020 -> 32B +0.000   (gain -0.020 [-0.050,+0.000])
+  dSupport 7B +0.000 -> 32B +0.000   (gain +0.000 [+0.000,+0.000])
+
+  -> CASE 2: no meaningful capacity improvement; model size alone does
+     not resolve the Stage-V verification failure. Stop scaling.
+
+==========================================================================================
+6. RUNTIME
+  Qwen2.5-VL-32B-Instruct       400 inf    78.0 min  mean 11.42s  peak {'0': 16.32, '1': 18.22, '2': 18.22, '3': 16.83}
+  Qwen2.5-VL-7B-Instruct        100 inf     5.8 min  mean 3.1s  peak {'0': 17.14}

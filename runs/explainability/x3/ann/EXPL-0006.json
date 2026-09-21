@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric tool output; nothing in the supplied images can confirm or refute a reported score."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "A score of 1.000 indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "An interpretive assertion with no visual evidence; it also conflicts with the fact that a localized region of interest is annotated in this image."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white blob lies almost entirely inside the center cell (lower part), and IMAGE D outlines the blue bodyboard there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That localized region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value, not a visually checkable property."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "No observable evidence of authenticity is offered, and a region of interest is explicitly annotated in the center, so the conclusion is not supported by the supplied evidence."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Only the stated center location is corroborated (mask/outline cover the blue bodyboard in the center cell). The explanation internally contradicts itself by reading a 1.000 manipulation score as 'no manipulation' and concluding authenticity; no texture, lighting, boundary or geometry evidence is cited or visible. No object is named, so object_correct is not applicable."
+}

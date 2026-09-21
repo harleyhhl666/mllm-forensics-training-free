@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.122).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region in the center-left has a high mean probability (0.776).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric per-cell detector statistic; not observable in the image and no mask is supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That center-left region has a maximum probability of 0.978.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Same: a detector value rather than a visual property."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "There is an identifiable region in the center-left of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The centre-left cell is one of the densest parts of the frame: the harnessed horses' bodies and tangle of legs, part of the dark grading implement, and a large area of clod-textured bare soil, with the print's dark emulsion edge down the left margin."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests that the image is likely authentic.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An authenticity verdict is not a checkable visual observation."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Scan of a vintage black-and-white print showing a harnessed horse team with a grader/scraper and a standing man on bare graded earth, with wide blank paper margin at right. The centre-left cell is real and content-bearing. Judgement is heavily limited by the medium: photographic grain mixes with soil texture, the horses' overlapping forms are ambiguous, and the sky is fully blown out. Note the explanation says nothing about the scan's own strong artefacts (hard vertical emulsion seam at right, dark left edge line, foxing)."
+}

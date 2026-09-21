@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.422).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not checkable from the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region with high probability is very small (area ratio 0.0019).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A claim about mask geometry; no mask supplied, so area cannot be verified."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region does not significantly impact the overall image integrity.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No region is located in the image, so the referenced area cannot be inspected."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Visual inspection of the image shows no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "I see no obvious alteration artifact, but this is a soft, faded, grainy scan with dust specks and flat overcast light, which materially limits how reliably subtle texture, edge or lighting anomalies could be detected."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Score-driven with one generic negative visual claim. The image's scan artifacts (grain, dust, colour fading) make a claim of 'no obvious signs' weakly checkable at best; nothing specific in image A is named."
+}

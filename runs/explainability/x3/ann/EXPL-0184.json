@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.961.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector output; nothing in image A can confirm or refute a reported score."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is very high, indicating a strong likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Image A is a telephoto surf action shot; inspecting it I find no observable edge, texture or lighting discontinuity that would support a strong likelihood of alteration. The claim rests solely on the score."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region in the center has a high mean probability of 0.944.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported localization statistic, not something observable in the photograph."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The center region's high mean probability suggests that the core of the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell shows the girl's hips, thighs and bent knees in a black wetsuit plus her outstretched left hand against blown-out foam. Deep shadow in the neoprene and clipped whites make this area low in judgeable detail; nothing visible establishes either authenticity or alteration."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The explanation describes no image content at all: it names no object in the center cell and cites only detector numbers. It is also internally inconsistent, reading a very high image-level score as strong evidence of alteration while reading a high center-region probability as evidence the core is authentic."
+}

@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "A giraffe is present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A giraffe's neck and head dominate the centre/right of IMAGE A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The giraffe appears to have an unnatural appearance.",
+      "claim_type": "texture",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The head reads as flattened and low in detail, the ears are conspicuously pale with edges whose brightness does not match the sunlit neck, and the muzzle lacks defined structure."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The giraffe appears digitally altered.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE B shows the same scene with a normal profile head; the head in IMAGE A is markedly different, and the mask/outline covers exactly that area."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The altered appearance is particularly around the head and neck.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The head is clearly the affected part and the mask includes the upper neck, but the neck itself looks consistent with IMAGE B, so extending the anomaly to the neck is an overstatement."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This is consistent with the high manipulation score provided.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to an external detector score that cannot be checked from the images."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "This is consistent with the localization measurements provided.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The localized region named (center) matches the masked region in IMAGE C, which covers the head area."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Correctly names the giraffe and localises the oddity to the head; the visible head differences versus IMAGE B back the altered-appearance claim. Including the neck alongside the head is mildly overstated since the neck matches the comparison photograph."
+}

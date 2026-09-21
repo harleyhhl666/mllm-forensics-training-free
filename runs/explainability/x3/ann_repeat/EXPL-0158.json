@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "A score of 1.000 indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "A maximal manipulation score is read as indicating the absence of manipulation, inverting the reported quantity. Nothing supplied supports that reading."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region is in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a single small compact blob (under 1% of the frame) lying entirely in the middle-right cell, just grazing top-right; image D outlines the same spot."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported value; the supplied mask is binary and carries no probabilities."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content inside the masked area differs between A and B: in B the object is an orange-and-yellow North American hood locomotive with a cream flank band, pale nose panelling, visible handrails and louvred hood panels; in A the same position holds a blockier rust-red/maroon mass with a glared pale nose and no comparable banding or side detail. The flagged region is where the images diverge, not evidence of authenticity."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "Only the center-right location is correct. The explanation inverts the meaning of the manipulation score and then treats the flagged region as a reason to call the image authentic, while cropped comparison of A and B shows the small masked yard locomotive is rendered differently in the two images. Confidence is medium rather than high because the object is distant, hazy and low-resolution, so the visual difference is clear in colour and banding but not in fine detail; the explanation names no object at all."
+}

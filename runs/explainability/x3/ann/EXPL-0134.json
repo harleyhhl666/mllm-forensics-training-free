@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.185).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region in the center has a high probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported localization statistic; no mask supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This indicates a high likelihood of the image being authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell shows the blue diamond '3' stop-marker sign with the nose and flank of the Arriva railcar entering from the left and the far platform behind; all of it reads as ordinary photographic detail, but nothing visible there establishes authenticity."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is a two-track station with an Arriva GTW railcar at the left platform and a blue diamond '3' stopping-position sign near the exact centre. The explanation names the center region but describes no content in it, so its region and object accuracy cannot be graded."
+}

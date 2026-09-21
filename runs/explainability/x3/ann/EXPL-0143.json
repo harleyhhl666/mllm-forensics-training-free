@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.289.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is below the threshold typically used to indicate significant digital alteration.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "An interpretive threshold claim about a tool score; nothing visible bears on it."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There are no localized regions suggesting manipulation.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Localization output is not shown; absence of flagged regions cannot be verified from image A."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The scene is consistent with a real-world photograph.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The winter roadside scene is internally coherent (flat overcast light, uniform snow cover, consistent perspective along the guardrail and road), but authenticity itself is not what can be read off one image."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The scene shows a snowy roadside.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Deep fresh snow covers the shoulder, guardrail and foreground beside a plowed curving roadway."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "A fire hydrant is present in the scene.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A red hydrant with a white cap and a snow cap stands in the bottom-center of the frame."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "A road sign is present in the scene.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A large yellow diamond warning sign is mounted on a pole in the top-center; a round '60' speed-limit sign appears near the horizon."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The hydrant and sign are located in the bottom-center region.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The hydrant is indeed in the bottom-center cell, but the road sign is in the top-center, not the bottom-center."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "high",
+  "notes": "All three named objects (snowy roadside, fire hydrant, road sign) exist in image A. The referenced bottom-center cell does contain the fire hydrant, the foreground subject; the road sign is in the top-center. The explanation text itself makes no location assertion."
+}

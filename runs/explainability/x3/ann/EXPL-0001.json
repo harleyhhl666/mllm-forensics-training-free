@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.378).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high confidence probabilities.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Probability values are not observable in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized regions lie in the top-center, center and bottom-center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Those three cells form the vertical band containing the four giraffe heads and necks emerging from behind the rock, but with no region marking in image A the tool's regions cannot be confirmed."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Rests on unverifiable tool metrics."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A shows four giraffes leaning their heads and necks out from behind a sculpted rock wall in a zoo enclosure. The explanation names no object or feature, so only the region reference is loosely checkable; the named cells do coincide with the giraffes."
+}

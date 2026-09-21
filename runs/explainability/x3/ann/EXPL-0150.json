@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.578.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "0.578 is below the threshold for significant manipulation.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Assertion about a detector threshold, not an observable property."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-center with a high probability score.",
+      "claim_type": "location",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to detector output; no mask is supplied. The bottom-center cell itself is featureless open water."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That bottom-center region is a watermark or signature.",
+      "claim_type": "object",
+      "support": "unsupported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A watermark does exist in this photograph ('Blinkstar Media / 2013 / blinkstarmedia.com') but it sits in the bottom-LEFT corner, occupying only the leftmost ~10% of the width. A crop of the bottom strip confirms the middle third is empty grey-green water with no text, logo or mark of any kind."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "Watermarks or signatures are common in authentic photographs.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A general statement about photographic practice, not a checkable claim about image A."
+    }
+  ],
+  "region_correct": "no",
+  "object_correct": "no",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "Image A is a grey overcast waterscape with a yellow tug pushing a barge right of center. The explanation's one checkable visual claim places a watermark in the bottom-center; the watermark is actually in the bottom-left and the bottom-center holds only empty water. The named object exists in the image but not at the stated location, so this is mislocation rather than a hallucinated object."
+}

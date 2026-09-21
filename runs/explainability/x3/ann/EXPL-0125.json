@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.998.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated region the board differs between IMAGE A (cream deck with an orange-red stripe and dark nose edge) and IMAGE B (plain white/off-white board), so altered content is present."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white wedge lies 100% inside the center cell; IMAGE D outlines the board's nose there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability of 0.913.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value, not visually checkable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the presence of a specific feature or object there.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The annotated region contains a distinct object: the nose/front section of the surfboard."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The image shows a person surfing.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A person in a dark wetsuit lies prone on a surfboard catching a breaking wave in IMAGE A."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "high",
+  "notes": "Location (mask entirely in the center cell), the presence of an object there, and the person-surfing description are all corroborated. The authenticity conclusion is contradicted by the A-versus-B difference in the board inside that region, and reading a 0.998 manipulation score as evidence of authenticity is internally inconsistent."
+}

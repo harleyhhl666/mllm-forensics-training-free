@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.961).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not checkable against the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about detector output rather than about visible content; no mask is supplied and no content is named."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That center region has a high mean probability (0.944) and a very high max probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric statistics, not observable in image A."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in the center area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell contains the girl's lower body in a black wetsuit with her forearm and hand against whitewater. I see no seam, halo, resampled texture or lighting break there; the area is simply dark neoprene against clipped foam. No visible evidence supports significant alteration."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "Purely score-driven. The center cell is low-contrast (crushed blacks of the wetsuit beside near-clipped foam), which limits what can be judged, but nothing visible points to alteration and the explanation offers no observable evidence."
+}

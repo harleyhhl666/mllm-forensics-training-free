@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector output; not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The masked box is centred in the center cell, extending into top-center and center-left; IMAGE D outlines the horse and rider there."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.937).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported statistic, not observable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported statistic, not observable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This indicates significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE A shows a saddled bay horse with a mounted, helmeted rider where IMAGE B shows a riderless chestnut being led, and the change lies inside the marked region."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location and manipulation conclusion both agree with the mask and the paired comparison. The explanation is nonetheless purely score-driven: it identifies no object and cites no visible texture, lighting or boundary evidence."
+}

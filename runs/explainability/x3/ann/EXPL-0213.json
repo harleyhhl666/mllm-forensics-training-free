@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.205).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector score is metadata not present or verifiable in the photograph itself."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are small.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to the extent of detector heatmap regions, which are not supplied and cannot be seen in the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not indicate significant manipulations.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No localized region is identified, and while the visible scene shows no seam, ghosting or duplicated texture, the strong filter grading, corner vignette and edge blur limit what can be ruled out."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears consistent and natural.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Scene content is coherent: two giraffes on a dirt strip before a barn wall, trees, fence and rock border, with consistent diffuse lighting and short shadows under the animals. 'Natural' is overstated in that the frame carries obvious applied processing (heavy vignette, oversaturation, blown white sky, abrupt sharp-to-blurred ring)."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There are no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No compositing cues (mismatched noise, cut edges, cloned texture, impossible shadows) are visible; however obvious global editing is present as filter/vignette/saturation processing, so 'no obvious signs of digital alteration' holds only for local content edits."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No regions referenced and no objects named, so most claims are metric statements that are not checkable from the image. The consistency claim is broadly borne out by content and lighting, but the image is visibly filter-processed, which makes the unqualified 'natural' wording overstated."
+}

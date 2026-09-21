@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.198).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions in the top-center area show high probability values.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric per-cell detector statement; not observable in the photograph and no mask is supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced region is the top-center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The top-centre ninth exists, though its content is sparse: the upper crown of the slim foreground tree — thin branches and clusters of pointed green leaves — against a completely blown-out white sky, with no people, animals or structures."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests that the image is likely authentic.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An authenticity verdict is not a checkable visual observation."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Snapshot of several riders on horseback on a paved area before a post-and-rail fence and dense greenery. The named top-centre cell is only foliage against clipped white sky; the explanation asserts nothing about its content, so only the location naming is checkable. That cell does carry the frame's most conspicuous edge artefacts — purple/cyan fringing and glow halos on every twig against the white sky, plus blocky JPEG chewing — which the explanation does not address."
+}

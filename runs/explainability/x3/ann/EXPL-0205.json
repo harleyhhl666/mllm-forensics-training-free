@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The TruFor image-level manipulation score is 0.986.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "This indicates a high likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Content inside the marked region differs clearly between A and B: in A the hydrant is glossy bright red with a plain smooth barrel and a white band, while in B the same hydrant is safety orange with raised cast lettering ('CANADA'), a foundry medallion and numerals."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the bottom-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single white rectangle fills the bottom-center cell and rises into the lower part of the center cell; IMAGE D outlines the hydrant in that same span."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high mean probability of 0.934.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Specific probability value cannot be verified visually."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "That region is a manipulated area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The outlined hydrant's colour and surface detail differ from the corresponding hydrant in IMAGE B, so the marked area is where the content was changed."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "high",
+ "notes": "Region matches the mask (bottom-center, extending into the lower centre cell) and the A-vs-B comparison corroborates altered content there. The explanation names no object and gives no texture/lighting/boundary evidence, but asserts nothing unsupported."
+}

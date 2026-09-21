@@ -1,0 +1,111 @@
+M1 MITIGATION EXPERIMENT — verification-gated evidence, sham-controlled
+decisions=1600  stage_v=400  complete samples=100
+clusters=100  bootstrap=10000 seed=20260918
+sampling: 1 variant per coco_id, 100 untouched TESTING-split coco_ids, natural tamper distribution, no band balancing, seed 20260918
+
+======================================================================================
+1. INTEGRITY
+  decision JSON parse failures     : 0/1600
+  Stage-V parse failures           : 0/400
+  Stage-V invalid -> forced State C: 0
+  all prompt hashes match protocol : True
+  B and S share Stage-D prompt     : True
+  S never received a state         : True
+  M always received a state        : True
+  M-none == B-none prompt          : True
+
+======================================================================================
+2. STAGE-V VERIFIER BEHAVIOUR  (conservative, prompt-induced criterion)
+   NOTE: the asymmetric 'supported only if' wording is imposed by the
+   prompt; this is NOT naturally emergent model calibration.
+
+  cell                                matched  mismatch  supported   insuff   states A/B/C
+  fake + correct ELA                    0.020     0.980      0.000    1.000   0/2/98
+  fake + donor ELA                      0.000     1.000      0.000    1.000   0/0/100
+  real + own ELA  <-- key stress test    0.020     0.980      0.000    1.000   0/2/98
+  real + donor ELA                      0.000     1.000      0.000    1.000   0/0/100
+
+  headline Stage-V quantities (cluster CI):
+    P(mismatched | fake, donor cue)  1.000 [1.000,1.000]
+    P(insufficient | real, own ELA)  1.000 [1.000,1.000]
+    P(State A | real, own ELA)       0.000 [0.000,0.000]   <- real image kept as evidence
+    P(matched|correct) - P(matched|donor), fake images: +0.020 [+0.000,+0.050]
+      -> verifier does NOT discriminate cue validity (CI includes zero)
+    WARNING: verifier rejects essentially everything -> Goal 1 could be
+    met trivially by blanket rejection. Interpret Goals 2/3 accordingly.
+
+======================================================================================
+3. TPR / FPR / YOUDEN J BY CONDITION
+  condition      TPR TPR 95% CI            FPR FPR 95% CI              J J 95% CI
+  B-none       0.020 [0.000,0.050]     0.020 [0.000,0.050]     0.000 [+0.000,+0.000]
+  B-correct    0.070 [0.020,0.120]     0.080 [0.030,0.140]    -0.010 [-0.050,+0.020]
+  B-wrong      0.060 [0.020,0.110]     0.100 [0.040,0.160]    -0.040 [-0.080,-0.010]
+  S-correct    0.070 [0.020,0.120]     0.080 [0.030,0.140]    -0.010 [-0.050,+0.020]
+  S-wrong      0.060 [0.020,0.110]     0.100 [0.040,0.160]    -0.040 [-0.080,-0.010]
+  M-correct    0.000 [0.000,0.000]     0.000 [0.000,0.000]     0.000 [+0.000,+0.000]
+  M-wrong      0.010 [0.000,0.030]     0.010 [0.000,0.030]     0.000 [+0.000,+0.000]
+  M-none       0.020 [0.000,0.050]     0.020 [0.000,0.050]     0.000 [+0.000,+0.000]  (sanity only)
+
+======================================================================================
+4. PRIMARY GOALS
+  Goal1 FPR(M-wrong) - FPR(B-wrong)           -0.090  [-0.150,-0.040] EXCLUDES zero  McNemar p=0.003906
+      target: negative, with a clear practical effect
+  Goal2 J(M-correct) - J(B-correct)           +0.010  [-0.020,+0.050] includes zero
+      target: positive  <-- CORE MITIGATION METRIC
+  Goal3 FPR(M-none) - FPR(B-none)             +0.000  [+0.000,+0.000] includes zero  McNemar p=1
+      target: near zero (identical prompts; pure sampling noise)
+  Goal3 TPR(M-none) - TPR(B-none)             +0.000  [+0.000,+0.000] includes zero  McNemar p=1
+      target: near zero
+
+======================================================================================
+5. SECONDARY DIAGNOSTICS
+  TPR(M-correct) - TPR(B-none)                -0.020  [-0.050,+0.000] includes zero  McNemar p=0.5
+      target: positive: useful correct-cue benefit preserved
+  J(M-wrong) - J(B-none)                      +0.000  [+0.000,+0.000] includes zero
+      target: near zero: wrong cue approximately harmless
+  dJ_correct = J(M-correct) - J(B-correct)    +0.010  [-0.020,+0.050] includes zero
+  dJ_wrong  = J(M-wrong) - J(B-wrong)         +0.040  [+0.010,+0.080] EXCLUDES zero
+
+======================================================================================
+6. ATTRIBUTION — deliberation (S vs B) versus gating (M vs S)
+
+  a) deliberation effect: does the extra Stage-V pass alone help?
+  FPR(S-wrong) - FPR(B-wrong)                 +0.000  [+0.000,+0.000] includes zero  McNemar p=1
+  J(S-correct) - J(B-correct)                 +0.000  [+0.000,+0.000] includes zero
+
+  b) verification-state gating effect: does injecting the state help
+     BEYOND having deliberated?
+  FPR(M-wrong) - FPR(S-wrong)                 -0.090  [-0.150,-0.040] EXCLUDES zero  McNemar p=0.003906
+      target: negative
+  J(M-correct) - J(S-correct)                 +0.010  [-0.020,+0.050] includes zero
+      target: positive, or at least not worse
+
+======================================================================================
+7. STATE DISTRIBUTION ACTUALLY INJECTED INTO M CONDITIONS
+  M-correct  fake  A=0   B=2   C=98
+  M-wrong    fake  A=0   B=0   C=100
+  M-correct  real  A=0   B=2   C=98
+  M-wrong    real  A=0   B=0   C=100
+
+======================================================================================
+8. PRE-REGISTERED VERDICT
+  Goal1 wrong-cue FPR suppressed      : MET  (-0.090)
+  Goal2 J(M-correct) > J(B-correct)   : NOT MET  (+0.010)
+  Goal3 structure introduces no shift : MET  (FPR +0.000, TPR +0.000)
+  residual FPR(M-wrong)=0.010 vs project-internal engineering standard 0.10: below
+    (project-internal only; NOT a field standard)
+
+  -> S ~ B and M > S: VERIFICATION-STATE GATING produces the benefit.
+
+  CAVEAT: the verifier rejected nearly all cues, so any wrong-cue
+  suppression may reflect blanket rejection rather than verification.
+  Check TPR(M-correct) - TPR(B-none) before claiming mitigation.
+
+======================================================================================
+9. TAMPER-RATIO BANDS (descriptive)
+  quartile cuts: 0.0082 / 0.0217 / 0.0796
+  band     n    B-corr TPR  M-corr TPR B-wrong FPR M-wrong FPR
+  q1      25         0.080       0.000       0.040       0.040
+  q2      25         0.040       0.000       0.040       0.000
+  q3      25         0.160       0.000       0.200       0.000
+  q4      25         0.000       0.000       0.120       0.000

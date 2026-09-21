@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content inside the annotated region differs between IMAGE A and IMAGE B (the board nose at the man's feet: white deck with dark footstrap fittings in A versus a plainer pale cream deck in B), so altered content is present."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-left.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white wedge sits ~80% in the center-left cell; IMAGE D outlines the windsurf board's nose there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value, not visually checkable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the tool is confident in the authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated region is exactly where A departs from B; no visible evidence supports an authenticity inference."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The center-left location matches the annotated region (nose of the windsurf board). The authenticity conclusion is contradicted by the A-versus-B difference inside that region, and reading a 1.000 manipulation score as 'no manipulation' is internally inconsistent."
+}

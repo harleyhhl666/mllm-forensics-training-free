@@ -1,0 +1,61 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image exhibits an unusually high manipulation score (0.871).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the bottom-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask wedge fills the bottom-right cell and extends into the centre-right cell; Image D's outline agrees."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.862) and a maximum probability (0.995).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric probability values are not observable; Image C is binary."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This indicates significant digital alteration.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The annotated bottom-right corner is near-black, soft and vignetted in both A and B, so I cannot reliably compare content there."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The overall color saturation and contrast are highly unnatural.",
+   "claim_type": "texture",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "Image A is collapsed into clipped reds, oranges and yellows with blown highlights and crushed blacks, with no natural greys, greens or blues anywhere."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "That unnatural saturation and contrast suggests post-processing or manipulation.",
+   "claim_type": "manipulation",
+   "support": "partially_supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "A strong stylistic grade is clearly present, but the same red/high-contrast treatment appears in Image B as well, so it characterises the source photograph rather than indicating a local edit in the marked region."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "partial",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "low",
+ "notes": "Location is correct and the described global colour/contrast abnormality is genuinely visible. However that grading is equally present in the paired image, so it is not evidence about the annotated region, and the deep shadow and vignetting in the bottom-right make any local A-versus-B comparison unreliable."
+}

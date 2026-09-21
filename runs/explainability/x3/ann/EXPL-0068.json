@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.985.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE A differs from IMAGE B in the annotated area: the board is pale aqua with a navy stripe and sunburst decal in A versus a cream/ivory board with a 'FREELINE' sun decal in B, and the figure's upper body clothing differs too."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white rectangle has ~64% of its area and its centroid in the bottom-center cell; IMAGE D's box encloses the board low in the frame."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region suggests a potential manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated rectangle is where A and B differ; outside it the two images match."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The overall image has an unnatural appearance.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Parts do read oddly - the kneeling figure's limbs and gear are hard to resolve, the fin placement is atypical - but the sky, surf line and sand look like an ordinary heavily stylised beach photo, so 'the overall image' overstates it."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location and the manipulation conclusion are corroborated by the mask/outline and the A-versus-B difference in the surfboard and the figure's clothing. The vaguer claim that the whole image looks unnatural is only partly borne out: local incoherence is visible around the figure, but the wider scene does not obviously look unnatural."
+}

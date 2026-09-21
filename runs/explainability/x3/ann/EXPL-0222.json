@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.998.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Nothing observable supports reading a high manipulation score as an authenticity indicator."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's rectangle straddles the bottom-left and bottom-center cells roughly half and half, so bottom-center covers only about half of the annotated region."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The localized region suggests a natural scene.",
+      "claim_type": "other",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The marked area contains beached kayaks on wet sand; nothing links a localization probability to scene naturalness, and the region is dominated by man-made craft rather than natural content."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "This supports the image's authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Conclusion rests on the reversed reading of the score plus an unfounded inference; no observable support."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The annotated region is a wide bar spanning bottom-left and bottom-center over the beached kayaks, so the single named cell is only half right. The authenticity reasoning inverts the manipulation score and the 'natural scene' inference has no visual basis; the marked content is man-made kayaks on sand."
+}

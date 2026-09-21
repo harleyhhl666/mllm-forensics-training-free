@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.973).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There are localized regions with significant mean and maximum probabilities of manipulation.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Unquantified detector statistics; not verifiable from the images."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "These regions are particularly in the 'center' area.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask's bulk lies in the center cell, matching the outline in IMAGE D under the skater's feet."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "These regions are also particularly in the 'top-right' area.",
+      "claim_type": "location",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask contains a single connected region confined to the middle row (center and center-left cells); the top-right cell is entirely unmarked and shows only tree canopy in both IMAGE A and IMAGE B."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "These regions suggest digital alterations.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Alteration is clearly evidenced in the centre region, where the skateboard visible in IMAGE B is absent/smeared in IMAGE A, but not in the additional top-right area the explanation names."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The alteration may involve the skater's pose.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The skater's pose, clothing and limb positions are the same in IMAGE A and IMAGE B; what differs is the skateboard beneath his feet, not his pose."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "The alteration may involve background elements.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Background inside the annotated region is smeared where the board was, which could loosely count, but the trees, fence and banners elsewhere match IMAGE B, so the broad claim is not reliably judgeable."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "A skater is present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "An airborne helmeted skater in a white shirt and blue jeans is the main subject."
+    }
+  ],
+  "region_correct": "no",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The 'center' location is correct and the skater is present, but the explanation also names top-right (and the unit lists bottom-right) where the annotation marks nothing and no difference from the source photograph is visible. Its attribution of the edit to the skater's pose is contradicted by the A/B comparison, in which the pose is unchanged and the skateboard is what differs."
+}

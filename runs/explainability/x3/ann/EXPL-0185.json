@@ -1,0 +1,85 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.955.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score is very high.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Characterisation of an unverifiable number."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "It indicates a strong likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The masked centre object differs clearly between A and B: in A the hydrant is uniformly bright orange with chrome caps, while in B it has a white bonnet, a large black pumper cap with chain and a faded white stencil."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "The localized region in the center has a high mean probability of 0.898.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask in IMAGE C is a tall bar centred on the center cell; the numeric value itself is not verifiable but the stated location is correct."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests that the central part of the image is likely authentic.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inverted: the centre is exactly the region the annotation marks, and it is where A and B differ most; nothing supports calling it authentic. This also contradicts C3."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "A fire hydrant is present.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "An orange fire hydrant stands in the centre of the sidewalk, inside the outlined region in IMAGE D."
+  },
+  {
+   "claim_id": "C7",
+   "claim_text": "Bollards are present.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "Two white rust-streaked cylindrical bollards flank the hydrant in the center-left and center-right cells."
+  },
+  {
+   "claim_id": "C8",
+   "claim_text": "The setting is a realistic urban setting.",
+   "claim_type": "other",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "Concrete sidewalk with expansion joints, yellow-painted curb, iron picket fence, painted masonry wall and folding café furniture read as an ordinary city streetscape."
+  },
+  {
+   "claim_id": "C9",
+   "claim_text": "The presence of the hydrant and bollards in that setting further supports the authenticity of the image.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Plausible scene content is not evidence of authenticity, and the hydrant itself is the object inside the marked region that differs from IMAGE B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "high",
+ "notes": "Region and objects are named correctly (hydrant in the centre, two flanking bollards, urban sidewalk), and a real A-vs-B difference exists in the hydrant's colour scheme. But the explanation reasons backwards: it treats the high-probability centre region and the plausible scene content as evidence of authenticity while simultaneously calling alteration strongly likely."
+}

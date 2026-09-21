@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.185).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are small and scattered.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the tool's localization output; no mask is supplied so region sizes cannot be seen."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is no significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Single frontal flash with consistent falloff, contact shadows under the bed and hangers, coherent perspective in the cardboard floor seams, and uniform grain; no halos, cloned texture or mismatched sharpness are visible."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears consistent and natural.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Physically and optically coherent, so 'consistent' holds; but the scene itself is a constructed installation-like room of plastic sheeting, woven plastic bags and cardboard, which is unusual rather than a natural everyday setting."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No regions or objects named. Lighting, shadow and perspective consistency support the no-alteration claim; the word 'natural' is a stretch given the deliberately artificial constructed subject matter, hence partially supported."
+}

@@ -1,0 +1,126 @@
+EVIDENCE ABSTRACTION LAYER — 7B
+rows 1840  complete sources 184  bootstrap 10000 seed 20260918
+1840 inf  83.8 min  mean 2.68s  peak 17.16 GB
+
+==============================================================================================
+1. INTEGRITY
+  parse failures 0/1840   bad verdicts 0   unparsed region tokens 0
+  cells {'E0_score_only': 368, 'E1_raw_map': 368, 'E2_structured': 368, 'E3_both': 368, 'E4_shifted_struct': 368}
+  unique coco_id 184
+  E0/E2/E4 single image: True
+  E1/E3 two images     : True
+  E4 preserves E2 region count and score: True
+  E4 locations are exactly the mirror of E2: True
+  protocol sha1 ec1118a2f9b8fe17bad237892630752d0ade4d2f
+
+==============================================================================================
+2. DEGENERATE-REFERENCE ARTIFACT (must be read before faithfulness)
+  the output schema enumerates the nine grid names, and without structured
+  evidence the model sometimes echoes ALL nine back. Such answers carry no
+  spatial information and are counted separately.
+  condition                   all-9 echo   empty  mean cited
+  E0 score only                    0.204   0.000        2.65
+  E1 score + raw map               0.114   0.098        1.82
+  E2 score + structured            0.005   0.000        1.29
+  E3 structured + raw              0.011   0.003        1.35
+  E4 mirrored structured           0.008   0.000        1.31
+
+==============================================================================================
+=== PART A: DECISION UTILITY ===
+==============================================================================================
+  condition                    recall            95% CI     FPR            95% CI        J
+  E0 score only                 0.837 [0.783,0.886]   0.011 [0.000,0.027]    0.826
+  E1 score + raw map            0.565 [0.495,0.636]   0.016 [0.000,0.038]    0.549
+  E2 score + structured         0.174 [0.120,0.228]   0.011 [0.000,0.027]    0.163
+  E3 structured + raw           0.451 [0.380,0.522]   0.022 [0.005,0.043]    0.429
+  E4 mirrored structured        0.179 [0.125,0.234]   0.011 [0.000,0.027]    0.168
+
+  reference (earlier round, prompt without referenced_regions):
+    C10 score only 0.755   C11 score+map 0.527
+
+==============================================================================================
+3. PRIMARY DECISION CONTRASTS
+
+  structured_benefit   E2 - E0
+    fake recall  -0.663 [-0.728,-0.592] EXCLUDES zero  p=3.762e-37
+    real FPR     +0.000 [-0.016,+0.016] includes zero  p=1
+    J            -0.663 [-0.728,-0.592] EXCLUDES zero
+
+  raw_map_cost   E1 - E0
+    fake recall  -0.272 [-0.353,-0.196] EXCLUDES zero  p=3.914e-10
+    real FPR     +0.005 [-0.011,+0.022] includes zero  p=1
+    J            -0.277 [-0.359,-0.196] EXCLUDES zero
+
+  structured_vs_raw   E2 - E1
+    fake recall  -0.391 [-0.462,-0.321] EXCLUDES zero  p=7.941e-21
+    real FPR     -0.005 [-0.022,+0.011] includes zero  p=1
+    J            -0.386 [-0.457,-0.315] EXCLUDES zero
+
+  raw_after_abstraction   E3 - E2
+    fake recall  +0.277 [+0.201,+0.353] EXCLUDES zero  p=1.64e-11
+    real FPR     +0.011 [-0.011,+0.033] includes zero  p=0.625
+    J            +0.266 [+0.196,+0.337] EXCLUDES zero
+
+==============================================================================================
+4. CONFOUND CHECK — does structured evidence leak the label?
+  frozen corpus stats: fake non-empty 184/184 vs real 174/184;
+  mean regions fake 1.147 vs real 1.902; area median 0.0251 vs 0.00395
+  fake  mean regions 1.147  empty 0/184
+  real  mean regions 1.902  empty 10/184
+  real FPR | empty evidence  0.100 (n=10)
+  real FPR | non-empty       0.006 (n=174)
+  -> any E2 decision gain may ride on these scalar-like cues, NOT on
+     spatial reasoning. Read Part B before interpreting Part A.
+
+==============================================================================================
+=== PART B: SPATIAL FAITHFULNESS ===
+==============================================================================================
+5. CITATION AND AGREEMENT (structured conditions; all-9 echoes excluded
+   from agreement as non-informative, and counted in the artifact row)
+  condition                     cite   inter   exact   unsup   halluc
+  E2 score + structured        1.000   1.000   0.832   0.006    1.000
+  E3 structured + raw          1.000   1.000   0.839   0.008    0.889
+  E4 mirrored structured       1.000   1.000   0.826   0.006    1.000
+  E2 spatial agreement (intersects)   1.000 [1.000,1.000]
+  E2 exact agreement                  0.832 [0.793,0.868]
+  E2 unsupported-region rate          0.006 [0.000,0.014]
+  E2 citation rate                    1.000 [1.000,1.000]
+
+  baseline: agreement without structured evidence (E1 raw map),
+  scored against what the abstraction WOULD have said:
+  E1 spatial agreement 0.358 [0.301,0.415]  (n=282)
+  E2 - E1 agreement is reported as a difference of independent rates,
+  not paired, because the E1 denominator differs; treat descriptively.
+
+==============================================================================================
+6. SHIFT RESPONSIVENESS — frozen eligible subset ONLY
+  eligible = primary region's grid location changes under the mirror
+  non-eligible samples are NOT in the denominator and the subset is never
+  expanded post hoc
+
+  [fake] eligible 70 (frozen 70), scored 70
+    follows mirrored evidence      1.000 [1.000,1.000]
+    still cites the ORIGINAL side  0.000 [0.000,0.000]
+    verdict change E4-E2           +0.014 [+0.000,+0.043] includes zero
+    (a verdict change is NOT required: moving the stated location need
+     not alter authenticity)
+
+  [real] eligible 80 (frozen 80), scored 78
+    follows mirrored evidence      1.000 [1.000,1.000]
+    still cites the ORIGINAL side  0.013 [0.000,0.038]
+    verdict change E4-E2           +0.000 [+0.000,+0.000] includes zero
+    (a verdict change is NOT required: moving the stated location need
+     not alter authenticity)
+
+==============================================================================================
+7. CASE JUDGEMENT
+  recall  E0 0.837  E1 0.565  E2 0.174  E3 0.451
+  J       E0 0.826  E1 0.549  E2 0.163  E3 0.429
+  E2-E1 recall -0.391 EXCLUDES zero   E2-E0 recall -0.663 EXCLUDES zero
+  E2 spatial agreement 1.000   fake shift-following 1.000
+
+  -> CASE C structured abstraction improves explanation faithfulness without materially changing discrimination
+  -> CASE D structured evidence harms the scalar decision
+
+  success criterion was accuracy PRESERVATION + faithfulness gain,
+  not beating score-only accuracy.

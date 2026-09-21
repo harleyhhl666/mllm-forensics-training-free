@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.276).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the bottom-right corner.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "No localization map or mask is supplied for this unit, so whether a flagged region sits in the bottom-right cell cannot be checked. The bottom-right cell does contain a distinct object (a sunlit foreground grind rail and its support post), but that does not confirm the stated localization."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That bottom-right region has a high probability (0.99).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric value with no supplied localization evidence to compare against."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "These measurements suggest the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "The stated reasoning is internally inconsistent: a 0.99 localized manipulation probability is treated as evidence of authenticity. Nothing supplied supports that inference, and no visual observation is offered for it."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The explanation names no object and offers no observation of the photograph; it reasons only from reported numbers, and does so contradictorily (high localized manipulation probability cited as support for authenticity). Image A itself is a backlit skatepark photograph with strong lens flare and a blurred foreground rail in the bottom-right; nothing there is described by the explanation."
+}

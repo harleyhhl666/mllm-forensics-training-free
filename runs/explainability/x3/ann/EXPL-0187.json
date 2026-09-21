@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported detector score cannot be checked against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated animal differs between A and B: A shows a largely white-bodied piebald cow with a dark head and a ragged dark back patch, B shows a red-brown/roan animal with a broad white band behind the shoulder. A finding of no manipulation is not supported."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single animal-shaped mask lies wholly within the center-right cell (roughly x 775-918, y 345-443), and IMAGE D outlines the same animal."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An unquantified reported probability is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated region is exactly where A and B differ, so an authenticity conclusion is contradicted by the supplied comparison."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The center-right location is exactly right - the mask falls entirely in that cell. But both substantive claims assert non-manipulation and authenticity, which conflict with the visible A/B difference in the annotated cow. No object is named."
+}

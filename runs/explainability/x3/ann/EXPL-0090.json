@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.226.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "0.226 is relatively low, indicating a low likelihood of digital alteration.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Interpretation of a score, not an observable property."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The centroid is in the 'bottom-center' region.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-center cell is almost entirely dark rippled open water, with only a sliver of seawall railing and a small moored boat at its top edge; with no mask there is nothing visible to confirm or refute a centroid there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The centroid has a high probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not an observable property."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests a natural scene.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The photograph is naturally lit and internally consistent (level horizon, matching exposure imbalance between bright cumulus sky and shadowed water), so it reads as an ordinary capture; but the subject is a built waterfront with a moored yacht, a long commercial building, parked cars and a seawall promenade rather than a natural landscape."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No objects are named in the explanation. Image A is a waterfront view across a river: white multi-deck yacht, cream low-rise building with awnings, parked vehicles, tree line, cumulus sky, dark choppy water in the foreground. The bottom-center reference cannot be validated without a mask."
+}

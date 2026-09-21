@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.995.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The annotated giraffe's pose differs between the photographs: in A the head is carried high on a raised neck, in B the neck is lowered so the muzzle reaches toward the second giraffe. Content in the marked region is changed, so no authenticity conclusion is supported."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a grid location in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's giraffe-shaped silhouette has its centroid in the center cell, spanning into center-right and the bottom-center/bottom-right cells via the legs; IMAGE D outlines that giraffe."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high mean probability of 0.915.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric confidence value; not verifiable from images."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests the presence of a real object or feature in that area.",
+   "claim_type": "manipulation",
+   "support": "partially_supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "An object is genuinely present there - a giraffe standing in profile - so the 'presence of an object' half is right, but the implication that it is unaltered content is not supported given the pose difference from IMAGE B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "The location matches the mask, which traces a giraffe, and an object is indeed present there. But the explanation reads a 0.995 score as authenticity and infers untouched content, while A-vs-B shows the annotated giraffe's neck/head pose differs. The explanation itself names no object and no visual property; at this resolution the pose change is the clearest observable difference."
+}

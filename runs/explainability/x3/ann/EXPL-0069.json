@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.270).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with high probabilities are small and scattered.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the distribution of an unsupplied detector heatmap; not readable from the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is no significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Grass, foliage and timber grain are continuous and non-repeating with no clone tiling; depth-of-field falloff progresses smoothly with distance; one flat overcast light and colour temperature covers woman, horse, timber and grass; woman and horse sit on a believable common ground plane."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears consistent and natural.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The scene is internally coherent. The horse's large apparent size relative to the woman is explained by it being nearer the camera and cropped by the frame edge, and the only jarring elements are stylistic (neon wig, red wellingtons, exaggerated pose)."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "No regions or objects named. The two visually checkable claims — absence of significant alteration evidence and overall consistency — are both borne out: continuous natural texture, smooth focus falloff and uniform lighting. Minor softness/edge halo where the horse's back meets bright background is consistent with lens and JPEG processing rather than masking."
+}

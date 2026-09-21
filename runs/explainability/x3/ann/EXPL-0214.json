@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.975).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask is centred on the center cell (its largest share), extending into center-left and bottom-center; IMAGE D outlines the foreground cow there."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.908) and a very high max probability (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The outlined foreground cow is reddish-brown with a pale muzzle in IMAGE A and uniformly black with a dark muzzle in IMAGE B, in an otherwise matching scene, so that area has been altered."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "medium",
+ "notes": "Region and the alteration claim are both consistent with the evidence: the annotated centre region is the foreground cow, whose coat colour differs from IMAGE B while the rest of the scene matches. The explanation cites only tool scores and names no object, texture or mechanism, so it is supported only at that generic level; the mask also extends well beyond the single 'center' cell."
+}

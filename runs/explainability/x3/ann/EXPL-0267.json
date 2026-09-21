@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.981).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not verifiable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single blob spans the center and bottom-center cells with a narrow spill to the right; IMAGE D outlines the nearest standpipe over the same span."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.929) and a maximum probability (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Specific numeric values cannot be checked against the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inside the outlined region A shows an orange standpipe with yellow/blue fittings and a chrome hydrant nozzle assembly on its face, whereas B shows polished brass posts with fluted golden caps and no such assembly."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "high",
+ "notes": "Location matches the mask (centre, continuing downward) and the A-vs-B comparison corroborates changed content there. The explanation names no object and cites no texture, lighting or boundary evidence, but asserts nothing unsupported."
+}

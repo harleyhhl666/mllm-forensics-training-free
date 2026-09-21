@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported detector score cannot be checked against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The supplied comparison shows the hull inside the annotated region differs between A and B (A: rounded, fully varnished clinker stern with a dark blue capping rail; B: a raked planked transom with dark painted topsides), so a finding of no manipulation is not supported."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white wedge is centred at about 58% across and 87% down, i.e. in the bottom-center cell, with only a thin spill into bottom-right; IMAGE D outlines the same area."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That localized region suggests a high probability of a real object.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated area contains the boat's hull, and that is precisely the content that differs between A and B; nothing in the evidence supports reading the region as authentic."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This aligns with the authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "A conclusion of authenticity conflicts with the observable difference in the annotated region."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The named location matches the annotation, but every substantive claim is a claim of non-manipulation, and the boat hull inside the annotated region visibly differs between IMAGE A and IMAGE B. The explanation names no specific object, so object_correct is not applicable."
+}

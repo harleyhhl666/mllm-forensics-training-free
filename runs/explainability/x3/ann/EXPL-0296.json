@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white wedge lies entirely inside the center cell; IMAGE D outlines the surfboard nose there."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.913) and a maximum probability of 1.0.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported score values, not visually checkable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Within the annotated area the board's appearance changes between IMAGE A (cream deck with orange-red stripe, dark nose edge) and IMAGE B (plain white board), while the rest of the frame matches."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Both checkable claims - center location and alteration in that area - are corroborated by the mask/outline and the A-versus-B difference in the surfboard. Score values are unverifiable and marked not_applicable; no object, texture, lighting or boundary claim is asserted."
+}

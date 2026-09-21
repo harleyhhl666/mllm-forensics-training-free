@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.146).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The provided localization measurements indicate only a small area with a relatively low mean probability of manipulation.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the tool's output; no mask is supplied to check area size or values."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The visual content includes cows.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Roughly seven or eight red/brown-and-white dairy cows stand in the foreground, seen from behind on straw-strewn ground."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The visual content includes a church.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A white church with a verdigris copper spire, clock tower, pedimented portico and the inscription 'ALLES WAS ODEM HAT LOBE DEN HERRN' stands directly behind the cows."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The cows and church appear consistent and natural.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Uniform flat overcast light with matching soft shadows, plausible scale between cows, lamp posts and church, hooves in natural contact with the bedding, and undistorted church geometry apart from mild wide-angle convergence."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "There are no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No halos, smeared outlines, cut-and-paste seams, colour mismatch or cloned texture are visible; animal hair edges show ordinary photographic detail."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Both named objects (cows, church) are present as described, and the consistency claims match what is visible. Only the detector-number statements are outside what image A can verify. No referenced regions."
+}

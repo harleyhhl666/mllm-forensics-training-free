@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.995).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask lies wholly within the center cell, matching IMAGE D's outline around the skateboard."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.819) and max probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric probabilities are not verifiable from the images."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation marks that area, consistent with alteration there, but the marked sliver is under about 1% of the frame and the strong vintage grade plus low resolution leave no seam or tonal step reliably visible, so 'significant' is overstated."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "A skateboarder is present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "An airborne skateboarder in a red long-sleeve top and helmet is clearly the main subject."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The alteration likely involves the skateboarder or the scene.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotated region is the skateboard beneath the rider, which is loosely consistent with 'the skateboarder', but the claim is hedged and so broad ('or the scene') that it is not reliably checkable; no specific difference in that region is confidently resolvable at this resolution."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location matches the annotation and the skateboarder really is present. The attribution of the alteration is hedged and very broad, and the vintage filter plus low resolution prevent confirming any visible anomaly inside the small annotated region, so the manipulation claim is only partially supported."
+}

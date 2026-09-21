@@ -1,0 +1,69 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.968.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score is very high and indicates a high likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "An inference about an unverifiable numeric value."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the center with a high mean probability of 0.935.",
+   "claim_type": "location",
+   "support": "partially_supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The annotated region is centred on the middle cell in Images C and D, but the numeric probability is not observable."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "The central part of the image is authentic.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Content inside the marked centre region differs substantially between A and B: A shows a yellow-fronted electric multiple unit cab with dot-matrix display and blue stripe, while B shows a Class 56 diesel locomotive numbered 56105 with buffers, screw coupling and dark blue body."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "A train is present in the image.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A train occupies the centre of Image A, matching the outlined region in Image D."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "A platform is present in the image.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A canopied platform with yellow safety line, platform '1' sign and waiting passengers runs along the right of Image A."
+  },
+  {
+   "claim_id": "C7",
+   "claim_text": "The presence of a train and platform supports the authenticity of the scene.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "Plausible scene content does not bear on whether the marked region was edited, and the train inside that region differs from the paired image."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Region and objects (train, platform) are correctly identified. But the explanation contradicts itself, first reading the high score as alteration then concluding from a high in-region probability that the centre is authentic, and the authenticity conclusion conflicts with the clear A-versus-B difference in the vehicle occupying that region."
+}

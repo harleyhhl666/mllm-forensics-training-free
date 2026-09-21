@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization measurements indicate significant areas of concern.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Vague restatement of detector output; asserts nothing independently checkable beyond the location."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those areas are in the 'center-right' region.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C contains two narrow horizontal blobs, both lying almost entirely in the middle-right cell with only a ~35 px sliver crossing into centre; IMAGE D's outlines sit in the same band."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Those areas have high mean and maximum probabilities of manipulation.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "These findings suggest digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The outlined background vehicle differs markedly between the images: IMAGE A shows a cream coach with a red pinstripe and broad yellow and green lower bands on rubber tyres, while at the same position IMAGE B shows a white rail vehicle with a continuous dark window band, roof-mounted equipment and no yellow/green striping. The content in the marked band has been changed."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Location matches the mask, and the A-versus-B comparison of the outlined background vehicle shows a substantively different vehicle and livery, supporting the alteration conclusion. The explanation names no object and cites no visible artefact of its own; the region is small, distant and hazy, which limits how precisely the change can be characterised."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector output; not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the 'center-left'.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "About 55% of the mask lies in center-left and 45% in top-left, so the named cell is the dominant one but not the whole region."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.938).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported statistic, not observable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported statistic, not observable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The wall print inside the marked area shows entirely different content in IMAGE A (derelict interior with a bright window) than in IMAGE B (rider on a white horse)."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The alteration conclusion is backed by a clear A-versus-B difference in the annotated area. The single named cell captures roughly half of the mask, which also extends into top-left. No object is named and no visible anomaly described."
+}

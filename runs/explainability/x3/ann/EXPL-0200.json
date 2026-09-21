@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.147).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric forensic-tool output is not observable in the photograph; cannot be verified from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high confidence in the authenticity of the image.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Per-region tool confidences are not observable in the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is no significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Nothing in the visible scene (six doughnuts in a white box, consistent soft lighting) stands out as altered, but absence of alteration cannot be established from a single image."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "All nine grid cells are listed as referenced but the explanation text names no location or object, so there is nothing spatial to check. Image A is a top-down shot of six doughnuts in a white bakery box."
+}

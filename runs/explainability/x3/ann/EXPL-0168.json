@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.304).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not verifiable from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with high probabilities are small and scattered.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes unsupplied measurement geometry, not visible content."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This indicates no significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No visible seam or inconsistency is apparent, but the turbulent, motion-blurred water dominating the frame limits reliable artifact detection."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears consistent with a real photograph of a water park activity.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The frame clearly shows a FlowRider-type artificial sheet wave with blue padded walls, an attendant at the top of the wave and spectators at a railing — a water-park attraction with a child bodyboarding."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The auditable content claim is correct — image A is plainly a water-park flow-wave ride with a child riding a bodyboard, a supervising attendant and a queue of onlookers, all consistently lit by warm low-angle sun from the right. Score and region claims cannot be checked against the image. Subtle artifact judgements are limited by heavy spray motion blur and clipped foam highlights."
+}

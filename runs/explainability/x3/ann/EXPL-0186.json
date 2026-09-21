@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.082).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not checkable from the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probability values.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A measurement statement about regions that are not supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced regions are the top-left, top-center and bottom-right of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Top-left and top-center are dominated by blown-out white sky plus the skater's raised hand and capped head; bottom-right is empty paving with the board nose and a grind ledge. Nothing visible marks these cells, and no mask is available."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests the image is not heavily manipulated.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The frame is internally coherent under flat overcast light, but clipped sky and haloing at the arm/roofline edges are ambiguous and cannot settle the question visually."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Score-and-region reasoning only; no object or scene feature is described, so there is nothing about image content to verify. The inference is internally inconsistent in citing high localized manipulation probabilities as evidence against manipulation. The named regions coincide with the overexposed sky and bright/soft edges around the skater's raised hand — areas where halo and fringing are visible but attributable to clipping and chromatic aberration; no reliable judgement is possible."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.994).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's blob sits in the middle column, about 75-80% of its area inside the center cell; IMAGE D's outline matches."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.936).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability (0.996).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The boat content inside the marked region differs between IMAGE A and IMAGE B (dark hull with cream trim and two red-and-white ball fenders in A versus a red, cream and green painted bow with a black rope fender in B), supporting a content change; but the explanation cites no visible artifact and 'significant' is not independently verifiable."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location is correct and matches the mask (center cell dominant, small extension into top-center). The A/B comparison shows the boat inside the marked region differing, lending partial support to the alteration conclusion, though the explanation rests only on detector numbers and names no object or visible artifact."
+}

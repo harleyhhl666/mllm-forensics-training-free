@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.985).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotated rectangle in IMAGE C has ~64% of its area and its centroid in the bottom-center cell; IMAGE D's box sits low and centre in the frame."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.904) and a maximum probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported score values, not visually checkable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Within the annotated region IMAGE A differs clearly from IMAGE B (aqua board with navy stripe and sunburst versus cream board with 'FREELINE' decal; figure's clothing also differs), while the rest of the frame matches."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Both checkable claims - bottom-center location and alteration there - are corroborated by the mask/outline and the A-versus-B comparison. The annotated rectangle also extends into neighbouring cells, so bottom-center is the dominant but not sole cell."
+}

@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.065).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates minimal evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No visible alteration evidence is present in image A, so the conclusion agrees with what is visible, but it is inferred from the score rather than from any stated observation."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized regions with higher probabilities do not suggest significant tampering.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Unspecified detector regions; no localization evidence supplied and no image location named."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall image appears consistent with a typical urban photograph.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Multi-storey brick commercial buildings, storefront awnings and signage, an ornamental streetlamp, a sidewalk and a parked car; a close-focused hand-lettered sign in the foreground. Lighting direction is consistent, blur falls off naturally with distance, and no seams or halos are visible."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Generic, score-driven text naming no object or region. Its one checkable claim (a typical urban scene) holds. The photograph contains a striking real-world scale oddity - a building-height baseball bat sculpture - and a very strong foreground/background focus split, which could read as compositing; the explanation mentions neither, so no claim about them is judged."
+}

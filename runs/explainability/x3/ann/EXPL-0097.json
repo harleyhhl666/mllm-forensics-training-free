@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.180).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not checkable against the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probability scores.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A measurement statement with no visual counterpart; no mask supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced localized regions are in the center-left and top-left of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Top-left and center-left contain the cropped rear of a yellow box truck, its undercarriage and a traffic signal; nothing visibly marks these cells as special."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This indicates the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The street scene is internally coherent with consistent harsh midday light and plausible reflections, but authenticity itself is not determinable from what is visible."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Purely score-based; the explanation describes no object or scene content, so most claims are not checkable against image A. It is internally inconsistent in citing high localized manipulation probabilities as support for authenticity. The visible scene (a grackle on a parking meter at a sunlit intersection, yellow truck at left, cars and a limestone building behind) shows consistent hard shadows and a plausible truck reflection in the dark car at bottom-right; no observable anomaly, but no confirmation of the numbers either."
+}

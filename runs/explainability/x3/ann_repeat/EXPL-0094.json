@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.898).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The tall bottle-shaped mask in IMAGE C lies entirely in the middle column and spans top-centre, centre and bottom-centre, with the bulk in the centre cell. 'Center' is the dominant cell but understates the extent."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.925) and a very high max probability (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The outlined ice-covered hydrant differs between the images: IMAGE A shows a red/orange barrel with a whitish frosted bonnet and a chrome side cap, while IMAGE B shows a rust-streaked yellow barrel with a green bonnet and two ice masses flanking it. The content inside the marked region has clearly been changed."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The alteration conclusion is borne out by the A-versus-B comparison of the outlined hydrant, whose barrel and bonnet colours differ. The location is only partly right: the mask spans the whole centre column, not just the centre cell. The explanation names no object and cites no visible artefact, resting entirely on scores."
+}

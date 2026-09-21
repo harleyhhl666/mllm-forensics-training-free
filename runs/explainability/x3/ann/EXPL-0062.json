@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.986",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not checkable against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of authenticity",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated region IMAGE A shows only two skate shoes with no board, whereas IMAGE B shows round pale wheel-like discs consistent with a skateboard at the same spot; content there differs, so an authenticity reading is not supported."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a grid location in the center",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The two mask blobs in IMAGE C span roughly y 212-392 of an 819-px frame, so the centroid falls just inside the center cell but a large share of the area lies in top-center (with a sliver toward top-right)."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That location has a high mean probability of 0.879",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is not manipulated in that area",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "That is precisely where IMAGE A and IMAGE B disagree about the presence of a skateboard alongside the skater's feet, so the area cannot be called unaltered."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The stated cell is only roughly right: the annotation straddles top-center and center with its centroid barely inside center. The substantive claims fail. A high manipulation score is read as authenticity, an internal contradiction, and the annotated region is exactly where the A-vs-B comparison shows a difference around the skater's feet and board. Fine detail at this crop is ambiguous, so confidence is medium rather than high."
+}

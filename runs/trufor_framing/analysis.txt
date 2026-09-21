@@ -1,0 +1,138 @@
+STRUCTURED FRAMING / REGION-PRESENCE CONTROL — 7B
+rows 2208  complete sources 184  bootstrap 10000 seed 20260918
+2208 inf  98.1 min  mean 2.65s  2026-09-21 10:57:09 -> 2026-09-21 12:35:13
+
+==============================================================================================
+1. INTEGRITY
+  parse failures 0/2208   bad verdicts 0
+  cells {'P0_score_only': 368, 'P1_framing_only': 368, 'P2_empty_regions': 368, 'P3_placeholder': 368, 'P4_true_location': 368, 'P5_neutral_meta': 368}
+  unique coco_id 184
+  all single-image: True
+  P0 on score-only template, P1-P5 on structured: True
+  P0/P1 payload empty: True
+  score identical across conditions: True
+  region count identical in P3/P4/P5 payloads: True
+  protocol sha1 15e146d7d994da76cffceb7b47ab2752f21d3186
+
+==============================================================================================
+2. DECISION BY CONDITION
+  condition                    recall            95% CI     FPR            95% CI   spec       J
+  P0 score-only prompt          0.837 [0.783,0.886]   0.011 [0.000,0.027]  0.989   0.826
+  P1 framing, no block          0.125 [0.082,0.174]   0.005 [0.000,0.016]  0.995   0.120
+  P2 empty regions              0.043 [0.016,0.076]   0.000 [0.000,0.000]  1.000   0.043
+  P3 placeholder id             0.223 [0.163,0.283]   0.000 [0.000,0.000]  1.000   0.223
+  P4 true location              0.141 [0.092,0.196]   0.000 [0.000,0.000]  1.000   0.141
+  P5 neutral metadata           0.158 [0.109,0.212]   0.000 [0.000,0.000]  1.000   0.158
+
+==============================================================================================
+3. REPLICATION CHECKS (pre-registered)
+  P0 expected 0.837  got 0.837 [0.783,0.886]  delta -0.000  OK
+  P4 expected 0.141  got 0.141 [0.092,0.196]  delta +0.000  OK
+  these are exact prompt+payload replicates of S0/S1; a large deviation
+  would indicate a pipeline problem rather than a finding
+
+==============================================================================================
+4. CAUSAL CHAIN (each step paired within source)
+
+  prompt_framing_effect   P1 - P0
+    fake recall  -0.712 [-0.777,-0.647] EXCLUDES zero  p=7.347e-40
+    real FPR     -0.005 [-0.027,+0.011] includes zero  p=1
+    J            -0.707 [-0.772,-0.641] EXCLUDES zero
+
+  empty_container_effect   P2 - P1
+    fake recall  -0.082 [-0.125,-0.043] EXCLUDES zero  p=6.104e-05
+    real FPR     -0.005 [-0.016,+0.000] includes zero  p=1
+    J            -0.076 [-0.120,-0.038] EXCLUDES zero
+
+  region_object_effect   P3 - P2
+    fake recall  +0.179 [+0.125,+0.234] EXCLUDES zero  p=2.328e-10
+    real FPR     +0.000 [+0.000,+0.000] includes zero  p=1
+    J            +0.179 [+0.125,+0.234] EXCLUDES zero
+
+  actual_spatial_information   P4 - P3
+    fake recall  -0.082 [-0.125,-0.043] EXCLUDES zero  p=6.104e-05
+    real FPR     +0.000 [+0.000,+0.000] includes zero  p=1
+    J            -0.082 [-0.125,-0.043] EXCLUDES zero
+
+  generic_metadata_effect   P5 - P3
+    fake recall  -0.065 [-0.103,-0.033] EXCLUDES zero  p=0.0004883
+    real FPR     +0.000 [+0.000,+0.000] includes zero  p=1
+    J            -0.065 [-0.103,-0.033] EXCLUDES zero
+
+==============================================================================================
+5. SUPPLEMENTARY CONTRASTS
+  P4 - P0  (expect ~ -0.696)               -0.696 [-0.761,-0.630] EXCLUDES zero  p=5.877e-39
+  P5 - P4  (neutral vs real location)      +0.016 [-0.011,+0.043] includes zero  p=0.4531
+
+==============================================================================================
+6. REASON AUDIT
+
+  fake targets
+  condition                      score_high  manipulation_       locality  evidence_weak
+  P0 score-only prompt                0.913          0.995          0.000          0.000
+  P1 framing, no block                0.766          1.000          0.489          0.005
+  P2 empty regions                    0.685          1.000          0.989          0.000
+  P3 placeholder id                   0.821          1.000          0.495          0.000
+  P4 true location                    0.717          1.000          0.277          0.000
+  P5 neutral metadata                 0.799          1.000          0.522          0.000
+
+  real targets
+  condition                      score_high  manipulation_       locality  evidence_weak
+  P0 score-only prompt                0.043          1.000          0.000          0.011
+  P1 framing, no block                0.092          1.000          0.799          0.000
+  P2 empty regions                    0.060          1.000          0.989          0.000
+  P3 placeholder id                   0.054          1.000          0.380          0.000
+  P4 true location                    0.022          1.000          0.283          0.000
+  P5 neutral metadata                 0.092          1.000          0.571          0.000
+
+==============================================================================================
+7. LOCALITY WITHOUT LOCALITY DATA
+  P1/P2/P3/P5 carry NO location, area or probability value. Locality
+  language there is activated by framing/schema, not derived from evidence.
+  condition                      fake            95% CI     real  has loc data
+  P0 score-only prompt          0.000 [0.000,0.000]    0.000           n/a
+  P1 framing, no block          0.489 [0.418,0.560]    0.799            no
+  P2 empty regions              0.989 [0.973,1.000]    0.989            no
+  P3 placeholder id             0.495 [0.424,0.565]    0.380            no
+  P4 true location              0.277 [0.212,0.342]    0.283           YES
+  P5 neutral metadata           0.522 [0.451,0.592]    0.571            no
+
+  P1 - P0 locality language (fake): +0.489 [+0.418,+0.560] EXCLUDES zero
+
+==============================================================================================
+8. ACKNOWLEDGED MANIPULATION BUT REAL
+  verdict == real AND manipulation_acknowledged AND (locality OR evidence_weak)
+
+  condition                      fake            95% CI     real  among fake->Real
+  P0 score-only prompt          0.000 [0.000,0.000]    0.011        0.000 (n=30)
+  P1 framing, no block          0.489 [0.418,0.560]    0.799        0.559 (n=161)
+  P2 empty regions              0.957 [0.924,0.984]    0.989        1.000 (n=176)
+  P3 placeholder id             0.418 [0.348,0.489]    0.380        0.538 (n=143)
+  P4 true location              0.245 [0.185,0.310]    0.283        0.285 (n=158)
+  P5 neutral metadata           0.489 [0.418,0.560]    0.571        0.581 (n=155)
+
+==============================================================================================
+9. SCHEMA ARTIFACT (recorded, NOT used for judgement)
+  P0 score-only prompt       all-9 echo 0.204   empty 0.000
+  P1 framing, no block       all-9 echo 0.158   empty 0.000
+  P2 empty regions           all-9 echo 0.065   empty 0.000
+  P3 placeholder id          all-9 echo 0.011   empty 0.000
+  P4 true location           all-9 echo 0.000   empty 0.000
+  P5 neutral metadata        all-9 echo 0.022   empty 0.000
+
+==============================================================================================
+10. CASE JUDGEMENT
+  recall  P0 0.837  P1 0.125  P2 0.043  P3 0.223  P4 0.141  P5 0.158
+  P1-P0 framing        -0.712 [-0.777,-0.647] EXCLUDES zero
+  P2-P1 container      -0.082 [-0.125,-0.043] EXCLUDES zero
+  P3-P2 region obj     +0.179 [+0.125,+0.234] EXCLUDES zero
+  P4-P3 spatial        -0.082 [-0.125,-0.043] EXCLUDES zero
+  P5-P3 metadata       -0.065 [-0.103,-0.033] EXCLUDES zero
+
+  -> F1 PROMPT FRAMING drives the collapse: the structured instruction alone, with no payload at all, already shifts the decision policy
+
+  share of the total P0->P4 drop (+0.696) attributable to each step:
+    framing P1-P0            +102.3%
+    container P2-P1           +11.7%
+    region object P3-P2       -25.8%
+    spatial content P4-P3     +11.7%

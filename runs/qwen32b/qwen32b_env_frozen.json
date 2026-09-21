@@ -1,0 +1,183 @@
+{
+ "purpose": "Qwen2.5-VL-32B-Instruct capacity ablation: environment preparation record",
+ "question": "Is the 7B Stage-V self-verification collapse driven by model capacity?",
+ "only_intended_variable": "model size (7B -> 32B)",
+ "env": {
+  "conda_env": "qwen_vl_32b",
+  "conda_env_path": "/home/borui/miniconda3/envs/qwen_vl_32b",
+  "created_by": "conda create -n qwen_vl_32b --clone qwen_vl",
+  "python": "3.10.13",
+  "platform": "Linux-5.15.0-139-generic-x86_64-with-glibc2.31",
+  "torch": "2.5.1",
+  "torch_cuda": "12.1",
+  "cudnn": 90100,
+  "transformers": "5.14.1",
+  "accelerate": "1.14.0",
+  "nvidia_driver": "535.183.01",
+  "cuda_driver_api": "CUDA Version: 12.2",
+  "n_gpus_visible_during_smoke": 4,
+  "gpu_model": "NVIDIA GeForce RTX 3090 (24576 MiB)",
+  "flash_attn": "NOT installed (attn_implementation left at library default)",
+  "bitsandbytes": "0.49.2 present but UNUSED (BF16 only, no quantization)",
+  "qwen-vl-utils": "0.0.14",
+  "pillow": "9.4.0",
+  "safetensors": "0.8.0",
+  "numpy": "2.2.6",
+  "tokenizers": "0.22.2",
+  "huggingface-hub": "1.24.0"
+ },
+ "model": {
+  "repo_id": "Qwen/Qwen2.5-VL-32B-Instruct",
+  "revision_pinned": "7cfb30d71a1f4f49a57592323337a4a4727301da",
+  "note": "snapshot pinned by commit; 'main' is never used",
+  "local_path": "/mnt/disk3/borui/hf_cache/models--Qwen--Qwen2.5-VL-32B-Instruct/snapshots/7cfb30d71a1f4f49a57592323337a4a4727301da",
+  "cache_dir": "/mnt/disk3/borui/hf_cache",
+  "downloaded_via": "HF_ENDPOINT=https://hf-mirror.com (direct huggingface.co unreachable from this host)",
+  "n_shards": 18,
+  "total_bytes": 68283251376,
+  "total_GB": 68.28,
+  "all_shards_present": true,
+  "all_safetensors_headers_valid": true,
+  "file_hashes": {
+   "config.json": "7e64c1bfb448034a327aa07e51955837b6ef2e09",
+   "preprocessor_config.json": "2bf9a853f945ef9746e7e9a1597d5a072efa385b",
+   "tokenizer_config.json": "f8851b2e274a6181bdcebf1e1f34a28dce40e2a8",
+   "generation_config.json": "5f3464e045b44fb32c720e6cefdb0f7435b98f42",
+   "chat_template.json": "da5373cbaf0f73e9ca374486466cf0bafc895902",
+   "model.safetensors.index.json": "b2b83505bbed087a3426a9728b0d7f5e96d88e67"
+  },
+  "config_transformers_version": "4.49.0",
+  "installed_transformers": "5.14.1",
+  "version_note": "checkpoint config declares transformers 4.49.0; the env has 5.14.1, which loads it without modification. Nothing was upgraded or downgraded for the 32B run."
+ },
+ "loading": {
+  "dtype": "bfloat16",
+  "quantization": "NONE \u2014 BF16 as required for a clean size ablation",
+  "device_map": "auto",
+  "max_memory": {
+   "0": "20GiB",
+   "1": "20GiB",
+   "2": "20GiB",
+   "3": "20GiB"
+  },
+  "cuda_visible_devices": "0,1,2,3",
+  "gpus_used": 4,
+  "gpus_left_free": 3,
+  "cpu_or_disk_offload": null,
+  "has_offload": false,
+  "input_device": "cuda:0",
+  "modules_per_device": {
+   "0": 15,
+   "1": 18,
+   "2": 18,
+   "3": 18
+  },
+  "load_time_s": 28.7,
+  "per_gpu_after_load_GB": {
+   "0": 15.61,
+   "1": 17.55,
+   "2": 17.55,
+   "3": 16.19
+  },
+  "peak_per_gpu_stage_v_GB": {
+   "0": 16.3,
+   "1": 18.21,
+   "2": 18.21,
+   "3": 16.81
+  },
+  "headroom_note": "peak 16.3-18.2 GB per 24 GB card -> ~6 GB free on each; well inside the 2-3 GB safety margin requirement"
+ },
+ "parity": {
+  "stage_v_prompt_sha1": "cfa6908aaf02a60f71ad74153a0a3df773252b45",
+  "stage_v_prompt_matches_frozen_7B": true,
+  "min_pixels": 200704,
+  "max_pixels": 802816,
+  "visual_tokens_32B_dev_sample": 1944,
+  "visual_tokens_7B_same_sample": 1944,
+  "prompt_tokens_32B_dev_sample": 2364,
+  "prompt_tokens_7B_same_sample": 2364,
+  "identical_visual_token_count": true,
+  "decoding": {
+   "do_sample": false,
+   "temperature": 0.0,
+   "max_new_tokens": 320,
+   "repetition_penalty": 1.0
+  },
+  "decoding_source": "copied verbatim from configs/exp01.yaml (the 7B config); do_sample=false deterministic, max_new_tokens=320",
+  "forensic_tool_config_unchanged": true,
+  "evaluation_code_shared": "forensic_tools.run_tools and mllm_probe parsing are imported, not reimplemented"
+ },
+ "smoke_tests": {
+  "level1_text_only": {
+   "ok": true,
+   "seconds": 2.3,
+   "output": "Hello! How can I assist you today? \ud83d\ude0a"
+  },
+  "level2_single_image": {
+   "ok": true,
+   "seconds": 2.1,
+   "visual_tokens": 368,
+   "output": "The image shows a solid orange rectangle centered on a dark green background."
+  },
+  "level3_stage_v": {
+   "ok": true,
+   "seconds": 10.8,
+   "sample": "airplane_163746_bbox_2",
+   "sample_status": "development sample, already consumed by the 7B M1 run; NOT an untouched source",
+   "parsed": {
+    "image_consistency": "matched",
+    "forensic_support": "insufficient",
+    "strongest_region": "top-center",
+    "reason": "The strongest responses in the visualization are located at the top-center, corresponding to the airplanes in the sky. These objects have distinct edges and details that naturally produce strong responses in the analysis, which is consistent with ordinary image content."
+   },
+   "schema_complete": true,
+   "parser_changes": "none required \u2014 the 7B extract_json handled the ```json fence unchanged"
+  }
+ },
+ "planned_ablation": {
+  "status": "NOT RUN \u2014 awaiting user confirmation",
+  "design": "paired model-capacity ablation on the already-frozen M1 Stage-V inputs; same samples, same prompt, same cue construction",
+  "conditions": [
+   "100 x fake + correct ELA",
+   "100 x fake + donor ELA",
+   "100 x real + own ELA"
+  ],
+  "n_inferences": 300,
+  "est_minutes_at_10_8s": 54.0,
+  "source_protocol": "/mnt/disk3/borui/fevi/runs/mitigation/mitigation_frozen.json",
+  "paired_7B_results": "/mnt/disk3/borui/fevi/runs/mitigation_run/stage_v.jsonl",
+  "metrics": [
+   "P(matched|fake,correct)",
+   "P(supported|fake,correct)",
+   "P(mismatched|fake,donor)",
+   "P(insufficient|fake,donor)",
+   "P(matched|real,own)",
+   "P(insufficient|real,own)",
+   "dMatch = P(matched|correct) - P(matched|donor)",
+   "dSupport = P(supported|fake-correct) - P(supported|real-own)"
+  ],
+  "seven_B_baseline": {
+   "supported_total": "0/400",
+   "matched_fake_correct": 0.02,
+   "matched_fake_donor": 0.0,
+   "dMatch": 0.02,
+   "state_A_count": 0
+  }
+ },
+ "seven_B_env_untouched": true,
+ "seven_B_config": "configs/exp01.yaml (unmodified)",
+ "thirty_two_B_config": "/home/borui/haolin/fevi/configs/exp01_32b.yaml",
+ "code": {
+  "new_files": [
+   "src/mllm_probe_mgpu.py",
+   "src/smoke32b.py"
+  ],
+  "modified_existing": [],
+  "note": "the 7B probe class is subclassed, not edited",
+  "hashes": {
+   "src/mllm_probe_mgpu.py": "b1ffe6ac3a32a5b012709e02cb88cd908196420e",
+   "src/smoke32b.py": "d494bab12e4e4aa9cfd9d1bb5df3c0a88a58e458",
+   "exp01_32b.yaml": "be708a3441b7374385b11655f7673ed5e04c99b0"
+  }
+ }
+}

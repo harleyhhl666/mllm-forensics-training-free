@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.990.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported detector score cannot be checked against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content inside the annotated region differs between A and B: A shows a red-and-white boat with a stack of brightly coloured canoes above the bus roof, B shows a single pale blue-hulled cabin cruiser with a white cabin. That argues against a finding of authenticity."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a grid location in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask rectangle in IMAGE C spans roughly x 23-62% and y 25-44%, with its centroid inside the center cell, though it extends up into top-center and left into center-left."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That location has a high mean probability of 0.925.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric probability is not verifiable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests that the image is not manipulated in that area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated area is exactly where the boat content differs between A and B, so a claim of no manipulation there is not supported."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The annotated rectangle's centroid does fall in the center cell (it also straddles top-center and center-left), so the location is acceptable. The substantive conclusions - that the image is authentic and unmanipulated in that area - conflict with the visible A/B difference in the boat above the bus roof. No object is named."
+}

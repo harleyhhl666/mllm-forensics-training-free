@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.276).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not verifiable from the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities of manipulation are small.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to measurement geometry that is not supplied and cannot be observed."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not significantly affect the overall authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No visible artifact can be matched to the unseen regions, and authenticity is not decidable from the visible content."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The visual content appears consistent with a real photograph of a person skateboarding.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A skater in a light hoodie and dark jeans is clearly visible crouched over his board on a metal rail at an outdoor skate park, and the scene is internally coherent."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The one checkable content claim is correct: image A is a monochrome, strongly backlit photograph of a person skateboarding along a rail, with lens flare, ghost orbs and clipped highlights consistent throughout. The score and region statements concern data absent from image A. The word 'skateboarding' matches the visible activity exactly; no object is hallucinated."
+}

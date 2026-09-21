@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.995).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not checkable against the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the bottom-center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask blob's centroid lies in bottom-center but a substantial part of it extends into the bottom-left cell."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.875) and a maximum probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric probabilities are not verifiable from the images."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation marks that area (the skateboard) as the region of interest, consistent with alteration there; 'significant' is somewhat overstated because the marked region covers roughly 2% of the frame and no seam, texture or lighting anomaly is clearly visible at its boundary."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location is broadly right, though the annotated blob also occupies bottom-left. The explanation names no object and offers no visual evidence beyond detector numbers; its manipulation conclusion aligns with the annotation but the 'significant' characterisation is not visually corroborated."
+}

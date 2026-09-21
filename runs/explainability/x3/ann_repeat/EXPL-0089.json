@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.998.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The outlined hydrant differs between the images: in IMAGE A it has a teal bonnet over a cream/white barrel with rust streaks, while in IMAGE B the same hydrant has a blue bonnet over a weathered olive-gold/brass barrel. The marked content has changed, so nothing here indicates authenticity."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-left.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The tall column-shaped mask in IMAGE C lies entirely in the left column, with the greater part in the middle-left cell and the remainder in top-left; IMAGE D confirms the outlined hydrant is centred on centre-left."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean and max probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is not manipulated.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The A-versus-B difference in the outlined hydrant's colour scheme contradicts this."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The centre-left location matches the mask's dominant cell. But the explanation reads a 0.998 manipulation score as evidence of authenticity, which is internally contradictory, and the paired comparison shows the outlined hydrant's bonnet and barrel colours differ between the images. No object is named."
+}

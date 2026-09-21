@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.497.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not verifiable from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "0.497 is relatively low, indicating a low likelihood of digital alteration.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Interpretation of a score, not an observable image property."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The structured localization measurements returned no regions of concern.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about the tool's output record, not checkable against the photograph."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The image appears to be authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The vintage press photograph of a coach and two Kimberly players shows no obvious composite seam or inserted content, but the flat blown-out sky, hard edges around caps and shoulders, and grease-pencil marks are ambiguous; authenticity cannot be judged reliably from A alone."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "No regions referenced and no objects named, so region and object checks do not apply. All substantive content is detector-score reporting that image A cannot confirm; the single visual conclusion is left uncertain rather than guessed."
+}

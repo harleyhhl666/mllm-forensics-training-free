@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center-left.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white wedge lies ~96% within the center-left cell, and IMAGE D outlines the surfboard nose there."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.928) and maximum probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported score values, not visually checkable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated area the board's appearance changes between IMAGE A (black speckled deck, yellow rail) and IMAGE B (pale cream deck with a logo decal); the rest of the frame matches."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Both checkable claims - the center-left location and alteration in that area - are corroborated by the mask/outline and the A-versus-B difference in the surfboard nose. Score values themselves are unverifiable. No object is named and no texture, lighting, boundary or geometry anomaly is asserted, so none needed judging."
+}

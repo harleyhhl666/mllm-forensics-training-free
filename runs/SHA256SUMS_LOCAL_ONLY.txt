@@ -1,0 +1,32 @@
+# SHA256SUMS_LOCAL_ONLY.txt
+#
+# Large artifacts that deliberately stay OUT of git. Each line is an aggregate
+# SHA256 over the directory's files (find -type f | sort | xargs sha256sum | sha256sum),
+# so the exact content set can be identified later even though it was never pushed.
+#
+# Server root: /mnt/disk3/borui/fevi/runs
+# Recorded at the close of the training-free stage.
+#
+# directory | files | size | aggregate_sha256
+
+trufor_mllm/evidence      | 736 | 607M | ef376023883317dab84ead8d038d858d17856d933174aa77f4d65c3d35ad440a
+trufor_feasibility/maps   | 400 | 610M | d970e38037850dbcca732858e42b2b5a33d0baf20b796ec6e97d89eefd8b14eb
+ela_cache                 | 829 | 157M | 5a5b2ad926068c8552ead157156c8578d8ca9ca3b9e2c08a525500da935d566b
+explainability/packets    | 900 | 140M | 14e6ee57850094f0ff47825fc85705dc50454734f4836f5a77f42f57c0ab5755
+
+# Individual files
+#
+# TruFor runtime checkpoint (md5, matches the value asserted in every TruFor run_meta):
+#   external_tools/TruFor/test_docker/weights/trufor.pth.tar
+#   md5 = 55d7075dd1ff945e9c0f9437c5df9495
+#
+# TruFor weights archive as downloaded:
+#   md5 = 7bee48f3476c75616c3c5721ab256ff8
+#
+# TGIF dataset: /mnt/disk3/borui/fevi/data  (~12 GB, upstream dataset, not checksummed
+# here because it is not ours to redistribute; see docs/DATASET_AND_SPLITS.md for the
+# frozen per-sample manifest, which IS committed).
+#
+# All four directories above are regenerable from the frozen protocols plus the
+# dataset; none of them contains a result that is not already summarised in a
+# committed analysis file.

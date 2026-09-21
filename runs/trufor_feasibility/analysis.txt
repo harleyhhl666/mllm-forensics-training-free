@@ -1,0 +1,94 @@
+TRUFOR IMAGE-LEVEL FEASIBILITY — TGIF sd2-sp
+protocol sha1 1e11d06ca1cd8461d10140974aabba114e9e9bbe
+bootstrap 10000 over source pairs, seed 20260918
+
+========================================================================================
+1. INTEGRITY
+  rows                     : 400 (expect 400)
+  complete source pairs    : 200 (expect 200)
+  unique coco_id           : 200
+  n_samples == n_coco_id   : True
+  missing scores           : 0
+  all scores within [0,1]  : True
+  checkpoint md5 verified  : 55d7075dd1ff945e9c0f9437c5df9495
+  GT used as model input   : NO (masks only scored after inference)
+
+========================================================================================
+2. PRIMARY — IMAGE-LEVEL AUROC (fake vs paired real)
+  AUROC = 0.9845   95% CI [0.9700, 0.9951]   n_pairs=200
+  CI includes 0.5: False
+
+========================================================================================
+3. CONTROLLED-FPR OPERATING POINTS
+  (evaluation-derived operating points, NOT frozen deployment thresholds)
+  TPR@FPR<=0.05 = 0.9550  95% CI [0.9250, 0.9800]  (actual FPR 0.0400, score threshold 0.696212)
+  TPR@FPR<=0.10 = 0.9650  95% CI [0.9350, 0.9900]  (actual FPR 0.0800, score threshold 0.621641)
+
+========================================================================================
+4. SCORE DISTRIBUTION
+  fake  n=200  mean=0.9456  median=0.9943  std=0.1417
+        p10=0.8553 p25=0.9691 p75=0.9985 p90=0.9996  [min 0.0197, max 1.0000]
+  real  n=200  mean=0.2594  median=0.2176  std=0.1834
+        p10=0.0867 p25=0.1371 p75=0.3145 p90=0.5030  [min 0.0057, max 0.9049]
+
+  separation check (is AUROC driven by a few extremes?)
+    score>0.5: fake 96.5%   real 10.5%
+    score>0.9: fake 87.5%   real 0.5%
+    median gap = +0.7767
+    mean fraction of reals scoring >= a given fake: 0.0156
+
+========================================================================================
+5. PAIRED ANALYSIS (same source)
+  dscore = score_fake - score_real
+    mean   +0.6862  95% CI [+0.6542, +0.7167]
+    median +0.7543   std 0.2270
+    P(score_fake > score_real) = 0.9850  95% CI [0.9650, 1.0000]
+    pairs with fake>real: 197/200
+
+========================================================================================
+6. SECONDARY — LOCALIZATION (fakes only; does NOT replace the primary)
+  n fakes scored      : 200
+  pixel AUROC (subsampled) mean 0.9930  median 0.9998
+  IoU @map>0.5        mean 0.7578  median 0.8049
+  pixel F1 @map>0.5   mean 0.8459  median 0.8919
+  3x3 grid hit rate   0.8300
+
+  by tamper_ratio quartile:
+    q1 n=50   IoU 0.6152  F1 0.7316  pAUC 0.9893  hit 0.400
+    q2 n=50   IoU 0.7694  F1 0.8657  pAUC 0.9972  hit 0.940
+    q3 n=50   IoU 0.7746  F1 0.8582  pAUC 0.9909  hit 0.980
+    q4 n=50   IoU 0.8721  F1 0.9281  pAUC 0.9948  hit 1.000
+  by mask type:
+    bbox  n=110  IoU 0.7874  F1 0.8732  pAUC 0.9946  hit 0.891
+    segm  n=90   IoU 0.7217  F1 0.8125  pAUC 0.9911  hit 0.756
+
+========================================================================================
+7. CONFIDENCE MAP — DESCRIPTIVE ONLY (no pooled score constructed)
+  fake mean confidence            0.9702
+  confidence INSIDE  GT region    0.8520
+  confidence OUTSIDE GT region    0.9779
+  inside - outside                -0.1259
+  real mean confidence            0.9457
+  (pixel-level localization reliability; NOT an image-level trust score)
+
+========================================================================================
+8. ELA ON THE SAME 200 SOURCES (existing frozen read-out)
+  ELA  AUROC 0.5492 [0.5185,0.5795]   TPR@5% 0.1150   TPR@10% 0.1550
+  TruFor AUROC 0.9845 [0.9700,0.9951]   TPR@5% 0.9550   TPR@10% 0.9650
+  paired AUROC difference (TruFor - ELA) +0.4352 [+0.4015, +0.4688] -> EXCLUDES zero
+  same 200 sources, same images -> this paired comparison is valid
+
+========================================================================================
+9. GO / YELLOW / NO-GO
+  AUROC 0.9845 CI [0.9700,0.9951]  includes 0.5: False
+  TPR@5% 0.9550   TPR@10% 0.9650
+  P(fake>real) 0.9850
+  localization IoU 0.7578  pixel AUROC 0.9930
+
+  -> GO: AUROC clearly above chance, usable TPR at controlled FPR,
+     paired fake scores usually exceed paired real, localization
+     effective. TruFor qualifies as a plausible external evidence source.
+
+  (no numeric cutoff here is treated as a field standard)
+
+  plot -> /mnt/disk3/borui/fevi/runs/trufor_feasibility/score_distribution.png

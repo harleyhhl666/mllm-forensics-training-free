@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.091).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions in the bottom-right corner show high probability.",
+      "claim_type": "location",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about detector output at a named location; no mask supplied to verify."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The bottom-right region contains a watermark or signature.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A white copyright signature reading '© Ryan Taylor' is clearly visible along the bottom of the bottom-right cell, overlaying the grass and ballast verge; a region crop confirms the exact text."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "A watermark or signature is a common feature in authentic photographs.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A general statement about photographic practice, not a checkable claim about image A."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "The one content claim is correct and precisely placed: the '© Ryan Taylor' watermark sits in the bottom-right cell of image A (a DRS Class 37 37688 hauling an engineering train). Verified with a zoomed crop of that corner."
+}

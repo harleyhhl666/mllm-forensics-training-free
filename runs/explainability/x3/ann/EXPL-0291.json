@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.998.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "A manipulation score is being read as an authenticity indicator, and a region-of-interest mask was supplied for this image; nothing in the evidence supports reading the flagged score as authenticity."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "The grid location in the bottom-right corner has a high probability score.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single small white blob lies entirely in the bottom-right cell, near the bottom edge; IMAGE D outlines the same spot."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests a real object or feature in the image.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The high-probability region is exactly the area the annotation marks as the region of interest; treating it as evidence of a 'real object' inverts what the localisation marks, and no visual evidence is offered for it."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "There is an object at that bottom-right location.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "The outlined area contains the frontmost glazed doughnut hole on a blue plate, plainly visible."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "partial",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "The named region matches the mask, but the explanation's reasoning is inverted: it reads a high manipulation score as authenticity and reads the localised high-probability region as evidence of a real object. It also never names the object present there (a glazed doughnut hole on a blue plate)."
+}

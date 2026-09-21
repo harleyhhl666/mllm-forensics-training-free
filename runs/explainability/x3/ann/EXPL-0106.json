@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.789.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector score cannot be verified from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is below the threshold for significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "No threshold is observable, and the evidence runs the other way: content inside the annotated region differs substantially between A and B (A shows the ship's superstructure with davits and stowed boats, B shows a flight deck with a group of sailors behind safety netting)."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-right corner.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in IMAGE C fills the bottom-right cell but equally fills the center-right cell, so naming only the bottom-right corner understates the annotated extent."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An unquantified reported probability is not checkable against the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests that region is a genuine part of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated right-hand region is exactly where A and B differ, so a conclusion of genuineness for that area is not supported by the supplied comparison."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The annotated region covers the whole right column's middle and bottom cells, so 'bottom-right corner' is only part of it. The explanation's substantive conclusion - that the score is sub-threshold and the region genuine - is contradicted by the visible A/B difference inside that region. No object is named."
+}

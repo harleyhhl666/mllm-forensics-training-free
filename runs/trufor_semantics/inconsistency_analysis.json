@@ -1,0 +1,77 @@
+{
+ "inconsistency": {
+  "D2_decomposition": {
+   "fake": {
+    "A": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 184,
+    "P_real_given_present": 0.0,
+    "n_present_true": 184
+   },
+   "real": {
+    "A": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 184,
+    "P_real_given_present": 0.0,
+    "n_present_true": 175
+   }
+  },
+  "D3_presence_first": {
+   "fake": {
+    "A": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 184,
+    "P_real_given_present": 0.0,
+    "n_present_true": 184
+   },
+   "real": {
+    "A": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n": 184,
+    "P_real_given_present": 0.0,
+    "n_present_true": 176
+   }
+  }
+ },
+ "definition": {
+  "A_primary": "manipulation_present = true AND final_verdict = real  (the structured-field version of last round's acknowledged_manipulation_but_real, no regex needed)",
+  "B": "manipulation_present = false AND final_verdict = fake",
+  "reported_for": [
+   "fake",
+   "real"
+  ]
+ },
+ "note": "A is the primary metric; measured from structured fields, not regex"
+}

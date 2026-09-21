@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region with a high mean probability (0.931) and max probability (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask shows extent but not probability values."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That localized region is in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The single white blob in IMAGE C lies wholly inside the bottom-centre cell, and the red outline in IMAGE D sits in the same place."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The outlined content in IMAGE D is one front-row glazed doughnut whose glaze texture, highlight direction, edge softness and grain match its neighbours; no seam, halo or lighting mismatch is visible, and the low resolution and heavy grain make a paired comparison with IMAGE B inconclusive rather than confirming alteration."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The location claim matches the mask exactly. The alteration conclusion rests only on quoted scores: nothing visibly anomalous distinguishes the outlined doughnut from the rest of the batch, and the image is too grainy and low-resolution to judge subtle texture or boundary effects. No object is named."
+}

@@ -1,0 +1,17 @@
+{
+ "phase": "task_semantics",
+ "n_inferences": 1104,
+ "minutes": 45.8,
+ "mean_seconds": 2.45,
+ "peak_GB": 16.95,
+ "started": "2026-09-21 14:23:07",
+ "finished": "2026-09-21 15:08:52",
+ "protocol_sha1": "d0617e9527291cf151dbbc7382ac3c4f23068c3e",
+ "model_path": "/home/borui/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5",
+ "decoding": {
+  "do_sample": false,
+  "temperature": 0.0,
+  "max_new_tokens": 320,
+  "repetition_penalty": 1.0
+ }
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.995.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "A region of interest is annotated in IMAGE A; nothing in the supplied evidence supports an authenticity conclusion, and the explanation reads a very high manipulation score as its opposite."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The grid location of the region is the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask sliver lies entirely inside the center cell, matching the skateboard outlined in IMAGE D."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That center location has a high mean probability of 0.819.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric probability is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is not manipulated in that center area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The centre is exactly the annotated region of interest, so the evidence points against this conclusion rather than for it."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The named cell matches the annotated region (the airborne skateboard), but the explanation concludes that very region is unmanipulated and treats a near-1.0 manipulation score as evidence of authenticity, which is internally contradictory. The heavy vintage filter and low resolution make the board region itself not reliably judgeable by eye."
+}

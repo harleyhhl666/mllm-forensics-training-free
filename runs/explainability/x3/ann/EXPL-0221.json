@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not verifiable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the top-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's only blob sits in the right column, mostly within the top-right cell; IMAGE D outlines the red fire hydrant at that position."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.964) and max probability (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Specific numeric values cannot be checked visually."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The hydrant in A appears smoother and more uniformly red than the heavily flanged, weathered hydrant in B, but at this small size and with the soft, compressed rendering I cannot judge the difference reliably."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The image is likely manipulated.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Follows from C4 and carries the same uncertainty; no texture, boundary or lighting anomaly is discernible to me in the marked region."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Location matches the mask precisely and the reasoning is internally consistent. The alteration claim cannot be confirmed from what is visible: the flagged hydrant occupies about 2% of the frame and is soft and compressed, so the A-vs-B difference in its casting detail is ambiguous."
+}

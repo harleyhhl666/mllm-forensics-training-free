@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.275.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is relatively low.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A characterisation of a reported number, not of visible content."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The grid location in the top-center area shows a high probability of being authentic.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported per-region statistic; no mask supplied and no visible content named."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests the image is not significantly manipulated.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The top-center cell contains the clad footbridge crossing the tracks, part of the red-brick lift tower and a band of completely blown-out white sky. The sky is featureless from overexposure, so that area carries almost no judgeable detail either way."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is a Birmingham Moor Street platform scene with preserved Class 47 D1755 in two-tone green on chocolate-and-cream Mk1 stock and enthusiasts watching from the far platform. The explanation names the top-center region but describes no content in it."
+}

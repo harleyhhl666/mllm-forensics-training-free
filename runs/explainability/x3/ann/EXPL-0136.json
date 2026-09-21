@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.138).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric forensic-tool output is not observable in the photograph; cannot be verified from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The provided localization measurements indicate a very small region with a high probability of manipulation.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Region size and probability figures are tool outputs, not visible in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That small high-probability region is likely a false positive.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "No region is identified in the image, so its status cannot be judged visually."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears natural and consistent.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The scene is a coherent outdoor riverbank view with plausible lighting and reflections, but a global naturalness judgement of this soft, low-contrast image is not reliably decidable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The photograph shows animals near a river.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Two cattle (one black, one reddish-brown) stand on a stony bank at the edge of a river occupying the lower third of the frame."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The one image-checkable claim (animals near a river) is correct. The remaining claims restate tool measurements that cannot be verified from the photograph."
+}

@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.422).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score; not checkable against the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region with high probability is very small (area ratio 0.0019).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric area statistic from detector output; no mask supplied and no location is named."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region does not significantly impact the overall image integrity.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An inference about detector output rather than an assertion about anything visible."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Visual inspection of the image shows no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Inspection of the railway photograph reveals no seams, halos, cloned patches or lighting contradictions; the visible defects are film grain, dust specks, JPEG blocking and a white border, i.e. capture/scan artefacts, not obvious editing."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Only the final sentence makes a checkable visual claim, and it holds up at the available resolution. The rest restates numeric detector output. No region or object is named."
+}

@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.821).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "Image C's white square and Image D's red rectangle are centred on the middle cell of the grid."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.886) and a maximum probability (0.988).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric probability values are not observable; Image C is a binary mask."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inside the centre region A shows a cream/red engineering works train with tanks, machinery and blue banners, whereas B shows a navy-blue First Great Western HST power car with yellow front and magenta stripe."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Location matches the annotation and the A/B comparison shows a substantial content difference in that region, so the alteration conclusion is supported. The explanation rests only on unverifiable numeric scores plus the location; it names no visual anomaly of its own."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.870.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is relatively high.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A characterisation of a number that the images cannot verify."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-left.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's rectangle straddles center-left and bottom-left (roughly half of each) and clips the left edge of the two center-column cells, so center-left is one of the covered cells but not the whole region."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability of 0.909.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests that the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "No visual evidence supports the inference; the annotation marks this area as the region of interest, and content inside it differs between IMAGE A and IMAGE B (white duvet plus a switched-on monitor at the bed's foot in A versus a gold/tan quilted bedspread with a striped bolster and no monitor in B)."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The named center-left cell is part of the annotated region but the mask also covers bottom-left and edges of the center column. The authenticity conclusion is unsupported and runs against the visible A-versus-B difference in the bed area inside the marked region. No object, texture, lighting or boundary observation is offered."
+}

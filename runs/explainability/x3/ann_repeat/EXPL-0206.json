@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.980).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Restates a numeric detector output; nothing in the supplied imagery can confirm or refute a score value."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single white blob lies in the center column, with most of its area in the center cell (a small tail into bottom-center); IMAGE D outlines the bed inside the central doorway."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.944) and a maximum probability (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector confidence values are not verifiable from the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Comparing A with B in the outlined area, the bedding changed: B shows a flat, smoothly tucked teal spread with plain white pillows and a plain wooden headboard, while A shows a plump quilted teal cover with blue/white pillow arrangement, and A additionally shows an abstract picture above the bed. Content in the masked region clearly differs."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "The explanation is almost entirely a restatement of numeric detector outputs and names no object or visual property. The one checkable spatial claim (center) matches the mask, and A-vs-B comparison does show altered content there, so the alteration claim holds; but the explanation offers no visual evidence of its own, which caps overall support."
+}

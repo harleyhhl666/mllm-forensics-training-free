@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.990).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the bottom-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask sits predominantly in the bottom-right cell, with a smaller part in center-right; IMAGE D's outline agrees."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.862) and a very high max probability (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "IMAGE A has a large pale white cow at that spot where IMAGE B has a small brown animal deeper in the grass, and the animal in A carries blocky dark and cyan patches over its face, both indicating alteration there."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "high",
+ "notes": "Region and alteration claim both hold: the annotated bottom-right area differs from IMAGE B and shows visible rendering artifacts on the white animal. The explanation names no object, texture or mechanism, so its support rests on the generic alteration assertion alone."
+}

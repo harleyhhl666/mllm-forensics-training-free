@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.789).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported detector score is not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the bottom-right.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white block fills the bottom-right cell but also fully covers the center-right cell; IMAGE D's outline confirms this, so the stated location is correct but incomplete."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.878) and a very high max probability (0.992).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities cannot be checked against the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Within the annotated right-side region, A shows the photographing ship's superstructure with a raised platform, davits and a stowed boat, while B shows a helicopter flight deck with a cluster of sailors behind the deck-edge barrier; the content of that region has clearly been replaced."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The alteration claim is corroborated by the A/B difference inside the annotated area. The stated location is understated rather than wrong: the annotation spans the center-right cell as well as bottom-right, so region_correct is uncertain. Numeric score statements are not checkable from images. No object or specific mechanism is named."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.148).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not verifiable from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization measurements indicate a very small region with a high probability of manipulation.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes an unsupplied measurement; nothing in image A corresponds to it."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That small high-probability region is likely a false positive.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Plausible, but the region is not shown and no visible artifact can be checked against it."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall scene appears consistent and natural.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The beach frame is coherent: level horizon, uniform diffuse overcast light, matching reflections of both surfers and their boards on the wet sand, and leashes trailing plausibly across the surface."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There are no visible signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No seam, halo or texture break is apparent, but the flat low-contrast light and visible compression blockiness in the sky limit how reliably subtle artifacts could be seen."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The general scene-consistency claim is borne out by what is visible: a coherent overcast beach photograph of two surfers with consistent reflections and no observable geometric or lighting contradiction. The 'no visible signs of alteration' claim is left uncertain because low contrast and sky compression artifacts make subtle-artifact detection unreliable. Score and region statements are not auditable against image A."
+}

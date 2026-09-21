@@ -1,0 +1,104 @@
+QWEN2.5-VL-32B CAPACITY REPLICATION
+rows 736  complete sources 184  bootstrap 10000 seed 20260918
+model 7cfb30d71a1f4f49  bfloat16  736 inf  105.7 min  mean 8.59s
+
+============================================================================================
+1. INTEGRITY
+  parse failures    : 0/736
+  missing verdicts  : 0
+  cells             : {'B0_score_only': 184, 'B1_own_map': 184, 'B2_blank_map': 184, 'B3_shifted_map': 184}
+  unique coco_id    : 184
+  own score identical across conditions: True
+  B0 single image / others two images  : True / True
+  B3 preserves B1 map mean (1e-6)     : True
+  B2 blank exactly zero               : True
+  protocol sha1 af95a7583ae40ca1951fd1e0d4acfe810d44b5ff
+  7B sources available: conflict 184  2x2 184
+  shared sources with 7B: 184
+
+============================================================================================
+2. COLLAPSE CHECK (failure-mode screen)
+  B0 score only              {'fake': 180, 'real': 4}   most common fake 0.978
+  B1 score + own map         {'fake': 162, 'real': 22}   most common fake 0.880
+  B2 score + blank map       {'fake': 169, 'real': 15}   most common fake 0.918
+  B3 score + shifted map     {'fake': 157, 'real': 27}   most common fake 0.853
+  overall verdict mix {'fake': 668, 'real': 68}  max share 0.908
+  near-constant output (>0.95 one label): False
+  reason length mean 266 chars  min 142  max 468
+
+============================================================================================
+3. RECALL BY CONDITION (32B)
+  condition                    recall            95% CI   7B counterpart
+  B0 score only                 0.978 [0.957,0.995]   C10 0.755
+  B1 score + own map            0.880 [0.832,0.924]   F1_own 0.522
+  B2 score + blank map          0.918 [0.875,0.957]   F2_blank 0.266
+  B3 score + shifted map        0.853 [0.804,0.902]   F4_shifted 0.495
+
+============================================================================================
+4. EFFECTS (32B), each paired within source
+  map_cost                 B1 - B0  -0.098 [-0.141,-0.060] EXCLUDES zero  p=7.629e-06
+  content_effect           B2 - B1  +0.038 [-0.011,+0.087] includes zero  p=0.1892
+  spatial_correspondence   B3 - B1  -0.027 [-0.060,+0.005] includes zero  p=0.2266
+
+============================================================================================
+5. SAME EFFECTS ON 7B (same 184 sources)
+  map_cost                 C10 -> F1_own  -0.234 [-0.321,-0.152] EXCLUDES zero   n=184
+  content_effect           F1_own -> F2_blank  -0.255 [-0.326,-0.185] EXCLUDES zero   n=184
+  spatial_correspondence   F1_own -> F4_shifted  -0.027 [-0.082,+0.027] includes zero   n=184
+
+============================================================================================
+6. DELTA EFFECT = effect_32B - effect_7B  (PRIMARY capacity comparison)
+  computed per source, bootstrapped paired across models
+  a capacity difference requires the delta CI to exclude zero; comparing
+  significance between models is NOT used as evidence
+
+  map_cost
+    32B -0.098 [-0.141,-0.060]
+    7B  -0.234 [-0.321,-0.152]
+    DELTA +0.136 [+0.038,+0.234] EXCLUDES zero  n=184
+
+  content_effect
+    32B +0.038 [-0.011,+0.087]
+    7B  -0.255 [-0.326,-0.185]
+    DELTA +0.293 [+0.212,+0.380] EXCLUDES zero  n=184
+
+  spatial_correspondence
+    32B -0.027 [-0.060,+0.005]
+    7B  -0.027 [-0.082,+0.027]
+    DELTA +0.000 [-0.065,+0.065] includes zero  n=184
+
+============================================================================================
+7. EXPLANATION-FAITHFULNESS: B1 vs B3
+  condition                    score_high  map_shows_l  map_inconsi  region_smal  map_support   spatial
+  B0 score only                     0.783        0.038        0.168        0.011        0.158     0.000
+  B1 score + own map                0.630        0.060        0.587        0.082        0.652     0.022
+  B2 score + blank map              0.440        0.054        0.217        0.027        0.125     0.022
+  B3 score + shifted map            0.609        0.054        0.484        0.092        0.576     0.011
+
+  spatial-language rate  B1 0.022  B3 0.011  diff -0.011 [-0.038,+0.016] includes zero
+  B3's map is deliberately misaligned with the image. Spatial language at
+  a similar rate means the explanation's apparent grounding does not track
+  whether the evidence actually corresponds to the image.
+  -> FLAG: potential explanation-faithfulness failure
+
+  example B1 / B3 reasons for the same source:
+    [baseball glove_109118_bbox_1]
+      B1: The TruFor image-level manipulation score is 0.999, which indicates a very high likelihood of digital alteration. Additionally, the second image appea
+      B3: The TruFor image-level manipulation score is 0.999, which indicates a very high likelihood of digital alteration. Additionally, the accompanying local
+    [baseball glove_12639_bbox_1]
+      B1: The image depicts a natural scene of a baseball game with players, spectators, and a clear outdoor setting. There are no visible signs of digital mani
+      B3: The image depicts a natural scene of a baseball game with players, spectators, and a clear outdoor setting. There are no visible signs of digital mani
+
+============================================================================================
+8. INTERPRETATION
+  32B recalls  B0 0.978  B1 0.880  B2 0.918  B3 0.853
+  7B  recalls  C10 0.755  F1 0.522  F2 0.266  F4 0.495
+
+  -> CAPACITY-INVARIANT FAILURE: B1 < B0 and B3 ~ B1
+
+  delta CIs decide capacity claims:
+    map_cost                 +0.136 [+0.038,+0.234] EXCLUDES zero
+    content_effect           +0.293 [+0.212,+0.380] EXCLUDES zero
+    spatial_correspondence   +0.000 [-0.065,+0.065] includes zero
+
+9. RESOURCES  peaks {'0': {'alloc_GB': 15.62, 'reserved_GB': 17.51, 'peak_GB': 16.27}, '1': {'alloc_GB': 17.56, 'reserved_GB': 19.02, 'peak_GB': 18.17}, '2': {'alloc_GB': 17.56, 'reserved_GB': 19.02, 'peak_GB': 18.17}, '3': {'alloc_GB': 16.19, 'reserved_GB': 17.65, 'peak_GB': 16.78}}  device_map {'model.visual': 0, 'model.language_model.embed_tokens': 0, ...

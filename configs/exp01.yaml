@@ -1,0 +1,129 @@
+# FEVI = Forensic Evidence acknowledgment-Verdict Inconsistency
+# Phase 1 phenomenon-verification experiment. ALL parameters live here.
+experiment:
+  name: fevi_phase1
+  seed: 20260918
+  out_root: /mnt/disk3/borui/fevi/runs
+
+model:
+  # resolved snapshot (verified Phase 0); pinned so a cache update cannot
+  # silently change which weights an experiment used
+  path: /home/borui/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5
+  dtype: bfloat16
+  device_map: cuda:0
+  # Qwen2.5-VL uses DYNAMIC resolution (verified Phase 0: smart_resize, factor=28,
+  # patch=14, merge=2). NOT 336x336. We pin the visual-token budget so that
+  # tamper_ratio -> visual-token analysis is comparable across images.
+  min_pixels: 200704      # 256 * 28 * 28
+  max_pixels: 802816      # 1024 * 28 * 28
+  generation:
+    do_sample: false      # deterministic decoding for Stage A/B main pass
+    temperature: 0.0
+    max_new_tokens: 320
+    repetition_penalty: 1.0
+
+# Stability control (Control 3) re-runs the SAME input N times.
+# With do_sample=false runs are identical by construction, so the stability
+# control uses low-temperature sampling to measure sensitivity honestly.
+stability:
+  n_repeats: 5
+  do_sample: true
+  temperature: 0.3
+  top_p: 0.9
+
+forensic_tools:
+  ela:
+    jpeg_quality: 90
+    scale: 20
+  noise_residual:
+    method: highpass_median   # median-filter residual
+    kernel: 3
+  dct_jpeg:
+    block: 8
+    q_hist_bins: 64
+  # Validity metadata thresholds (Gate 0). Tool output is unusable if its
+  # visualization is degenerate. Thresholds fixed a priori, NOT tuned on results.
+  validity:
+    min_variance: 1.0e-4        # normalized [0,1] map variance
+    min_dynamic_range: 0.05
+    max_near_constant_ratio: 0.98
+    max_saturation_ratio: 0.30
+    dct_jpeg_requires_jpeg: true
+
+# Gate 1: objective anomaly score, computed WITHOUT any GT mask.
+# Score = max over 3x3 cells of (cell mean - global mean) / global std  (blind).
+gate1:
+  threshold_mode: calibration   # 'calibration' | 'fixed'
+  # Set by scripts/calibrate.py on the calibration split; do not hand-edit
+  # after seeing test results.
+  fixed_threshold: null
+  calibration_fpr: 0.10         # threshold = 90th pct of anomaly score on REAL images
+
+evidence_strength:
+  # Percentile cuts on the calibration split's anomaly-score distribution.
+  mode: calibration_percentile
+  weak_medium_pct: 50
+  medium_strong_pct: 80
+
+localization:
+  grid: 3                        # 3x3 nine-cell grid, Phase-1 default
+  gt_cell_min_overlap: 0.05      # GT cell counted if >=5% of its area is tampered
+  hit_rule: intersect            # predicted set ∩ GT set != empty
+  # PREPROCESSING DECISION, not a dataset property: TGIF masks are stored as RGB
+  # PNG with Photoshop feathering at the edit boundary, so 1917/2058 are NOT
+  # pure {0,255}. We binarize at >127 to obtain a hard GT region. This affects
+  # tamper_ratio and the 3x3 GT cells and is therefore recorded explicitly.
+  mask_binarize_threshold: 127
+  mask_note: "TGIF ps_mask PNGs are RGB with feathered edges; >127 binarization is an experiment preprocessing choice"
+  # Gate 3 is VACUOUS when the GT mask covers most of the grid: if 8 or 9 of the
+  # 9 cells are tampered, almost any prediction "hits" and the random baseline is
+  # ~1.0, so a hit carries no evidence that the model understood anything.
+  # Samples whose GT occupies more than this many cells are marked
+  # localization_gate_uninformative and EXCLUDED from Gate 3 (and hence from the
+  # core denominator). Declared before running the test split, not tuned on it.
+  max_gt_cells_for_gate3: 6
+  # Diagnostic only: for large-area tampering a 3x3 grid cannot discriminate.
+  # Such samples are reported separately rather than silently counted.
+
+sampling:
+  calibration_n: 120             # disjoint from test split
+  test_n: 400
+  smoke_n: 8
+
+datasets:
+  tgif_sp:
+    root: /mnt/disk3/borui/fevi/data/TGIF
+    index: /mnt/disk3/borui/fevi/runs/phase0/tgif_sp_index.json
+    kind: generative_local_edit_spliced   # MAIN experiment domain
+    # Verified Phase 0: 2058 triples, 343 coco_ids, 13 categories, all PNG,
+    # mean|diff| outside mask = 0.0030 (median) -> pixel-exact local splice.
+    enabled: true
+  cocoglide:
+    root: /mnt/disk3/borui/fevi/data/CocoGlide
+    kind: generative_local_edit_regenerated
+    # Verified Phase 0: mean|diff| outside mask = 0.24 -> whole image regenerated.
+    # Light tools showed NO signal here (image AUC ~0.51, pixel AUC ~0.48).
+    # Retained as a cross-condition comparison, not as the main experiment.
+    enabled: false
+  casia1:
+    root: /mnt/disk3/borui/fevi/data/CASIA1
+    kind: traditional_manipulation # cross-domain comparison ONLY
+    enabled: false
+  columbia:
+    root: /mnt/disk3/borui/fevi/data/Columbia
+    kind: traditional_splicing
+    enabled: false
+
+split:
+  # GROUPED by coco_id: all bbox/segm variants of one source image stay in the
+  # same split, so no source image can leak across calibration/test.
+  group_key: coco_id
+  stratify_by: category
+  calibration_frac: 0.20
+  seed: 20260918
+  smoke_from: calibration        # smoke subset never touches the test split
+
+conditions:
+  # Pre-registered prompt/input conditions. No result-based sample filtering.
+  - with_tools          # Stage A + Stage B, image + ELA + noise + DCT
+  - no_tools            # Control 1: image only

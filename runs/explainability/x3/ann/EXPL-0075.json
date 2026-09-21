@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.066).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the bottom-right corner of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-right cell is filled by the nearest parking meter's body, cropped by both the right and bottom frame edges, carrying a blue 'BUY PARKING CARDS AT' sticker and a white decal numbered 420 / 03010."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That bottom-right region has a high probability of being real.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector value; not observable in the photograph and no mask is supplied."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This indicates the image is likely authentic.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An authenticity verdict is not a checkable visual observation."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Overcast city street with a receding row of parking meters, regulatory signage, and a scaffolded multi-storey building toward the vanishing point. The bottom-right cell is real and content-bearing, but the explanation names no object there. That cell is the most heavily defocused part of the frame — the near meter's paint renders as smooth, detail-free grey with soft haloed edges — so texture and boundary claims about it could not be judged reliably in any case."
+}

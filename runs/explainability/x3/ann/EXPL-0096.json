@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This is a high score indicating potential manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Consistent with the visible evidence: the surfboard in the lower centre of IMAGE A differs from the corresponding board in IMAGE B."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The provided region list is empty.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about the tool's own output list, not about image content."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "No specific area of concern was identified.",
+      "claim_type": "location",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C supplies a definite annotated region in the bottom-center, and IMAGE D outlines it, so a specific area does exist."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is a natural beach scene.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "IMAGE A clearly shows a beach: sand, surf, headland, and a surf-school group with boards."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "There are no obvious signs of digital alteration such as unnatural artifacts or inconsistencies.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Viewing IMAGE A alone, no conspicuous artifact, seam or lighting inconsistency is apparent; but the A/B comparison does show changed content, so only *obvious* cues are absent."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The scene description (beach) is accurate and reading the score as indicating potential manipulation is consistent with the A/B difference. However the explanation asserts no specific area of concern, which the supplied mask and outline contradict, and then leans toward no alteration while also calling the score indicative of manipulation - internally inconsistent. No region was named, so region_correct is not applicable."
+}

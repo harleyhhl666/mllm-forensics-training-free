@@ -1,0 +1,37 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is low (0.149).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from the photograph."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There are localized regions showing high probabilities.",
+   "claim_type": "location",
+   "support": "uncertain",
+   "evidence_basis": "none",
+   "brief_justification": "No mask is supplied, so detector regions cannot be verified. The referenced center cell does contain the two hands and donuts meeting mid-frame."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "This suggests the image is likely authentic.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "visible_real_image",
+   "brief_justification": "The flash-lit snapshot has awkward hand poses and opaque plugs in both donut holes that are hard to read, but harsh flash, motion blur and low resolution equally explain them; the visible evidence does not settle authenticity either way."
+  }
+ ],
+ "region_correct": "uncertain",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "uncertain",
+ "confidence": "medium",
+ "notes": "Very short and purely detector-number based: no object named, no location stated in words, no visual property described. With no mask available the region claim is unverifiable, and the ambiguous hands and blocked donut holes mean the authenticity conclusion cannot be confirmed from what is visible."
+}

@@ -1,0 +1,121 @@
+TRUFOR SCORE-MAP CONFLICT INTERVENTION
+rows 1656  complete sources 184  bootstrap 10000 seed 20260918
+NOTE: F5 amplified and F6 binary are VISUALIZATION interventions. They are
+not new TruFor outputs and are never evidence of tool improvement.
+
+============================================================================================
+1. INTEGRITY
+  parse failures       : 0/1656
+  missing verdicts     : 0
+  cells                : {'F1_own': 184, 'F2_blank': 184, 'F3_donor': 184, 'F4_shifted': 184, 'F5_amplified': 184, 'F6_binary': 184, 'R1_own': 184, 'R2_blank': 184, 'R3_donor': 184}
+  unique coco_id       : 184
+  own score identical across all fake conditions: True
+  blank maps are exactly zero                   : True
+  shifted preserves mean and active fraction    : False
+  all conditions used 2 images                  : True
+  protocol sha1        : f65614514b090bd12eca59a139ee1963e6921021
+
+============================================================================================
+2. FAKE RECALL BY CONDITION
+  condition                  recall            95% CI   map mean  active frac
+  F1 own map (baseline)       0.522 [0.451,0.592]    0.06553      0.06369
+  F2 blank map                0.266 [0.207,0.332]    0.00000      0.00000
+  F3 donor map                0.370 [0.299,0.435]    0.06553      0.06369
+  F4 shifted own map          0.495 [0.424,0.565]    0.06553      0.06369
+  F5 amplified [vis]          0.533 [0.462,0.603]    0.07886      0.07113
+  F6 binary [vis]             0.386 [0.315,0.457]    0.06369      0.06369
+
+  reference from the 2x2 round (same prompt for C11/F1):
+    score only  (C10) 0.755
+    score + map (C11) 0.527   vs F1 0.522 -> replication delta -0.005
+
+============================================================================================
+3. CONTRASTS vs F1 (effect -> source bootstrap CI -> McNemar p)
+  F2_blank - F1
+    -0.255  [-0.326,-0.185] EXCLUDES zero   p=1.754e-10   (F1-only=53, F2-only=6)
+  F3_donor - F1
+    -0.152  [-0.228,-0.082] EXCLUDES zero   p=0.0001275   (F1-only=40, F3-only=12)
+  F4_shifted - F1
+    -0.027  [-0.082,+0.027] includes zero   p=0.4421   (F1-only=16, F4-only=11)
+  F5_amplified - F1 [vis]
+    +0.011  [-0.043,+0.065] includes zero   p=0.8388   (F1-only=11, F5-only=13)
+  F6_binary - F1 [vis]
+    -0.136  [-0.201,-0.076] EXCLUDES zero   p=7.025e-05   (F1-only=32, F6-only=7)
+
+============================================================================================
+4. REAL CONTROLS (FPR)
+  R1 own map              FPR 0.011 [0.000,0.027]
+  R2 blank map            FPR 0.005 [0.000,0.016]
+  R3 donor map            FPR 0.011 [0.000,0.027]
+  R2_blank - R1: -0.005 [-0.016,+0.000] includes zero  p=1
+  R3_donor - R1: +0.000 [-0.016,+0.016] includes zero  p=1
+
+============================================================================================
+5. SUPPRESSION SUBGROUP RECOVERY (n=56)
+  these are cases where score-only said Fake but score+map said Real
+  condition                 recovered to Fake    rate            95% CI
+  F1 own map (baseline)               1/56      0.018 [0.000,0.054]
+  F2 blank map                        5/56      0.089 [0.018,0.161]
+  F3 donor map                       10/56      0.179 [0.089,0.286]
+  F4 shifted own map                  9/56      0.161 [0.071,0.268]
+  F5 amplified [vis]                 10/56      0.179 [0.089,0.286]
+  F6 binary [vis]                     6/56      0.107 [0.036,0.196]
+
+  non-suppression fakes for comparison:
+    F1 own map (baseline)   0.742  (n=128)
+    F2 blank map            0.344  (n=128)
+    F3 donor map            0.453  (n=128)
+    F4 shifted own map      0.641  (n=128)
+    F5 amplified [vis]      0.688  (n=128)
+    F6 binary [vis]         0.508  (n=128)
+
+  suppression-case properties vs the rest:
+    suppressed   n=56   tamper 0.0650  map_mean 0.06028  active 0.05860  map_max 0.9976  score 0.9807
+    others       n=128  tamper 0.0746  map_mean 0.06783  active 0.06591  map_max 0.9977  score 0.9591
+
+============================================================================================
+6. F4 SHIFTED — SPATIAL-CORRESPONDENCE TEST
+  F4 - F1 = -0.027 [-0.082,+0.027] includes zero
+  F4 has the SAME value distribution and global intensity as F1; only the
+  alignment with the image is broken. So a null result here means the
+  verdict does not depend on map-image correspondence.
+  for comparison F3 - F1 = -0.152 [-0.228,-0.082] EXCLUDES zero
+  (donor differs in texture too, so F4 is the cleaner test)
+
+============================================================================================
+7. EXPLANATION AUDIT (deterministic rules; secondary)
+  condition                  score_high  map_shows_l  map_inconsi  region_smal  map_support
+  F1 own map (baseline)           0.891        0.109        0.016        0.033        0.207
+  F2 blank map                    0.897        0.277        0.016        0.000        0.223
+  F3 donor map                    0.864        0.098        0.016        0.016        0.201
+  F4 shifted own map              0.853        0.087        0.022        0.027        0.212
+  F5 amplified [vis]              0.902        0.087        0.027        0.060        0.190
+  F6 binary [vis]                 0.929        0.293        0.016        0.065        0.136
+
+  among fakes judged REAL, how often the reason says the map shows little:
+    F1 own map (baseline)   n=88   map_shows_little 0.216   region_small 0.000
+    F2 blank map            n=135  map_shows_little 0.356   region_small 0.000
+    F3 donor map            n=116  map_shows_little 0.138   region_small 0.000
+    F4 shifted own map      n=93   map_shows_little 0.172   region_small 0.000
+    F5 amplified [vis]      n=86   map_shows_little 0.186   region_small 0.000
+    F6 binary [vis]         n=113  map_shows_little 0.478   region_small 0.000
+
+  example reasons per condition (fake targets):
+    F1_own (judged Real): The image shows a natural outdoor setting with people engaged in a baseball game, and the lighting and shadows are consistent with natural s
+    F2_blank (judged Real): The image shows a natural outdoor setting with people engaged in a baseball game, and the lighting and shadows appear consistent with natura
+    F3_donor (judged Real): The image shows a natural outdoor setting with people engaged in a baseball game, and the lighting and shadows appear consistent with natura
+    F4_shifted (judged Real): The image shows a natural outdoor setting with people engaged in a baseball game, and the lighting and shadows appear consistent with natura
+    F5_amplified (judged Real): The image shows a natural outdoor setting with people engaged in a baseball game, and the lighting and shadows are consistent with natural s
+    F6_binary (judged Real): The image shows a natural outdoor setting with people engaged in a baseball game, and the lighting and shadows appear consistent with natura
+
+============================================================================================
+8. MECHANISM JUDGEMENT
+  F1 0.522 | F2 0.266 | F3 0.370 | F4 0.495 | F5 0.533 | F6 0.386
+  score-only reference 0.755
+
+  -> MECHANISM B spatial-mismatch sensitivity
+  breaking spatial alignment while preserving map statistics changes
+  little, so the effect is driven by appearance rather than by
+  map-image correspondence.
+
+9. RUNTIME  1656 inf  74.3 min  mean 2.66s  peak 17.1 GB

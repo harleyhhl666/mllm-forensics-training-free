@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated giraffe is only ~90x150 px in a wide, soft shot; tight crops of the same area in A and B look closely similar (profile stance, neck raised to the right, head pointing right), so neither a difference nor an absence of difference can be established reliably. A maximal score also cannot itself demonstrate 'no manipulation'."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white giraffe-shaped silhouette sits in the bottom-centre cell (only its head tip touches the centre cell); IMAGE D's outline is in the same place."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric detector output, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the presence of a real object in the image.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A giraffe is indeed visible at the annotated location, but the inference that its presence is therefore unaltered is not established by the supplied evidence at this resolution."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "low",
+  "notes": "Location matches the annotation. The explanation's internal logic is inconsistent (a score of 1.000 read as 'no manipulation' while the annotation marks a region of interest), but the annotated giraffe is too small and soft in both A and B for me to judge whether its content differs, so the manipulation judgement is left uncertain."
+}

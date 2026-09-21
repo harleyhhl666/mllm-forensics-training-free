@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.298).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the center-left.",
+      "claim_type": "location",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to a detector-output region; without a mask, image A cannot confirm which cell was flagged. The center-left cell itself does exist and contains the orange floral chair seat plus the cat's lower body and tail."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.708) and a high max probability (0.955).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric values, not observable properties."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This indicates a high likelihood of the image being authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The snapshot of a tabby cat on an orange swivel chair in a cluttered bedroom shows no obvious compositing, but authenticity cannot be established from A alone, and the cited high region probability is an ambiguous basis for the conclusion."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A shows a tabby cat seated in an orange floral swivel chair, with a desk, dark chest of drawers, stationery and a wicker basket around it. The explanation names no objects at all, so no object check applies; its center-left reference points only to detector output, which the image cannot verify."
+}

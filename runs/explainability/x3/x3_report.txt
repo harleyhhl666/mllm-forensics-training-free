@@ -1,0 +1,292 @@
+PHASE X3 — SEMANTIC EXPLANATION AUDIT
+annotations 300/300 primary, 60/60 repeat
+ANNOTATOR IS AN ASSISTIVE MEASUREMENT, NOT GROUND TRUTH — see section 9
+  fake 200 (M1 100, M2 100)   real 100 (M1 50, M2 50)
+  M1 = Qwen2.5-VL-7B D0_baseline, M2 = Qwen2.5-VL-32B B2_structured
+  (mapping revealed only now, at analysis time; annotators never saw it)
+
+================================================================================================
+1. OVERALL SEMANTIC SUPPORT
+  group                    supported     partial  unsupported   uncertain     n
+  fake M1 (7B)                 0.040       0.310        0.610       0.040   100
+  fake M2 (32B)                0.490       0.500        0.010       0.000   100
+  real M1 (7B)                 0.040       0.120        0.040       0.800    50
+  real M2 (32B)                0.080       0.540        0.060       0.320    50
+  counts, fake M1: {'supported': 4, 'partially_supported': 31, 'unsupported': 61, 'uncertain': 4}
+  counts, fake M2: {'supported': 49, 'partially_supported': 50, 'unsupported': 1, 'uncertain': 0}
+
+================================================================================================
+2. CLAIM-TYPE SUPPORT (not_applicable excluded from denominator)
+
+  [fake 7B]  total claims 539   per explanation 5.4
+  type            n_eval  supported  partial   unsup  uncert
+  location           101      0.792    0.198   0.010   0.000
+  object              43      0.674    0.233   0.093   0.000
+  texture              1      1.000    0.000   0.000   0.000
+  lighting             3      0.333    0.333   0.000   0.333
+  manipulation       196      0.128    0.020   0.791   0.061
+  other               13      0.154    0.385   0.308   0.154
+  not_applicable excluded: 182
+
+  [fake 32B]  total claims 509   per explanation 5.1
+  type            n_eval  supported  partial   unsup  uncert
+  location           102      0.833    0.147   0.020   0.000
+  object              29      0.759    0.138   0.103   0.000
+  texture              2      1.000    0.000   0.000   0.000
+  geometry             1      0.000    1.000   0.000   0.000
+  physics              1      0.000    0.000   1.000   0.000
+  manipulation       137      0.672    0.153   0.044   0.131
+  other                4      0.250    0.500   0.250   0.000
+  not_applicable excluded: 233
+
+  [real 7B]  total claims 215   per explanation 4.3
+  type            n_eval  supported  partial   unsup  uncert
+  location            27      0.296    0.037   0.000   0.667
+  object              12      0.667    0.250   0.083   0.000
+  texture              1      0.000    0.000   0.000   1.000
+  manipulation        43      0.000    0.000   0.070   0.930
+  other               25      0.000    0.040   0.000   0.960
+  not_applicable excluded: 107
+
+  [real 32B]  total claims 221   per explanation 4.4
+  type            n_eval  supported  partial   unsup  uncert
+  location             5      0.000    0.000   0.000   1.000
+  object              15      1.000    0.000   0.000   0.000
+  texture              2      0.000    0.500   0.000   0.500
+  lighting             1      1.000    0.000   0.000   0.000
+  manipulation        72      0.097    0.139   0.069   0.694
+  other               42      0.310    0.119   0.000   0.571
+  not_applicable excluded: 84
+
+================================================================================================
+3. UNSUPPORTED CLAIM RATE (unsupported / evaluable)
+  group                  all   texture  lighting  boundary  geometry   physics manipulat
+  fake 7B              0.459     0.000     0.000       n=0       n=0       n=0     0.791
+  fake 32B             0.047     0.000       n=0       n=0     0.000     1.000     0.044
+  real 7B              0.037     0.000       n=0       n=0       n=0       n=0     0.070
+  real 32B             0.036     0.000     0.000       n=0       n=0       n=0     0.069
+
+================================================================================================
+4. HALLUCINATED OBJECT RATE
+  group                HOR              95% CI     n
+  fake 7B            0.030   [0.000,0.070]       100
+  fake 32B           0.010   [0.000,0.030]       100
+  real 7B            0.000   [0.000,0.000]        50
+  real 32B           0.000   [0.000,0.000]        50
+
+  object_correct field:
+    fake 7B       {'partial': 13, 'no': 5, 'not_applicable': 66, 'yes': 16}
+    fake 32B      {'not_applicable': 72, 'partial': 9, 'yes': 18, 'no': 1}
+    real 7B       {'not_applicable': 42, 'partial': 2, 'yes': 5, 'no': 1}
+    real 32B      {'not_applicable': 37, 'yes': 13}
+
+================================================================================================
+5. FALSE FORENSIC EXPLANATION RATE (real images only)
+   = a forensic anomaly is asserted and judged unsupported
+
+  real 7B: all 50  FFER 0.060 [0.000,0.140]
+    cited 49  no-citation 1
+    FFER on cited subset 0.061 [0.000,0.143]  n=49
+    no-citation explanations are NOT scored as errors
+    unsupported_claim_present: {False: 46, True: 4}
+    contradictory_claim_present: {False: 36, True: 14}
+
+  real 32B: all 50  FFER 0.100 [0.020,0.180]
+    cited 6  no-citation 44
+    FFER on cited subset 0.667 [0.333,1.000]  n=6
+    *** n=6 is very small; DESCRIPTIVE ONLY, no inference drawn ***
+    no-citation explanations are NOT scored as errors
+    unsupported_claim_present: {False: 45, True: 5}
+    contradictory_claim_present: {False: 50}
+
+================================================================================================
+6. PAIRED 7B vs 32B (same source, both models)
+
+  [fake] paired sources 100
+    unsupported claim count  7B 1.64  32B 0.13  delta -1.510 [-1.690,-1.320]
+      paired: 7B fewer 3   tie 16   32B fewer 81
+    overall support: 7B better 1   tie 13   32B better 86
+    hallucinated object: 7B 0.030  32B 0.010
+    type             7B sup  32B sup   7B n  32B n
+    manipulation      0.128    0.672    196    137
+    texture           1.000    1.000      1      2
+    lighting          0.333      nan      3      0
+    boundary            nan      nan      0      0
+    geometry            nan    0.000      0      1
+    physics             nan    0.000      0      1
+
+  [real] paired sources 50
+    unsupported claim count  7B 0.08  32B 0.10  delta +0.020 [-0.060,+0.100]
+      paired: 7B fewer 3   tie 45   32B fewer 2
+    overall support: 7B better 5   tie 21   32B better 24
+    hallucinated object: 7B 0.000  32B 0.000
+    type             7B sup  32B sup   7B n  32B n
+    manipulation      0.000    0.097     43     72
+    texture           0.000    0.000      1      2
+    lighting            nan    1.000      0      1
+    boundary            nan      nan      0      0
+    geometry            nan      nan      0      0
+    physics             nan      nan      0      0
+
+================================================================================================
+7. FAKE: SPATIALLY CORRECT vs INCORRECT EXPLANATION
+
+  [7B]
+    correct     n=100  supported 0.040  partial 0.310  unsup 0.610  uncertain 0.040  | claim UCR 0.476
+
+  [32B]
+    correct     n=98   supported 0.500  partial 0.500  unsup 0.000  uncertain 0.000  | claim UCR 0.020
+    unscored    n=2    supported 0.000  partial 0.500  unsup 0.500  uncertain 0.000  | claim UCR 0.458
+
+================================================================================================
+8. FAKE: BY GT EXTENT (frozen area quartiles)
+
+  [7B]
+    extent        n  supported  partial   unsup  uncert  claim UCR
+    small        25      0.000    0.200   0.760   0.040      0.559
+    medium       50      0.040    0.320   0.620   0.020      0.485
+    large        25      0.080    0.400   0.440   0.080      0.373
+
+  [32B]
+    extent        n  supported  partial   unsup  uncert  claim UCR
+    small        25      0.360    0.640   0.000   0.000      0.043
+    medium       50      0.620    0.360   0.020   0.000      0.029
+    large        25      0.360    0.640   0.000   0.000      0.016
+
+================================================================================================
+9-11. REPEAT SUBSET RELIABILITY (same annotator model, fresh context)
+  repeat units with both passes: 60/60
+
+  field                             agreement    kappa                  note
+  overall_semantic_support              0.717    0.589ordinal/nominal, kappa approximate
+  region_correct                        0.800    0.646ordinal/nominal, kappa approximate
+  object_correct                        0.933    0.868ordinal/nominal, kappa approximate
+  manipulation_claim_supported          0.650    0.549ordinal/nominal, kappa approximate
+  unsupported_claim_present             0.917    0.815   binary, kappa valid
+  contradictory_claim_present           0.867    0.645   binary, kappa valid
+  hallucinated_object_present           0.967   -0.017   binary, kappa valid
+  confidence                            0.750    0.364ordinal/nominal, kappa approximate
+
+  OVERALL agreement across all fields: 0.825
+  claim count pass1 4.97 vs pass2 5.10; exact same count in 33/60
+  claim decomposition granularity is NOT identical between passes, so
+  claim-level kappa is not computed; only explanation-level fields are
+
+  11. ALL DISAGREEMENTS (for optional human spot-check)
+
+    [overall_semantic_support] 17 disagreements
+      EXPL-0010  fake  M2  pass1=supported  pass2=partially_supported
+      EXPL-0022  real  M2  pass1=uncertain  pass2=partially_supported
+      EXPL-0059  fake  M2  pass1=partially_supported  pass2=uncertain
+      EXPL-0082  fake  M2  pass1=partially_supported  pass2=supported
+      EXPL-0083  fake  M1  pass1=partially_supported  pass2=unsupported
+      EXPL-0094  fake  M2  pass1=supported  pass2=partially_supported
+      EXPL-0100  fake  M2  pass1=partially_supported  pass2=supported
+      EXPL-0105  fake  M2  pass1=supported  pass2=partially_supported
+      EXPL-0112  fake  M1  pass1=partially_supported  pass2=unsupported
+      EXPL-0120  real  M1  pass1=uncertain  pass2=unsupported
+      EXPL-0131  real  M2  pass1=uncertain  pass2=partially_supported
+      EXPL-0138  fake  M1  pass1=partially_supported  pass2=unsupported
+      EXPL-0141  fake  M2  pass1=supported  pass2=partially_supported
+      EXPL-0169  real  M1  pass1=uncertain  pass2=unsupported
+      EXPL-0186  real  M1  pass1=uncertain  pass2=unsupported
+      EXPL-0247  fake  M2  pass1=supported  pass2=partially_supported
+      EXPL-0284  fake  M1  pass1=uncertain  pass2=unsupported
+
+    [region_correct] 12 disagreements
+      EXPL-0001  real  M1  pass1=uncertain  pass2=not_applicable
+      EXPL-0059  fake  M2  pass1=yes  pass2=partial
+      EXPL-0070  fake  M1  pass1=yes  pass2=partial
+      EXPL-0071  fake  M2  pass1=yes  pass2=partial
+      EXPL-0094  fake  M2  pass1=yes  pass2=partial
+      EXPL-0112  fake  M1  pass1=partial  pass2=yes
+      EXPL-0169  real  M1  pass1=not_applicable  pass2=uncertain
+      EXPL-0222  fake  M1  pass1=partial  pass2=yes
+      EXPL-0235  real  M1  pass1=yes  pass2=uncertain
+      EXPL-0248  fake  M2  pass1=partial  pass2=yes
+      EXPL-0257  real  M2  pass1=not_applicable  pass2=uncertain
+      EXPL-0268  fake  M2  pass1=partial  pass2=uncertain
+
+    [object_correct] 4 disagreements
+      EXPL-0070  fake  M1  pass1=not_applicable  pass2=partial
+      EXPL-0156  real  M2  pass1=yes  pass2=not_applicable
+      EXPL-0179  fake  M1  pass1=partial  pass2=yes
+      EXPL-0284  fake  M1  pass1=partial  pass2=not_applicable
+
+    [manipulation_claim_supported] 21 disagreements
+      EXPL-0010  fake  M2  pass1=yes  pass2=uncertain
+      EXPL-0022  real  M2  pass1=uncertain  pass2=yes
+      EXPL-0025  real  M2  pass1=uncertain  pass2=yes
+      EXPL-0053  fake  M2  pass1=uncertain  pass2=yes
+      EXPL-0071  fake  M2  pass1=partial  pass2=yes
+      EXPL-0102  real  M2  pass1=uncertain  pass2=not_applicable
+      EXPL-0115  fake  M1  pass1=partial  pass2=yes
+      EXPL-0120  real  M1  pass1=uncertain  pass2=no
+      EXPL-0131  real  M2  pass1=uncertain  pass2=not_applicable
+      EXPL-0137  real  M2  pass1=uncertain  pass2=not_applicable
+      EXPL-0141  fake  M2  pass1=yes  pass2=partial
+      EXPL-0156  real  M2  pass1=partial  pass2=not_applicable
+      EXPL-0181  real  M2  pass1=no  pass2=uncertain
+      EXPL-0186  real  M1  pass1=uncertain  pass2=no
+      EXPL-0206  fake  M2  pass1=partial  pass2=yes
+      EXPL-0210  fake  M2  pass1=partial  pass2=yes
+      EXPL-0227  fake  M2  pass1=partial  pass2=yes
+      EXPL-0248  fake  M2  pass1=partial  pass2=yes
+      EXPL-0268  fake  M2  pass1=partial  pass2=yes
+      EXPL-0274  real  M2  pass1=partial  pass2=uncertain
+      EXPL-0284  fake  M1  pass1=uncertain  pass2=no
+
+    [unsupported_claim_present] 5 disagreements
+      EXPL-0120  real  M1  pass1=False  pass2=True
+      EXPL-0169  real  M1  pass1=False  pass2=True
+      EXPL-0181  real  M2  pass1=True  pass2=False
+      EXPL-0186  real  M1  pass1=False  pass2=True
+      EXPL-0284  fake  M1  pass1=False  pass2=True
+
+    [contradictory_claim_present] 8 disagreements
+      EXPL-0089  fake  M1  pass1=False  pass2=True
+      EXPL-0112  fake  M1  pass1=False  pass2=True
+      EXPL-0169  real  M1  pass1=True  pass2=False
+      EXPL-0218  fake  M1  pass1=False  pass2=True
+      EXPL-0219  fake  M1  pass1=True  pass2=False
+      EXPL-0238  real  M1  pass1=True  pass2=False
+      EXPL-0266  real  M1  pass1=True  pass2=False
+      EXPL-0284  fake  M1  pass1=True  pass2=False
+
+    [hallucinated_object_present] 2 disagreements
+      EXPL-0009  fake  M1  pass1=True  pass2=False
+      EXPL-0180  fake  M2  pass1=False  pass2=True
+
+    [confidence] 15 disagreements
+      EXPL-0013  fake  M2  pass1=medium  pass2=high
+      EXPL-0030  fake  M2  pass1=high  pass2=medium
+      EXPL-0070  fake  M1  pass1=high  pass2=medium
+      EXPL-0089  fake  M1  pass1=high  pass2=medium
+      EXPL-0094  fake  M2  pass1=high  pass2=medium
+      EXPL-0105  fake  M2  pass1=high  pass2=medium
+      EXPL-0115  fake  M1  pass1=medium  pass2=high
+      EXPL-0160  fake  M2  pass1=high  pass2=medium
+      EXPL-0180  fake  M2  pass1=high  pass2=medium
+      EXPL-0211  real  M1  pass1=high  pass2=medium
+      EXPL-0218  fake  M1  pass1=high  pass2=medium
+      EXPL-0222  fake  M1  pass1=high  pass2=medium
+      EXPL-0243  fake  M1  pass1=high  pass2=medium
+      EXPL-0284  fake  M1  pass1=low  pass2=medium
+      EXPL-0292  fake  M1  pass1=high  pass2=medium
+
+  uncertain-heavy fields (pass 1, share of uncertain):
+    overall_semantic_support           0.200
+    region_correct                     0.140
+    object_correct                     0.000
+    manipulation_claim_supported       0.270
+  uncertain share by claim type:
+    other            0.595
+    texture          0.333
+    manipulation     0.268
+    lighting         0.250
+    location         0.098
+    object           0.000
+    geometry         0.000
+    physics          0.000
+
+wrote .\x3\x3_analysis.json

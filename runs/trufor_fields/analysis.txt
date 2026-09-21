@@ -1,0 +1,127 @@
+STRUCTURED FIELD ABLATION — 7B
+rows 2208  complete sources 184  bootstrap 10000 seed 20260918
+2208 inf  100.4 min  mean 2.71s
+
+==============================================================================================
+1. INTEGRITY
+  parse failures 0/2208   bad verdicts 0
+  cells {'S0_score_only': 368, 'S1_location': 368, 'S2_area': 368, 'S3_probability': 368, 'S4_loc_area': 368, 'S5_full': 368}
+  unique coco_id 184
+  all single-image: True
+  key sets exactly match declared fields: True
+  score identical across conditions: True
+  region count identical across structured conditions: True
+  protocol sha1 b5722533ed218eff9d48c990a540229d1bd5d645
+
+==============================================================================================
+2. DECISION BY CONDITION
+  condition                  recall            95% CI     FPR            95% CI   spec       J
+  S0 score only               0.837 [0.783,0.886]   0.011 [0.000,0.027]  0.989   0.826
+  S1 + location               0.141 [0.092,0.196]   0.000 [0.000,0.000]  1.000   0.141
+  S2 + area                   0.196 [0.141,0.255]   0.000 [0.000,0.000]  1.000   0.196
+  S3 + probability            0.103 [0.060,0.147]   0.000 [0.000,0.000]  1.000   0.103
+  S4 + location & area        0.212 [0.152,0.272]   0.000 [0.000,0.000]  1.000   0.212
+  S5 full structured          0.114 [0.071,0.163]   0.000 [0.000,0.000]  1.000   0.114
+
+  descriptive background (different prompt, NOT a replication):
+    previous round E0 0.837 / E2 0.174
+
+==============================================================================================
+3. PRIMARY CONTRASTS vs S0
+
+  location_effect   S1 - S0
+    fake recall  -0.696 [-0.761,-0.630] EXCLUDES zero  p=5.877e-39
+    real FPR     -0.011 [-0.027,+0.000] includes zero  p=0.5
+    J            -0.685 [-0.750,-0.620] EXCLUDES zero
+
+  area_effect   S2 - S0
+    fake recall  -0.641 [-0.707,-0.571] EXCLUDES zero  p=6.019e-36
+    real FPR     -0.011 [-0.027,+0.000] includes zero  p=0.5
+    J            -0.630 [-0.701,-0.560] EXCLUDES zero
+
+  probability_effect   S3 - S0
+    fake recall  -0.734 [-0.793,-0.668] EXCLUDES zero  p=4.592e-41
+    real FPR     -0.011 [-0.027,+0.000] includes zero  p=0.5
+    J            -0.723 [-0.788,-0.658] EXCLUDES zero
+
+  location_plus_area   S4 - S0
+    fake recall  -0.625 [-0.696,-0.554] EXCLUDES zero  p=4.815e-35
+    real FPR     -0.011 [-0.027,+0.000] includes zero  p=0.5
+    J            -0.614 [-0.685,-0.543] EXCLUDES zero
+
+  full_penalty   S5 - S0
+    fake recall  -0.723 [-0.788,-0.658] EXCLUDES zero  p=1.837e-40
+    real FPR     -0.011 [-0.027,+0.000] includes zero  p=0.5
+    J            -0.712 [-0.777,-0.647] EXCLUDES zero
+
+==============================================================================================
+4. SUPPLEMENTARY CONTRASTS (field addition, holding the rest fixed)
+  S4-S1  adding area on top of location      recall +0.071 [+0.038,+0.109] EXCLUDES zero  p=0.0002441
+  S4-S2  adding location on top of area      recall +0.016 [-0.005,+0.043] includes zero  p=0.375
+  S5-S4  adding probability and centroid     recall -0.098 [-0.141,-0.060] EXCLUDES zero  p=7.629e-06
+
+==============================================================================================
+5. REASON AUDIT (deterministic rules)
+  fake targets
+  condition                    area_small   area_limited  evidence_weak     score_high  manipulation_
+  S0 score only                     0.000          0.000          0.000          0.913          0.995
+  S1 + location                     0.005          0.277          0.000          0.717          1.000
+  S2 + area                         0.380          0.489          0.000          0.804          1.000
+  S3 + probability                  0.005          0.505          0.005          0.609          1.000
+  S4 + location & area              0.196          0.451          0.005          0.734          1.000
+  S5 full structured                0.005          0.663          0.000          0.668          1.000
+
+  real targets
+  condition                    area_small   area_limited  evidence_weak     score_high  manipulation_
+  S0 score only                     0.000          0.000          0.011          0.043          1.000
+  S1 + location                     0.011          0.283          0.000          0.022          1.000
+  S2 + area                         0.429          0.620          0.000          0.027          1.000
+  S3 + probability                  0.000          0.636          0.005          0.087          1.000
+  S4 + location & area              0.353          0.598          0.005          0.016          1.000
+  S5 full structured                0.005          0.815          0.005          0.060          1.000
+
+==============================================================================================
+6. ACKNOWLEDGED MANIPULATION BUT REAL (forensic inconsistency)
+  verdict == real AND the reason matches manipulation_acknowledged AND (area_small OR area_limited OR evidence_weak)
+
+  condition                     fake            95% CI      real
+  S0 score only                0.000 [0.000,0.000]     0.011
+  S1 + location                0.245 [0.185,0.310]     0.288
+  S2 + area                    0.582 [0.511,0.652]     0.707
+  S3 + probability             0.457 [0.386,0.527]     0.636
+  S4 + location & area         0.533 [0.462,0.603]     0.745
+  S5 full structured           0.603 [0.533,0.674]     0.815
+
+  among fake targets judged Real, share showing the inconsistency:
+    S0 score only           n=30   0.000
+    S1 + location           n=158  0.285
+    S2 + area               n=148  0.723
+    S3 + probability        n=165  0.509
+    S4 + location & area    n=145  0.676
+    S5 full structured      n=163  0.681
+
+==============================================================================================
+7. AREA DOSE-RESPONSE (descriptive, S2 only)
+  largest region area_ratio quartile cuts [0.0135 0.0352 0.0944]
+  quartile        n   S0 recall   S2 recall    delta
+  Q1             46       0.826       0.130   -0.696
+  Q2             46       0.826       0.130   -0.696
+  Q3             46       0.935       0.239   -0.696
+  Q4             46       0.761       0.283   -0.478
+
+==============================================================================================
+8. SECONDARY FAITHFULNESS (location-bearing conditions only)
+  S1 + location            agreement 1.000  exact 0.810  all-9 echo 0.000
+  S4 + location & area     agreement 1.000  exact 0.808  all-9 echo 0.008
+  S5 full structured       agreement 1.000  exact 0.756  all-9 echo 0.003
+
+==============================================================================================
+9. PATTERN JUDGEMENT
+  recall  S0 0.837  S1 0.141  S2 0.196  S3 0.103  S4 0.212  S5 0.114
+  S1-S0 -0.696 EXCLUDES zero
+  S2-S0 -0.641 EXCLUDES zero
+  S3-S0 -0.734 EXCLUDES zero
+  S4-S1 +0.071 EXCLUDES zero   S4-S2 +0.016 includes zero
+
+  -> GENERIC STRUCTURED OVERLOAD: all single fields fall by a similar amount
+  -> PROBABILITY CONFLICT dominates among single fields

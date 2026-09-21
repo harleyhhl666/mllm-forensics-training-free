@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.931).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value cannot be verified from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the bottom-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white block is centred on the bottom-right cell and IMAGE D outlines that same area."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.924) and a maximum probability (0.995).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities are not checkable against the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated bottom-right region, A contains a large foreground mute swan while B shows a small red-painted wooden boat and the larger red hull; the content of that region has clearly been changed."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Location matches the annotation and the alteration claim is corroborated by the A/B difference in that region. The numeric score statements are simply not verifiable from images, so they are marked not_applicable rather than judged. No specific object or mechanism is named and no texture/lighting claim is made, so nothing is overstated."
+}

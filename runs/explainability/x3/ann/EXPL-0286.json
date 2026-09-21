@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.956).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector output, not verifiable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the top-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single white rectangle is centred in the top-center cell, and IMAGE D outlines a doughnut there."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.905) and a maximum probability (0.993).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Specific numeric values cannot be checked against the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The outlined doughnut in A looks slightly glossier with a pinkish/greenish glaze cast compared with the same doughnut in B, but the scene is soft, warm-cast and compressed, so I cannot reliably confirm a significant alteration from what is visible."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Region statement matches the mask exactly. No object, texture, lighting or boundary evidence is offered, and the alteration in the outlined glazed doughnut is not reliably visible at this resolution, so the manipulation claim rests only on unverifiable scores."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score, not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region with a high mean probability (0.945) and max probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric values, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That localized region is at the 'center' grid location.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white blob has its centroid in the centre cell; IMAGE D outlines the hydrant in that same position."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "These suggest significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated region differs clearly between A and B: A shows an intact bonnet and seated green-banded caps, B shows the hydrant's top missing with an open dark cavity and caps hanging loose."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The alteration likely involves the fire hydrant or surrounding area.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A yellow fire hydrant is present in the centre of IMAGE A and is exactly what the IMAGE D outline traces."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Region and named object both match the annotation, and the alteration conclusion is backed by an obvious A-vs-B difference in the hydrant's top and caps. Numeric statements are unverifiable rather than wrong."
+}

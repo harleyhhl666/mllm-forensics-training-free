@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.990).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value cannot be verified from images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single rectangle has its centroid in the center cell; IMAGE D outlines the same box, which also reaches into top-center and center-left."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.925) and a maximum probability (0.996).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities are not checkable against the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated box, A shows a red-and-white boat plus a nested stack of coloured canoes above the bus roof, while B shows a single pale blue cabin cruiser with a white cabin; the content of that region differs."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "The location is consistent with the annotation (centroid in the center cell, with spill into top-center/center-left) and the alteration claim is corroborated by an observable A/B content difference there. Score and probability figures are not verifiable from imagery. No object or specific mechanism is named."
+}

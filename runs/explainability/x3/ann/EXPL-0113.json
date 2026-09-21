@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.973.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is very high and indicates a strong likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content under the skater's feet differs sharply between IMAGE A and IMAGE B: IMAGE B shows a complete skateboard with four pale wheels and visible trucks, while in IMAGE A the board is reduced to a small dark fragment and a teal sliver in smeared background."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask's bulk lies in the center cell, with a smaller part crossing into center-left; IMAGE D's outline matches."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That center region has a high mean probability of 0.853.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric probability is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The central part of the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The centre is exactly the annotated region and is where IMAGE A most clearly differs from IMAGE B (the skateboard is missing/replaced by smeared content), so the evidence contradicts this; it also contradicts C2."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The explanation gets the region right and its first sentence is consistent with the evidence, but it then asserts the centre is likely authentic - the one area where the annotation and the A/B comparison both show altered content. The two halves of the text directly contradict each other."
+}

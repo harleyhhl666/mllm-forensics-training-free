@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.981).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector output; not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization tool identifies a region in the center-right.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask includes part of center-right, but most of it sits in top-center, center and bottom-right, so center-right alone understates the extent."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.915).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported statistic, not observable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported statistic, not observable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This indicates significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content inside the annotated head-and-neck region of the tall central giraffe differs between IMAGE A and IMAGE B, so alteration in the marked area is observable."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The manipulation conclusion agrees with the annotation and the A/B difference, but the single named cell only partly covers the masked region, which spans top-center, center, center-right and bottom-right. The explanation names no object and describes no visible anomaly."
+}

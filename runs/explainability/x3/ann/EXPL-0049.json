@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value is not verifiable from the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Alteration is observable independent of the score: the animal in the annotated area differs between IMAGE A and IMAGE B."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the 'center-left' area.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's animal-shaped mask lies mostly in the center-left cell, with a narrow strip crossing into the center cell; IMAGE D outlines the same animal."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability (0.921) and a maximum probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities cannot be checked against the images."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant evidence of manipulation in that specific area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated animal outline, A shows a red-and-white piebald cow with a large white flank and chest while B shows a dark near-black white-faced calf; that content has been replaced."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Location matches the annotation and the alteration claim is corroborated by an observable A/B difference in the annotated animal. Score and probability numbers are not verifiable from imagery. No object is named and no texture, lighting or mechanism claim is made, so nothing is overstated."
+}

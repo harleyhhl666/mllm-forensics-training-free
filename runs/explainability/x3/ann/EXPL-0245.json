@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.289).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There are no regions identified by the forensic tool as suspicious.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Tool localization output is not supplied or visible; cannot be verified."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The image contains snow.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Deep fresh snow covers the foreground, shoulder, guardrail and evergreen trees."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The image contains a road.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A plowed multi-lane roadway with lane markings curves from the middle distance to the lower left."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image contains signage.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A yellow diamond warning sign on a pole in the top-center, plus a round '60' sign near the horizon."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The snow, road and signage appear consistent and natural.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Lighting is uniformly flat and overcast and the snow cover is continuous across objects, which is consistent, but consistency at this level is not a reliable judgement from one image."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "high",
+  "notes": "The three named visual elements all exist in image A as described. The forensic-score and no-suspicious-region claims are not checkable against the photograph."
+}

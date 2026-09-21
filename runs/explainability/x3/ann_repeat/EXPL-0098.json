@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.988.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The marked region in IMAGE A contains a ring doughnut with hyper-saturated magenta and cyan icing bearing small yellow smiley discs, while at the same position IMAGE B shows only a plain sugar-glazed doughnut hole. The content has clearly been changed."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "A donut is present.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A ring doughnut is clearly visible inside the outlined region of IMAGE D."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That donut is highly saturated.",
+      "claim_type": "texture",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Its icing is fluorescent magenta and electric cyan, far more saturated than anything else in the frame, including the plain brown doughnuts beside it."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "That donut is unrealistic.",
+      "claim_type": "texture",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The icing colours are outside any plausible range for glazed dough, the colour boundaries are smeared and banded rather than grainy, and the colour bleeds over the doughnut's brown rim."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The donut has a smiley face pattern.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Four or five small yellow discs, each with two dots and a curved mouth, are embedded in the icing, repeating the face of the smiley figurine standing behind it."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "This suggests digital manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The saturation, the smeared posterised colour boundaries, the absence of shading or shadow consistent with the surrounding soft light, and the repeated identical smiley discs are all visible in the image itself and support a local edit."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The relevant region is the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The square mask in IMAGE C has most of its area in the bottom-centre cell, with substantial spill into bottom-right and a thin top sliver in centre and centre-right; bottom-centre is the dominant cell."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "This is the one explanation in the set that cites an actual visible feature rather than only detector scores, and it checks out: the marked doughnut is genuinely hyper-saturated, carries repeated small smiley-face discs, and the paired image shows a plain doughnut hole in its place. The named location matches the mask's dominant cell, though the mask also covers much of bottom-right."
+}

@@ -1,0 +1,85 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.985.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "No observable support for reading a high manipulation score as an authenticity indicator."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-right.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's rectangle occupies the right column across the center-right and top-right cells; its centroid is in center-right, so the named cell is right but incomplete."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The high mean probability suggests the presence of a specific feature or object there.",
+      "claim_type": "other",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Nothing links a localization probability to an object's presence; the inference has no visual basis even though objects do occupy the region."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "A puppy is present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A small white curly-coated puppy occupies the left and center of IMAGE A."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "A newspaper is present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Folded printed pages with a red masthead fragment and barcode lie on the right side of IMAGE A."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The puppy is interacting with the newspaper.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The puppy's muzzle rests near the newspaper's folded edge, which reads as proximity/contact, but no clear interaction (chewing, pawing) is visible."
+    },
+    {
+      "claim_id": "C9",
+      "claim_text": "The localized region is consistent with that puppy-and-newspaper content.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The marked region covers newspaper pages and an adjacent mass of brown curly fur, but not the puppy itself, which lies outside the mask."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Puppy and newspaper both exist in IMAGE A, so the object naming is real, but the annotated region spans the right column (center-right plus top-right) and encloses newspaper plus a patch of brown curly fur rather than the puppy. The authenticity conclusion inverts its own high manipulation score and is unsupported. Region label center-right is correct but incomplete."
+}

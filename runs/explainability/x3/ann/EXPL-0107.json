@@ -1,0 +1,85 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.969.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported detector score cannot be checked against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is very high, indicating a strong likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Alteration is observable: the cow inside the annotated region differs between A and B (A: dark head held low in profile with a broad white mid-body band; B: head turned toward the camera with a pale muzzle and a differently blotched piebald coat)."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-left.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single rectangle spans roughly x 241-376, y 444-561, lying mostly in the center-left cell; IMAGE D's red box confirms it."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability (0.883) and a max probability (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities are not verifiable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There is a house in the background.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A cream-walled two-storey building with a terracotta hipped roof and a chimney does stand on the ridge behind the pasture in IMAGE A."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The localized region corresponds to that house.",
+      "claim_type": "location",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotated rectangle encloses the standing black-and-white cow on the slope, not the house; the house sits higher and to the right of the box."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "The house is a real and not digitally added element.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The house appears in both A and B and is not the annotated region, but the fog leaves its detail low-contrast and the explanation offers no checkable basis beyond a misattributed probability figure."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The overall scene appears natural.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The flat fog-lit scene has no obvious visual incongruity at this resolution, but 'appears natural' is too vague to verify and does not address the annotated region."
+    },
+    {
+      "claim_id": "C9",
+      "claim_text": "This supports the authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated animal differs between A and B, so an authenticity conclusion is contradicted by the supplied comparison; it also contradicts the explanation's own opening statement."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "no",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The center-left location matches the annotation, but the object attributed to that region is wrong: the box encloses a standing black-and-white cow, while the house it names sits further up and to the right. The house is not hallucinated - it genuinely appears in the scene - but it is not the annotated content. The explanation also contradicts itself, calling the score a strong indication of alteration and then concluding the image is authentic."
+}

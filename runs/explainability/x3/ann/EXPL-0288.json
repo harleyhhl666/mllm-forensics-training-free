@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.205).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector score is metadata not present or verifiable in the photograph itself."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The region in the bottom-left has a high probability of being manipulated (0.943).",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-left cell contains foreground landscaping rocks, dirt, grass and a small teal object; it is darkened by a corner vignette and softened by edge blur. Nothing there visibly indicates insertion or editing, but the softness/vignette make the area unjudgeable at this resolution, and the stated numeric probability is not itself observable."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a distinguishable region located in the bottom-left of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-left ninth exists and holds identifiable content (rock border, dirt, lawn edge, a small teal item at the frame edge), so the named location is meaningful."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "These observations suggest that the image is likely authentic.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An overall authenticity verdict is not a checkable visual claim, and it does not follow from the immediately preceding statement of a high manipulation probability."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Zoo giraffe scene with heavy filter vignette and edge blur. The explanation names no object, so only the location is checkable. It internally contradicts itself: a 0.943 probability of manipulation in the bottom-left is offered as support for authenticity. No visible seam, halo or texture anomaly in the bottom-left beyond filter vignette and faux-bokeh softness."
+}

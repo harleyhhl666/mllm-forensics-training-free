@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score, not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content in the annotated region differs between A and B: the right-hand giraffe faces the camera with head and ossicones visible in A but is seen from behind, rump and tail toward the viewer, in B."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white silhouette is centred in the middle-right cell; IMAGE D's outline of the right-hand giraffe matches."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability (0.943) and a max probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric values, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This marks a specific area of concern, likely related to the giraffe or its surroundings.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A giraffe occupies the centre-right of IMAGE A and is exactly what the IMAGE D outline traces."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "This supports the conclusion of digital manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The region singled out by the annotation is where A and B visibly diverge in the giraffe's pose and orientation."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Region and named object both match the annotation, and the alteration conclusion is backed by a clear A-vs-B difference in the right-hand giraffe's orientation. Numeric score statements are unverifiable rather than wrong."
+}

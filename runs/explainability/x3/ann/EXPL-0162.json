@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.999.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The board carried by the kitesurfer differs in deck colour, graphics and lettering between IMAGE A and IMAGE B, so altered content is present in the frame."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There are localized regions in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C shows two white polygons, ~81% of their area inside the center cell (the rest just crossing into center-right); IMAGE D outlines the carried board there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Those regions have high probability scores.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported score values, not visually checkable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is not manipulated in those areas.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Those are precisely the areas where IMAGE A departs from IMAGE B; the rest of the frame matches."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The center location is corroborated by the mask and outline (the kiteboard under the rider's arm). The explanation's conclusion of authenticity is contradicted by the A/B comparison, which shows the board's deck appearance changed exactly inside the annotated regions; it is also internally inconsistent in reading a 0.999 manipulation score as evidence of authenticity."
+}

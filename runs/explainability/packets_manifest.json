@@ -1,0 +1,3837 @@
+[
+ {
+  "anon_id": "EXPL-0019",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.961, which is very high, indicating a strong likelihood of digital alteration. However, the localized region in the center-right has a high probability score, suggesting the presence of a real object in that area. This suggests the image is real.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0019_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0019_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0019_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0019_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0039",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.961), and the localization output indicates a region in the 'center-right' with a high mean probability (0.893) and a very high max probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0039_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0039_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0039_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0039_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0241",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.928, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0241_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0241_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0241_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0241_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0182",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.998) and the localized region with a high mean probability (0.928) and max probability (0.998) in the center suggest significant digital alteration. The localized area likely indicates a manipulated section of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0182_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0182_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0182_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0182_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0164",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation, and the grid location in the center has a high probability of being authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0164_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0164_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0164_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0164_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0149",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. The localized region in the 'center' has a high mean probability (0.96) and a max probability of 1.0, suggesting a manipulated area, likely around the player or the background.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0149_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0149_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0149_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0149_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0218",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation, and the top-center region has a high probability of being authentic, suggesting the image is real.",
+  "referenced_regions": [
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0218_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0218_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0218_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0218_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0053",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localized region in the top-center with a high mean probability (0.967) and a max probability of 1.0 suggests a specific area of the image has been manipulated, likely related to the ball or its trajectory.",
+  "referenced_regions": [
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0053_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0053_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0053_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0053_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0112",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.985, indicating a high likelihood of authenticity. The localized region in the center-right has a high mean probability, suggesting the presence of a specific feature or object, which is consistent with the image of a puppy interacting with a newspaper.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0112_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0112_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0112_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0112_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0248",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.985), and the localization output indicates a region in the center-right with a high mean probability (0.898) and a very high max probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0248_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0248_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0248_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0248_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0292",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.980, which is very high, indicating a strong likelihood of digital alteration. However, the presence of a localized region with a high probability score in the center suggests that the image is not entirely manipulated, as the tool has identified a specific area with a high probability of being authentic. This could be due to the tool's limitations or the nature of the image itself. Given the score and the localized region, the image appears to be real.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0292_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0292_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0292_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0292_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0206",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.980), and the localization output indicates a region in the center with a high mean probability (0.944) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0206_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0206_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0206_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0206_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0012",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.870, which is relatively high, but the localized region in the center-left has a high mean probability of 0.909, suggesting that the image is likely authentic.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0012_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0012_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0012_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0012_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0145",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.870) and the region in the 'center-left' with a high mean probability (0.909) and max probability (0.991) suggest significant digital alteration in that area, indicating the image is likely manipulated.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0145_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0145_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0145_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0145_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0170",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.966, which is very high, indicating a high likelihood of digital alteration. However, the localized region in the bottom-left has a high mean probability of 0.946, suggesting that this part of the image is authentic. The presence of a localized region with high probability in the image suggests that the image is not entirely manipulated.",
+  "referenced_regions": [
+   "bottom-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0170_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0170_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0170_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0170_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0176",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.966), and the regions in the bottom-left and center have significant mean and maximum probabilities, indicating potential digital alterations. The bottom-left region, in particular, has a high mean probability (0.946) and a very high maximum probability (0.997), suggesting strong evidence of manipulation.",
+  "referenced_regions": [
+   "bottom-left",
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0176_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0176_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0176_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0176_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0222",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the bottom-center with a high probability suggests a natural scene, supporting the image's authenticity.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0222_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0222_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0222_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0222_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0268",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localized region in the bottom-center has a high mean probability (0.904) and a maximum probability (0.998), indicating significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0268_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0268_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0268_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0268_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0243",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.994, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.936, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0243_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0243_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0243_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0243_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0210",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.994), and the localization output indicates a region in the center with a high mean probability (0.936) and a maximum probability (0.996), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0210_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0210_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0210_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0210_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0166",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.931, which is high, suggesting potential manipulation. However, the localized region in the bottom-right corner has a high mean probability (0.924) and a max probability (0.995), indicating a strong confidence in the authenticity of that area. Given the high score and the localized confidence, the image appears to be an authentic photograph.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0166_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0166_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0166_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0166_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0255",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.931), and the localization output indicates a region in the bottom-right with a high mean probability (0.924) and a maximum probability (0.995), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0255_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0255_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0255_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0255_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0106",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.789, which is below the threshold for significant digital alteration. The localized region in the bottom-right corner has a high mean probability, suggesting it is a genuine part of the image.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0106_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0106_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0106_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0106_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0067",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.789), and the localization output indicates a region in the bottom-right with a high mean probability (0.878) and a very high max probability (0.992), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0067_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0067_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0067_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0067_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0133",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the bottom-center suggests a high probability of a real object, which aligns with the authenticity of the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0133_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0133_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0133_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0133_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0148",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localization output highlights a region in the bottom-center with a high mean probability (0.952) and a maximum probability (0.999), suggesting a manipulated area in that specific location.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0148_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0148_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0148_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0148_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0198",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.990, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.925, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0198_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0198_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0198_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0198_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0152",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.990), and the localization output indicates a region in the center with a high mean probability (0.925) and a maximum probability (0.996), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0152_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0152_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0152_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0152_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0077",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The grid location in the center suggests a region of interest, but no manipulation is detected in this area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0077_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0077_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0077_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0077_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0110",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the center with a high mean probability (0.939) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0110_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0110_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0110_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0110_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0122",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the center-left has a high probability, suggesting the presence of a real object in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0122_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0122_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0122_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0122_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0049",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. The localized region in the 'center-left' area has a high mean probability (0.921) and a maximum probability (0.999), suggesting significant evidence of manipulation in that specific area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0049_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0049_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0049_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0049_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0121",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The grid location in the center has a high mean and max probability, suggesting the presence of a manipulated region, but the overall score suggests the image is real.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0121_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0121_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0121_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0121_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0024",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the center with a high mean probability (0.95) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0024_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0024_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0024_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0024_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0107",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.969, which is very high, indicating a strong likelihood of digital alteration. However, the localized region in the center-left has a high mean probability (0.883) and a max probability (0.997), suggesting that the house in the background is a real and not digitally added element. The overall scene appears natural, supporting the authenticity of the image.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0107_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0107_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0107_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0107_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0285",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.969), and the localization output indicates a region in the 'center-left' with a high mean probability (0.883) and a very high max probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0285_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0285_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0285_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0285_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0187",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the center-right has a high probability score, suggesting the image is authentic.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0187_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0187_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0187_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0187_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0088",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. The localization measurement in the 'center-right' region with a high mean probability (0.924) and a max probability of 1.0 further supports the presence of manipulated content in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0088_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0088_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0088_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0088_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0203",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.997, indicating a high likelihood of authenticity. The localized region in the center-right has a high mean probability of 0.933, suggesting that the object in this area is likely real.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0203_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0203_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0203_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0203_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0264",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.997), and the localization output indicates a region in the center-right with a high mean probability (0.933) and a maximum probability (0.997), suggesting significant digital alteration, particularly around the cow-like figure.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0264_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0264_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0264_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0264_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0009",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the center supports this, with a high probability score of 0.997, suggesting the presence of a real object in the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0009_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0009_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0009_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0009_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0013",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.998) and the localized region with a high mean probability (0.895) and max probability (0.997) in the center suggest significant digital alteration, likely involving the cow or the surrounding area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0013_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0013_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0013_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0013_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0095",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the center-left has a high probability, suggesting the tool is confident in the authenticity of the image.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0095_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0095_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0095_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0095_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0216",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localized region in the center-left has a high mean probability (0.949) and a max probability of 1.0, suggesting a manipulated area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0216_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0216_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0216_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0216_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0123",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.990, indicating a high likelihood of authenticity. The localized region in the bottom-right corner has a high probability score, suggesting the presence of a digital artifact, which is consistent with the image being a real photograph.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0123_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0123_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0123_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0123_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0183",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.990), and the localization output indicates a region in the bottom-right with a high mean probability (0.862) and a very high max probability (0.998), suggesting digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0183_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0183_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0183_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0183_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0126",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.975, which is very high, indicating a high likelihood of authenticity. The localized region in the center has a high mean probability, suggesting that the cow in the foreground is a real part of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0126_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0126_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0126_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0126_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0214",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.975), and the localization output indicates a region in the center with a high mean probability (0.908) and a very high max probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0214_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0214_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0214_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0214_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0083",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.996, indicating a high likelihood of authenticity. The grid location in the top-right corner has a high mean probability, suggesting a real object in that area.",
+  "referenced_regions": [
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0083_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0083_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0083_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0083_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0141",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.996), and the localization output indicates a region in the top-right with a high mean probability (0.958) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0141_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0141_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0141_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0141_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0138",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.997, indicating a high likelihood of authenticity. The grid location measurement in the bottom-center area suggests a pattern that aligns with the natural distribution of donuts on a cooling rack, supporting the authenticity of the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0138_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0138_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0138_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0138_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0010",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.997) and the localized region with a high mean probability (0.931) and max probability (0.997) in the bottom-center suggest significant digital alteration.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0010_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0010_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0010_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0010_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0226",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the bottom-center suggests a potential manipulation, but the overall score and the absence of other manipulated regions support the authenticity of the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0226_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0226_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0226_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0226_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0034",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the bottom-center with a high mean probability (0.925) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0034_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0034_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0034_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0034_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0190",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.993, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.91, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0190_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0190_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0190_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0190_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0109",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.993), and the localization output indicates a region in the center with a high mean probability (0.91) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0109_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0109_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0109_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0109_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0253",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.996, indicating a high likelihood of authenticity. The localized region in the bottom-center supports this, with a high mean and max probability, suggesting the presence of a real object in the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0253_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0253_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0253_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0253_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0159",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.996), and the localization output indicates a region with a high mean probability (0.975) and a max probability of 1.0 in the bottom-center area, suggesting significant digital alteration, likely related to the placement of the donut in the sink.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0159_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0159_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0159_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0159_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0073",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.997, indicating a high likelihood of authenticity. The localized region in the center-right has a high mean and max probability, suggesting a real object in the image.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0073_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0073_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0073_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0073_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0047",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.997), and the localization output indicates a region in the center-right with a high mean probability (0.975) and a maximum probability (0.999), suggesting significant digital alteration, particularly around the donut.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0047_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0047_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0047_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0047_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0098",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.988, indicating a high likelihood of digital alteration. The presence of a highly saturated and unrealistic donut with a smiley face pattern suggests digital manipulation.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0098_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0098_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0098_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0098_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0180",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.988), and the localization output indicates a region in the bottom-center with a high mean probability (0.891) and a very high max probability (0.999), suggesting significant digital alteration in that area. The presence of a toy-like figure with a donut face further supports the likelihood of digital manipulation.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0180_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0180_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0180_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0180_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0040",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.956, which is very high, indicating a strong likelihood of digital alteration. However, the presence of a localized region with a high probability score in the top-center suggests that the image is not entirely manipulated, as the tool has identified a specific area with a high confidence level, which could be a natural part of the image.",
+  "referenced_regions": [
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0040_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0040_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0040_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0040_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0286",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.956), and the localization output indicates a region in the top-center with a high mean probability (0.905) and a maximum probability (0.993), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0286_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0286_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0286_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0286_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0291",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The grid location in the bottom-right corner has a high probability score, suggesting a real object or feature in the image.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0291_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0291_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0291_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0291_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0299",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localization output indicates a region in the bottom-right with a high mean probability (0.903) and a maximum probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0299_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0299_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0299_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0299_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0185",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.955, which is very high, indicating a strong likelihood of digital alteration. However, the localized region in the center has a high mean probability of 0.898, suggesting that the central part of the image is likely authentic. The presence of a fire hydrant and bollards in a realistic urban setting further supports the authenticity of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0185_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0185_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0185_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0185_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0050",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.955), and the localization output indicates a region in the center with a high mean probability (0.898) and a very high max probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0050_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0050_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0050_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0050_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0249",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is low (0.266), and the localized regions show high probability scores, indicating that the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-right",
+   "center",
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0249_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0249_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0249_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0249_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0239",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is relatively low (0.266), and the localized regions with higher probabilities do not indicate significant anomalies or inconsistencies that would suggest digital alteration. The overall visual context and details appear consistent with a real photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0239_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0239_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0239_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0239_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0205",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.986, indicating a high likelihood of digital alteration. The localized region in the bottom-center has a high mean probability of 0.934, suggesting a manipulated area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0205_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0205_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0205_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0205_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0188",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.986), and the localization output indicates a region in the bottom-center with a high mean probability (0.934) and a maximum probability of 1.0, suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0188_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0188_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0188_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0188_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0089",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the center-left supports this, with a high mean and max probability, suggesting the image is not manipulated.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0089_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0089_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0089_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0089_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0160",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localization output indicates a region with a high mean probability (0.957) and a max probability (0.999) in the 'center-left' area, suggesting significant digital alteration. The visual anomaly of the water flow from the fire hydrant also supports the conclusion of manipulation.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0160_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0160_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0160_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0160_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0229",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.981, which is very high, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.929, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0229_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0229_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0229_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0229_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0267",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.981), and the localization output indicates a region in the center with a high mean probability (0.929) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0267_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0267_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0267_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0267_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0041",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the top-right corner has a high probability score, suggesting the presence of a manipulated area, but the overall score and the absence of other manipulated regions suggest the image is real.",
+  "referenced_regions": [
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0041_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0041_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0041_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0041_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0221",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.998) and the localized region in the top-right with a high mean probability (0.964) and max probability (0.999) suggest significant digital alteration in that area, indicating the image is likely manipulated.",
+  "referenced_regions": [
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0221_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0221_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0221_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0221_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0142",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.784, which is below the threshold for significant manipulation, and the localized region in the center-right has a high probability score, suggesting the presence of a real object in the image.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0142_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0142_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0142_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0142_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0212",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.784), and the localization output indicates a region in the center-right with a high mean probability (0.915) and a very high max probability (0.996), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0212_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0212_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0212_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0212_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0031",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.997, indicating a high likelihood of authenticity. The center region has a high mean probability of 0.917, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0031_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0031_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0031_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0031_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0027",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.997) and the localized region in the center with a high mean probability (0.917) and max probability (0.999) suggest significant digital alteration, likely involving the fire hydrant or surrounding area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0027_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0027_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0027_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0027_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0171",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the bottom-center has a high mean and max probability, suggesting it is a genuine part of the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0171_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0171_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0171_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0171_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0127",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.999) and the localized region with a high mean probability (0.972) and max probability (1.0) in the bottom-center area suggest significant digital alteration, likely involving the fire hydrant or its surroundings.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0127_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0127_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0127_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0127_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0179",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score of 0.898 indicates a high likelihood of digital alteration, and the localized region in the center suggests a manipulated area, which aligns with the unusual ice formation around the fire hydrant.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0179_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0179_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0179_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0179_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0094",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.898), and the localization output indicates a region in the center with a high mean probability (0.925) and a very high max probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0094_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0094_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0094_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0094_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0157",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.997, indicating a high likelihood of authenticity. The grid location 'center' has a high mean probability of 0.945, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0157_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0157_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0157_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0157_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0087",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.997) and the localized region with a high mean probability (0.945) and max probability (0.999) in the 'center' grid location suggest significant digital alteration, likely involving the fire hydrant or surrounding area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0087_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0087_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0087_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0087_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0070",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.997, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.927, suggesting the presence of a real object in the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0070_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0070_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0070_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0070_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0105",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.997), and the localized region in the center has a high mean probability (0.927) and a maximum probability (0.997), indicating significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0105_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0105_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0105_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0105_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0080",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation. The localized region in the center-right has a high probability score, suggesting it is a genuine part of the image.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0080_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0080_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0080_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0080_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0030",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. The localized region in the center-right with a high mean probability (0.943) and a max probability (0.999) suggests a specific area of concern, likely related to the giraffe or its surroundings, which supports the conclusion of digital manipulation.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0030_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0030_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0030_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0030_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0261",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score of 0.994 indicates a high likelihood of digital alteration, and the localized region in the center suggests a potential manipulation point.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0261_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0261_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0261_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0261_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0196",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.994), and the localization output indicates a region in the center with a high mean probability (0.882) and a maximum probability (0.996) near the giraffe, suggesting digital alteration.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0196_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0196_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0196_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0196_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0281",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the bottom-center has a high probability score, suggesting the presence of a real object in the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0281_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0281_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0281_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0281_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0167",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localized region in the bottom-center with a high mean probability (0.893) and a max probability of 1.0 suggests a specific area of concern, likely related to the giraffes or the surrounding environment, which may have been digitally added or modified.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0167_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0167_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0167_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0167_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0284",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.995, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.915, suggesting the presence of a real object or feature in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0284_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0284_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0284_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0284_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0059",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.995), and the localization output indicates a region in the center with a high mean probability (0.915) and a maximum probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0059_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0059_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0059_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0059_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0230",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the center has a high probability score, suggesting the presence of a giraffe in the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0230_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0230_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0230_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0230_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0260",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. The localized region in the center, which corresponds to the giraffe, has a high mean probability (0.908) and a max probability of 1.0, suggesting significant manipulation in that area. The giraffe's posture and the context of its environment appear unnatural, further supporting the conclusion of digital alteration.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0260_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0260_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0260_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0260_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0092",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score of 0.993 indicates a high likelihood of digital alteration, and the localized region in the center suggests a potential manipulation, such as the giraffe's head being digitally added to the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0092_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0092_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0092_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0092_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0072",
+  "label": "fake",
+  "explanation": "The giraffe in the image appears to have an unnatural and digitally altered appearance, particularly around its head and neck, which is consistent with the high manipulation score and localization measurements provided.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0072_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0072_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0072_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0072_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0115",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score of 0.999 and the high probability of 1.0 for the central region suggest significant digital manipulation.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0115_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0115_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0115_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0115_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0071",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the center with a high mean probability (0.908) and a max probability of 1.0, suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0071_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0071_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0071_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0071_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0084",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation, and the grid location in the center has a high probability of being authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0084_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0084_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0084_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0084_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0151",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. The localized region in the center with a high mean probability (0.922) and a max probability of 1.0 further supports the presence of manipulation in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0151_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0151_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0151_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0151_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0061",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 1.000, indicating no manipulation, and the grid location in the center has a high probability of being authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0061_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0061_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0061_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0061_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0055",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. The localized region in the center has a high mean probability (0.908) and a max probability (0.999), suggesting significant manipulation in that area, likely related to the giraffes or the tree.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0055_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0055_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0055_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0055_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0194",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.981, indicating a high likelihood of authenticity. The grid location 'center-right' has a high mean probability of 0.915 and a max probability of 0.998, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0194_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0194_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0194_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0194_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0118",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.981), and the localization tool identifies a region in the center-right with a high mean probability (0.915) and a maximum probability (0.998), indicating significant evidence of digital alteration.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0118_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0118_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0118_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0118_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0197",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the center-left supports this, with a high probability score of 0.999, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0197_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0197_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0197_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0197_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0269",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localization output indicates a region in the center-left with a high mean probability (0.832) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0269_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0269_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0269_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0269_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0277",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The grid location in the center suggests a region of interest, but no manipulation is detected in this area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0277_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0277_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0277_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0277_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0232",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localized region in the center has a high mean probability (0.937) and a maximum probability (0.999), indicating significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0232_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0232_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0232_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0232_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0237",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.997, indicating a high likelihood of authenticity. The localized region in the center-left supports this, with a high probability of being a real photograph.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0237_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0237_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0237_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0237_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0005",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.997), and the localization output indicates a region in the 'center-left' with a high mean probability (0.938) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0005_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0005_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0005_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0005_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0271",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.996, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.909, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0271_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0271_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0271_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0271_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0008",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.996), and the localization output indicates a region in the center with a high mean probability (0.909) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0008_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0008_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0008_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0008_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0103",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the center-left supports this, with a high mean and max probability, suggesting the presence of a real object in the image.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0103_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0103_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0103_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0103_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0074",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localization output indicates a region in the 'center-left' with a high mean probability (0.925) and a maximum probability (0.994), suggesting significant digital alteration in that area. Additionally, the overall image has an unnatural color balance and contrast, further supporting the conclusion of digital manipulation.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0074_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0074_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0074_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0074_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0002",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the top-right corner has a high mean and max probability, suggesting the presence of a real object in that area.",
+  "referenced_regions": [
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0002_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0002_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0002_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0002_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0225",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localization output indicates a region in the top-right with a high mean probability (0.915) and a maximum probability (0.999), suggesting significant digital alteration, particularly around the horse figure.",
+  "referenced_regions": [
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0225_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0225_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0225_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0225_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0215",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the bottom-center has a high probability score, suggesting the presence of a horse, which is a natural element in the scene.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0215_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0215_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0215_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0215_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0295",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.999) and the localized region with a high mean probability (0.918) and max probability (0.999) in the bottom-center suggest significant digital alteration. These scores indicate a high likelihood of manipulation in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0295_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0295_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0295_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0295_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0207",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the center-left has a high probability score, suggesting the presence of a real object in the image.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0207_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0207_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0207_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0207_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0140",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the center-left with a high mean probability (0.91) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0140_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0140_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0140_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0140_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0256",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.983, indicating a high likelihood of authenticity. The localized region in the center-left has a high mean probability of 0.913, suggesting the presence of a real object or person in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0256_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0256_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0256_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0256_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0242",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.983), and the localization output indicates a region in the 'center-left' with a high mean probability (0.913) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0242_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0242_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0242_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0242_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0283",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the center-left has a high mean probability and maximum probability, suggesting the presence of a specific feature or object, which is consistent with the natural scene of people riding horses on a beach.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0283_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0283_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0283_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0283_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0054",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the 'center-left' with a high mean probability (0.918) and a max probability of 1.0, suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0054_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0054_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0054_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0054_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0104",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score of 0.980 and the localized region in the top-left corner with a high probability suggest significant digital manipulation.",
+  "referenced_regions": [
+   "top-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0104_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0104_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0104_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0104_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0044",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.980), and the localization output indicates a region in the top-left with a high mean probability (0.88) and a very high max probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "top-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0044_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0044_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0044_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0044_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0064",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the center-left has a high mean probability and maximum probability, suggesting the presence of a real object or feature in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0064_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0064_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0064_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0064_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0250",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), indicating a strong likelihood of digital alteration. The localized region in the center-left with a high mean probability (0.927) and a maximum probability of 1.0 further supports the presence of manipulated content in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0250_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0250_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0250_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0250_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0147",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.914, which is high, suggesting significant manipulation. However, the localized region in the bottom-center has a high mean probability (0.928) and max probability (0.997), indicating a strong likelihood of authenticity in that area. The overall context and lighting also support the authenticity of the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0147_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0147_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0147_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0147_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0016",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.914), and the localization output indicates a region in the bottom-center with a high mean probability (0.928) and a very high max probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0016_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0016_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0016_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0016_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0007",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation. The localized regions in the bottom-center suggest a high probability of manipulation, but the overall score and the absence of other manipulated regions suggest the image is authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0007_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0007_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0007_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0007_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0262",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localized regions in the bottom-center of the image show high mean and maximum probabilities of manipulation, further supporting the conclusion that the image has been digitally altered.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0262_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0262_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0262_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0262_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0062",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.986, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.879, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0062_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0062_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0062_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0062_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0163",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.986), and the localization output indicates a region in the center with a high mean probability (0.879) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0163_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0163_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0163_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0163_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0139",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The grid location in the bottom-left corner has a high mean probability, suggesting the presence of a watermark or a digital signature, which is common in authentic photographs.",
+  "referenced_regions": [
+   "bottom-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0139_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0139_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0139_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0139_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0231",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the bottom-left with a high mean probability (0.924) and a maximum probability (0.998), suggesting significant digital alteration in that area. Additionally, the presence of multiple identical figures in different poses is indicative of image manipulation.",
+  "referenced_regions": [
+   "bottom-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0231_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0231_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0231_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0231_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0130",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.995, indicating a high likelihood of authenticity. The localized region in the bottom-center suggests a potential anomaly, but the score and the overall context of the image suggest it is not manipulated.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0130_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0130_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0130_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0130_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0300",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.995), and the localization output indicates a region in the bottom-center with a high mean probability (0.875) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0300_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0300_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0300_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0300_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0014",
+  "label": "fake",
+  "explanation": "The image-level manipulation score of 0.994 and the high probability of the grid location in the center-left suggest significant digital manipulation.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0014_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0014_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0014_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0014_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0227",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.994), and the localization output indicates a region in the 'center-left' with a high mean probability (0.887) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0227_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0227_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0227_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0227_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0234",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.942, which is high, suggesting significant manipulation. However, the localized region in the center has a high mean probability of 0.941, indicating that the central part of the image is likely authentic. The presence of a shadow and the natural lighting further support the authenticity of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0234_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0234_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0234_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0234_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0056",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.942), and the localization output indicates a region in the center with a high mean probability (0.941) and a very high max probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0056_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0056_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0056_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0056_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0004",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.982, indicating a high likelihood of authenticity. The grid location at the bottom-center with a high mean probability suggests a natural element in the image, supporting the authenticity of the photograph.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0004_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0004_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0004_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0004_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0290",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.982), and the localized region in the bottom-center has a high mean probability (0.909) and a very high max probability (0.999), indicating significant evidence of digital alteration.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0290_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0290_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0290_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0290_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0258",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.995, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.819, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0258_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0258_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0258_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0258_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0042",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.995) and the localized region with a high mean probability (0.819) and max probability (0.998) in the center suggest significant digital alteration, likely involving the skateboarder or the scene.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0042_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0042_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0042_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0042_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0113",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.973, which is very high, indicating a strong likelihood of digital alteration. However, the localized region in the center has a high mean probability of 0.853, suggesting that the central part of the image is likely authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0113_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0113_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0113_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0113_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0046",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.973), and there are localized regions with significant mean and maximum probabilities of manipulation, particularly in the 'center' and 'top-right' areas. These regions suggest digital alterations, such as the skater's pose or background elements.",
+  "referenced_regions": [
+   "bottom-right",
+   "center",
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0046_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0046_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0046_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0046_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0018",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.994, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.854, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0018_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0018_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0018_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0018_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0033",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.994), and the localization output indicates a region in the center with a high mean probability (0.854) and a maximum probability (0.996) exceeding the threshold, suggesting significant digital alteration.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0033_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0033_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0033_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0033_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0172",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.994, indicating a high likelihood of authenticity. The localized region in the center-right has a high mean probability of 0.932, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0172_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0172_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0172_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0172_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0209",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.994), and the localization output indicates a region in the center-right with a high mean probability (0.932) and a maximum probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0209_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0209_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0209_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0209_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0263",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.992, indicating a high likelihood of authenticity. The grid location in the center has a high mean probability of 0.908, suggesting the presence of a real object or person in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0263_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0263_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0263_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0263_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0201",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.992), and the localization output indicates a region in the center with a high mean probability (0.908) and a maximum probability (0.997), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0201_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0201_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0201_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0201_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0006",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the center has a high probability score, suggesting the image is authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0006_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0006_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0006_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0006_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0204",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localized region in the center has a high mean probability (0.923) and a max probability of 1.0, suggesting a manipulated area around the person in the water.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0204_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0204_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0204_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0204_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0177",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the center-left supports this, with a high mean and max probability, suggesting the image is not manipulated.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0177_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0177_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0177_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0177_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0228",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the center-left with a high mean probability (0.948) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0228_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0228_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0228_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0228_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0162",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized regions in the center of the image have high probability scores, suggesting that the image is not manipulated in those areas.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0162_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0162_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0162_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0162_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0276",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.999) and the localized regions with high mean and max probabilities indicate significant digital alteration, particularly in the central area of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0276_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0276_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0276_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0276_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0015",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the bottom-center suggests a high probability of the image being authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0015_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0015_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0015_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0015_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0096",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, which is a high score indicating potential manipulation, but the provided region list is empty, suggesting no specific area of concern was identified. The image appears to be a natural beach scene with no obvious signs of digital alteration, such as unnatural artifacts or inconsistencies.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0096_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0096_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0096_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0096_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0252",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.999, indicating a high likelihood of authenticity. The localized region in the center-left has a high mean and max probability, suggesting the presence of a specific feature or object, which is consistent with the image of a surfer.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0252_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0252_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0252_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0252_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0114",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the center-left with a high mean probability (0.928) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0114_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0114_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0114_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0114_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0068",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score of 0.985 indicates a high likelihood of digital alteration. The localized region in the bottom-center suggests a potential manipulation, which aligns with the overall image's unnatural appearance.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0068_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0068_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0068_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0068_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0161",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.985), and the localization output indicates a region in the bottom-center with a high mean probability (0.904) and a maximum probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0161_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0161_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0161_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0161_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0236",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the center has a high mean and max probability, suggesting the presence of a specific feature or object, which is consistent with the image of a surfer on a wave.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0236_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0236_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0236_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0236_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0124",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.998) and the localized region with a high mean probability (0.869) and max probability (0.998) in the center of the image suggest significant digital alteration. The localized area likely indicates a manipulated section, supporting the conclusion that the image is not authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0124_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0124_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0124_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0124_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0101",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating no manipulation. The localized region in the center-left has a high probability, suggesting the tool is confident in the authenticity of the image.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0101_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0101_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0101_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0101_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0233",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localized region in the 'center-left' area has a high mean probability (0.918) and a max probability (0.999), suggesting a manipulated area, likely related to the person or object in that region.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0233_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0233_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0233_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0233_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0125",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The localized region in the center has a high mean probability of 0.913, suggesting the presence of a specific feature or object, which is consistent with the image of a person surfing.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0125_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0125_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0125_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0125_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0296",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localization output indicates a region in the center with a high mean probability (0.913) and a maximum probability of 1.0, suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0296_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0296_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0296_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0296_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0158",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 1.000, indicating no manipulation, and the localized region in the center-right has a high probability score, suggesting the image is authentic.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0158_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0158_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0158_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0158_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0247",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 1.000, indicating a high likelihood of digital alteration. Additionally, the localization output highlights a region in the center-right with a high mean probability (0.914) and a maximum probability (0.998), suggesting a manipulated area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0247_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0247_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0247_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0247_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0038",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score of 0.999 indicates a high likelihood of digital alteration, and the localized region in the bottom-center suggests a manipulated area, which is consistent with the presence of a glowing, ghostly figure superimposed on the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0038_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0038_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0038_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0038_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0224",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization output indicates a region in the bottom-center with a high mean probability (0.95) and a max probability of 1.0, suggesting significant digital alteration in that area. The visual anomaly of the train with a blue overlay further supports the conclusion of digital manipulation.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0224_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0224_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0224_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0224_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0273",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score of 0.999 and the presence of localized regions with high probability scores suggest that the image has not been digitally altered.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0273_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0273_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0273_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0273_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0100",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.999), and the localization measurements indicate significant areas of concern in the 'center-right' region with high mean and maximum probabilities of manipulation. These findings suggest digital alteration.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0100_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0100_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0100_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0100_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0219",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.998, indicating a high likelihood of authenticity. The grid location in the center-right has a high mean probability of 0.927, suggesting the presence of a real object or feature in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0219_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0219_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0219_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0219_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0082",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.998), and the localization output indicates a region in the center-right with a high mean probability (0.927) and a maximum probability (0.999), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0082_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0082_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0082_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0082_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0079",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.821, which is relatively high, but the localized region in the center has a high mean probability of 0.886, suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0079_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0079_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0079_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0079_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0220",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.821), and the localization output indicates a region in the center with a high mean probability (0.886) and a maximum probability (0.988), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0220_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0220_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0220_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0220_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0058",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.844, which is relatively high, suggesting potential manipulation. However, the localized region in the center has a high mean probability of 0.933, indicating that the area is likely authentic. The presence of a tram and the urban setting are consistent with a real photograph.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0058_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0058_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0058_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0058_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0154",
+  "label": "fake",
+  "explanation": "The image exhibits a high manipulation score (0.844) with a localized area of high probability (mean: 0.933, max: 0.998) in the center, indicating significant digital alteration, particularly in the selective colorization of the tram.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0154_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0154_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0154_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0154_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0165",
+  "label": "fake",
+  "explanation": "The TruFor image-level manipulation score is 0.968, which is very high, indicating a high likelihood of the image being authentic. The localized region in the center has a high mean probability of 0.947, suggesting that the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0165_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0165_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0165_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0165_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0011",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.968), and the localization output indicates a significant area in the center with a high mean probability (0.947) and a maximum probability (0.997), suggesting digital alteration, likely related to the train's appearance or the surrounding environment.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0011_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0011_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0011_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0011_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0191",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high at 0.871, and the localized region in the bottom-right corner has a high probability score, indicating significant digital alteration.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0191_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0191_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0191_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0191_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0280",
+  "label": "fake",
+  "explanation": "The image exhibits an unusually high manipulation score (0.871) and a localized region in the bottom-right with a high mean probability (0.862) and a maximum probability (0.995), indicating significant digital alteration. Additionally, the overall color saturation and contrast are highly unnatural, suggesting post-processing or manipulation.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0280_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0280_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0280_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0280_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0174",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.992, indicating a high likelihood of authenticity. The localized region in the bottom-center suggests a potential anomaly, but the score and the overall scene do not suggest digital alteration.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0174_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0174_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0174_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0174_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0045",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is very high (0.992), and the localization output indicates a region in the bottom-center with a high mean probability (0.916) and a maximum probability (0.995), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0045_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0045_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0045_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0045_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0057",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.995, indicating a high likelihood of authenticity. The grid location in the center shows a high probability of 0.998, suggesting the image is not manipulated in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0057_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0057_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0057_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0057_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0117",
+  "label": "fake",
+  "explanation": "The high image-level manipulation score (0.995) and the localized region in the center with a high mean probability (0.95) and max probability (0.998) suggest significant digital alteration, likely involving the train or its surroundings.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0117_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0117_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0117_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0117_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0193",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is 0.968, which is very high, indicating a high likelihood of digital alteration. However, the localized region in the center has a high mean probability of 0.935, suggesting that the central part of the image is authentic. The presence of a train and platform in the image supports the authenticity of the scene.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0193_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0193_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0193_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0193_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0217",
+  "label": "fake",
+  "explanation": "The image-level manipulation score is high (0.968), and the localization output indicates a significant area in the center with a high mean probability (0.935) and a maximum probability (0.997), suggesting digital alteration in that region.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0217_A.jpg",
+   "B": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0217_B.jpg",
+   "C": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0217_C.png",
+   "D": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0217_D.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0032",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.497, which is below the threshold for significant digital alteration, and there are no localized regions indicating tampering.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0032_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0287",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.497, which is relatively low, indicating a low likelihood of digital alteration. Additionally, the structured localization measurements returned no regions of concern, further supporting the conclusion that the image appears to be authentic.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0287_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0093",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.291), and the localized regions in the bottom-left and bottom-right corners have high probability scores, suggesting these areas are not manipulated.",
+  "referenced_regions": [
+   "bottom-left",
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0093_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0155",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.291), and the localized regions with high probabilities are extremely small and do not affect the overall integrity of the image. The visual inspection also does not reveal any obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0155_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0085",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.298), and the localized region in the center-left has a high mean probability (0.708) and a high max probability (0.955), indicating a high likelihood of the image being authentic.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0085_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0036",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.298), and the localized regions with high probabilities are small and scattered, indicating no significant evidence of digital alteration. The overall scene appears consistent and natural.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0036_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0175",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.185), and the bottom-center region has a high probability of being manipulated (0.955), suggesting that the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0175_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0223",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.185), and the localized regions with higher probabilities are small and scattered, indicating no significant evidence of digital alteration. The overall scene appears consistent and natural.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0223_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0135",
+  "label": "real",
+  "explanation": "The TruFor image-level manipulation score is 0.233, which is relatively low, indicating a low likelihood of digital alteration. Additionally, there are no localized regions in the JSON, suggesting no specific areas of manipulation were identified.",
+  "referenced_regions": [
+   "bottom-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0135_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0297",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.233), and there are no regions identified by the forensic tool as suspicious. The scene appears natural, with no visible anomalies or inconsistencies.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0297_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0150",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.578, which is below the threshold for significant manipulation. The localized region in the bottom-center has a high probability score, suggesting a watermark or signature, which is common in authentic photographs.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0150_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0195",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.578), and the localized region with a high probability of manipulation is very small and located at the bottom-center, which is likely a false positive given the context of the image. The overall scene appears consistent with a natural photograph of a water body and distant landscape.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0195_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0090",
+  "label": "real",
+  "explanation": "The TruFor image-level manipulation score is 0.226, which is relatively low, indicating a low likelihood of digital alteration. The centroid in the 'bottom-center' region has a high probability, suggesting a natural scene.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0090_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0020",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.226), and the localized regions with higher probabilities are small and do not significantly impact the overall scene. The visual content appears consistent and natural, with no obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0020_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0270",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.891, which is high, suggesting potential manipulation. However, the localized region in the bottom-center has a high mean probability (0.738) and a max probability (0.966), indicating a strong likelihood of the region being real. This suggests the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0270_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0099",
+  "label": "real",
+  "explanation": "The image-level manipulation score is high (0.891), and the localization output indicates a region in the bottom-center with a high mean probability (0.738) and a maximum probability (0.966), suggesting digital alteration in that area.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0099_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0111",
+  "label": "real",
+  "explanation": "The TruFor image-level manipulation score is 0.146, which is relatively low, indicating a low likelihood of digital alteration. The localized region in the center-left has a high mean probability of 0.63, suggesting that the image is not significantly manipulated in that area.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0111_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0076",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.146), and the provided localization measurements indicate only a small area with a relatively low mean probability of manipulation. The visual content, including the cows and the church, appears consistent and natural without obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0076_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0028",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.022), and the localized regions show no significant anomalies, suggesting the image is authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0028_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0282",
+  "label": "real",
+  "explanation": "The image-level manipulation score is very low (0.022), indicating minimal likelihood of digital alteration. Additionally, the localized regions with higher probabilities are small and scattered, suggesting no significant tampering.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0282_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0208",
+  "label": "real",
+  "explanation": "The TruFor image-level manipulation score is 0.138, which is relatively low, and the localized region in the center has a high mean probability of 0.869, indicating a high confidence in the authenticity of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0208_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0136",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.138), and the provided localization measurements indicate a very small region with a high probability of manipulation, which is likely a false positive. The overall scene appears natural and consistent with an authentic photograph of animals near a river.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0136_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0200",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.147), and the localized regions show high confidence in the authenticity of the image, indicating no significant digital alteration.",
+  "referenced_regions": [
+   "bottom-center",
+   "bottom-left",
+   "bottom-right",
+   "center",
+   "center-left",
+   "center-right",
+   "top-center",
+   "top-left",
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0200_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0254",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.147), indicating minimal evidence of digital alteration. Additionally, the localized regions with higher probabilities are very small (area ratios < 0.01) and do not suggest significant tampering.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0254_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0294",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.149), and the localized regions show high probabilities, suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0294_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0131",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.149), indicating minimal evidence of digital alteration. The localized regions with higher probabilities do not suggest significant tampering, and the overall image appears consistent with a natural photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0131_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0029",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.138), and the grid location in the center has a high mean probability (0.706) and max probability (0.937), indicating that the image is likely authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0029_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0265",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.138), and the provided localization measurements indicate only a very small region with a low area ratio and mean probability, which does not suggest significant digital alteration. The visual inspection of the image also shows no obvious signs of manipulation.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0265_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0143",
+  "label": "real",
+  "explanation": "The TruFor image-level manipulation score is 0.289, which is below the threshold typically used to indicate significant digital alteration. Additionally, there are no localized regions suggesting manipulation, and the scene appears consistent with a real-world photograph of a snowy roadside with a fire hydrant and a road sign.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0143_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0245",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.289), and there are no regions identified by the forensic tool as suspicious. The visual elements, such as the snow, road, and signage, appear consistent and natural.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0245_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0189",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.269), and the localized regions show high probabilities, suggesting the image is not significantly manipulated.",
+  "referenced_regions": [
+   "bottom-center",
+   "bottom-left",
+   "top-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0189_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0298",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.269), and the localized regions with higher probabilities are very small and scattered, indicating no significant evidence of digital alteration. The overall image appears consistent with a natural photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0298_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0129",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.185), and the localized regions show high probabilities, suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "center-left",
+   "top-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0129_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0144",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.185), and the localized regions with higher probabilities are minimal and do not indicate significant tampering. The overall image appears consistent and natural.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0144_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0244",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.585, which is below the threshold for significant digital alteration. The presence of a bird in the water and the natural setting suggest the image is authentic.",
+  "referenced_regions": [
+   "bottom-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0244_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0017",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.585, which is relatively low, suggesting minimal evidence of digital alteration. Additionally, the localized regions with higher probabilities are small and do not indicate significant tampering, further supporting the authenticity of the image.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0017_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0001",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.378), and the localized regions show high confidence probabilities, indicating the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-center",
+   "center",
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0001_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0181",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.378), and the localized regions with higher probabilities are small and scattered, indicating no significant evidence of digital alteration. The overall composition and natural appearance of the giraffes and their environment support the conclusion that the image is authentic.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0181_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0048",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.203), and the localized region in the center has a high probability (0.93), indicating a high likelihood of authenticity.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0048_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0272",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.203), and the localized regions with high probabilities are very small and scattered, indicating no significant evidence of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0272_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0288",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.205), and the region in the bottom-left has a high probability of being manipulated (0.943), suggesting that the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0288_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0213",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.205), and the localized regions with higher probabilities are small and do not indicate significant manipulations. The overall scene appears consistent and natural, with no obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0213_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0066",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.197), and the localized regions show high probabilities, suggesting the image is not significantly manipulated.",
+  "referenced_regions": [
+   "bottom-center",
+   "bottom-left",
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0066_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0199",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.197), and the localized regions with high probabilities are very small and scattered, indicating no significant evidence of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0199_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0278",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.072), and the grid location in the center has a high mean probability (0.811) and a maximum probability (0.982), indicating that the image is likely authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0278_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0035",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.072), and the provided localization measurements indicate a very small region with a high probability of manipulation, which is likely a false positive. The overall scene appears consistent and natural, with no visible signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0035_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0003",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.068), and the localized regions have high probability scores, indicating that the image is likely authentic.",
+  "referenced_regions": [
+   "center",
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0003_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0132",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.068), and while there are localized regions with higher probabilities, they are small and do not significantly impact the overall authenticity. The visual content appears consistent with a natural scene, showing giraffes in a savanna environment without obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0132_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0023",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.330, which is below the threshold for significant digital alteration. The localized region in the bottom-center has a high probability score, suggesting a real-world object or person, which supports the authenticity of the image.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0023_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0192",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.330), and the localized regions with higher probabilities are small and do not significantly affect the overall content. The image appears consistent and natural, with no obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0192_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0251",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.270), and the localized regions show high probabilities, suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0251_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0069",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.270), and the localized regions with high probabilities are small and scattered, suggesting no significant evidence of digital alteration. The overall scene appears consistent and natural.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0069_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0279",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.122), and the localized region in the center-left has a high mean probability (0.776) and a maximum probability (0.978), suggesting that the image is likely authentic.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0279_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0173",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.122), indicating minimal evidence of digital alteration. Additionally, the provided localization measurements suggest only a very small region with a high probability of manipulation, which is not significant enough to conclude the image is fake.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0173_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0235",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.198), and the localized regions in the top-center area show high probability values, suggesting that the image is likely authentic.",
+  "referenced_regions": [
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0235_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0274",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.198), and the localized regions with higher probabilities are small and scattered, indicating no significant evidence of digital alteration. The overall scene appears consistent and natural.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0274_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0075",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.066), and the localized region in the bottom-right corner has a high probability of being real, indicating the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0075_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0108",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.066), and the localized regions with high probabilities are small and do not significantly affect the overall content. The image appears consistent with a typical urban street scene, showing no obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0108_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0211",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.065), and the localized region in the bottom-center has a high probability (0.895), suggesting the presence of an object that is likely a sticker or note, which is a common feature in real photographs.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0211_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0156",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.065), indicating minimal evidence of digital alteration. The localized regions with higher probabilities do not suggest significant tampering, and the overall image appears consistent with a typical urban photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0156_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0078",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.862, which is high, but the localized region in the bottom-center has a high mean probability of 0.894, suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0078_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0289",
+  "label": "real",
+  "explanation": "The image-level manipulation score is high (0.862), and the localization measurements indicate significant manipulation probabilities in the bottom-center and bottom-right regions, suggesting digital alteration.",
+  "referenced_regions": [
+   "bottom-center",
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0289_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0097",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.180), and the localized regions show high probability scores, indicating that the image is likely authentic.",
+  "referenced_regions": [
+   "center-left",
+   "top-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0097_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0119",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.180), and the provided regions with high probabilities are small and isolated, likely due to noise or compression artifacts rather than deliberate manipulation. The overall scene appears consistent and natural.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0119_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0120",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.276), and the localized region in the bottom-right corner has a high probability (0.99), suggesting the image is authentic.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0120_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0025",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.276), and the localized regions with higher probabilities of manipulation are small and do not significantly affect the overall authenticity of the image. The visual content appears consistent with a real photograph of a person skateboarding.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0025_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0063",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.041), and there are no localized regions, suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0063_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0275",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.041), and the localization tool did not identify any regions of concern, suggesting the image is likely authentic.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0275_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0238",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.347), and the central region has a high mean probability (0.757) indicating a high likelihood of authenticity.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0238_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0102",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.347), and the localized regions with higher probabilities are small and do not significantly affect the overall authenticity of the image. The visual content appears consistent with a real photograph of a skateboarding scene.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0102_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0186",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.082), and the localized regions show high probability values, suggesting the image is not heavily manipulated.",
+  "referenced_regions": [
+   "bottom-right",
+   "top-center",
+   "top-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0186_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0178",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.082), and the localized regions with higher probabilities are minimal and do not indicate significant tampering. The overall image appears consistent with a real photograph of a skateboarder in action.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0178_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0266",
+  "label": "real",
+  "explanation": "The TruFor image-level manipulation score is 0.148, which is relatively low, and the localized region in the center has a high mean probability, suggesting the image is authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0266_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0137",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.148), and the provided localization measurements indicate a very small region with a high probability of manipulation, which is likely a false positive. The overall scene appears consistent and natural, with no visible signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0137_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0060",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.304), and the localized regions show high probabilities, indicating the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0060_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0168",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.304), and the localized regions with high probabilities are small and scattered, indicating no significant evidence of digital alteration. The overall scene appears consistent with a real photograph of a water park activity.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0168_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0259",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.114), and the localized region in the top-center has a high probability (0.988), suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0259_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0065",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.114), indicating minimal evidence of digital alteration. Additionally, the provided localization measurements suggest only a very small and isolated area with a high probability of manipulation, which is not significant enough to conclude the image is fake.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0065_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0081",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.477, which is below the threshold for significant digital alteration. The localized region in the center has a high probability score, suggesting the tool is confident in the authenticity of the central part of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0081_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0051",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.477), and the localized region in the center has a mean probability of 0.843, which is not extremely high. The visual inspection of the image does not reveal any obvious signs of digital alteration, such as unnatural artifacts or inconsistencies in lighting and shadows.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0051_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0184",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.961, which is very high, indicating a strong likelihood of digital alteration. However, the localized region in the center has a high mean probability of 0.944, suggesting that the core of the image is likely authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0184_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0037",
+  "label": "real",
+  "explanation": "The image-level manipulation score is high (0.961), and the localization output indicates a region in the center with a high mean probability (0.944) and a very high max probability (0.998), suggesting significant digital alteration in that area.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0037_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0052",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.347, which is below the threshold for significant digital alteration. The localized region in the center has a high probability score, suggesting the presence of a real object, which aligns with the image of a surfer riding a wave.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0052_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0257",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.347), and the localized region in the center has a small area ratio (0.003) with a mean probability of 0.821, which suggests minimal evidence of digital alteration. The visual content appears consistent with a natural scene of surfing.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0257_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0026",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.905, which is high, but the presence of a grid location in the center with a high probability suggests that the image is not heavily manipulated. The details in the cake, such as the palm trees and surfboards, appear consistent and natural, supporting the authenticity of the image.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0026_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0116",
+  "label": "real",
+  "explanation": "The image-level manipulation score is high (0.905), and the localization output indicates a significant area in the center with a high mean probability (0.851) and a maximum probability (0.991), suggesting digital alteration, likely due to the detailed and artificial-looking decorations on the cake.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0116_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0202",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.111), and the localized regions show high probability scores, indicating that the image is likely authentic.",
+  "referenced_regions": [
+   "center-left",
+   "top-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0202_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0021",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.111), and the localized regions with high probabilities are very small and do not indicate significant tampering. The overall visual evidence supports the authenticity of the photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0021_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0146",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.040), and the bottom-center region has a high probability of being real (0.89), suggesting the image is authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0146_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0128",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.040), and the localized regions with higher probabilities are minimal and do not indicate significant tampering. The overall visual evidence supports the authenticity of the photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0128_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0134",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.185), and the localized region in the center has a high probability (0.998), indicating a high likelihood of the image being authentic.",
+  "referenced_regions": [
+   "center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0134_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0043",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.185), and the localized regions with high probabilities are very small and do not significantly affect the overall image integrity. The visual inspection also shows no obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0043_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0246",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.091), and the localized regions in the bottom-right corner show high probability, suggesting the presence of a watermark or signature, which is a common feature in authentic photographs.",
+  "referenced_regions": [
+   "bottom-right"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0246_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0086",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.091), and the localized regions with higher probabilities are very small and do not indicate significant tampering. The overall image appears consistent with a real photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0086_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0240",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.168), and the localized regions show high probabilities, suggesting the image is likely authentic.",
+  "referenced_regions": [
+   "bottom-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0240_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0293",
+  "label": "real",
+  "explanation": "The image-level manipulation score is low (0.168), indicating minimal evidence of digital alteration. The localized regions with higher probabilities are very small and do not suggest significant tampering. The overall visual consistency and context support the authenticity of the photograph.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0293_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0169",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.422, which is below the threshold for significant digital alteration. The localized region in the center-left has a high mean probability, suggesting the tool is confident in its detection, but the score is low enough to indicate the image is likely authentic.",
+  "referenced_regions": [
+   "center-left"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0169_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0022",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.422), and the localized region with high probability is very small (area ratio 0.0019) and does not significantly impact the overall image integrity. The visual inspection of the image shows no obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0022_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0153",
+  "label": "real",
+  "explanation": "The image-level manipulation score is 0.275, which is relatively low, and the grid location in the top-center area shows a high probability of being authentic, suggesting the image is not significantly manipulated.",
+  "referenced_regions": [
+   "top-center"
+  ],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0153_A.jpg"
+  }
+ },
+ {
+  "anon_id": "EXPL-0091",
+  "label": "real",
+  "explanation": "The image-level manipulation score is relatively low (0.275), and the provided localization measurements indicate only a small area with a high probability of manipulation, which is not sufficient to conclude the image is fake. The overall visual inspection does not show any obvious signs of digital alteration.",
+  "referenced_regions": [],
+  "images": {
+   "A": "/mnt/disk3/borui/fevi/runs/explainability/packets/EXPL-0091_A.jpg"
+  }
+ }
+]

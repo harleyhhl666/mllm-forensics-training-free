@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 1.000.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Comparison of IMAGE A with IMAGE B shows altered content in the annotated area, consistent with digital alteration of this photograph."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the center-left.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask region falls wholly within the center-left cell, matching the outline in IMAGE D."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high mean probability (0.949) and a max probability of 1.0.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from images."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests a manipulated area in the center-left.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The outlined animal at the left frame edge is light chestnut with white belly, tail stripe and white hind legs in IMAGE A but uniformly dark brown with no white in IMAGE B; differences are confined to this region."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "medium",
+ "notes": "Location and the alteration claim are both borne out: the annotated center-left region contains a cow whose coat colour and markings differ between IMAGE A and IMAGE B. The explanation is generic, resting on scores rather than any visible artifact it identifies, and names no object or mechanism, so support is for its general assertions only."
+}

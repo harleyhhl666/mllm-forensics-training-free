@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector score cannot be checked against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C shows one compact white rectangle inside the middle row/middle column; IMAGE D outlines that same central area."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.917).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not verifiable from images."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a max probability of 0.999.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not verifiable from images."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "These indicate significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content inside the annotated centre region differs between IMAGE A and IMAGE B: the hydrant's white steamer cap, hanging chain and round rust-coloured base pad in B are replaced in A by red bolted side-outlet caps and a plain bolted base, consistent with altered content there."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The alteration likely involves the fire hydrant or the surrounding area.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A red fire hydrant is present in the centre cell of IMAGE A and is exactly what the IMAGE D outline encloses."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Location and named object both match the annotation; the manipulation conclusion is backed by a visible A-vs-B difference at the hydrant. The numeric score statements are simply unverifiable rather than wrong, and the explanation is appropriately hedged ('likely involving')."
+}

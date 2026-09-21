@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is low (0.198).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A reported numeric detector value; the photograph cannot confirm it."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There are localized regions in the top-center area.",
+   "claim_type": "location",
+   "support": "uncertain",
+   "evidence_basis": "none",
+   "brief_justification": "No mask is supplied, so the existence or placement of detector regions cannot be checked. The top-center cell contains only overexposed sky and thin tree branches - no distinct object the claim could be pointing at."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "Those regions show high probability values.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Unquantified detector confidence; not visually checkable."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests that the image is likely authentic.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "visible_real_image",
+   "brief_justification": "The scene is a plausible group horseback-riding snapshot with no clear seam, halo or impossible shadow visible, but the sky is clipped to featureless white and several horses overlap confusingly, so authenticity cannot be judged from what is visible and the stated basis (detector numbers) is not observable."
+  }
+ ],
+ "region_correct": "uncertain",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "uncertain",
+ "confidence": "medium",
+ "notes": "The explanation makes no describable visual observation at all - only detector numbers and a vague reference to top-center regions. The top-center cell holds sky and branches, so no object claim can be checked, and with no mask available the region claim is not verifiable either way."
+}

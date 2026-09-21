@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.898.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content in the annotated region differs from IMAGE B: in B the hydrant has a green bonnet and a rust-streaked yellow barrel with two symmetrical ice columns, while in A it is red with chrome caps and a single large asymmetric ice mass."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The white blob in IMAGE C lies wholly in the middle column with most of its mass in the centre cell; IMAGE D outlines the hydrant in the same place."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region is a manipulated area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The marked region is exactly where A and B differ in hydrant colour, bonnet type and surface."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There is an unusual ice formation around the fire hydrant.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A large, lopsided ice accretion around the hydrant is clearly visible in IMAGE A; however comparably heavy ice is present in IMAGE B too, so 'unusual' overstates what distinguishes A."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The manipulated region aligns with that ice formation.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The outlined region in IMAGE D follows the hydrant body and excludes most of the surrounding ice, so alignment with the ice formation is only approximate."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Region and alteration conclusion are supported by the annotation and a clear A-vs-B difference at the hydrant. The ice-formation reasoning is weaker: heavy ice exists in both images, and the marked region tracks the hydrant body rather than the ice."
+}

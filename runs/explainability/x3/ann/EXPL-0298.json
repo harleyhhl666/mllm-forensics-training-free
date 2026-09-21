@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.269).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are very small and scattered.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Region sizes and distribution are tool outputs; no regions are visible in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is no significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Nothing obvious stands out on the hydrant, shrub or lawn, but the shallow depth of field and soft background make a confident negative verdict unreliable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall image appears consistent with a natural photograph.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Flat overcast lighting is uniform across hydrant, shrub and grass, which is consistent, but a global naturalness verdict is not reliably judgeable."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "No object or location claim is made about the hydrant-and-shrub photograph, so only the two global naturalness statements touch the image, and both are too coarse to confirm."
+}

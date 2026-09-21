@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported detector score cannot be checked against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The animal inside the annotated region differs between A and B: A shows a red-and-white piebald cow with a broad white flank and chest, B shows a dark near-black calf with a white face and white throat band. A finding of no manipulation is not supported."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-left.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in IMAGE C is an animal-shaped blob spanning roughly x 235-390, y 348-500, with about 80% of it in the center-left cell and the remainder in the center cell."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An unquantified reported probability is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the presence of a real object in that area.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "An object - a cow - is indeed present at that location in IMAGE A and the mask follows a quadruped silhouette. But insofar as the claim asserts the object is unaltered, the A/B comparison shows different cattle there."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The center-left location matches the annotation, and an animal really does occupy it, so the vague 'real object' claim is half right as a statement of presence. The core assertions - no manipulation, and the object being genuine - conflict with the visible A/B difference: a red-and-white piebald cow in A against a dark white-faced calf in B."
+}

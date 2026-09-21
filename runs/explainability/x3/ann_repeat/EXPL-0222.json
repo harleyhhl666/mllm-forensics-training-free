@@ -1,0 +1,61 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.998.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "In the annotated area A shows two brightly multicoloured kayaks (yellow/blue/teal with red trim) while B shows a single lime-green sit-on-top kayak with a red one behind. The content there is changed, so no authenticity conclusion is supported."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the bottom-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's rectangular bar lies in the bottom row, centroid just inside the bottom-center cell though roughly half its width extends into bottom-left; IMAGE D outlines the beached kayaks there."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high probability.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "An unquantified detector confidence statement; not verifiable from images."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The localized region suggests a natural scene.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The marked region is precisely where the kayaks differ from the comparison photograph; nothing observable supports reading it as untouched natural content."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "This supports the image's authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Contradicted by the visible A-vs-B difference inside the annotated region."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "Bottom-center is an acceptable (if slightly generous) description of the mask, which straddles bottom-left and bottom-center. The authenticity conclusions are unsupported: the outlined kayaks differ clearly from IMAGE B. The explanation identifies no object and cites no visual property."
+}

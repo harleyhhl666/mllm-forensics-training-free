@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.378).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector score is not something that can be checked against the photograph itself."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high confidence probabilities.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates detector output; no mask or score map is supplied and no visual assertion is made."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The image shows several giraffe heads in closely similar poses against sculpted rock; whether that is natural or edited cannot be resolved from appearance alone, so authenticity is not reliably judgeable."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "The explanation is entirely score-based: it names no object and describes no visible feature, so almost nothing in it is checkable against the image. The only substantive claim (authenticity) is not verifiable by inspection."
+}

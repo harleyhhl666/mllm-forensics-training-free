@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high at 0.871.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the bottom-right corner.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask is a wedge filling the bottom-right cell (and the centre-right cell above it), flush with the right and bottom borders; Image D's outline agrees."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high probability score.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Probability values are not observable; Image C is binary."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This indicates significant digital alteration.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The marked bottom-right area is very dark, soft and heavily vignetted in both A and B, and the extreme red grading suppresses detail, so I cannot reliably determine whether content there differs between the two images."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "uncertain",
+ "confidence": "low",
+ "notes": "The bottom-right location matches the annotation. Whether content there was altered cannot be judged: that corner is crushed to near-black with heavy vignetting and blur in both A and B, and the explanation cites no visible anomaly of its own, only unverifiable scores."
+}

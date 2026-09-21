@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.585.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "0.585 is relatively low.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Interpretation of an unverifiable tool score; nothing visible bears on it, and this value is high relative to the other scores cited across this set."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This suggests minimal evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Depends entirely on the unverifiable score."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The localized regions with higher probabilities are small.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Region extents are tool outputs; no regions are visible in image A."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "Those regions do not indicate significant tampering.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "No regions are delineated in image A."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "This supports the authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Rests on the unverifiable metrics above."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Entirely tool-metric reasoning. No object, location, texture or lighting claim is made about the waterhole photograph (three giraffes drinking, a small bird at the shoreline), so no claim is checkable against image A."
+}

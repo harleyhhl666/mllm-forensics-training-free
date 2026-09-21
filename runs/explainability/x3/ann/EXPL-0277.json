@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.998.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector output; not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated region IMAGE A shows a saddled bay horse carrying a helmeted rider, while IMAGE B shows a riderless chestnut being led; content there clearly differs."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a grid location in the center that is a region of interest.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask is a large box centred in the center cell (about 42% of its area there, with spill into top-center, center-left and top-left); IMAGE D outlines the horse and rider at that position."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "No manipulation is detected in this area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "This is the annotated area and the area where IMAGE A departs from IMAGE B, so the supplied evidence contradicts the claim."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The region named is right and corresponds to the annotated horse-and-rider, but the explanation treats a 0.998 manipulation score as evidence of authenticity and states no manipulation was detected there, which contradicts both the annotation and the visible A-versus-B difference."
+}

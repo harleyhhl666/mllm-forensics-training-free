@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The single tapering wedge in IMAGE C lies essentially entirely in the middle-right cell, with only a few pixels crossing into centre; IMAGE D's outline around the train matches that placement."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.927) and a maximum probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The outlined locomotive differs substantially between the images: IMAGE A shows a dark green body with a broad yellow front wrap and yellow waist stripe, while IMAGE B shows a pale silver-grey body with a dark charcoal nose mask and a lime/yellow-green waistline stripe. The content inside the marked region has clearly been changed."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Location matches the mask precisely and the A-versus-B comparison of the outlined train shows a clearly different livery, supporting the alteration conclusion. The explanation names no object and cites no visible artefact of its own, resting entirely on scores; resolution is low so the exact nature of the change cannot be characterised."
+}

@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high, 0.999.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "Localized regions with high probability scores are present.",
+   "claim_type": "location",
+   "support": "partially_supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "A localized annotated region does exist (fragmented horizontal band in Images C and D), but numeric probability values are not observable."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "The referenced localized region is in the center-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask lies entirely in the middle row, mostly in the center-right cell with a small extension into the center cell."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "These findings suggest the image has not been digitally altered.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Content inside the marked band differs between A and B: A/D show a white coach with a yellow-green stripe in the background where B shows the pale rack-railway train with catenary. The conclusion also contradicts the evidence the same sentence cites."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "Named region matches the annotation, but the conclusion is internally contradictory (high manipulation score and high-probability localization cited as evidence of no alteration) and conflicts with the visible A-versus-B difference inside the marked region."
+}

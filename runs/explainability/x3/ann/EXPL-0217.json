@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.968).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a significant area in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask fills the middle cell and spills into top-centre, bottom-centre and middle-right, covering roughly 18% of the frame."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That area has a high mean probability (0.935) and a maximum probability (0.997).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric probability values are not observable; Image C is a binary mask."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests digital alteration in that region.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inside the marked region A shows a yellow-fronted electric multiple unit cab with dot-matrix destination display, while B shows a Class 56 diesel locomotive numbered 56105 with buffers and screw coupling."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Location matches the annotation and a substantial A-versus-B content difference is visible inside it, supporting the alteration conclusion. The explanation rests only on unverifiable numeric values plus the location and names no visual anomaly of its own."
+}

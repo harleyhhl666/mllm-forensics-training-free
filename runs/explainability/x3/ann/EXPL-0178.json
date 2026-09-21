@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.082).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not verifiable from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are minimal.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Concerns unsupplied measurement geometry."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not indicate significant tampering.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No visible artifact can be associated with the unseen regions; tampering cannot be judged from the visible frame."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall image appears consistent with a real photograph of a skateboarder in action.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A skater in a plaid shirt and 'DEATH' snapback is clearly airborne with his graphic-side board tilted beneath his feet over a plaza, background buildings softly out of focus — an internally coherent action photograph."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The checkable content claim matches image A precisely: a skateboarder mid-trick, airborne with the board beneath him in an urban plaza under flat overcast light. The rest of the explanation reports detector scores and region sizes that image A cannot confirm. Mild haloing and purple/green fringing are visible at the high-contrast sky edges but are ordinary clipping/aberration, so they neither support nor refute the tampering statement."
+}

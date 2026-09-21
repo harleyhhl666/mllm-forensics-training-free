@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.998.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "A manipulation score is described as indicating authenticity, and the marked region does differ between A and B: the locomotive is green/cream with a yellow front in A but grey with a yellow front in B."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "The grid location in the center-right has a high mean probability of 0.927.",
+   "claim_type": "location",
+   "support": "partially_supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The annotated region is indeed in the center-right cell, but the numeric probability value is not observable in the imagery."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests the presence of a real object or feature in that area.",
+   "claim_type": "other",
+   "support": "unsupported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "An object (the locomotive and coaches) is present there, but a localization probability does not establish that the content is 'real'; the region is the annotated region of interest and its content differs from Image B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "The center-right location matches the annotation, which covers the arriving locomotive and its coaches. However the explanation reinterprets a high manipulation score and a high localization probability as evidence of authenticity, which is internally contradictory and conflicts with the visible livery/colour difference between A and B inside that region."
+}

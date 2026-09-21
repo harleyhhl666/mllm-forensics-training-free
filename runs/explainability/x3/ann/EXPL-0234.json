@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.942.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score cannot be verified from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is high and suggests significant manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The skateboard deck is a flat saturated blue panel in IMAGE A but dark grip-taped/wood-toned in IMAGE B, so content in the annotated region really has been altered."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask silhouette lies almost entirely in the center cell, only grazing center-right; IMAGE D outlines the same skateboard there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That center region has a high mean probability of 0.941.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric probability is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This indicates the central part of the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The center is precisely the annotated region, and its content differs from IMAGE B (recoloured deck), so the evidence points the opposite way; this also contradicts C2 in the same explanation."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "A shadow is present in the image.",
+      "claim_type": "lighting",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A dark diagonal cast shadow is clearly visible on the concrete in the lower-right of IMAGE A."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "The lighting in the image is natural.",
+      "claim_type": "lighting",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Overall scene lighting is consistent sunlit daylight, but the outlined deck face reads as a flat evenly bright panel with no shading gradient, so lighting is not uniformly natural across the frame."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The shadow and natural lighting further support the authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The shadow lies far from the annotated region and says nothing about it; the annotated deck content demonstrably differs from IMAGE B."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The explanation locates the region correctly and correctly notes a visible shadow, but then argues the centre is authentic - the exact region the annotation marks and where content differs from the source photograph. It asserts both significant manipulation and authenticity, so it is internally contradictory, and it uses an unrelated shadow as evidence for the annotated region."
+}

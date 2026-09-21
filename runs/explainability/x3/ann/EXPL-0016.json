@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.914)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the bottom-center",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask rectangle in IMAGE C is centred in the bottom-center cell, and IMAGE D's box there encloses the glowing meter head."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.928)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a very high max probability (0.997)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated area IMAGE A shows a glowing digital meter head with a green LCD and 'PARKING' text where IMAGE B shows a classic mechanical meter with an arched window and sticker band."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Location matches the annotation (a bounding box centred in bottom-center, spilling right) and the alteration claim is confirmed by a substantial A-vs-B difference in the meter head. No object is named and no texture, lighting or boundary artifact is asserted."
+}

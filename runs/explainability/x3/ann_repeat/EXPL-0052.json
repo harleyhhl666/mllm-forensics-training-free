@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.347.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score; not checkable against the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is below the threshold for significant digital alteration.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about a decision threshold, not about visible content."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region in the center has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates detector output; no mask is supplied for this unit so the value cannot be checked."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The relevant region is the center of the image.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The centre cell is mostly open green wave face with the nose of the board intruding; the surfer himself sits in the centre-left cell, so 'center' is only approximately where the named subject is."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "A real object is present there.",
+      "claim_type": "object",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "'A real object' is vague; the centre cell contains wave face and part of the surfboard, but whether that matches what is meant cannot be determined."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The image shows a surfer riding a wave.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A crouched surfer on a white board is clearly visible riding the face of a large breaking teal wave."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The surfer-on-a-wave description is accurate. The location is roughly right but the surfer is centre-left rather than centre. Most of the text is untestable score commentary, and it draws an authenticity conclusion from a 'high probability' region without any visible basis."
+}

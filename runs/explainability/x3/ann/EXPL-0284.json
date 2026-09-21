@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.995.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated giraffe sits in a low-resolution, heavily compressed area. Comparing A and B there, the near giraffe's head may be carried differently (raised up-left in A, bent down toward its companion in B), but at this resolution I cannot confirm that difference, and no seam or blending artifact is visible; the claim can neither be confirmed nor refuted."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The grid location in the center has a high mean probability of 0.915.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The region of interest is at the center grid location.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's giraffe-shaped white silhouette is centred in the frame with its bulk in the centre and bottom-centre cells; IMAGE D's outline matches."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the presence of a real object or feature in that area.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A giraffe is clearly present at the annotated location, but the further inference that its presence is unaltered is not established by the visible evidence."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "low",
+  "notes": "Location matches the annotation and an object is genuinely present there. The explanation is internally inconsistent in reading a high manipulation score as authenticity, but the A-vs-B content difference in this soft, low-resolution region is not something I can resolve, so the manipulation judgement is uncertain."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.066).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with high probabilities are small.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Extent of an unsupplied detector heatmap; not visible in the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not significantly affect the overall content.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No region is located, so nothing specific can be inspected; the scene shows no seam or cloned patch, but the heavily defocused foreground meter and the hazy far background carry too little detail to rule out local edits."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The image appears consistent with a typical urban street scene.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Every cue is urban: metered on-street parking, painted asphalt with stop bars and tar seams, traffic signals showing red, a street-name blade, tow-away and street-cleaning signs, overhead utility lines, graffiti, and a scaffolded multi-storey building."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There are no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Perspective converges consistently to a single vanishing point and the flat overcast light is shadowless throughout; the pavement seams, patches and repeated near-identical meters with sequential numbers are genuine features rather than editing artefacts. The uniform, textureless sky and the strong defocus in the foreground limit certainty."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "The scene characterisation ('typical urban street scene') is squarely confirmed by the visible content. The sequentially numbered, near-identical meters give a superficially cloned look but are clearly a real repeated streetscape element, not a duplication artefact."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.994).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask rectangle sits wholly inside the center cell, matching IMAGE D's outline."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.854) and a maximum probability (0.996).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric probabilities are not verifiable from the images."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The maximum probability exceeds the threshold.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to an unstated detector threshold; not checkable from the images."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated centre region the skateboard appears with a pale cream deck face, dark wheels and a red truck element in IMAGE A, versus a dark grip-taped deck with pale yellow wheels and silver trucks in IMAGE B."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Every checkable claim holds: the named cell matches the annotation and content there differs from the source photograph. The explanation is thin, resting entirely on detector statistics with no object named and no visual cue described."
+}

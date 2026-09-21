@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.203).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region in the center has a high probability (0.93).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Per-region probability values cannot be read from image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region is in the center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell does contain the focal content - the adult giraffe's lowered head meeting the calf - but no region marking exists in image A to confirm the tool's region."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Rests on unverifiable metrics; also cites a 'high probability' as evidence for authenticity without stating what the probability measures."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A shows an adult giraffe and a calf inside a zoo barn behind a green cable fence, with a large log in the foreground. The explanation names no object or visual feature, so only the center-region reference is loosely checkable, and it coincides with the main subject."
+}

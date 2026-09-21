@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.330.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is below the threshold for significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about a detector threshold; no threshold or detector output is visible in the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region in the bottom-center has a high probability score.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric per-cell value; not observable and no mask is supplied."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The bottom-center region contains a real-world object or person.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-centre cell is filled by the pony's face and muzzle, with the dark leather cheekpieces and noseband, plus the rider's black-sleeved forearm at the lower left and a wedge of his jodhpur-clad thigh at the right. So real content is there, but it is an animal's head plus parts of the rider rather than a discrete object or a separate person as worded."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This supports the authenticity of the image.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An authenticity conclusion is not a checkable visual observation, and the presence of a recognisable object in a cell does not bear on it either way."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Telephoto shallow-depth shot of a helmeted boy on a grey pony in light rain, other riders blurred behind. The bottom-centre cell does hold identifiable real content (the pony's head plus rider's arm and thigh), so the region call is right, but 'object or person' is vague and only loosely matches what is there. Softness in that cell from the focus plane sitting on the boy's face limits any texture or boundary judgement."
+}

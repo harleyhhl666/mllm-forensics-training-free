@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.994).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask's larger lobe occupies the center-right cell (spilling into center), matching the outline in IMAGE D."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.932) and a maximum probability (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric probabilities are not verifiable from the images."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The board inside the annotated region carries a white-with-blue-stripes graphic and circular logo in IMAGE B but a black/white/grey zig-zag and swirl graphic in IMAGE A, a clear content difference in exactly that area."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "All checkable claims hold: the named cell matches the annotation and content there differs from the source photograph. The explanation names no object and cites only detector statistics, so it offers no described visual evidence of its own."
+}

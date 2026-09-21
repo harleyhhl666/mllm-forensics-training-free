@@ -1,0 +1,69 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.068).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There are localized regions with higher probabilities.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to detector heatmap values that are not supplied and cannot be seen."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions are small.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Spatial extent of an unsupplied heatmap; not checkable against the image."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "They do not significantly impact the overall authenticity.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "With no region located, nothing specific can be inspected; the visible frame shows continuous grass and horizon and no seam or cloned patch, but underexposure and heavy foliage mush leave small areas unresolvable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The visual content appears consistent with a natural scene.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Flat overcast light falls consistently on animals and vegetation, the horizon is unbroken, grass texture flows across the frame and the animals' scale and perspective match the setting."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The image shows giraffes in a savanna environment.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Two giraffes are clearly present, in head-lowered browsing postures, standing in tall straw-coloured grass dotted with dark thorn bushes and small trees — a savanna/bushveld setting."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "There are no obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No cloning patterns, mismatched seams, doubled edges, warped structures or lighting inconsistencies are visible; the odd-looking features are the awkward head-down postures, foreground grass blur and small bright specks in the sky, all consistent with capture conditions."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "This is the strongest-grounded of the set: the named objects (giraffes) and the described environment (savanna) both match the image, and the consistency and no-obvious-alteration claims hold up against what is visible. The numeric and heatmap claims remain uncheckable."
+}

@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the bottom-center.",
+   "claim_type": "location",
+   "support": "partially_supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's rectangular bar lies in the bottom row but straddles the bottom-left/bottom-center boundary roughly evenly, with its centroid on the divide; 'bottom-center' names only about half of it."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.904) and a maximum probability (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric confidence values cannot be verified visually."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This indicates significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inside the annotated area A shows a brightly multicoloured kayak (yellow hull, green/blue striping, red-orange deck accents) with a dark red kayak behind, while B shows a single lime-green sit-on-top kayak. Content there clearly differs."
+  }
+ ],
+ "region_correct": "uncertain",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "The alteration conclusion is borne out by the visible A-vs-B difference in the beached kayaks. The stated region is only half right: the mask spans bottom-left and bottom-center about equally. The explanation names no object and cites no visual property of its own."
+}

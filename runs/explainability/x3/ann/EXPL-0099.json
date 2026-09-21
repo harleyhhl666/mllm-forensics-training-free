@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.891).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the bottom-center.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No mask is supplied. The bottom-center of the frame is broad pasture grass with a greener swale/livestock trail and a black calf with a yellow ear tag at its right margin; nothing there visibly marks out a region."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.738) and a maximum probability (0.966).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric values, not observable properties."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Close inspection of the bottom-center shows no seam or brightness step, no repeated or cloned grass tufts, no bounded smoothing patch, and no ghost outline or suspiciously clean void. The calf at its edge has a shadow matching the direction, length and softness of every other shadow in the frame, and grass interleaves naturally around its feet. The softness present is a gradual depth-of-field and JPEG-compression falloff, not a localized artifact."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "Image A is a telephoto rangeland scene with about twenty mostly black cattle, a herding dog at lower right, scattered pale boulders, and a '(c) 2010 Stephanie Smith' watermark in the bottom-left. The explanation's substantive assertion is that the bottom-center shows digital alteration; nothing observable there supports it. Heavy compression and haze mean subtle edits cannot be ruled out, but the claim as stated has no visible backing."
+}

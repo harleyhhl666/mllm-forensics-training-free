@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.138).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization measurements indicate only a very small region with a low area ratio and mean probability.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Area ratio and probability figures are tool outputs, not visible in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region does not suggest significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "No region is delineated in image A, so its significance cannot be judged."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Visual inspection of the image shows no obvious signs of manipulation.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No conspicuous seam, halo or geometric break is apparent on the hydrant or storefront, but the glass reflections, glare and scattered white specks make a confident 'no signs' verdict unreliable from this single image."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "The only image-grounded claim is a global 'no obvious signs of manipulation', which is the kind of negative judgement a single image cannot establish reliably."
+}

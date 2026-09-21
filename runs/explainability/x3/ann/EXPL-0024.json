@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value is not verifiable from images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's animal-shaped mask straddles the center and center-right cells, with its centre of mass on the boundary between them, so 'center' is correct but incomplete."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.95) and a maximum probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities cannot be checked against the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated outline, A shows a black-and-white Holstein-type cow facing the camera with short pale horns and a white chest, while B shows a solid black cow with its head turned back to its flank; the animal has been replaced."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The alteration claim is corroborated by an observable A/B difference in the annotated animal. The named location understates the annotation, which covers the center-right cell as much as the center. Score and probability figures are not verifiable from imagery; no object or mechanism is named."
+}

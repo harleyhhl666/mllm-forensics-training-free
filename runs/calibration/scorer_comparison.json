@@ -1,0 +1,91 @@
+{
+ "ela": {
+  "usable": true,
+  "n_valid_real": 120,
+  "n_valid_fake": 120,
+  "scorers": {
+   "cell3_peak_z": {
+    "auc": 0.485,
+    "threshold": 2.1606133222579955,
+    "fake_pass_rate": 0.075,
+    "real_median": 1.586286723613739,
+    "fake_median": 1.5671052932739258
+   },
+   "patch_peak_z": {
+    "auc": 0.49541666666666667,
+    "threshold": 5.905536079406739,
+    "fake_pass_rate": 0.10833333333333334,
+    "real_median": 4.018147945404053,
+    "fake_median": 4.03909969329834
+   },
+   "patch_p999_over_med": {
+    "auc": 0.5101388888888889,
+    "threshold": 3.983961486816406,
+    "fake_pass_rate": 0.125,
+    "real_median": 2.531919479370117,
+    "fake_median": 2.611702084541321
+   },
+   "patch_top1pct_z": {
+    "auc": 0.4741666666666667,
+    "threshold": 4.172576141357422,
+    "fake_pass_rate": 0.06666666666666667,
+    "real_median": 3.0465978384017944,
+    "fake_median": 2.9560927152633667
+   },
+   "global_mean": {
+    "auc": 0.4754861111111111,
+    "threshold": 0.16185603290796283,
+    "fake_pass_rate": 0.058333333333333334,
+    "real_median": 0.09560972824692726,
+    "fake_median": 0.09407613426446915
+   }
+  }
+ },
+ "noise_residual": {
+  "usable": true,
+  "n_valid_real": 115,
+  "n_valid_fake": 116,
+  "scorers": {
+   "cell3_peak_z": {
+    "auc": 0.470839580209895,
+    "threshold": 2.315418338775635,
+    "fake_pass_rate": 0.034482758620689655,
+    "real_median": 1.7270594835281372,
+    "fake_median": 1.6620087027549744
+   },
+   "patch_peak_z": {
+    "auc": 0.49137931034482757,
+    "threshold": 6.466790199279786,
+    "fake_pass_rate": 0.09482758620689655,
+    "real_median": 4.171331405639648,
+    "fake_median": 4.220714330673218
+   },
+   "patch_p999_over_med": {
+    "auc": 0.48305847076461766,
+    "threshold": 14.46900653839114,
+    "fake_pass_rate": 0.07758620689655173,
+    "real_median": 5.01679801940918,
+    "fake_median": 5.04645562171936
+   },
+   "patch_top1pct_z": {
+    "auc": 0.47608695652173916,
+    "threshold": 5.016319751739503,
+    "fake_pass_rate": 0.0603448275862069,
+    "real_median": 3.3393478393554688,
+    "fake_median": 3.4507569074630737
+   },
+   "global_mean": {
+    "auc": 0.5154422788605697,
+    "threshold": 0.33147452473640443,
+    "fake_pass_rate": 0.09482758620689655,
+    "real_median": 0.20896144211292267,
+    "fake_median": 0.20176409929990768
+   }
+  }
+ },
+ "dct_jpeg": {
+  "usable": false,
+  "n_valid_real": 0,
+  "n_valid_fake": 0
+ }
+}

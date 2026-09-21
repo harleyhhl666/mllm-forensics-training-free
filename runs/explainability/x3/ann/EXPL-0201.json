@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.992).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask blob sits almost entirely inside the center cell, matching IMAGE D's outline around the surfer's legs and board."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.908) and a maximum probability (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric probabilities are not verifiable from the images."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The board's deck in the annotated region shows a pale mint/green panel and a reddish tail patch in IMAGE A where IMAGE B has a plain white deck, so alteration there is evidenced; 'significant' overstates it, as the marked region is under about 1% of the frame and, at this resolution, the difference is a subtle colour change rather than a plainly visible seam."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location matches the annotation and content in that region differs from the source photograph, so the direction of the conclusion is right. The explanation names no object and cites only detector statistics, and 'significant' is stronger than the small, low-resolution difference visible in the marked area."
+}

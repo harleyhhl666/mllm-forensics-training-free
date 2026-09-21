@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.988).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a near-square block whose centre sits about 80% down the frame, occupying bottom-center and bottom-right with only a sliver in the middle row; image D outlines the same rectangle."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.891).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported value; the supplied mask is binary and carries no probabilities."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a very high max probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "As above: a reported number with no probability map supplied."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There is significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "In B the bottom-center holds a plain golden-brown glazed doughnut ball with cracked sugar crust, with the cat's blurred muzzle nosing it. In A the same position holds a face-on ring doughnut with flat, near-clipping magenta and cyan swirled icing, a hard black centre hole and pasted yellow smiley discs that are all frontal regardless of the surface curvature, plus one smeared one."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "A toy-like figure is present.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A yellow vinyl smiley-face figurine with a red sleeveless torso and chunky yellow limbs stands in the upper middle of image A."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "The toy-like figure has a donut face.",
+      "claim_type": "object",
+      "support": "unsupported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The figure's head is a smooth yellow sphere with a painted emoticon face and no hole; it is not a doughnut. The doughnut with smiley decorations is a separate object below it. The described composite object does not exist."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The toy-like figure with a donut face supports the likelihood of digital manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The cited object is not present as described, so it cannot support the conclusion. The figurine itself lies outside the masked region and, judged against B, is unaltered; the actual altered content is the recoloured ring doughnut."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": true,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location and the general conclusion of alteration are correct and well corroborated by the A-vs-B difference at the bottom-center doughnut. However the explanation's one visual justification conflates two separate objects into a nonexistent 'toy-like figure with a donut face': the figurine has a plain painted yellow ball head and lies outside the mask, while the smiley-decorated doughnut is the actually altered object. That conflated object counts as hallucinated."
+}

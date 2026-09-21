@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.997.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "In the annotated center-right region the doughnut differs from IMAGE B in sprinkle coverage and colour palette, hole size and glaze, so content there has been changed."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the center-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask's dominant cell is center-right (with spill into bottom-right and center), and IMAGE D outlines the doughnut there."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high mean and max probability.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests a real object in the image.",
+   "claim_type": "object",
+   "support": "partially_supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A sprinkled ring doughnut really does occupy the annotated center-right region, so an object is present; but its appearance differs from IMAGE B, so this is not evidence of unaltered content."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "partial",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "The center-right location matches the annotation and a real doughnut sits there, but the authenticity reading is unsupported: sprinkle coverage, sprinkle colours, hole size and glaze in that region all differ from IMAGE B. Reading a high manipulation score as authenticity is internally contradictory."
+}

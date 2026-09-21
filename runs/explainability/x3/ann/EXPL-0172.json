@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.994.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the annotated region the board's graphic differs between the two photographs: IMAGE B shows a white board with blue stripes and a circular swirl logo, while IMAGE A shows a black/white/grey zig-zag and swirl pattern."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region is in the center-right of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask's dominant lobe lies in the center-right cell, with the remainder in the center cell; IMAGE D's outline matches, tracing the board under the girl's arm."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability of 0.932.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric probability is not checkable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is not manipulated in that area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "That area is precisely the annotated region, and the board's graphic there differs from the source photograph, so the evidence contradicts this."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The location matches the annotated region (the board carried by the right-hand figure), but the explanation declares that exact region unmanipulated while the board's graphic there clearly differs from the source photograph, and it reads a near-1.0 manipulation score as evidence of authenticity."
+}

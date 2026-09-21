@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.997.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported detector score cannot be checked against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The animal in the annotated region differs between A and B: B shows a single coherent grazing cow with a brown flank and white rump, while A shows a smeared, incoherent cow-like mass with duplicated head forms. An authenticity finding is not supported."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's rectangle spans roughly x 519-858, y 359-573 with its centroid just inside the center-right cell, though it also covers the right part of the center cell; IMAGE D outlines the same box."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability of 0.933.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric probability is not verifiable from the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The object in this area is likely real.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated area contains the cow, and it is precisely the content that differs between A and B, so a claim that it is genuine is not supported."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The center-right location is consistent with the annotation (which also reaches into the center cell). Both substantive conclusions - authenticity and a genuine object in that area - conflict with the visible A/B difference in the annotated animal. The explanation refers vaguely to 'the object' without naming it, so object_correct is not applicable."
+}

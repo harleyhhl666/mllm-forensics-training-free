@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The outlined giraffe is presented differently in the two images: in IMAGE A it faces the camera, showing the chest and frontal face with the tail hidden, while in IMAGE B the same animal is seen from the rear with the rump toward the camera, the head turned aside and the tail clearly hanging between the hind legs. The marked content has changed, so nothing here indicates an absence of manipulation."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The tall figure-shaped mask in IMAGE C sits mainly in the right and centre-right of the frame with its largest share in the middle-right cell; IMAGE D confirms the outline is centred on centre-right, though it also reaches top-right, top-centre and slightly into centre and the bottom row."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The region is a genuine part of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The A-versus-B difference in the outlined giraffe's orientation contradicts the claim that the marked content is unaltered."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The centre-right location is correct, but the explanation reads a manipulation score of 1.000 as indicating no manipulation, which is internally contradictory, and the paired comparison shows the outlined giraffe changed from a rear view in B to a front-facing view in A. The explanation names no object."
+}

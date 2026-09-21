@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.985).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center-right.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's rectangle fills most of the center-right cell but also covers the lower third of the top-right cell, so center-right is correct but incomplete."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.898).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a very high max probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content in the marked area differs markedly between IMAGE A and IMAGE B: A shows a mass of brown curly fur and legible-scale newsprint with headline lettering, while the same area in B is out-of-focus counter surface and a pale blurred sheet. That supports a content difference, but the explanation cites only scores and no specific visible artifact, and 'significant' is not independently verifiable."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The named center-right region matches the bulk of the annotated rectangle but omits its extension into top-right. The A/B comparison does show differing content inside the marked area, which lends partial support to the alteration claim, though the explanation itself names no object, texture, boundary or lighting evidence."
+}

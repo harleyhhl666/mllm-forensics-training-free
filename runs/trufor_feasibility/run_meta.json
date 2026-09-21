@@ -1,0 +1,9 @@
+{
+ "n_inferences": 396,
+ "minutes": 3.5,
+ "mean_seconds": 0.184,
+ "peak_gpu_GB": 3.21,
+ "checkpoint_md5": "55d7075dd1ff945e9c0f9437c5df9495",
+ "protocol_sha1": "1e11d06ca1cd8461d10140974aabba114e9e9bbe",
+ "gpu": "NVIDIA GeForce RTX 3090"
+}

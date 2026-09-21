@@ -1,0 +1,69 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.980.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is very high, indicating a strong likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Interpretation of an unverifiable number; the images give no basis to confirm or refute."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region with a high probability score in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's quadrilateral sits in the middle column with roughly 80% of its area in the center cell (spilling slightly into bottom-center); IMAGE D outlines the bed seen through the doorway."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That localized region suggests the image is not entirely manipulated.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "Nothing observable supports the inference; the annotation marks a region of interest and says nothing about the rest of the image being authentic."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The tool has identified a specific area with a high probability of being authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The marked area is the annotated region of interest, not an area indicated as authentic; no visual evidence supports this reading."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "This could be due to the tool's limitations or the nature of the image itself.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Speculation about the detector; asserts nothing checkable against the imagery."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "Given the score and the localized region, the image appears to be real.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Conclusion contradicts the text's own stated strong likelihood of alteration and rests on no observable evidence."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "Center location matches the annotated region (the bed visible through the bedroom doorway). The explanation names no object and cites no texture, lighting, boundary or geometry observation; its conclusion that the image is real directly reverses its own premise of strong alteration likelihood."
+}

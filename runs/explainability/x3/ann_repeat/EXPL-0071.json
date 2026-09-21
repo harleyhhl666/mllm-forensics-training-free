@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The giraffe-shaped mask in IMAGE C occupies middle-centre, middle-right and bottom-centre, with most pixels in centre and bottom-centre. 'Center' is the dominant cell but understates the extent."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.908) and a max probability of 1.0.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the outlined region IMAGE A contains a small human-like figure with a badly smeared head and saturated blue/red/white chroma streaking across the torso, standing beside a lowered giraffe head; at the same position IMAGE B shows only giraffes and a metal feeder frame with no such figure. Content in the marked area clearly differs and shows local distortion."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The alteration conclusion is borne out: the marked area in A contains a smeared, colour-streaked figure absent from B. The location is only partly right, since the mask spans three cells and the explanation names only 'center'. The explanation identifies no object and cites no visible artefact, resting solely on scores."
+}

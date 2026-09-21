@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.497.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector output; nothing in image A can confirm or refute a score value."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "0.497 is below the threshold for significant digital alteration.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Assertion about a detector threshold, not an observable property of the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There are no localized regions indicating tampering.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Image A is a grainy vintage press print of three baseball figures; no clear splice, seam or inserted object is visible, but the blown-out flat sky, hard subject outlines and darkroom-style retouching marks make a confident 'no localized anomaly' judgement unreliable."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "The explanation is almost entirely about numeric detector outputs, which image A cannot verify. Its one image-level claim (absence of localized tampering) is consistent with a casual look at the photograph, but the retouched-looking sky and print artifacts keep it from being clearly supported. No objects or regions are named in the text despite 'center' being listed as a referenced region."
+}

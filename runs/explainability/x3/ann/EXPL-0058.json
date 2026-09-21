@@ -1,0 +1,69 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.844.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score is relatively high and suggests potential manipulation.",
+   "claim_type": "manipulation",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "An inference about an unverifiable numeric value."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the center with a high mean probability of 0.933.",
+   "claim_type": "location",
+   "support": "partially_supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "A localized region does occupy the centre cell in Images C and D, but the numeric value itself is not observable."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That indicates the area is likely authentic.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The tram inside the centre region is vividly yellow in A but greyscale in B, and its front livery differs (plain black apron in A versus sardine-graphic panel in B), so content there does differ."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "A tram is present.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A tram is clearly visible head-on in the centre of Image A, matching the outlined region in Image D."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "The setting is urban.",
+   "claim_type": "other",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A narrow city street with multi-storey buildings, shopfronts, signage, tram rails and pedestrians is visible."
+  },
+  {
+   "claim_id": "C7",
+   "claim_text": "The tram and urban setting are consistent with a real photograph.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "The presence of plausible scene content does not bear on whether the region was edited, and Image A's selective colour treatment of the tram departs from the otherwise monochrome frame and from Image B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Region and object (tram, urban street) are correctly identified. The explanation is internally contradictory: it cites a high manipulation score as suggesting manipulation, then reads a high in-region localization probability as indicating authenticity, and its authenticity conclusion conflicts with the visible difference between A and B in the tram's colour and front panel."
+}

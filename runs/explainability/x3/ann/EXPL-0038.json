@@ -1,0 +1,61 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The TruFor image-level manipulation score is 0.999.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A numeric detector score is not checkable from the supplied images; no score is visible in any image."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "An inference about a score value that itself cannot be verified from the imagery."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the bottom-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "Image C's white rectangle occupies the bottom row centred on the bottom-center cell (spilling into bottom-left/right); Image D's outline matches."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That localized region is a manipulated area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Content inside the marked band differs clearly between A and B: A shows a large glowing blue/gold vehicle-like form where B shows only a small blue lamp and dark track area."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "A glowing, ghostly figure is present in that region.",
+   "claim_type": "object",
+   "support": "partially_supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A luminous, semi-transparent glowing form is clearly visible there, but it reads as a vehicle/machine-like shape rather than a 'figure'; the glowing and translucent description fits."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "That figure is superimposed on the image.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The form is semi-transparent with background track detail showing through, and has no counterpart in Image B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "partial",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Region and manipulation claims align with the mask and with the A/B difference. The described entity is a glowing vehicle-like translucent form rather than a 'figure', so the object description is only partly accurate. Detector-score statements are not checkable from the images."
+}

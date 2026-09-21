@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not verifiable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the bottom-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The only white blob in IMAGE C sits wholly inside the bottom-right cell, low against the frame edge, matching the outline in IMAGE D."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.903) and a maximum probability (0.997).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Specific numeric values cannot be checked visually."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The marked area is a small, soft-focus, heavily compressed glazed doughnut hole; its glaze pattern looks somewhat different from the corresponding piece in IMAGE B, but the region is too small and blurred for me to judge an alteration reliably, and no seam, lighting or geometry anomaly is discernible."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Location matches the mask precisely. The alteration claim cannot be confirmed from what is visible: the flagged blob covers roughly 1% of the frame, is out of the focal plane and JPEG-degraded, so any A-vs-B difference there is ambiguous. No object, texture or boundary detail is asserted."
+}

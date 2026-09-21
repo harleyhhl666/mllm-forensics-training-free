@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.347).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region in the center has a small area ratio (0.003) with a mean probability of 0.821.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported localization statistics; no mask supplied, so region size cannot be checked."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This suggests minimal evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "I observe no obvious alteration artifacts, but spray, motion blur and aerated foam make fine texture and boundary judgements unreliable in much of the frame."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The visual content appears consistent with a natural scene of surfing.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Image A shows a coherent surf scene: one surfer tucked in the barrel of a breaking wave, with consistent water, foam and spray throughout the frame."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The only content-level claim (a natural surfing scene) matches image A. The rest is detector bookkeeping that image A cannot confirm; the explanation names no object in the center cell."
+}

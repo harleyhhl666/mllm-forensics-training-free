@@ -1,0 +1,109 @@
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# ---------------------------------------------------------------------------
+# IDE / editor
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+
+# ---------------------------------------------------------------------------
+# Secrets and local config -- never commit
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.key
+*.pem
+id_rsa*
+credentials
+.netrc
+
+# ---------------------------------------------------------------------------
+# Model weights and caches
+# ---------------------------------------------------------------------------
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.pth.tar
+*.bin
+models/
+weights/
+checkpoints/
+hf_cache/
+huggingface/
+transformers_cache/
+.cache/
+
+# ---------------------------------------------------------------------------
+# Vendored upstream repo: kept on the server, pinned by commit in
+# docs/FINAL_EXPERIMENT_MANIFEST.md rather than committed here.
+# ---------------------------------------------------------------------------
+external_tools/
+
+# ---------------------------------------------------------------------------
+# Raw datasets -- TGIF imagery stays local (12 GB)
+# ---------------------------------------------------------------------------
+data/
+datasets/
+
+# ---------------------------------------------------------------------------
+# Results: TRACKED BY DEFAULT.
+# runs/ holds the frozen protocols, raw verdicts and analyses that the whole
+# project rests on, so it is NOT ignored wholesale. Only the heavy binary
+# by-products are excluded -- they are recorded by SHA256 in
+# docs/FINAL_EXPERIMENT_MANIFEST.md and kept on the server.
+# ---------------------------------------------------------------------------
+runs/**/evidence/
+runs/**/maps/
+runs/**/packets/
+runs/ela_cache/
+runs/**/*.npz
+runs/**/*.npy
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.gif
+*.pdf
+
+# Local annotation working tree: packet images are regenerable from the
+# frozen protocol; the annotation JSON itself lives under runs/explainability/x3.
+x3/packets/
+x3/manifest_local.json
+
+# ---------------------------------------------------------------------------
+# Scratch
+# ---------------------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+_keep*.txt
+*.tgz
+*.tar.gz
+*.zip
+
+# ---------------------------------------------------------------------------
+# Logs: the small analysis .txt outputs under runs/ are results and ARE tracked;
+# only genuine runtime logs are ignored.
+# ---------------------------------------------------------------------------
+*.log
+nohup.out
+
+# ---------------------------------------------------------------------------
+# Notebooks / OS
+# ---------------------------------------------------------------------------
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+desktop.ini

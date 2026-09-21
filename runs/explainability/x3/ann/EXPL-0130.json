@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.995.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score cannot be verified from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "A region of interest is annotated in IMAGE A; nothing in the supplied evidence supports an authenticity conclusion, and the explanation treats a high manipulation score as its opposite."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask blob straddles the bottom-center and bottom-left cells, with its centroid in bottom-center; the named cell is the majority one but the region also extends into bottom-left."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That localized region suggests a potential anomaly.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation marks the skateboard as the region of interest, so an anomaly there is plausible, but no seam, texture or lighting irregularity is reliably visible in IMAGE A or D at this resolution."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The score and overall context of the image suggest it is not manipulated.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "Contradicts C4 in the same explanation and is not supported by any visible evidence; the annotated region indicates the opposite conclusion."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The named location broadly matches the annotated region (the skateboard under the boy's feet, mostly bottom-center with spill into bottom-left), but the explanation names no object and reaches a no-manipulation conclusion while simultaneously conceding a potential anomaly, so it is internally contradictory and unsupported by the evidence."
+}

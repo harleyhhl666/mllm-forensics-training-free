@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE A differs from IMAGE B in the annotated area: the skateboard's underside graphic and wheel colour differ (glossy blue/black with dark wheels in A versus tie-dye with yellow-green wheels in B)."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There are localized regions in the bottom-center of the image",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's two touching white components lie entirely within the bottom-center cell, and IMAGE D's outline sits on the skateboard there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Those regions show high mean and maximum probabilities of manipulation",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistics, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This supports the conclusion that the image has been digitally altered",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The localized A-vs-B difference in the annotated skateboard supports an alteration conclusion."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "The named cell matches the mask exactly, and the alteration conclusion is consistent with the visible A-vs-B difference in the skateboard. No object is named and no texture, lighting, boundary or specific mechanism claim is made."
+}

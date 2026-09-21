@@ -1,0 +1,11 @@
+{
+ "n_pairs": 512,
+ "missing": 0,
+ "size_mismatch": [],
+ "non_binary_masks": 0,
+ "formats": {
+  "real|PNG|RGB": 512,
+  "fake|PNG|RGB": 512,
+  "mask|PNG|L": 512
+ }
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region is in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a single tall blob occupying the center column, with its densest part in the middle-center cell; image D outlines the same area. The named cell matches."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.927).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric value; the binary mask records extent, not probabilities, so the figure cannot be checked."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability of 0.997.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "As above: a reported number with no probability map supplied."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There is significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Comparing A with B, the hydrant in the masked center region differs substantially: in B it is a plain blue hydrant with a ribbed bonnet, a single side nozzle, a hanging rusted chain and cast foundry lettering; in A the barrel is elongated, the chain and lettering are gone, and the head carries a swirled yellow-orange painted dome with a red/yellow cap and a teal nozzle. The altered content lies inside the masked area."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The location is correct against the mask and the alteration claim is corroborated by the A-vs-B difference at the hydrant. The explanation names no object and cites no visual property, so it is thin: most of its content is unauditable score narration and it does not describe what was changed. Image D additionally shows a detached, shadowless colour fragment beside the hydrant's left shoulder and a noticeably soft bonnet, but the explanation makes no claim about either."
+}

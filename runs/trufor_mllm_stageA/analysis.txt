@@ -1,0 +1,71 @@
+PHASE T1 — TruFor -> MLLM STAGE-A GROUNDING
+rows 1104  complete sources 184  bootstrap 10000 seed 20260918
+
+==========================================================================================
+1. INTEGRITY
+  parse failures            : 0/1104
+  per-condition counts      : {'fake_T0_notool': 184, 'fake_T1_correct': 184, 'fake_T2_wrong': 184, 'real_T0_notool': 184, 'real_T1_correct': 184, 'real_T2_wrong': 184}
+  unique coco_id            : 184
+  n_samples == n_coco_id    : True
+  distinct tool-prompt hashes: 211 (differ only by the 3-decimal score, as frozen)
+  images per condition      : {'fake_T0_notool': 1, 'fake_T1_correct': 2, 'fake_T2_wrong': 2, 'real_T0_notool': 1, 'real_T1_correct': 2, 'real_T2_wrong': 2}
+  same-coco donors           : 0
+
+==========================================================================================
+2. FAKE — GROUNDING RATES
+  condition              GT hit            95% CI   cue hit    joint   n_pred
+  T0 no-tool              0.363  [0.292,0.433]         nan      nan     2.46
+  T1 correct TruFor       0.673  [0.602,0.743]       0.680    0.680     2.24
+  T2 donor TruFor         0.614  [0.538,0.690]       0.627    0.410     2.27
+
+  CONTRASTS on GT localization (effect -> CI -> McNemar p)
+    T1 - T0    +0.310  [+0.240,+0.386] EXCLUDES zero   p=1.189e-13  (T0-only=3, T1-only=56)
+    T1 - T2    +0.058  [+0.006,+0.111] EXCLUDES zero   p=0.05248  (T2-only=6, T1-only=16)
+    T2 - T0    +0.251  [+0.175,+0.327] EXCLUDES zero   p=7.077e-10  (T0-only=5, T2-only=48)
+
+==========================================================================================
+3. Q3/Q4 — DONOR FOLLOWING vs IMAGE-BASED RECOVERY (fake, T2)
+  follows donor cue (T2 pred ∩ donor cue cells)   0.627 [0.550,0.698]
+  follows own cue   (T1 pred ∩ own   cue cells)   0.680 [0.609,0.751]
+  cue adherence T1 - T2                           +0.026 [-0.078,+0.136]
+  still hits target GT under T2                   0.614 [0.538,0.690]
+  T2 outcome split: GT+cue 64  GT only 41  cue only 42  neither 37  (n=184)
+  NOTE: donor and GT cells can coincide by chance; 'cue only' is the
+  cleanest evidence of being pulled to a wrong location.
+
+==========================================================================================
+4. Q5 — REAL IMAGES (descriptive: spurious localization)
+  condition             n_pred mean            95% CI  reports any   cue hit  evidence_used
+  T0 no-tool                   2.51  [2.40,2.64]          1.000       nan          0.000
+  T1 own TruFor                1.39  [1.26,1.53]          1.000     0.489          1.000
+  T2 donor TruFor              1.49  [1.35,1.64]          1.000     0.489          1.000
+
+  n_pred change real T1 - T0  -1.125 [-1.261,-0.989]
+  n_pred change real T2 - T0  -1.022 [-1.168,-0.875]
+
+  most frequent predicted cells (real):
+    T0 no-tool          top-center 143, top-right 117, top-left 101, center-right 60
+    T1 own TruFor       center 165, top-center 25, center-right 17, top-right 16
+    T2 donor TruFor     center 164, top-center 31, center-right 21, top-right 20
+
+==========================================================================================
+5. SCORE INTERPRETATION (did the model read the score field?)
+  fake_T0_notool      {'low': 184}
+  fake_T1_correct     {'high': 180, 'medium': 4}
+  fake_T2_wrong       {'high': 180, 'medium': 4}
+  real_T0_notool      {'low': 184}
+  real_T1_correct     {'medium': 141, 'low': 33, 'high': 10}
+  real_T2_wrong       {'medium': 143, 'high': 11, 'low': 30}
+
+==========================================================================================
+6. STAGE-A VERDICT ON WHETHER TO PROCEED
+  T1 - T0 +0.310 [+0.240,+0.386]
+  T1 - T2 +0.058 [+0.006,+0.111]
+  T2 - T0 +0.251 [+0.175,+0.327]
+
+  -> T1 > T2 with CI excluding zero: the model exploits the
+     correspondence of a high-quality spatial evidence package.
+     Proceeding to Stage B is justified.
+
+==========================================================================================
+7. RUNTIME  1104 inf  44.6 min  mean 2.39s  peak {'0': 17.12}

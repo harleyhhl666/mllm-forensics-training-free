@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.993.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric tool output; no supplied image lets me verify a detector score."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An inference about a detector value rather than an observable image property."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in IMAGE C is a rectangle centred on the center cell, filling it and spilling into top-center and center-left; IMAGE D outlines the same area."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That localized central region suggests a potential manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content inside the outlined region differs between IMAGE A and IMAGE B: the giraffe head is rendered quite differently in the two."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "A giraffe's head is present in that region.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The outlined region in IMAGE D encloses the giraffe's head and upper neck."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The giraffe's head was digitally added to the image.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The head clearly differs from IMAGE B (profile head with ossicones vs. flattened frontal head with flared pale ears and a faint halo), so the head area was altered; but 'added' as a specific insertion mechanism is not established — replacement/regeneration of an already-present head fits the pair at least as well."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Region and object are right: the mask/outline covers the giraffe's head and upper neck in the center of the frame, and that content differs from IMAGE B. The explanation is hedged ('suggests a potential manipulation'), which matches the evidence. The specific mechanism 'head being digitally added' is only partly supported; the detector-score sentences assert nothing checkable in the imagery."
+}

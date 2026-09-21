@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.999.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "A score of 0.999 indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "A near-maximal manipulation score is read as evidence of authenticity, inverting the reported quantity. Nothing supplied supports that reading."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region is in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a tall vertical bar whose centroid falls in the bottom-center cell, occupying center and bottom-center with a spill into the right column; image D outlines the same box."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean and max probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported values; the supplied mask is binary and carries no probabilities."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The flagged region is a genuine part of the image.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "A and B differ markedly inside the masked area: B shows a hydrant with heavily chipped red paint and silver-grey patches, two capped side outlets with hanging chains, a flange collar and a wide bolted base flange partly hidden by weeds; A shows a taller, slimmer, smooth glossy red barrel with a single side outlet, no chains, and little ground integration. The region contains replaced content."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "Only the bottom-center location is correct. The explanation inverts the score's meaning and then asserts the flagged region is genuine, whereas the A-vs-B comparison shows the hydrant inside the mask has been substituted - different form, single outlet instead of two, missing chains and base flange, and an unusually smooth low-noise paint surface with no contact shadow. It also names no object."
+}

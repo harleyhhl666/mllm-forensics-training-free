@@ -1,0 +1,69 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.980.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score is very high, indicating a strong likelihood of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The asserted alteration is borne out: inside the annotated area A shows a thick plush teal bedspread with a large embossed fern/frond relief and a pale contrast pillow, while B shows a flat, lightly patterned teal coverlet with a single white pillow and a plain wooden headboard."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region with a high probability score in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single quadrilateral lies almost entirely in the center cell (small tail into bottom-center); IMAGE D outlines the bed seen through the central doorway."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That localized region suggests the image is not entirely manipulated.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "A localized high-probability region marks where alteration is indicated, not where content is authentic; nothing observable supports reading it as evidence of unaltered content."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The tool has identified a specific area with a high probability of being authentic.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The marked area is exactly where the bedding differs from IMAGE B, so calling it a high-probability authentic area is contradicted by the visible evidence."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "This could be due to the tool's limitations or the nature of the image itself.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Speculation about the detector; asserts nothing checkable about the image."
+  },
+  {
+   "claim_id": "C7",
+   "claim_text": "Given the score and the localized region, the image appears to be real.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Contradicted by the visible difference in the annotated region, and also inconsistent with the explanation's own earlier statement that the score indicates strong likelihood of alteration."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "Self-contradictory: it first reads the high score as strong evidence of alteration, then reverses and concludes the image is real on the basis of the localized region. The region itself is correctly placed (center, the bed through the doorway) and is exactly where A and B differ, so the final 'appears to be real' conclusion has no observable support."
+}

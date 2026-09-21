@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.961).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector output; not checkable against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the 'center-right'.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white rectangle sits wholly within the center-right cell; IMAGE D outlines the pitcher's glove there."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.893).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a very high max probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation marks that area as a region of interest, but at this resolution the glove region shows only soft edges and compression artefacts common to the rest of the frame; no alteration cue is reliably visible, and a mask alone cannot establish 'significant' alteration."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location is correct and consistent with the annotation mask. No object is named and no texture, lighting, boundary or geometry evidence is cited, so the alteration conclusion rests entirely on unverifiable scores plus the region's existence; the glove area is too low-resolution to judge independently."
+}

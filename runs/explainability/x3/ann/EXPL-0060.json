@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.304).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not checkable from the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probabilities.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A measurement statement about regions that are not supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced localized region is in the bottom-center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Bottom-center contains the lower part of the boy's torso, the right side of the aqua bodyboard and surrounding flowing water; no mask is available to confirm the measured region."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This indicates the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Nothing visibly anomalous appears, but heavy motion-blurred spray and clipped foam in the named area make fine boundary and texture assessment unreliable."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Score-and-region reasoning with no content description. It is internally inconsistent in citing high localized manipulation probabilities as support for authenticity. Image A shows a boy bodyboarding on a FlowRider-style sheet wave; the bottom-center is board, hip and streaked whitewater. Motion streaking and blown highlights in the foam there are consistent with a moving water sheet, but they also make subtle artifacts unjudgeable."
+}

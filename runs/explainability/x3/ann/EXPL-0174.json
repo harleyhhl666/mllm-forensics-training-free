@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.992.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "none",
+   "brief_justification": "A manipulation score is read as indicating authenticity; nothing in the supplied evidence supports that inversion."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the bottom-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "Image C's wedge-shaped mask sits in the bottom-centre cell (grazing bottom-left); Image D's outline agrees."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That localized region suggests a potential anomaly.",
+   "claim_type": "other",
+   "support": "partially_supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "A region of interest is indeed marked there, but the explanation names no observable anomaly; it only reports the annotation's existence."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The score and the overall scene do not suggest digital alteration.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Content inside the marked region differs clearly between A and B: A shows a vintage maroon/cream cab approaching with a snow plume, while B shows a green/white EMU with a yellow front end and lit red tail lamps."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "The bottom-centre location matches the annotated region containing the train. The explanation is internally contradictory (a high manipulation score read as authenticity, an anomaly noted then dismissed) and its no-alteration conclusion conflicts with the clear A-versus-B difference in the train's livery and front-end there."
+}

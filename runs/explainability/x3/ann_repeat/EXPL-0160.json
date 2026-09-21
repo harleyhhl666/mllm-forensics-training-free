@@ -1,0 +1,85 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the 'center-left' area.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a tall narrow column lying entirely in the left grid column, with roughly 60% of its area in center-left and the rest in top-left; image D outlines the hydrant there."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.957).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported value; the supplied mask is binary and carries no probabilities."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a max probability of 0.999.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "As above: a reported number with no probability map supplied."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There is significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the masked area A and B differ clearly: B shows a squat barrel hydrant with a blue bonnet and a weathered olive/khaki barrel with chipped mottled paint and a visible bolted flange; A shows a taller hydrant with a teal/turquoise bonnet and a cream-white rust-streaked barrel. The outlined hydrant in D is also slightly smoother and lower in micro-detail than the surrounding brickwork."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "A fire hydrant is present.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A hydrant stands on the brick sidewalk in the center-left of image A, being flushed by a worker with a wrench."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "Water flows from the fire hydrant.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A heavy rust-brown jet issues from the hydrant's outlet, arcs over the curb and floods the roadway."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The water flow from the fire hydrant is visually anomalous.",
+      "claim_type": "physics",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The plume looks essentially the same in B as in A - same rust-brown sediment-laden jet, same trajectory over the curb, same flooding of the street - so it is original content, not an anomaly. Its unusual appearance is the normal look of a hydrant being flushed, and it lies outside the masked region."
+    },
+    {
+      "claim_id": "C9",
+      "claim_text": "The water-flow anomaly supports the conclusion of manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The cited evidence does not bear on the flagged region: the mask covers the hydrant body in the left column, not the plume, which occupies the centre and right cells and matches the source photograph."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location, the named hydrant and the general conclusion of alteration all hold: the hydrant's colour scheme and barrel differ between A and B inside the mask. But the one piece of visual reasoning the explanation offers is misdirected - it attributes the anomaly to the water flow, which is present and near-identical in the source photograph and falls outside the masked region, while the actual altered object is the hydrant itself."
+}

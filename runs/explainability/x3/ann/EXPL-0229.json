@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.981.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score is very high.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Characterisation of an unverifiable number."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "It indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "A manipulation score is read as authenticity, and the masked foreground standpipe does differ from IMAGE B: in A it is orange with yellow/blue fittings and a chrome hydrant assembly on its face, while in B the posts are polished brass with fluted caps and no such assembly."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "The grid location in the center has a high mean probability of 0.929.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask blob in IMAGE C has its upper body in the center cell (continuing into bottom-center with a right-edge spill); the numeric value itself is unverifiable but the named cell is correct."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests the image is not manipulated in that area.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inverted: the centre is exactly the annotated region, and it is where A departs from B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "high",
+ "notes": "The named cell matches the mask, but both conclusions invert the evidence: a high manipulation score is read as authenticity and the high-probability centre region is read as proof the area is unmanipulated, while the outlined foreground standpipe visibly differs from IMAGE B. No object is named."
+}

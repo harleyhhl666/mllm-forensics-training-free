@@ -1,0 +1,69 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The outlined glove is tan/camel leather with cream lacing in IMAGE A but black leather with tan lacing in IMAGE B at the same position and pose, so the content in the marked region has clearly been replaced."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the top-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The single white blob in IMAGE C lies wholly within the top-centre cell, and the red outline in IMAGE D encircles the raised glove in that same cell."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability (0.967) and a max probability of 1.0.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "A specific area of the image has been manipulated.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The marked area differs substantively between A and B, consistent with a localized change."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The manipulated area is likely related to the ball.",
+      "claim_type": "object",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The outlined region contains the fielder's raised glove, hand and wristband; the baseball is a separate small object in the top-left cell, well outside the marked area."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "Or to the ball's trajectory.",
+      "claim_type": "physics",
+      "support": "unsupported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Nothing about the ball's flight path is visible as anomalous, and the marked region does not lie along or contain the ball."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "no",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "high",
+  "notes": "The top-centre location is exactly right and the A-versus-B comparison confirms the marked content changed (glove colour differs). However the explanation misidentifies the object: the marked region is the raised glove, not the ball, which sits separately in the top-left cell, and no evidence bears on the ball's trajectory."
+}

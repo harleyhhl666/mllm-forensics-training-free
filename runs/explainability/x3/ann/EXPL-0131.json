@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.149).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric forensic-tool output is not observable in the photograph; cannot be verified from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates minimal evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Depends on the unverifiable score."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized regions with higher probabilities do not suggest significant tampering.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "No regions are shown in image A."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall image appears consistent with a natural photograph.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The flash-lit indoor scene with the two children, doughnuts and ornate settee is internally coherent, but a global naturalness verdict is not reliably judgeable from one image."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "No object or location claims are made, so nothing can be matched against the visible content (two girls holding decorated doughnuts indoors)."
+}

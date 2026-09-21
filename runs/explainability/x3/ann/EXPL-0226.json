@@ -1,0 +1,61 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.999.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inside the annotated bottom-center region IMAGE A shows an intact pale sugared ring doughnut while IMAGE B shows a larger, darker, hole-free filled doughnut with a bite taken out, so content there has been substituted."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the bottom-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask lies entirely in the bottom-center cell, and IMAGE D's box sits there around the ring doughnut."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That localized region suggests a potential manipulation.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The object in that region differs clearly from IMAGE B in shape, colour, presence of a centre hole and bite, while the rest of the frame matches."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "There is an absence of other manipulated regions.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Only one masked region is supplied, and comparison of IMAGE A with IMAGE B shows differences confined to it; elsewhere the two match."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "The overall score and the absence of other manipulated regions support the authenticity of the image.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "A single localized edit does not become authentic because it is the only one; the annotated region's content demonstrably differs from IMAGE B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "partial",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "high",
+ "notes": "Location is right and the middle of the explanation correctly flags the bottom-center region as a potential manipulation, which the A-versus-B comparison bears out (ring doughnut in A, bitten filled doughnut in B). But the explanation then reverses itself to conclude authenticity from the same high score, which is both unsupported and contradictory."
+}

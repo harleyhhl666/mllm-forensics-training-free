@@ -1,0 +1,149 @@
+32B FINAL CAPACITY REPLICATION — Qwen2.5-VL-32B-Instruct
+complete sources 184  bootstrap 10000 seed 20260918
+1622 inf  249.3 min  mean 9.21s  2026-09-21 16:03:28 -> 2026-09-21 20:12:43
+the question is whether capacity changes the MECHANISM, not whether 32B is more accurate
+
+==============================================================================================
+1. INTEGRITY
+  parse failures 0/1622   bad verdicts 0
+  cells {'B0_score_only': 368, 'B1_score_rule': 368, 'B2_structured': 368, 'B3_structured_rule': 368, 'B4_mirrored': 150}
+  unique coco_id 184
+  payload sha1 8d06347c476f846d (frozen 8d06347c476f846d) OK
+  B0/B1 carry no structured evidence: True
+  score identical across cells: True
+  shared sources with 7B: 184
+  protocol sha1 9cf55f9fe3ea461507f60fec0a2febbeff25e3ca
+
+==============================================================================================
+2. 32B CELLS (7B in parentheses)
+  cell                     recall            95% CI     FPR            95% CI   spec       J   7B recall/FPR/J
+  B0 score only             0.978 [0.957,0.995]   0.060 [0.027,0.098]  0.940   0.918   (0.837/0.011/+0.826)
+  B1 score + rule           0.989 [0.973,1.000]   0.109 [0.065,0.158]  0.891   0.880   (0.978/0.082/+0.897)
+  B2 structured             0.978 [0.957,0.995]   0.076 [0.038,0.120]  0.924   0.902   (0.114/0.000/+0.114)
+  B3 struct + rule          1.000 [1.000,1.000]   0.337 [0.272,0.408]  0.663   0.663   (0.967/0.065/+0.902)
+
+==============================================================================================
+3. 32B SIMPLE EFFECTS
+
+  rule_without_structured   B1 - B0
+    fake recall  +0.011 [+0.000,+0.027] includes zero  p=0.5
+    real FPR     +0.049 [+0.022,+0.082] EXCLUDES zero  p=0.003906
+    J            -0.038 [-0.076,-0.005] EXCLUDES zero
+
+  rule_with_structured   B3 - B2
+    fake recall  +0.022 [+0.005,+0.043] EXCLUDES zero  p=0.125
+    real FPR     +0.261 [+0.201,+0.326] EXCLUDES zero  p=7.105e-15
+    J            -0.239 [-0.304,-0.174] EXCLUDES zero
+
+  structured_without_rule   B2 - B0
+    fake recall  +0.000 [-0.016,+0.016] includes zero  p=1
+    real FPR     +0.016 [+0.000,+0.038] includes zero  p=0.25
+    J            -0.016 [-0.043,+0.005] includes zero
+
+  structured_with_rule   B3 - B1
+    fake recall  +0.011 [+0.000,+0.027] includes zero  p=0.5
+    real FPR     +0.228 [+0.168,+0.288] EXCLUDES zero  p=5.116e-12
+    J            -0.217 [-0.277,-0.158] EXCLUDES zero
+
+==============================================================================================
+4. 32B FACTORIAL INTERACTION  (B3-B2) - (B1-B0)
+  fake recall  +0.011 [-0.011,+0.033] includes zero   7B +0.712
+  real FPR     +0.212 [+0.147,+0.277] EXCLUDES zero   7B -0.005
+  J            -0.201 [-0.272,-0.136] EXCLUDES zero   7B +0.717
+
+==============================================================================================
+5. DELTA EFFECT = effect_32B - effect_7B  (PRIMARY capacity analysis)
+  paired per source; both models ran the same sources
+  a capacity change requires the delta CI to exclude zero
+
+  rule_without_structured
+    fake recall  32B +0.011  7B +0.141  DELTA -0.130 [-0.185,-0.082] EXCLUDES zero
+    real FPR     32B +0.049  7B +0.071  DELTA -0.022 [-0.065,+0.022] includes zero
+    J            32B -0.038  7B +0.071  DELTA -0.109 [-0.179,-0.043] EXCLUDES zero
+
+  rule_with_structured
+    fake recall  32B +0.022  7B +0.853  DELTA -0.832 [-0.886,-0.772] EXCLUDES zero
+    real FPR     32B +0.261  7B +0.065  DELTA +0.196 [+0.120,+0.272] EXCLUDES zero
+    J            32B -0.239  7B +0.788  DELTA -1.027 [-1.120,-0.929] EXCLUDES zero
+
+  structured_without_rule
+    fake recall  32B +0.000  7B -0.723  DELTA +0.723 [+0.658,+0.788] EXCLUDES zero
+    real FPR     32B +0.016  7B -0.011  DELTA +0.027 [+0.005,+0.054] EXCLUDES zero
+    J            32B -0.016  7B -0.712  DELTA +0.696 [+0.625,+0.761] EXCLUDES zero
+
+  structured_with_rule
+    fake recall  32B +0.011  7B -0.011  DELTA +0.022 [+0.005,+0.043] EXCLUDES zero
+    real FPR     32B +0.228  7B -0.016  DELTA +0.245 [+0.179,+0.310] EXCLUDES zero
+    J            32B -0.217  7B +0.005  DELTA -0.223 [-0.288,-0.158] EXCLUDES zero
+
+==============================================================================================
+6. THE TWO DECISIVE EFFECTS
+  B3 - B1 (does structured evidence add decision utility under correct
+  semantics?)  recall +0.011 [+0.000,+0.027] includes zero
+                J      -0.217 [-0.277,-0.158] EXCLUDES zero
+     7B A3 - A1 J was +0.005 (includes zero)
+     DELTA -0.223 [-0.288,-0.158] EXCLUDES zero
+
+  B2 - B0 (does the framing collapse weaken with capacity?)
+     32B recall +0.000 [-0.016,+0.016]   7B was -0.723
+     DELTA +0.723 [+0.658,+0.788] EXCLUDES zero
+
+==============================================================================================
+7. FAITHFULNESS (B2/B3, vs 7B A2/A3)
+  condition                   cite   agree   exact   unsup    all9     n
+  32B B2 structured          0.564   1.000   0.950   0.000   0.000   202
+  32B B3 struct + rule       0.687   1.000   0.943   0.004   0.000   246
+  7B  A2                     1.000   1.000   0.756   0.000   0.003   357
+  7B  A3                     1.000   1.000   0.776   0.000   0.003   357
+  7B reference spatial agreement was 1.000
+
+==============================================================================================
+8. B4 MIRROR CONTROL — frozen eligible subset only
+
+  [fake] frozen eligible 70  scored 70
+    follows mirrored evidence   1.000 [1.000,1.000]
+    still cites original side   0.000
+    B3 -> B4 verdict changed    0.000 (0/70)
+
+  [real] frozen eligible 80  scored 80
+    follows mirrored evidence   0.225 [0.138,0.312]
+    still cites original side   0.000
+    B3 -> B4 verdict changed    0.050 (4/80)
+
+  7B mirror shift responsiveness was 1.000
+  a verdict change is NOT required: relocating the stated evidence need
+  not alter authenticity
+
+==============================================================================================
+9. REASON AUDIT
+
+  fake targets
+  condition                   score_high      locality  manipulation  rule_consist
+  B0 score only                    0.207         0.011         1.000         0.000
+  B1 score + rule                  0.576         0.011         1.000         0.000
+  B2 structured                    0.174         0.353         1.000         0.000
+  B3 struct + rule                 0.163         0.049         1.000         0.005
+
+  real targets
+  condition                   score_high      locality  manipulation  rule_consist
+  B0 score only                    0.005         0.000         0.995         0.000
+  B1 score + rule                  0.027         0.000         1.000         0.000
+  B2 structured                    0.011         0.875         1.000         0.000
+  B3 struct + rule                 0.011         0.728         1.000         0.000
+
+  7B pattern: the rule raised score_high from 0.668 to 0.946 on fakes
+  32B score_high  B0 0.207 -> B1 0.576  (+0.370)
+  32B score_high  B2 0.174 -> B3 0.163  (-0.011)
+
+==============================================================================================
+10. CAPACITY HYPOTHESES C1-C4
+  recall  B0 0.978  B1 0.989  B2 0.978  B3 1.000
+  J       B0 +0.918  B1 +0.880  B2 +0.902  B3 +0.663
+
+  rule effect J: without struct -0.038 EXCLUDES zero   with struct -0.239 EXCLUDES zero
+  delta vs 7B:   without -0.109 EXCLUDES zero   with -1.027 EXCLUDES zero
+
+  -> C2 32B REDUCES framing collapse: B2-B0 is less negative than 7B with the delta CI excluding zero
+  -> structured evidence REDUCES discrimination even at 32B under correct semantics
+
+  wrote analysis_32b_final.json

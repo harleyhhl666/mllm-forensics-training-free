@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.994.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score cannot be verified from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The grid location in the center-left has a high probability.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The single rectangular block in IMAGE C lies mostly in the center-left cell (about two thirds of its width), with a smaller sliver crossing into the center cell; IMAGE D outlines the same area."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "These suggest significant digital manipulation.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated area covers the skateboard/wheel zone, and the content there differs between IMAGE A and IMAGE B (footwear and lower-body detail around the deck are not the same), so alteration in that region is consistent with the evidence; 'significant' is an overstatement given the marked block is only ~4% of the frame and no seam or tonal step is clearly visible at the boundary under the heavy sepia grade and low resolution."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Very terse explanation: only the location is checkable and it matches the annotated region. It names no object and no visual anomaly, resting entirely on detector numbers; the manipulation conclusion is directionally consistent with the annotation but 'significant' is not visually corroborated."
+}

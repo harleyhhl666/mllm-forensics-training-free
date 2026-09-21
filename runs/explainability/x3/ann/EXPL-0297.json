@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.233).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There are no regions identified by the forensic tool as suspicious.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about the tool's output record, not about the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The scene appears natural.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "An overcast shingle beach with a close-passing gull, breaking surf, distant figures, a beached white boat and a weathered turquoise ironwork finial in the foreground; scale, perspective and flat shadowless light are mutually coherent."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "There are no visible anomalies or inconsistencies.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No lighting, shadow or perspective inconsistency is visible, and the gull's anatomy and motion blur are plausible. However the frame does contain oddities of framing rather than editing \u2014 the gull's right wing and the boat are cut off, and the bright turquoise finial is very close and soft \u2014 so an absolute 'no visible anomalies' is slightly overstated."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No referenced regions and no objects named. The visual claims broadly match what is in image A; only the absolute phrasing about anomalies is mildly overstated given the unusual close foreground object and cropped subjects."
+}

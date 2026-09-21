@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not checkable against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Nothing observable supports reading a maximal manipulation score as indicating no manipulation."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The region concerned is the top-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white blob lies entirely within the top-center cell; IMAGE D outlines the fielder's raised mitt in that cell."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The top-center region has a high probability of being authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation marks exactly this area as the region of interest; no visible evidence supports calling it probably authentic."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is real.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "Conclusion rests only on the reversed reading of the scores; no observable support."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The top-center location matches the annotated region (the fielder's raised mitt). All interpretive claims invert their own inputs, treating a maximal manipulation score and the presence of a localized region as authenticity evidence, without citing anything visible."
+}

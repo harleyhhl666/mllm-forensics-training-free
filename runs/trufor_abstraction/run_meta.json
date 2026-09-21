@@ -1,0 +1,15 @@
+{
+ "phase": "evidence_abstraction",
+ "n_inferences": 1840,
+ "minutes": 83.8,
+ "mean_seconds": 2.68,
+ "peak_GB": 17.16,
+ "protocol_sha1": "ec1118a2f9b8fe17bad237892630752d0ade4d2f",
+ "model_path": "/home/borui/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5",
+ "decoding": {
+  "do_sample": false,
+  "temperature": 0.0,
+  "max_new_tokens": 320,
+  "repetition_penalty": 1.0
+ }
+}

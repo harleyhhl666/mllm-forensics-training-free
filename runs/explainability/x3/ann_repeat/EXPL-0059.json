@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.995).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score value; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The giraffe-shaped mask in IMAGE C has its largest mass in the centre cell, but it also clearly occupies centre-right, bottom-centre and bottom-right and clips top-centre, so naming only 'center' understates its extent."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.915) and a maximum probability (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Restates numeric detector output; the mask conveys extent, not probabilities."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE D outlines the near giraffe. Both A and B show two reticulated giraffes in left profile in the same enclosure and the outlined animal's stance is broadly similar in each; the second animal's head height appears lower in B, but the images are soft, heavily compressed and partly in deep shadow, so I cannot reliably tell whether the outlined region was altered. No seam, halo or lighting mismatch is visible inside the outline."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "low",
+  "notes": "The mask traces a whole giraffe spanning five grid cells, so the single cell 'center' is only the dominant one rather than the full extent. The alteration conclusion rests entirely on quoted scores; the A/B pair is too low in resolution and too deeply shadowed for me to confirm or rule out a change in the outlined region. The explanation names no object and no visible artefact."
+}

@@ -1,0 +1,85 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.985.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "A score of 0.985 indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "A near-maximal manipulation score is read as evidence of authenticity, inverting the quantity being reported. Nothing supplied supports that reading."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region is in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a rectangle in the right column spanning the middle row and the lower part of the top row; image D outlines the same block. Center-right is its principal cell."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported value; the supplied mask is binary and carries no probabilities."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The high probability suggests the presence of a specific feature or object in that region.",
+      "claim_type": "other",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "A manipulation-localization probability does not indicate the mere presence of an object; no evidence is offered for that reinterpretation."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "A puppy is present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A small white curly-coated puppy lies across the left and centre of image A."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "A newspaper is present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "An opened newspaper with halftone photos, a barcode and masthead lettering occupies the right side of image A."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The puppy is interacting with the newspaper.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The puppy lies adjacent to the paper with its muzzle near the folded edge, but it is resting rather than engaging with it; 'interacting' overstates what is visible."
+    },
+    {
+      "claim_id": "C9",
+      "claim_text": "The localized region is consistent with the normal content of the scene, supporting authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The masked region is where A departs from B: in A a clump of unattached brown curly fur sits between the puppy's ear and the page, and the headline type is garbled non-text; B shows no such brown fur mass. The region contains altered content rather than ordinary scene content."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The named region is correct and the named objects (puppy, newspaper) genuinely exist, but the reasoning inverts the score's meaning and then recasts the flagged region as benign scene content. Comparison with B shows the masked area is precisely where content differs - an unexplained brown fur clump with no contact shadow, plus non-text headline lettering - so the explanation's conclusion runs against the supplied evidence."
+}

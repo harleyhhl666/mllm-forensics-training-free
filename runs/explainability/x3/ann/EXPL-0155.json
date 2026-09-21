@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.291).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with high probabilities are extremely small.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the tool's localization output, not visible image content; no mask is supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not affect the overall integrity of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Without knowing where the regions are, their effect cannot be assessed; nothing in the visible room reads as damaged or spliced, but this is not verifiable."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Visual inspection does not reveal any obvious signs of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The thatched-roof lodge bedroom with mosquito-netted bed, wildlife prints and tropical foliage shows no obvious clone marks, composite seams or impossible lighting; the oddities present (blown-out windows, wide-angle distortion, a dark underexposed bundle at lower left) are ordinary photographic effects."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "not_applicable",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No referenced regions and no objects named. The only image-checkable claim \u2014 that casual inspection shows no obvious alteration \u2014 matches what is visible. The remaining claims concern detector numbers that image A cannot confirm."
+}

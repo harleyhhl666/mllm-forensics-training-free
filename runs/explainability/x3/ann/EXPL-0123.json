@@ -1,0 +1,61 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The TruFor image-level manipulation score is 0.990.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A named tool's numeric score cannot be verified from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "At the annotated bottom-right location IMAGE A shows a large white cow while IMAGE B shows a small solid-brown animal set deeper in the grass, so content there has been changed."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the bottom-right corner.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask lies mostly in the bottom-right cell (about five-sixths, the remainder in center-right), matching the outline in IMAGE D."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high probability score.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from images."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests the presence of a digital artifact there.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "The white animal in that region shows clear artifacts: flat blocky dark ear shapes and a bright cyan/blue rectangular patch over the muzzle, plus a smooth, soft-edged coat unlike the neighbouring tan cow."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "This is consistent with the image being a real photograph.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A digital artifact in the region is not evidence of the photograph being unedited; the visible glitching and the A-versus-B difference point the opposite way."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "partial",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "high",
+ "notes": "The location is right and the observation of a digital artifact in the bottom-right region is borne out by visible blocky/colour-glitched patches on the white animal there. But the explanation is self-contradictory: it reads a high manipulation score as authenticity and then treats a digital artifact as consistent with a real photograph. No object is named."
+}

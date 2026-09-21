@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.983)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the 'center-left'",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's rectangle is centred in the center-left cell but extends through top-left and bottom-left and slightly into the center column, so the single cell name is approximate."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.913)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability (0.998)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Within the annotated area the ridden horse is a chestnut/dun pony with a flaxen mane in IMAGE A versus a grey-white dappled horse in IMAGE B, with the rider's legwear also differing; content there has been altered."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The alteration claim is confirmed by the A-vs-B difference in the ridden horse. The location is only roughly right because the annotation is a tall bounding box covering the whole left column rather than one grid cell. No object, texture, lighting or boundary claim is made; numeric scores are outside what the images can adjudicate."
+}

@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.114).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not checkable from the image."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the top-center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The top-center cell contains only churning whitewater over smoother gray water — no subject — so without a mask the measured region cannot be identified."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That top-center region has a high probability (0.988).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric measurement, not verifiable from visible content."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The monochrome surf frame is coherent, but the named area is blown-out foam with clipped highlights, where texture and boundary cues are not reliably readable."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Score-based reasoning only, and internally inconsistent in reading a 0.988 localized manipulation probability as evidence of authenticity. Image A is a black-and-white frame of a lone silhouetted surfer holding a bright board on the right, with the whole rest of the frame filled by wave texture; top-center is pure blown-out whitewater over streaked water, where clipping and softness prevent any reliable judgement about that region."
+}

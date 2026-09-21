@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.270).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A detector score is metadata; it is not a property observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probabilities.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector statement about unspecified regions; no mask supplied and nothing corresponding is visible."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The referenced region is the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The centre ninth carries definite content: the right side of the woman (hair ends, shoulder, black top, extended arm), the top rail and diagonal brace of the weathered wooden gate, purple-flowering shrub behind, and the leading edge of the horse's dark mane at the cell's right edge."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests the image is likely authentic.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An authenticity verdict is not a checkable visual observation."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Overcast hillside shot of a teal-haired woman puckering toward a grazing chestnut horse beside an old timber gate. The centre cell exists and is content-dense, so the location is right, but the explanation attributes nothing visible to it. In the centre area the timber grain is the sharpest texture and shows no repetition or cloning; the woman, gate and horse share one flat shadowless illumination."
+}

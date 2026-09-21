@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.891.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "A score of 0.891 is high, suggesting potential manipulation.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An interpretation of a detector number, not an observable property of the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region in the bottom-center has a high mean probability (0.738) and a max probability (0.966).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric values for a region; no mask is supplied to check placement."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This indicates a strong likelihood of the region being real.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A zoomed look at the bottom-center cell shows ordinary shadowed pasture grass with no object, seam or convincingly repeated texture; but it is dark, soft and compressed, so 'real' cannot be affirmed with confidence, and a high probability value is an ambiguous basis for that direction of conclusion."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The grazing-cattle hillside scene has consistent warm low-angle light and shadows falling the same way for every animal, but authenticity is not determinable from A alone."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is a telephoto pasture scene: roughly twenty mostly black cattle on a rolling grassy slope, a brown-and-white stock dog at lower right, scattered boulders and yellow wildflowers, and a '(c) 2010 Stephanie Smith' watermark in the bottom-left (not mentioned in the text). The explanation is internally tense: it reads a high image-level score as evidence of potential manipulation and a high region probability as evidence of realness, using the same style of number in opposite directions. The bottom-center cell is essentially empty grass and cannot corroborate the region claim."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value cannot be verified from images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Independent of the score, altered content is observable: the boat's hull and stern differ markedly between IMAGE A and IMAGE B."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localization output highlights a region in the bottom-center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in IMAGE C is a single wedge centred in the bottom-center cell, matching the outline in IMAGE D."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability (0.952) and a maximum probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities are not checkable against the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests a manipulated area in that specific location.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated bottom-center area contains the hull, and comparing A with B shows that hull replaced: a rounded varnished clinker stern with dark blue capping rail in A versus a raked planked transom with dark painted topsides in B."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "Location matches the annotation and the alteration claim is corroborated by an observable A/B difference in that region. The numeric score and probability statements are not verifiable from imagery and are marked not_applicable. No object is named and no texture, lighting or mechanism claim is made."
+}

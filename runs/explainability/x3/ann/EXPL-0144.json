@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.185).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are minimal.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Region extents are tool outputs, not visible in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not indicate significant tampering.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "No regions are delineated in image A."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The overall image appears consistent and natural.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The giraffe, its ground shadowing and the rock backdrop are under the same flat diffuse light and the perspective is coherent, but this level of consistency judgement is not reliable from one image."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Purely metric-based reasoning plus one global naturalness statement; no object or location claim to check against the zoo giraffe photograph."
+}

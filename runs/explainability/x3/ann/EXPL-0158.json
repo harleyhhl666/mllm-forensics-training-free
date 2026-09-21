@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates no manipulation.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Zoomed comparison of the annotated area shows the locomotive differs between IMAGE A and IMAGE B (orange with a cream/light upper band and trailing cars in A versus an orange-and-maroon switcher in B), so altered content is present."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white blob lies 100% inside the center-right cell; IMAGE D's ellipse marks the same small locomotive there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high probability score.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported score value, not visually checkable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated region is exactly where A departs from B; nothing visible supports an authenticity inference."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The center-right location matches the annotated region (a small locomotive in the rail yard). The authenticity conclusion is contradicted by the A-versus-B difference inside that region, and reading a 1.000 manipulation score as 'no manipulation' is internally inconsistent. The annotated object is small and low-resolution, so the exact nature of the change is only broadly discernible."
+}

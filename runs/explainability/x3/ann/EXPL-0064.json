@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.999",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not checkable against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of authenticity",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Within the annotated region the near draught horse's head reads as uniformly dark with no bold white in IMAGE A, whereas IMAGE B shows the same horse with a distinctly pale face/blaze and lighter mottled body tone; content there differs, so an authenticity reading is not supported."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center-left",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white blob sits in the left column with its centroid in the center-left cell (legs extending into bottom-left), and IMAGE D outlines the near horse there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability and maximum probability",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistics, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "An object or feature is present in that area",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask silhouette shows a head-on quadruped with pricked ears and legs, and IMAGE D's outline encloses the near draught horse of the team."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "That object or feature is real, i.e. unmanipulated",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The masked horse's face marking and coat tone differ between IMAGE A and IMAGE B, so the annotated content is not unaltered."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location and the presence of an object in the annotated region are confirmed. The explanation contradicts itself by reading a near-maximal manipulation score as authenticity, and the masked horse's head differs between IMAGE A and IMAGE B, so calling that content real is unsupported. The old low-contrast monochrome print limits confidence on fine appearance detail but not on the location judgement."
+}

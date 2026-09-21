@@ -1,0 +1,109 @@
+PHASE X1 — RETROSPECTIVE EXPLAINABILITY ANALYSIS (no new inference)
+mask binarization threshold >127 (frozen preprocessing choice)
+
+================================================================================================
+A1. GT SPATIAL OBJECTS (fake samples)
+  fake samples 184
+  GT active cells (>=5% of mask): mean 2.57  dist {1: 40, 2: 67, 3: 23, 4: 44, 5: 7, 6: 3}
+  GT area_ratio median 0.0383
+  GT primary cell distribution: {'center': 74, 'bottom-center': 37, 'center-right': 23, 'center-left': 21, 'bottom-right': 12}
+  NOTE: a GT mask spanning many cells makes any 'hit' metric easier;
+  54/184 samples span >=4 cells, so precision/recall are reported alongside hit rates.
+
+================================================================================================
+CONDITIONS LOADED FROM DISK
+  7B_structured      cells 368   fake 184
+  7B_struct_rule     cells 368   fake 184
+  7B_mirrored        cells 368   fake 184
+  7B_struct_E2       cells 368   fake 184
+  7B_rawmap          cells 368   fake 184
+  7B_score_only      cells 368   fake 184
+  32B_structured     cells 368   fake 184
+  32B_struct_rule    cells 368   fake 184
+  32B_mirrored       cells 150   fake 70
+  32B_score_only     cells 368   fake 184
+
+================================================================================================
+A2.1  EVIDENCE -> GT   (does TruFor structured evidence point at real
+      tampering? independent of any MLLM)
+  n=184
+  any-cell hit        1.000
+  top-1 cell hit      1.000
+  top-1 == GT primary 0.940
+  exact cell agreement 0.223
+  multi-cell precision 0.979
+  multi-cell recall    0.531
+  -> this is the CEILING for Explanation->GT under faithful following
+
+================================================================================================
+A2.2 + A2.3  EXPLANATION -> EVIDENCE  and  EXPLANATION -> GT  (fake only)
+  condition            cite  E>Ev hit  E>Ev exact   unsup  E>GT hit  E>GT top1   prec    rec     n
+  7B_score_only       1.000       -           -       -       0.541      0.541  0.535  0.231   111
+  7B_rawmap           0.979       -           -       -       0.660      0.660  0.657  0.289   144
+  7B_struct_E2        1.000     1.000       0.935   0.000     1.000      1.000  0.995  0.519   184
+  7B_structured       1.000     1.000       0.929   0.000     0.995      0.995  0.993  0.514   184
+  7B_struct_rule      1.000     1.000       0.935   0.000     0.989      0.989  0.985  0.513   184
+  7B_mirrored         1.000     1.000       0.929   0.000     0.625      0.625  0.617  0.309   184
+  32B_score_only      1.000       -           -       -       0.853      0.696  0.574  0.473   184
+  32B_structured      0.978     1.000       0.950   0.000     1.000      0.994  0.994  0.517   184
+  32B_struct_rule     1.000     1.000       0.951   0.000     1.000      0.995  0.992  0.522   184
+  32B_mirrored        1.000     1.000       0.943   0.000     0.029      0.014  0.014  0.007    70
+
+  cite = fraction giving any region; all-nine echoes excluded entirely
+  E>Ev metrics need evidence to exist, so score-only rows are blank
+
+================================================================================================
+A3. MIRRORED vs CORRECT STRUCTURED EVIDENCE (eligible subset only)
+    eligible = GT-independent, frozen before any mirror result
+
+  [7B] n=70  (correct cell: 7B_struct_E2)
+    correct evidence     cite 1.000  Expl->Evidence 1.000  Expl->GT 1.000  n_scored 70
+    mirrored evidence    cite 1.000  Expl->Evidence 1.000  Expl->GT 0.014  n_scored 70
+    paired mirrored - correct:  Expl->Evidence +0.000 [+0.000,+0.000]   Expl->GT -0.986 [-1.000,-0.957]   n=70
+
+  [32B] n=70  (correct cell: 32B_struct_rule)
+    correct evidence     cite 1.000  Expl->Evidence 1.000  Expl->GT 1.000  n_scored 70
+    mirrored evidence    cite 1.000  Expl->Evidence 1.000  Expl->GT 0.029  n_scored 70
+    paired mirrored - correct:  Expl->Evidence +0.000 [+0.000,+0.000]   Expl->GT -0.971 [-1.000,-0.929]   n=70
+
+  descriptive only: if Expl->Evidence stays high while Expl->GT falls,
+  the model follows the evidence it is given and its explanation
+  correctness tracks the evidence's correctness.
+
+================================================================================================
+E. 7B vs 32B — CITATION COVERAGE vs CITATION CORRECTNESS
+   these are reported separately and never merged
+  condition           coverage  cond E>Ev exact  cond E>GT hit  n cited
+  7B_structured          1.000            0.929          0.995      184
+  32B_structured         0.978            0.950          1.000      180
+  7B_struct_rule         1.000            0.935          0.989      184
+  32B_struct_rule        1.000            0.951          1.000      184
+  coverage = willingness to name a region at all
+  conditional metrics are computed ONLY on samples where a region was named
+
+================================================================================================
+F. RAW MAP vs STRUCTURED EVIDENCE (7B, same sources, paired)
+  n=184
+    raw map (E1)       cite 0.979  Expl->Evidence 0.404  Expl->GT 0.660  GT precision 0.657  n 141
+    structured (E2)    cite 1.000  Expl->Evidence 1.000  Expl->GT 1.000  GT precision 0.995  n 184
+    paired structured - raw:  Expl->Evidence +0.596 [+0.511,+0.674]   Expl->GT +0.340 [+0.262,+0.418]   n=141
+  question: does structured evidence only make the model better at
+  RESTATING evidence, or also bring the explanation closer to GT?
+
+================================================================================================
+REAL-IMAGE SPATIAL SANITY (no GT mask exists; counts only)
+  condition           named a region  mean n cells     n
+  7B_score_only                1.000          1.02   182
+  7B_rawmap                    0.819          0.82   182
+  7B_struct_E2                 1.000          1.47   182
+  7B_structured                1.000          1.28   183
+  7B_struct_rule               0.995          1.31   183
+  7B_mirrored                  1.000          1.48   181
+  32B_score_only               0.870          1.77   184
+  32B_structured               0.120          0.16   184
+  32B_struct_rule              0.337          0.57   184
+  32B_mirrored                 0.225          0.39    80
+  naming a region on a real image is not automatically wrong, but it is
+  the population Part B must audit for unsupported suspicion
+
+wrote /mnt/disk3/borui/fevi/runs/explainability/x1_spatial_analysis.json

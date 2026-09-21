@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.997).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the center-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask's largest share is the center-right cell, with parts in bottom-right and center; IMAGE D's outline follows the doughnut there."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.975) and a maximum probability (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Within the annotated region the doughnut in IMAGE A is evenly sprinkled with cool blue/purple jimmies and has a wide dark hole, while IMAGE B shows warmer pastel sprinkles confined to one side over bare glossy glaze and a smaller glaze-filled hole."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The alteration is particularly around the donut.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The annotated region coincides with the doughnut, which is the element that differs between IMAGE A and IMAGE B; the jump rope and background are unchanged."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "yes",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "medium",
+ "notes": "Location, named object and alteration claim all line up with the evidence: the annotated center-right region is the doughnut, whose sprinkles, glaze and hole differ from IMAGE B while the surrounding jump rope and dark background match. The explanation still argues only from tool scores rather than from a visible artifact it identifies, and the mask extends beyond center-right into bottom-right."
+}

@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.347).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not verifiable from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are small.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes unsupplied measurement geometry, not visible content."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions do not significantly affect the overall authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No visible artifact can be matched to the unseen regions, and the heavy silhouette leaves little detail to assess."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The visual content appears consistent with a real photograph of a skateboarding scene.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "A skater is silhouetted at the coping of a concrete quarterpipe with the board's deck, trucks and wheels visible against the twilight sky — unmistakably a skateboarding scene."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The only auditable claim — that the content is a skateboarding scene — is directly confirmed: a silhouetted rider with board at the lip of a graffitied concrete ramp under a sunset sky. The remaining statements concern detector scores and regions absent from image A, so they are not checkable. No hallucinated objects."
+}

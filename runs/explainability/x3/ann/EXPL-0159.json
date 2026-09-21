@@ -1,0 +1,69 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.996).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the bottom-center area.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask sits mostly (about two thirds) in the bottom-center cell, the rest in center, matching the outline in IMAGE D."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.975) and a max probability of 1.0.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The doughnut in the annotated region is white/lavender glazed with sprinkles in IMAGE A and plain glossy chocolate with a larger hole in IMAGE B, while the surrounding vessel and lighting match."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "A donut is present.",
+   "claim_type": "object",
+   "support": "supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "A single sprinkled ring doughnut is clearly visible in IMAGE A, inside the annotated region."
+  },
+  {
+   "claim_id": "C6",
+   "claim_text": "There is a sink, and the donut is placed in it.",
+   "claim_type": "object",
+   "support": "unsupported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "The doughnut rests in a white ceramic bowl or mug with a glossy yellow rim and a visible tabletop beyond it; there is no drain, tap or basin, so no sink is present."
+  },
+  {
+   "claim_id": "C7",
+   "claim_text": "The alteration is likely related to the placement of the donut.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The doughnut's appearance differs between A and B, but the difference is in glaze and toppings rather than in where it sits, so a placement-specific mechanism is not established."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "partial",
+ "manipulation_claim_supported": "partial",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": true,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "high",
+ "notes": "Location and the general alteration claim hold up, and the doughnut is real. The explanation invents a sink: the container is a white ceramic bowl or mug with a yellow rim standing on a tabletop, with no plumbing fixture visible. Its 'placement' mechanism is also not what the A-versus-B comparison shows, which is a change of glaze and sprinkles rather than of position."
+}

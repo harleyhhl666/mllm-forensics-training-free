@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.995).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "There is a localized region in the center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "Image C's blob is centred on the middle cell, spilling into centre-right and bottom-centre; Image D's outline agrees."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.95) and max probability (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric probability values are not observable; Image C is a binary mask."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inside the marked region the locomotive nose differs between A and B: B shows a winged SJ emblem plus 'RAPID' and '987' lettering, absent from the plainer white-striped nose in A."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "The alteration likely involves the train or its surroundings.",
+   "claim_type": "manipulation",
+   "support": "partially_supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The annotated region encloses the locomotive front, and the visible difference is on the train; but the hedged 'or its surroundings' disjunction adds nothing checkable."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "partial",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "Location matches the annotation, which covers the locomotive front, and an A-versus-B difference in nose markings is visible there. The attribution is hedged and non-specific, and the numeric detector values are not auditable from the images."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.997.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector score is not something that can be checked against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated centre region of IMAGE A differs from IMAGE B there: in B the hydrant has a large white front cap, a hanging chain and a round rust-brown base pad, while in A it has two bolted red side-outlet caps and a plain bolted base on the sidewalk. The supplied evidence does not support an authenticity conclusion."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The center region has a high mean probability of 0.917.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric probability is not verifiable from the images."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The region of interest is located in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white rectangle lies within the middle row and middle column (only a thin sliver crosses into center-left); IMAGE D outlines the same area."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is not manipulated in that area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation marks exactly that area as the region of interest, and the hydrant's fittings and base there visibly differ between IMAGE A and IMAGE B, so 'not manipulated there' is contradicted by the supplied evidence."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The stated location matches the annotated region, but the explanation is internally inconsistent (a high manipulation score read as evidence of authenticity) and its substantive conclusion that the centre area is unmanipulated runs against the annotation and the visible A-vs-B difference at the hydrant. No object is named."
+}

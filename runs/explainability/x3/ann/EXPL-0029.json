@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.138).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The grid location in the center has a high mean probability (0.706).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Per-cell probability values cannot be read from image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The center cell has a max probability of 0.937.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Not observable in the photograph."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The referenced grid location is the center cell.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell contains the upper half of the yellow fire hydrant, the main subject, but no region marking exists in image A to confirm the tool's location."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Rests entirely on unverifiable metrics."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is a street-level view of a yellow fire hydrant in front of a campus store window. The explanation names no object or visual feature, so only the center-region reference is loosely checkable, and it does coincide with the main subject."
+}

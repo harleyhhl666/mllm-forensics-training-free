@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is high (0.985).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric value; not checkable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the center-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's rectangle lies in the right column with about 72% of its area and its centroid in the center-right cell (the rest in top-right); IMAGE D outlines that area."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.898) and a very high max probability (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric confidence values cannot be verified visually."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inside the annotated rectangle A shows a mass of wiry brown/taupe curly fur lying across the page, whereas B shows white wispy fur at the left and speckled granite countertop with a plain paper sheet. The content there is clearly different."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "The location matches the mask (center-right, spilling into top-right) and the A-vs-B comparison shows substituted content there - brown curly fur in A where B has white fur and bare speckled countertop. The explanation nonetheless consists only of detector numbers and names no object or visible property."
+}

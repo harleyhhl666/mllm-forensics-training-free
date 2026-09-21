@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.378).",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Forensic-tool numeric output is not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with higher probabilities are small and scattered.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Region sizes and distribution are tool outputs; no regions are visible in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is no significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No conspicuous seam or halo is evident around the giraffes or rock edges, but the strong shadow/sunlight contrast makes a confident negative verdict unreliable from one image."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Giraffes are present in the image.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Four giraffe heads and necks project out from behind the rock face, with reticulated coat patterns, ossicones and manes clearly visible."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The giraffes and their environment have a natural appearance.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The giraffes themselves look anatomically normal and consistently lit, but the surrounding environment is sculpted artificial zoo rockwork with visible barrier hardware, so 'natural environment' is overstated."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The overall composition supports the conclusion that the image is authentic.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Composition is not evidence about whether content was edited; this inference is not supported by anything observable."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The giraffes named do exist in image A. Describing their environment as natural is overstated given the artificial rockwork and visible zoo chain/cable. Inferring authenticity from composition is not grounded in anything observable."
+}

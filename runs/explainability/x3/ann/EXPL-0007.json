@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not checkable against the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates no manipulation",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE A and IMAGE B differ inside the annotated area: the skateboard's underside is a glossy blue/black graphic with small dark wheels in A but a multicoloured tie-dye graphic with bright yellow-green wheels in B, so the image is not unaltered."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There are localized regions in the bottom-center",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "All white pixels in IMAGE C fall inside the bottom-center cell (two touching components), and IMAGE D outlines the skateboard there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "Those regions suggest a high probability of manipulation",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated area is exactly where A and B differ, so a manipulation indication there is consistent with the visible evidence."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There is an absence of other manipulated regions",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C contains only the one bottom-center cluster, and the rest of IMAGE A matches IMAGE B as far as can be seen."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "Therefore the image is authentic",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated skateboard differs between IMAGE A and IMAGE B, so the authenticity conclusion is contradicted by the comparison."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Internally inconsistent: it reads a score of 1.000 as 'no manipulation' while acknowledging a high-probability localized region, then concludes authenticity. Localization is accurate and the localized manipulation indication matches the A-vs-B difference in the skateboard; the authenticity verdict does not."
+}

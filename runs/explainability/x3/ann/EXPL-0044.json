@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.980)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the top-left",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The white rectangle in IMAGE C sits against the left edge with its centroid in the top-left cell; IMAGE D outlines the horse's head in that cell."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.88)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a very high max probability (0.998)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The horse's head inside the annotated area is cream/palomino with a long wavy pale mane and a black leather halter in IMAGE A but a dappled grey head with a short mane and rope halter in IMAGE B, while the woman, rope and background match."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "The stated cell matches the annotation, and the alteration claim is confirmed by a localized A-vs-B difference in the horse's head. The mask is a coarse bounding box, but its centroid and bulk are in the top-left cell as stated. No texture, lighting, boundary or mechanism claim is made."
+}

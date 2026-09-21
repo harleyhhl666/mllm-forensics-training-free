@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is low (0.198).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric detector value; not checkable from the photograph."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localized regions with higher probabilities are small and scattered.",
+   "claim_type": "location",
+   "support": "uncertain",
+   "evidence_basis": "none",
+   "brief_justification": "No mask is supplied and the explanation names no grid cell, so the size and distribution of detector regions cannot be verified."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is no significant evidence of digital alteration.",
+   "claim_type": "manipulation",
+   "support": "uncertain",
+   "evidence_basis": "visible_real_image",
+   "brief_justification": "No seam, clone pattern, halo beyond ordinary overexposure, or impossible shadow is apparent, but the image is low-resolution with a clipped white sky and crowded overlapping horses, so subtle alteration could not be ruled out from what is visible."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "The overall scene appears consistent and natural.",
+   "claim_type": "other",
+   "support": "supported",
+   "evidence_basis": "visible_real_image",
+   "brief_justification": "Perspective, scale of riders and horses, ground contact and the uniform flat overcast lighting are all mutually consistent across the frame; the scene reads as coherent."
+  }
+ ],
+ "region_correct": "not_applicable",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "uncertain",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "No grid region is referenced, so there is no location claim to check. The general claim of a consistent, natural-looking scene matches what is visible; the claim about small scattered detector regions cannot be verified without a mask, and the no-alteration conclusion is not establishable from the visible evidence alone."
+}

@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.197).",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector score is metadata not present or verifiable in the photograph itself."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions with high probabilities are very small and scattered.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the spatial distribution of a detector heatmap that is not provided and cannot be read off the photograph."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is no significant evidence of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Visible content is coherent: both giraffes sit on a common ground plane with matching soft overcast light, the treeline and ground bands run continuously, and no seam, halo or duplicated texture is apparent. Confidence is limited by haze, background defocus and JPEG mottling in the foliage; the cluttered patterned mass around the feeder tray is ambiguous but reads as overlapping heads plus browse."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "No regions or objects named. The only visually checkable assertion is the absence of significant alteration evidence, which the image broadly bears out while leaving soft, low-detail areas unjudgeable."
+}

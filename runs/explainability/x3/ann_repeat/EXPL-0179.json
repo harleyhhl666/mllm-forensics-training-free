@@ -1,0 +1,77 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score of 0.898.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "An inference about detector output rather than about image content; no threshold information is supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region is in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a tall blob whose bulk fills the centre cell, extending into top-center and bottom-center; image D outlines the hydrant in the same place."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The localized region indicates a manipulated area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Inside the masked area A differs plainly from B: in B the hydrant has a dark charcoal bonnet, a green cap below it and a rusted yellow barrel, with symmetric ice columns on both flanks; in A it is a red-orange barrel with a frost-crusted top and a single large ice slab on the left. The outlined hydrant in D is also noticeably softer and waxier than the sharply resolved fence mesh and bark at similar depth."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "A fire hydrant is present.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "A municipal hydrant stands at the centre of image A on the concrete sidewalk."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "There is ice formation around the fire hydrant.",
+      "claim_type": "object",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Thick ice encases the hydrant's bonnet and left flank and spreads into a broad frozen apron at its base, with icicles on the ledge below."
+    },
+    {
+      "claim_id": "C7",
+      "claim_text": "The ice formation is unusual.",
+      "claim_type": "other",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The ice is visually striking, but heavy ice accretion is also present in B and is the ordinary result of a leaking hydrant in a hard freeze. What actually differs is its distribution - two flanking columns in B versus one asymmetric left-side slab in A - which the explanation does not state."
+    },
+    {
+      "claim_id": "C8",
+      "claim_text": "The unusual ice formation aligns with the manipulated area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask covers the hydrant body in the centre and only part of the adjoining ice; image D's outline deliberately excludes the large left-hand ice mound. So the cited ice overlaps the flagged region but is not the region itself."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "yes",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location, both named objects and the manipulation conclusion are correct, and unlike several other units in this set the score is read in the right direction. The weakness is the supporting observation: the ice is treated as the anomaly, but ice is present in the source photograph too and the mask/outline centres on the hydrant body rather than the ice mound. The genuine visible tells - the soft waxy hydrant surface and its altered colour scheme - go unmentioned."
+}

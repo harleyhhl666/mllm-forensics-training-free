@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 0.998.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Reported numeric detector output; not checkable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The annotated region's content differs between A and B: A shows a rounded-nose green/cream locomotive with yellow chevrons and dark blue coaches, B shows a flat-fronted dark boxy locomotive with grey/white coaches. Nothing observable supports an authenticity conclusion."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a grid location in the center-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single wedge-shaped blob lies almost entirely in the center-right cell; IMAGE D outlines the train there."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high mean probability of 0.927.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric value, not verifiable from images."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests the presence of a real object or feature in that area.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "An object (a train) is indeed present there, but its appearance is substituted relative to IMAGE B, so calling it a 'real' unaltered feature has no observable support."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "Location is correct (center-right, the train). The explanation reads a very high score as evidence of authenticity and concludes the region contains a genuine feature, but A-vs-B shows the locomotive and coach livery in exactly that region were replaced. The explanation names no object of its own."
+}

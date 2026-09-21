@@ -1,0 +1,47 @@
+{
+ "phase": "trufor_32b_capacity",
+ "n_inferences": 736,
+ "minutes": 105.7,
+ "mean_seconds": 8.59,
+ "gpu_mem": {
+  "0": {
+   "alloc_GB": 15.62,
+   "reserved_GB": 17.51,
+   "peak_GB": 16.27
+  },
+  "1": {
+   "alloc_GB": 17.56,
+   "reserved_GB": 19.02,
+   "peak_GB": 18.17
+  },
+  "2": {
+   "alloc_GB": 17.56,
+   "reserved_GB": 19.02,
+   "peak_GB": 18.17
+  },
+  "3": {
+   "alloc_GB": 16.19,
+   "reserved_GB": 17.65,
+   "peak_GB": 16.78
+  }
+ },
+ "nvidia_used_MiB": {
+  "0": 17036,
+  "1": 18472,
+  "2": 18472,
+  "3": 17164,
+  "4": 16,
+  "5": 16,
+  "6": 16
+ },
+ "protocol_sha1": "af95a7583ae40ca1951fd1e0d4acfe810d44b5ff",
+ "model_path": "/mnt/disk3/borui/hf_cache/models--Qwen--Qwen2.5-VL-32B-Instruct/snapshots/7cfb30d71a1f4f49a57592323337a4a4727301da",
+ "dtype": "bfloat16",
+ "device_map_resolved": "{'model.visual': 0, 'model.language_model.embed_tokens': 0, 'model.language_model.layers.0': 0, 'model.language_model.layers.1': 0, 'model.language_model.layers.2': 0, 'model.language_model.layers.3': 0, 'model.language_model.layers.4': 0, 'model.language_model.layers.5': 0, 'model.language_model.layers.6': 0, 'model.language_model.layers.7': 0, 'model.language_model.layers.8': 0, 'model.language_model.layers.9': 0, 'model.language_model.layers.10': 0, 'model.language_model.layers.11': 0, 'model.language_model.layers.12': 0, 'model.language_model.layers.13': 1, 'model.language_model.layers.14': 1, 'model.language_model.layers.15': 1, 'model.language_model.layers.16': 1, 'model.language_model.layers.17': 1, 'model.language_model.layers.18': 1, 'model.language_model.layers.19': 1, 'model.language_model.layers.20': 1, 'model.language_model.layers.21': 1, 'model.language_model.layers.22': 1, 'model.language_model.layers.23': 1, 'model.language_model.layers.24': 1, 'model.language_model.layers.25': 1, 'model.language_model.layers.26': 1, 'model.language_model.layers.27': 1, 'model.language_model.layers.28': 1, 'model.language_model.layers.29': 1, 'model.language_model.layers.30': 1, 'model.language_model.layers.31': 2, 'model.language_model.layers.32': 2, 'model.language_model.layers.33': 2, 'model.language_model.layers.34': 2, 'model.language_model.layers.35': 2, 'model.language_model.layers.36': 2, 'model.language_model.layers.37': 2, 'model.language_model.layers.38': 2, 'model.language_model.layers.39': 2, 'model.language_model.layers.40': 2, 'model.language_model.layers.41': 2, 'model.language_model.layers.42': 2, 'model.language_model.layers.43': 2, 'model.language_model.layers.44': 2, 'model.language_model.layers.45': 2, 'model.language_model.layers.46': 2, 'model.language_model.layers.47': 2, 'model.language_model.layers.48': 2, 'model.language_model.layers.49': 3, 'model.language_model.layers.50': 3, 'model.language_model.layers.51': 3, 'model.language_model.layers.52': 3, 'model.language_model.layers.53': 3, 'model.language_model.layers.54': 3, 'model.language_model.layers.55': 3, 'model.language_model.layers.56': 3, 'model.language_model.layers.57': 3, 'model.language_model.layers.58': 3, 'model.language_model.layers.59': 3, 'model.language_model.layers.60': 3, 'model.language_model.layers.61': 3, 'model.language_model.layers.62': 3, 'model.language_model.layers.63': 3, 'model.language_model.norm': 3, 'model.language_model.rotary_emb': 3, 'lm_head': 3}",
+ "decoding": {
+  "do_sample": false,
+  "temperature": 0.0,
+  "max_new_tokens": 320,
+  "repetition_penalty": 1.0
+ }
+}

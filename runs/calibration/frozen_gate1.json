@@ -1,0 +1,13 @@
+{
+ "tool": "ela",
+ "scorer": "patch_p999_over_med",
+ "threshold": 3.983961486816406,
+ "derived_from": "calibration split, 90th percentile of REAL-image scores (FPR=0.10)",
+ "calibration_auc": 0.5101388888888889,
+ "SMOKE_ONLY": true,
+ "WARNING": "This frozen decision exists ONLY to exercise the pipeline code end-to-end on CocoGlide. Gate 1 is NOT valid on CocoGlide: calibration AUC is ~0.51 (chance) and pixel-AUC vs GT is ~0.48. No scientific conclusion may be drawn from any run using this file. Replace with a real frozen decision derived on a dataset where the tools demonstrably carry signal.",
+ "strength_cuts": {
+  "weak_medium": 3.187169189453125,
+  "medium_strong": 4.780753784179687
+ }
+}

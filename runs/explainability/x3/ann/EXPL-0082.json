@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Detector score is not visible in or checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the center-right.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask in Image C and the outline in Image D lie almost entirely in the middle-right cell, tracing the train."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.927) and a maximum probability (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric probability values are not observable; Image C is a binary mask."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "There is significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The outlined train differs between A and B: in A the locomotive carries a green/cream livery with yellow front, while in B the same locomotive is grey with a yellow front end."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "partially_supported",
+ "confidence": "medium",
+ "notes": "The named region matches the annotation and an A-versus-B difference is visible there (locomotive livery/colour), so the alteration conclusion holds. The explanation offers no object, texture, lighting or boundary evidence of its own, resting only on unverifiable numeric scores plus the location."
+}

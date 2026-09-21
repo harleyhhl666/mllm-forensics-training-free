@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.168).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not observable in the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show high probabilities.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported localization statistics; no mask supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This suggests the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-center cell is bare platform pavement with the diagonal yellow safety line and a thin cable across it. The sky is unusually dark and saturated with visible grain, which is consistent with a polarizer or global processing rather than local editing, but I cannot judge authenticity from this."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is a portrait-format VIA Rail station view with P42DC locomotive 901 approaching at left and the station tower, lamp standards and parking area at right. The explanation names the bottom-center region but describes no content there, so region and object accuracy cannot be graded."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.999)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector score, not verifiable from the supplied images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the center-left",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white region sits almost wholly within the center-left cell, matching IMAGE D's outline of the harnessed animal."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.91)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability (0.999)",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric statistic, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests significant digital alteration in that area",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The animal inside the annotated region is a bay horse with white blaze and flaxen mane in IMAGE A but a dark long-eared donkey in IMAGE B, while the cart, fence and street are unchanged; content in that region has been altered."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "medium",
+  "notes": "The stated location matches the mask and outline, and the general alteration claim is confirmed by a clear A-vs-B difference confined to that region. No object is named and no texture, lighting, boundary or specific mechanism claim is made, so nothing is overstated; the numeric scores are outside what the images can adjudicate."
+}

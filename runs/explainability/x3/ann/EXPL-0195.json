@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is relatively low (0.578).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized region with a high probability of manipulation is very small.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Describes the tool's localization output; no mask is supplied."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region is located at the bottom-center.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-center cell is featureless rippled water with no distinguishing feature; without a mask there is nothing visible there to corroborate or refute the placement. The image's one distinctive bottom-area feature (a watermark) is in the bottom-left, not bottom-center."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "It is likely a false positive given the context of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Nothing visible in the empty bottom-center water suggests alteration, but an absence of visible cues cannot establish that a flagged region is spurious."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The overall scene appears consistent with a natural photograph of a water body and distant landscape.",
+      "claim_type": "other",
+      "support": "supported",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Image A shows a broad grey-green water expanse under flat overcast sky with a hazy forested shoreline across the horizon and a yellow tug pushing a barge; tone, haze gradient and perspective are coherent."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The scene description matches image A well (water body plus distant landscape, with a tug and barge and a bottom-left 'Blinkstar Media 2013' watermark that the text does not mention). The bottom-center placement of a flagged region cannot be checked because that cell is featureless water and no mask was provided."
+}

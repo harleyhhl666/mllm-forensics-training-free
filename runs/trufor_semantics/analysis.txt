@@ -1,0 +1,149 @@
+TASK-SEMANTICS / VERDICT DECOMPOSITION — 7B
+rows 1472  complete sources 184  bootstrap 10000 seed 20260918
+1104 inf  45.8 min  mean 2.45s  2026-09-21 14:23:07 -> 2026-09-21 15:08:52
+
+==============================================================================================
+1. INTEGRITY
+  parse failures 0/1472   bad verdicts 0
+  note counts none
+  cells {'D0_baseline': 368, 'D1_binary_rule': 368, 'D2_decomposition': 368, 'D3_presence_first': 368}
+  unique coco_id 184
+  D2/D3 manipulation_present parsed 736/736
+  D2/D3 manipulation_extent parsed 736/736
+  D0/D1 carry no presence field: True
+  evidence payload identical across conditions: True
+  protocol sha1 d0617e9527291cf151dbbc7382ac3c4f23068c3e
+
+==============================================================================================
+2. DECISION BY CONDITION
+  condition                  recall            95% CI     FPR            95% CI   spec       J          J 95% CI
+  D0 baseline                 0.114 [0.071,0.163]   0.000 [0.000,0.000]  1.000   0.114 [+0.071,+0.163]
+  D1 + binary rule            0.967 [0.940,0.989]   0.065 [0.033,0.103]  0.935   0.902 [+0.853,+0.946]
+  D2 + decomposition          1.000 [1.000,1.000]   0.951 [0.918,0.978]  0.049   0.049 [+0.022,+0.082]
+  D3 presence-first           1.000 [1.000,1.000]   0.957 [0.924,0.984]  0.043   0.043 [+0.016,+0.076]
+
+  reference: score-only prompt recall 0.837 / FPR 0.011 / J 0.826
+
+==============================================================================================
+3. REPLICATION CHECK
+  D0 expected ~0.114 (field round S5, same prompt bytes)
+  D0 observed  0.114 [0.071,0.163]   delta +0.000
+  OK — within CI
+
+==============================================================================================
+4. DECISION CONTRASTS
+
+  rule_clarification   D1 - D0
+    fake recall  +0.853 [+0.799,+0.902] EXCLUDES zero  p=1.095e-47
+    real FPR     +0.065 [+0.033,+0.103] EXCLUDES zero  p=0.0004883
+    J            +0.788 [+0.723,+0.853] EXCLUDES zero
+
+  decomposition   D2 - D0
+    fake recall  +0.886 [+0.837,+0.929] EXCLUDES zero  p=1.711e-49
+    real FPR     +0.951 [+0.918,+0.978] EXCLUDES zero  p=4.176e-53
+    J            -0.065 [-0.120,-0.011] EXCLUDES zero
+
+  presence_first   D3 - D0
+    fake recall  +0.886 [+0.837,+0.929] EXCLUDES zero  p=1.711e-49
+    real FPR     +0.957 [+0.924,+0.984] EXCLUDES zero  p=2.088e-53
+    J            -0.071 [-0.125,-0.016] EXCLUDES zero
+
+  ordered_benefit   D3 - D2
+    fake recall  +0.000 [+0.000,+0.000] includes zero  p=1
+    real FPR     +0.005 [+0.000,+0.016] includes zero  p=1
+    J            -0.005 [-0.016,+0.000] includes zero
+
+==============================================================================================
+5. PRESENCE-LEVEL METRICS (D2/D3)
+  condition                     TPR            95% CI      FPR            95% CI       J
+  D2 + decomposition          1.000 [1.000,1.000]    0.951 [0.918,0.978]   0.049
+  D3 presence-first           1.000 [1.000,1.000]    0.957 [0.924,0.984]   0.043
+
+  compare with the same condition's VERDICT J:
+    D2 + decomposition       presence J +0.049   verdict J +0.049   gap -0.000
+    D3 presence-first        presence J +0.043   verdict J +0.043   gap -0.000
+  a large positive gap localises the failure to final arbitration
+
+==============================================================================================
+6. PRESENCE-VERDICT INCONSISTENCY (structured fields, no regex)
+
+  D2 + decomposition
+    [fake] A present=true & verdict=real  0.000 [0.000,0.000]
+    [fake] B present=false & verdict=fake 0.000 [0.000,0.000]   n=184
+    [real] A present=true & verdict=real  0.000 [0.000,0.000]
+    [real] B present=false & verdict=fake 0.000 [0.000,0.000]   n=184
+    [fake] P(verdict=real | present=true) 0.000 (n=184)
+    [real] P(verdict=real | present=true) 0.000 (n=175)
+
+  D3 presence-first
+    [fake] A present=true & verdict=real  0.000 [0.000,0.000]
+    [fake] B present=false & verdict=fake 0.000 [0.000,0.000]   n=184
+    [real] A present=true & verdict=real  0.000 [0.000,0.000]
+    [real] B present=false & verdict=fake 0.000 [0.000,0.000]   n=184
+    [fake] P(verdict=real | present=true) 0.000 (n=184)
+    [real] P(verdict=real | present=true) 0.000 (n=176)
+
+  last round's regex proxy (acknowledged_manipulation_but_real):
+    P0 0.000  ->  P2 0.957. This round measures it directly.
+
+==============================================================================================
+7. EXTENT ANALYSIS (D2/D3)
+
+  D2 + decomposition
+    [fake] none 0/184 (0.000)  localized 184/184 (1.000)  widespread 0/184 (0.000)
+    [real] none 9/184 (0.049)  localized 174/184 (0.946)  widespread 1/184 (0.005)
+    [fake] P(verdict=real | present=true, extent=localized) 0.000 [0.000,0.000]  n=184
+    [real] P(verdict=real | present=true, extent=localized) 0.000 [0.000,0.000]  n=174
+
+  D3 presence-first
+    [fake] none 0/184 (0.000)  localized 184/184 (1.000)  widespread 0/184 (0.000)
+    [real] none 8/184 (0.043)  localized 175/184 (0.951)  widespread 1/184 (0.005)
+    [fake] P(verdict=real | present=true, extent=localized) 0.000 [0.000,0.000]  n=184
+    [real] P(verdict=real | present=true, extent=localized) 0.000 [0.000,0.000]  n=175
+
+  reading: if this is high in D2 but low in D3, the presence-first order
+  removed the 'localized = authenticity exemption' shortcut
+
+==============================================================================================
+8. REASON AUDIT
+
+  fake targets
+  condition                     locality    score_high  manipulation  evidence_wea  local_exempt  rule_consist
+  D0 baseline                      0.663         0.668         1.000         0.000         0.005         0.000
+  D1 + binary rule                 0.951         0.946         1.000         0.000         0.000         0.000
+  D2 + decomposition               1.000         0.918         1.000         0.000         0.000         0.038
+  D3 presence-first                1.000         0.902         1.000         0.000         0.000         0.076
+
+  real targets
+  condition                     locality    score_high  manipulation  evidence_wea  local_exempt  rule_consist
+  D0 baseline                      0.815         0.060         1.000         0.005         0.000         0.000
+  D1 + binary rule                 0.995         0.076         1.000         0.000         0.016         0.000
+  D2 + decomposition               0.989         0.283         1.000         0.000         0.011         0.000
+  D3 presence-first                0.984         0.299         1.000         0.000         0.016         0.005
+
+  key columns: local_exemption (localized => still real) and
+  rule_consistent (explicit adherence to the binary rule)
+    D0 baseline              local_exemption 0.005 [0.000,0.016]   rule_consistent 0.000 [0.000,0.000]
+    D1 + binary rule         local_exemption 0.000 [0.000,0.000]   rule_consistent 0.000 [0.000,0.000]
+    D2 + decomposition       local_exemption 0.000 [0.000,0.000]   rule_consistent 0.038 [0.011,0.065]
+    D3 presence-first        local_exemption 0.000 [0.000,0.000]   rule_consistent 0.076 [0.038,0.114]
+
+==============================================================================================
+9. FAITHFULNESS (secondary — must not regress)
+  D0 baseline              agreement 1.000  exact 0.756  all-9 echo 0.003  n=357
+  D1 + binary rule         agreement 1.000  exact 0.776  all-9 echo 0.003  n=357
+  D2 + decomposition       agreement 1.000  exact 0.830  all-9 echo 0.003  n=358
+  D3 presence-first        agreement 1.000  exact 0.816  all-9 echo 0.003  n=358
+
+==============================================================================================
+10. CASE JUDGEMENT
+  recall  D0 0.114  D1 0.967  D2 1.000  D3 1.000
+  J       D0 +0.114  D1 +0.902  D2 +0.049  D3 +0.043
+  rule_clarification   recall +0.853 EXCLUDES zero   FPR +0.065   J +0.788 EXCLUDES zero
+  decomposition        recall +0.886 EXCLUDES zero   FPR +0.951   J -0.065 EXCLUDES zero
+  presence_first       recall +0.886 EXCLUDES zero   FPR +0.957   J -0.071 EXCLUDES zero
+  ordered_benefit      recall +0.000 includes zero   FPR +0.005   J -0.005 includes zero
+
+  -> T1 TASK-SEMANTICS MISUNDERSTANDING: stating the binary rule alone restores a large part of decision utility
+
+  wrote presence_extent_analysis.json and inconsistency_analysis.json

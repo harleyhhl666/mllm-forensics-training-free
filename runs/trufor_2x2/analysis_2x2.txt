@@ -1,0 +1,103 @@
+SCORE x TASK-SEMANTICS 2x2 CAUSAL CONTROL — 7B
+complete sources 184  bootstrap 10000 seed 20260918
+A1 run: 368 inf  12.4 min  mean 2.0s  2026-09-21 15:22:10 -> 2026-09-21 15:34:33
+A0/A2/A3 read from frozen files; nothing re-inferred
+
+==============================================================================================
+1. INTEGRITY
+  A1 rows 368  parse failures 0  bad verdicts 0
+  A0 cells 368  unique sources 184
+  A1 cells 368  unique sources 184
+  A2 cells 368  unique sources 184
+  A3 cells 368  unique sources 184
+  A1 single-image and no structured payload: True
+  score identical across cells: True
+  protocol sha1 6f3fea39549b67ff8a5b00db7f7ff97934fc1001
+
+==============================================================================================
+2. FOUR CELLS
+  cell                         recall            95% CI     FPR            95% CI   spec       J          J 95% CI
+  A0 score-only                 0.837 [0.783,0.886]   0.011 [0.000,0.027]  0.989   0.826 [+0.772,+0.880]
+  A1 score-only + rule          0.978 [0.957,0.995]   0.082 [0.043,0.125]  0.918   0.897 [+0.853,+0.935]
+  A2 structured                 0.114 [0.071,0.163]   0.000 [0.000,0.000]  1.000   0.114 [+0.071,+0.163]
+  A3 structured + rule          0.967 [0.940,0.989]   0.065 [0.033,0.103]  0.935   0.902 [+0.853,+0.946]
+
+  factor layout:
+    A0  no structured, no rule
+    A1  no structured, RULE
+    A2  STRUCTURED, no rule
+    A3  STRUCTURED, RULE
+
+  cross-check against the frozen known values:
+    A0 expected recall 0.837 / FPR 0.011  observed 0.837 / 0.011  OK
+    A2 expected recall 0.114 / FPR 0.000  observed 0.114 / 0.000  OK
+    A3 expected recall 0.967 / FPR 0.065  observed 0.967 / 0.065  OK
+
+==============================================================================================
+3. SIMPLE EFFECTS
+
+  rule effect WITHOUT structured   A1 - A0
+    fake recall  +0.141 [+0.092,+0.196] EXCLUDES zero  p=2.98e-08
+    real FPR     +0.071 [+0.038,+0.109] EXCLUDES zero  p=0.0002441
+    J            +0.071 [+0.011,+0.130] EXCLUDES zero
+
+  rule effect WITH structured   A3 - A2
+    fake recall  +0.853 [+0.799,+0.902] EXCLUDES zero  p=1.095e-47
+    real FPR     +0.065 [+0.033,+0.103] EXCLUDES zero  p=0.0004883
+    J            +0.788 [+0.723,+0.853] EXCLUDES zero
+
+  structured effect WITHOUT rule   A2 - A0
+    fake recall  -0.723 [-0.788,-0.658] EXCLUDES zero  p=1.837e-40
+    real FPR     -0.011 [-0.027,+0.000] includes zero  p=0.5
+    J            -0.712 [-0.777,-0.647] EXCLUDES zero
+
+  structured effect WITH rule   A3 - A1
+    fake recall  -0.011 [-0.027,+0.000] includes zero  p=0.5
+    real FPR     -0.016 [-0.038,+0.000] includes zero  p=0.25
+    J            +0.005 [-0.016,+0.027] includes zero
+
+==============================================================================================
+4. FACTORIAL INTERACTION  (A3-A2) - (A1-A0)
+  fake recall  +0.712 [+0.647,+0.777] EXCLUDES zero
+  real FPR     -0.005 [-0.027,+0.016] includes zero
+  J            +0.717 [+0.647,+0.788] EXCLUDES zero
+
+  equivalent form (A3-A1) - (A2-A0), must match:
+  fake recall  +0.712 [+0.647,+0.777]  match
+  real FPR     -0.005 [-0.027,+0.016]  match
+  J            +0.717 [+0.647,+0.788]  match
+
+==============================================================================================
+5. RECALL CEILING — pre-registered caveat
+  A0 recall is already 0.837, so the score-only arm
+  has at most 0.163 of head-room. The structured
+  arm starts at 0.114 with 0.886 of head-room.
+  raw gains        A1-A0 +0.141   A3-A2 +0.853
+  head-room        0.163          0.886
+  gain / head-room +0.867          +0.963
+  this normalised view is DESCRIPTIVE only — it is not a pre-registered
+  metric and must not replace the raw interaction.
+
+  A1 fake errors remaining: 4/184
+  A0 fake errors remaining: 30/184
+
+==============================================================================================
+6. DID THE RULE CHANGE POLICY IN THE SCORE-ONLY ARM?
+  the decisive evidence is FPR movement, which has no ceiling problem
+  A1 - A0 FPR +0.071 [+0.038,+0.109] EXCLUDES zero
+  A3 - A2 FPR +0.065 [+0.033,+0.103] EXCLUDES zero
+  real images: A0 real -> A1 fake 13   A0 fake -> A1 real 0
+  fake images: A0 real -> A1 fake 26   A0 fake -> A1 real 0
+  total verdict changes A0 -> A1: 39/368 (0.106)
+  a non-trivial change count with flat recall means the rule DID shift
+  policy in the score-only arm; zero changes would mean it did not.
+
+==============================================================================================
+7. INTERPRETATION
+  recall  A0 0.837  A1 0.978  A2 0.114  A3 0.967
+  J       A0 +0.826  A1 +0.897  A2 +0.114  A3 +0.902
+  interaction on J +0.717 [+0.647,+0.788] EXCLUDES zero
+
+  -> A3 ~ A1: structured evidence gives no extra discrimination once semantics are correct, so its value is more likely explanation faithfulness than added decision utility
+
+  wrote analysis_2x2.json

@@ -1,0 +1,50 @@
+{
+ "phase": "trufor_32b_final_capacity",
+ "n_inferences": 1622,
+ "minutes": 249.3,
+ "mean_seconds": 9.21,
+ "gpu_mem": {
+  "0": {
+   "alloc_GB": 15.62,
+   "reserved_GB": 17.54,
+   "peak_GB": 16.03
+  },
+  "1": {
+   "alloc_GB": 17.56,
+   "reserved_GB": 19.32,
+   "peak_GB": 17.96
+  },
+  "2": {
+   "alloc_GB": 17.56,
+   "reserved_GB": 19.32,
+   "peak_GB": 17.96
+  },
+  "3": {
+   "alloc_GB": 16.19,
+   "reserved_GB": 17.94,
+   "peak_GB": 16.57
+  }
+ },
+ "nvidia_used_MiB": {
+  "0": 17068,
+  "1": 18756,
+  "2": 18756,
+  "3": 17446,
+  "4": 16,
+  "5": 16,
+  "6": 16
+ },
+ "started": "2026-09-21 16:03:28",
+ "finished": "2026-09-21 20:12:43",
+ "payload_sha1": "8d06347c476f846d660d70388a005e2a355fb013",
+ "protocol_sha1": "9cf55f9fe3ea461507f60fec0a2febbeff25e3ca",
+ "model_path": "/mnt/disk3/borui/hf_cache/models--Qwen--Qwen2.5-VL-32B-Instruct/snapshots/7cfb30d71a1f4f49a57592323337a4a4727301da",
+ "dtype": "bfloat16",
+ "device_map_resolved": "{'model.visual': 0, 'model.language_model.embed_tokens': 0, 'model.language_model.layers.0': 0, 'model.language_model.layers.1': 0, 'model.language_model.layers.2': 0, 'model.language_model.layers.3':",
+ "decoding": {
+  "do_sample": false,
+  "temperature": 0.0,
+  "max_new_tokens": 320,
+  "repetition_penalty": 1.0
+ }
+}

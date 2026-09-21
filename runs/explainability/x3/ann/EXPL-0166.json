@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.931.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A numeric detector score is not something that can be checked against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is high, suggesting potential manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Independent of the number, the assertion that the image may be manipulated is consistent with a clear content difference between IMAGE A and IMAGE B: a large foreground swan occupies the lower right of A where B shows moored boats."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the bottom-right corner.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C is a single solid block filling the bottom-right cell (extending slightly into bottom-center and middle-right); IMAGE D outlines the same area."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a mean probability of 0.924 and a max probability of 0.995.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric probabilities cannot be verified from the images."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "Those localized probabilities indicate strong confidence in the authenticity of that area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The masked bottom-right area is exactly where A and B differ: the large swan in A replaces the small red-interior wooden boat visible in B. The evidence points the opposite way from an authenticity finding."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "Given the high score and the localized confidence, the image appears to be an authentic photograph.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The supplied comparison shows altered content inside the annotated region, so a conclusion of authenticity is not supported; the conclusion also does not follow from the 'high score suggesting manipulation' stated earlier."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "medium",
+  "notes": "The stated location matches the annotation, but the explanation reads the localization as evidence of authenticity and concludes the photograph is authentic, while A vs B shows the content inside the annotated bottom-right region differs. It also contradicts itself: the same high score is called a sign of potential manipulation and then of authenticity. No object is named, so object_correct is not applicable."
+}

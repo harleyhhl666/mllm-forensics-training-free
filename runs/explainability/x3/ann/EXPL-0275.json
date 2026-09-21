@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.041).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector value; not verifiable from the photograph."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization tool did not identify any regions of concern.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about tool output, not about anything visible in image A."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This suggests the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Nothing visibly anomalous appears — flat overcast light, soft consistent shadows, coherent perspective on the brick building and sidewalk — but authenticity is not decidable from the visible image."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Entirely score-based; the explanation describes no object, region or visual feature, so there is little to audit against image A. The visible scene (a skateboarder mid-trick over a teal plastic obstacle on a city sidewalk, brick apartment block behind, parked cars and bare trees at right) contains no observable seam, halo or lighting contradiction, but that does not confirm the reported tool outputs."
+}

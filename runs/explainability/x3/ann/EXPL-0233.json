@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 1.000.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric score; not checkable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "IMAGE A differs from IMAGE B inside the annotated region (the windsurf board's nose/deck detail), while the rest of the frame matches."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the 'center-left' area.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white wedge lies ~80% within the center-left cell; IMAGE D outlines the board nose there."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a high mean probability (0.918) and max probability (0.999).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported score values, not visually checkable."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests a manipulated area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated area is precisely where A departs from B."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The manipulated area is likely related to the person or object in that region.",
+      "claim_type": "object",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "A person (the windsurfer) and objects (board, rig) are present in that region, and the annotation covers an object - the board's nose - but the person is not inside the annotated area, so the hedged phrasing is only half right."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "partial",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location and the manipulation conclusion are corroborated by the mask/outline and the A-versus-B difference. The final attribution is vague ('the person or object'): the annotated region covers the windsurf board's nose, not the person."
+}

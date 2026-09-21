@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.022).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localized regions show no significant anomalies.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "No mask is supplied, so the regions cannot be located. Across the visible frame nothing reads as an obvious artifact, but the shallow depth of field, mist and monochrome rendering make subtle judgements unreliable."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The image is authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The close low-angle monochrome shot of three cattle heads in misty pasture is internally coherent in light and depth, but authenticity is not determinable from image A alone."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "'center' is listed as a referenced region but the explanation names no region in its text; the center cell visibly holds the tilted muzzle and face of the middle grey cow. No objects named, so no object check applies."
+}

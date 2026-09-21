@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.997).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score, not verifiable from the images."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white silhouette lies in the middle column with its bulk in the centre cell; IMAGE D outlines the hydrant there."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.927).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability of 0.997.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value, not verifiable from imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This indicates significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The annotated centre area differs markedly between A and B: an elongated riser-style hydrant with dark collar, yellow/teal fittings and square base plate in A versus a shorter conventional blue hydrant with fluted bonnet and flared bell base in B."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Stated location matches the annotation and the alteration conclusion is backed by a visible A-vs-B difference at the hydrant. No object named; numeric values unverifiable rather than wrong."
+}

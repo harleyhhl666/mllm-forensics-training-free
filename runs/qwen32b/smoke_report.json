@@ -1,0 +1,195 @@
+{
+ "config_path": "/home/borui/haolin/fevi/configs/exp01_32b.yaml",
+ "env": {
+  "torch": "2.5.1",
+  "cuda": "12.1",
+  "transformers": "5.14.1",
+  "accelerate": "1.14.0",
+  "n_gpus": 4,
+  "python": "3.10.13"
+ },
+ "model_cfg": {
+  "path": "/mnt/disk3/borui/hf_cache/models--Qwen--Qwen2.5-VL-32B-Instruct/snapshots/7cfb30d71a1f4f49a57592323337a4a4727301da",
+  "dtype": "bfloat16",
+  "device_map": "auto",
+  "min_pixels": 200704,
+  "max_pixels": 802816,
+  "generation": {
+   "do_sample": false,
+   "temperature": 0.0,
+   "max_new_tokens": 320,
+   "repetition_penalty": 1.0
+  },
+  "max_memory": {
+   "0": "20GiB",
+   "1": "20GiB",
+   "2": "20GiB",
+   "3": "20GiB"
+  }
+ },
+ "load": {
+  "load_time_s": 28.7,
+  "placement": {
+   "input_device": "cuda:0",
+   "devices": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "n_modules_per_device": {
+    "0": 15,
+    "1": 18,
+    "2": 18,
+    "3": 18
+   },
+   "cpu_or_disk_offload": [],
+   "has_offload": false
+  },
+  "torch_mem": {
+   "0": {
+    "alloc_GB": 15.61,
+    "reserved_GB": 15.62,
+    "peak_GB": 15.61
+   },
+   "1": {
+    "alloc_GB": 17.55,
+    "reserved_GB": 17.56,
+    "peak_GB": 17.55
+   },
+   "2": {
+    "alloc_GB": 17.55,
+    "reserved_GB": 17.56,
+    "peak_GB": 17.55
+   },
+   "3": {
+    "alloc_GB": 16.19,
+    "reserved_GB": 16.19,
+    "peak_GB": 16.19
+   }
+  },
+  "nvidia_used_MiB": {
+   "0": 15168,
+   "1": 17020,
+   "2": 17020,
+   "3": 15714,
+   "4": 16,
+   "5": 16,
+   "6": 16
+  }
+ },
+ "smoke1": {
+  "seconds": 2.3,
+  "output": "Hello! How can I assist you today? \ud83d\ude0a",
+  "info": {
+   "n_visual_tokens": null,
+   "n_prompt_tokens": 20
+  },
+  "mem": {
+   "0": {
+    "alloc_GB": 15.62,
+    "reserved_GB": 15.64,
+    "peak_GB": 15.63
+   },
+   "1": {
+    "alloc_GB": 17.56,
+    "reserved_GB": 17.58,
+    "peak_GB": 17.57
+   },
+   "2": {
+    "alloc_GB": 17.56,
+    "reserved_GB": 17.58,
+    "peak_GB": 17.57
+   },
+   "3": {
+    "alloc_GB": 16.19,
+    "reserved_GB": 16.21,
+    "peak_GB": 16.2
+   }
+  }
+ },
+ "smoke2": {
+  "seconds": 2.1,
+  "output": "The image shows a solid orange rectangle centered on a dark green background.",
+  "info": {
+   "n_visual_tokens": 368,
+   "n_prompt_tokens": 396
+  },
+  "mem": {
+   "0": {
+    "alloc_GB": 15.62,
+    "reserved_GB": 15.84,
+    "peak_GB": 15.74
+   },
+   "1": {
+    "alloc_GB": 17.56,
+    "reserved_GB": 17.71,
+    "peak_GB": 17.67
+   },
+   "2": {
+    "alloc_GB": 17.56,
+    "reserved_GB": 17.71,
+    "peak_GB": 17.67
+   },
+   "3": {
+    "alloc_GB": 16.19,
+    "reserved_GB": 16.33,
+    "peak_GB": 16.3
+   }
+  }
+ },
+ "smoke3": {
+  "seconds": 10.8,
+  "stage_v_sha1": "cfa6908aaf02a60f71ad74153a0a3df773252b45",
+  "matches_frozen_prompt": true,
+  "sample": "airplane_163746_bbox_2",
+  "json_ok": true,
+  "parsed": {
+   "image_consistency": "matched",
+   "forensic_support": "insufficient",
+   "strongest_region": "top-center",
+   "reason": "The strongest responses in the visualization are located at the top-center, corresponding to the airplanes in the sky. These objects have distinct edges and details that naturally produce strong responses in the analysis, which is consistent with ordinary image content."
+  },
+  "raw": "```json\n{\n  \"image_consistency\": \"matched\",\n  \"forensic_support\": \"insufficient\",\n  \"strongest_region\": \"top-center\",\n  \"reason\": \"The strongest responses in the visualization are located at the top-center, corresponding to the airplanes in the sky. These objects have distinct edges and details that naturally produce strong responses in the analysis, which is consistent with ordinary image content.\"\n}\n```",
+  "info": {
+   "n_visual_tokens": 1944,
+   "n_prompt_tokens": 2364
+  },
+  "mem": {
+   "0": {
+    "alloc_GB": 15.62,
+    "reserved_GB": 16.77,
+    "peak_GB": 16.3
+   },
+   "1": {
+    "alloc_GB": 17.56,
+    "reserved_GB": 18.39,
+    "peak_GB": 18.21
+   },
+   "2": {
+    "alloc_GB": 17.56,
+    "reserved_GB": 18.39,
+    "peak_GB": 18.21
+   },
+   "3": {
+    "alloc_GB": 16.19,
+    "reserved_GB": 17.01,
+    "peak_GB": 16.81
+   }
+  },
+  "nvidia_used_MiB": {
+   "0": 16334,
+   "1": 17872,
+   "2": 17872,
+   "3": 16560,
+   "4": 16,
+   "5": 16,
+   "6": 16
+  }
+ },
+ "visual_token_parity": {
+  "stage_v_visual_tokens": 1944,
+  "min_pixels": 200704,
+  "max_pixels": 802816
+ }
+}

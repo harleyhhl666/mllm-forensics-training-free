@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.996).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The localization output indicates a region in the top-right.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a single near-circular blob centred at roughly 77% across and 31% down, sitting principally in the top-right cell and extending into center-right; image D outlines the sprinkle doughnut there."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.958).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported value; the supplied mask is binary and carries no probabilities."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability of 0.999.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "As above: a reported number with no probability map supplied."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "There is significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The outlined sprinkle doughnut in D is flatter and more evenly lit than its five neighbours, shows no specular highlight despite sitting in the box's shadowed corner, has no visible dough sidewall and little or no contact shadow. Against B, where the same doughnut is white-iced with rounded nonpareils and matching flash falloff, A's version is greyer and flatter. The difference is real but subtle at this resolution, so 'significant' is somewhat strong."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "The top-right location matches the mask. The alteration conclusion points at the right object but is asserted purely from detector numbers; the supporting visual evidence exists (flat frosting, missing highlight and contact shadow on the sprinkle doughnut) yet the explanation names neither the object nor any observable property, and 'significant' overstates a fairly subtle difference."
+}

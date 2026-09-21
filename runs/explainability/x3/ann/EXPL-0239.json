@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is relatively low (0.266).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not verifiable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localized regions with higher probabilities do not indicate significant anomalies or inconsistencies.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The masked bottom-right region contains the fire hydrant, whose paint scheme differs between A (blue barrel, yellow bonnet, orange-red cap) and B (uniform bright yellow, chrome cap); the flagged region does correspond to changed content."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "The localized regions do not suggest digital alteration.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Same basis: the region the annotation marks is exactly where A departs from B."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "The overall visual context and details appear consistent with a real photograph.",
+   "claim_type": "other",
+   "support": "partially_supported",
+   "evidence_basis": "visible_fake_image",
+   "brief_justification": "The desert utility-site scene, four hi-vis workers and harsh sunlight are internally plausible, but this general impression says nothing about the marked region and cannot be checked as an authenticity finding."
+  }
+ ],
+ "region_correct": "not_applicable",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "high",
+ "notes": "No region or object is named (referenced_regions is empty), so all checkable weight falls on the assertion that the flagged regions show no anomaly. That is contradicted by the annotation location plus the A-vs-B difference in the hydrant's paint scheme in the bottom-right."
+}

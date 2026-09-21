@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is high (0.870).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a region in the 'center-left'.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's rectangle covers about half of the center-left cell but also half of bottom-left plus slivers of center and bottom-center, so the named cell is correct yet incomplete."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.909).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a max probability (0.991).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "These suggest significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Content inside the marked area differs between IMAGE A and IMAGE B (white duvet and a switched-on monitor on a stand at the foot of the bed in A versus a gold/tan quilted bedspread with a striped bolster and no monitor in B), supporting a content change; but the explanation cites no visible artifact and 'significant' is not independently verifiable."
+    },
+    {
+      "claim_id": "C6",
+      "claim_text": "The image is likely manipulated.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "Consistent with the observed A/B content difference in the annotated region, though the explanation's own stated basis is only the detector scores."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Location partially matches: center-left is covered but the mask also spans bottom-left and clips the center column. The A/B comparison shows the bed area inside the mask differing, lending partial support to the manipulation conclusion, though the explanation names no object or visible artifact."
+}

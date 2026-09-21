@@ -1,0 +1,45 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is very high (0.999).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "The localization output indicates a region in the bottom-center.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "The mask falls wholly within the bottom-center cell, matching the annotated box in IMAGE D."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "That region has a high mean probability (0.925) and a maximum probability (0.998).",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric tool output, not checkable from the images."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "This suggests significant digital alteration in that area.",
+   "claim_type": "manipulation",
+   "support": "supported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The doughnut in that region is an intact pale sugared ring in IMAGE A but a larger darker filled doughnut with a bite and no centre hole in IMAGE B, an unmistakable change confined to the region."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "yes",
+ "unsupported_claim_present": false,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "supported",
+ "confidence": "high",
+ "notes": "Both the location and the alteration claim are well supported: the annotated bottom-center region contains a doughnut that differs substantially from IMAGE B while everything else matches. The explanation is generic, citing only scores, and names no object or visible artifact."
+}

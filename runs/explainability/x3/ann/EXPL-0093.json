@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.291).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There are localized regions in the bottom-left and bottom-right corners.",
+      "claim_type": "location",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Refers to entries in the tool's localization output rather than to visible image content; image A cannot confirm which cells the tool flagged."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "Those regions have high probability scores.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A reported numeric value, not an observable property."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "These areas (bottom-left and bottom-right) are not manipulated.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Bottom-left shows tiled floor with pooled mosquito-net fabric and an ambiguous dark cropped mass; bottom-right shows a round wooden table and chairs. Nothing there reads as an obvious splice, but the dark lower-left blob is genuinely hard to identify and the frame is soft and low-contrast, so a clean verdict is not possible."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is an interior of a rustic tropical lodge room (bed under a green mosquito net, thatched roof, table and chairs at right). The explanation names no objects, only grid cells tied to detector output, so the region reference cannot be validated visually. The inference that a 'high probability score' means 'not manipulated' is internally ambiguous in direction but is not checkable from the image either way."
+}

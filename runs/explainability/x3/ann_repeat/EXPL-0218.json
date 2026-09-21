@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The image-level manipulation score is 1.000.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "A reported numeric value; not verifiable from imagery."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates no manipulation.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Comparing A with B in the annotated area, the fielder's raised glove changes from a black closed-web fielder's glove (B) to a light tan laced mitt (A). Visible evidence contradicts a claim of no manipulation."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a top-center region of interest.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single small white blob lies entirely within the top-center cell; IMAGE D outlines the raised glove in that position."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "The top-center region has a high probability of being authentic.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "That is exactly the region the annotation marks, and A-vs-B shows its content (glove colour and web style) was changed, so nothing supports calling it authentic."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "This suggests the image is real.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "The annotated region's content differs from the comparison photograph, giving no observable support for this conclusion."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": true,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "medium",
+ "notes": "The location is right but the reasoning is internally inconsistent: a score of 1.000 is read as 'no manipulation' while the annotation marks a region whose content demonstrably differs from IMAGE B (tan laced mitt vs black glove). The authenticity conclusions are contradicted by the supplied evidence."
+}

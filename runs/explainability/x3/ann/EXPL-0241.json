@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.998.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; nothing in the supplied images makes it checkable."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score indicates a high likelihood of authenticity.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "none",
+      "brief_justification": "No visual evidence supports reading the score as an authenticity indicator, and the interpretation is not derivable from anything shown."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The grid location referred to is the center.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's single white rectangle lies entirely inside the center cell; IMAGE D outlines the same area (the glove at the player's hip)."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That center location has a high mean probability of 0.928.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This suggests the image is not manipulated in that area.",
+      "claim_type": "manipulation",
+      "support": "unsupported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The annotation specifically marks that area as the region of interest, so treating the localized region as an indication of no manipulation there has no support in the supplied evidence."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "no",
+  "unsupported_claim_present": true,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "unsupported",
+  "confidence": "high",
+  "notes": "The center region named matches the annotated region, but the explanation's substantive conclusions invert the meaning of its own inputs: it reads a high manipulation score as authenticity and the localized region as evidence of no manipulation. No object, texture, lighting or boundary observation is offered."
+}

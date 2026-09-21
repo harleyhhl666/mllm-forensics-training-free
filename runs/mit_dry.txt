@@ -1,0 +1,57 @@
+====================================================================================
+DATA INDEPENDENCE
+  testing-split coco_ids     : 343
+  used by calib/pilot/primary/secondary : 243
+  overlap with V4 / mechanism (validation split): 0 / 0
+  UNTOUCHED and available    : 100
+  triples in pool            : 600
+  paired originals present   : 600/600
+
+  SAMPLED 100 fakes from 100 sources (1 variant each)
+  tamper_ratio min=0.0017 med=0.0217 max=0.2450
+  categories {'airplane': 7, 'bear': 7, 'elephant': 11, 'kite': 1, 'scissors': 3, 'sheep': 12, 'skis': 15, 'snowboard': 7, 'sports ball': 10, 'stop sign': 5, 'tennis racket': 13, 'zebra': 9}
+  mask types {'bbox': 46, 'segm': 54}
+  donors assigned 100  same-coco 0  self 0
+
+====================================================================================
+PROMPT HASHES
+  STAGE_V      cfa6908aaf02a60f71ad74153a0a3df773252b45
+  STAGE_D_A    b32eee7c853bd6d1f710459c962dc2919cf1f1c6
+  STAGE_D_B    b3e07ae0dc4c7423bfc9b037d93d244642b6e033
+  STAGE_D_C    2d6f4f8c7e82092dae12fff531867bc8756fab05
+  B_NONE       75bab60a23543390b1913b45136a4a383401dbd1
+  B_CUE        fc516f3113308fcb3af318ee5da07ba7ad384771
+  M_NONE       75bab60a23543390b1913b45136a4a383401dbd1
+  M_NONE == B_NONE : True (execution-stability check only)
+
+====================================================================================
+SHAM ISOLATION CHECK
+  B-correct / B-wrong / S-correct / S-wrong all use the identical
+  B_CUE Stage-D prompt: True
+  S conditions run Stage V but never inject its result: True
+  B_CUE leaks no Stage-V vocabulary (matched/supported/region): True
+
+====================================================================================
+INFERENCE BUDGET
+  samples 100 x 2 labels = 200 image instances
+  Stage V (shared by M and S)        : 400
+  Stage D / single-stage conditions  : 1600
+    B-none 200  B-correct 200  B-wrong 200
+    S-correct 200  S-wrong 200  M-correct 200  M-wrong 200  M-none 200
+  TOTAL                              : 2000  (~97 min at 2.9 s each)
+
+====================================================================================
+VISUALIZATION SANITY (first 3 samples)
+  airplane_163746_bbox_2         own=48c444123534 donor=608b9cf59838 differ=True
+  airplane_1761_segm_0           own=69b3fa7084b7 donor=253eb940ed97 differ=True
+  airplane_272049_segm_2         own=8169afede1b6 donor=63bf127a20ca differ=True
+
+====================================================================================
+HASHES
+  config      a6dffa803e31c18bf5abe47e8d4a9c7a5f351c31
+  index       b2b2d360789a461ffee93b31c87d04d0b23b6099
+  mitigation_freeze.py  cee169c2cae55ab779036c06aa40e8bbf7882ebe
+  forensic_tools.py     adaf763cc54cc4cd4c292e625225ea2560aa8378
+  mllm_probe.py         34318a3f91fb2a99c5eba2b36453808379f6c9c7
+
+DRY RUN — nothing written. Pass --freeze to write the protocol.

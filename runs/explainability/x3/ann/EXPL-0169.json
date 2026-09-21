@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is 0.422.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not observable in image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is below the threshold for significant digital alteration.",
+      "claim_type": "manipulation",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A statement about a scoring threshold, not about visible content."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region in the center-left has a high mean probability.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported localization statistic; no mask supplied and no content named."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "This suggests the tool is confident in its detection.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "A claim about the detector's internal confidence, not about the photograph."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "The score is low enough to indicate the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center-left cell holds the receding InterCity coach rake, a red colour-light signal and overhead wiring clutter. It is soft, faded and low-contrast (a scanned print with grain and dust specks), so texture and boundary detail there cannot be judged reliably in either direction."
+    }
+  ],
+  "region_correct": "not_applicable",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Image A is a scanned film photograph of an InterCity push-pull set led by a Mk3 DVT under dense overhead wiring. The explanation describes no image content, and it sits awkwardly with itself, treating high detector confidence in a flagged region and a verdict of 'likely authentic' as jointly implied by the same numbers."
+}

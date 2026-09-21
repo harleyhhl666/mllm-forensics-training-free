@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is very high (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector value; not observable in the imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "There is a localized region in the bottom-center.",
+      "claim_type": "location",
+      "support": "partially_supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's bar spans bottom-left and bottom-center about equally, so the named cell is correct for roughly half the annotated region only."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "That region has a high mean probability (0.904).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region has a maximum probability (0.998).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric value, not observable in the imagery."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "This indicates significant digital alteration in that area.",
+      "claim_type": "manipulation",
+      "support": "partially_supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The beached-kayak content inside the marked bar differs between IMAGE A and IMAGE B (A shows a stack of red, yellow, green and blue kayaks with black cockpit rims and a red/white craft with a white dry bag; B shows a green/yellow kayak and a red-orange kayak in a different arrangement), supporting a content change; but no artifact is cited and 'significant' is not independently verifiable."
+    }
+  ],
+  "region_correct": "partial",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "partial",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "medium",
+  "notes": "Bottom-center covers about half the annotated bar, which also spans bottom-left. The A/B comparison shows the kayaks inside the marked area arranged differently, giving partial support to the alteration claim, but the explanation cites only detector numbers and names no object or visible artifact."
+}

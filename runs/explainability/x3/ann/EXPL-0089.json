@@ -1,0 +1,53 @@
+{
+ "claims": [
+  {
+   "claim_id": "C1",
+   "claim_text": "The TruFor image-level manipulation score is 0.998.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Numeric detector value; not checkable from the supplied images."
+  },
+  {
+   "claim_id": "C2",
+   "claim_text": "That score indicates a high likelihood of authenticity.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "A manipulation score is read as an authenticity indicator, and the masked center-left content does differ from IMAGE B (teal-and-white hydrant in A vs yellow-olive hydrant with blue bonnet in B)."
+  },
+  {
+   "claim_id": "C3",
+   "claim_text": "There is a localized region in the center-left.",
+   "claim_type": "location",
+   "support": "supported",
+   "evidence_basis": "gt_mask",
+   "brief_justification": "IMAGE C's single blob lies wholly in the left column with its centroid in the center-left cell (spilling up into top-left); IMAGE D outlines the hydrant there."
+  },
+  {
+   "claim_id": "C4",
+   "claim_text": "That region has a high mean and max probability.",
+   "claim_type": "other",
+   "support": "not_applicable",
+   "evidence_basis": "none",
+   "brief_justification": "Probability values are not observable in the images."
+  },
+  {
+   "claim_id": "C5",
+   "claim_text": "That localized region supports the conclusion that the image is not manipulated.",
+   "claim_type": "manipulation",
+   "support": "unsupported",
+   "evidence_basis": "paired_real",
+   "brief_justification": "Inverted reasoning: the flagged region is precisely the hydrant whose colour scheme differs between A and B."
+  }
+ ],
+ "region_correct": "yes",
+ "object_correct": "not_applicable",
+ "manipulation_claim_supported": "no",
+ "unsupported_claim_present": true,
+ "contradictory_claim_present": false,
+ "hallucinated_object_present": false,
+ "overall_semantic_support": "unsupported",
+ "confidence": "high",
+ "notes": "The center-left location matches the mask, but both substantive conclusions invert the evidence: a high manipulation score is treated as authenticity and the localised high-probability region is treated as proof of no manipulation, while the hydrant inside that region visibly differs from IMAGE B. No object is named."
+}

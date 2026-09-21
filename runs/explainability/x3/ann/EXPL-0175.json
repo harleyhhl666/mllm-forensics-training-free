@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The image-level manipulation score is low (0.185).",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric detector output; not checkable against image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The bottom-center region has a high probability of being manipulated (0.955).",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The bottom-center cell holds the foot of the patchwork bed with its glossy pale-blue gathered skirt over cardboard flooring. The area is heavily creased plastic/satin under hard flash with glare, so nothing there can be read as a reliable sign of alteration or of its absence."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "This suggests that the image is likely authentic.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "Image A shows an installation-like room built from plastic bags, blue tarp and cardboard; the odd appearance is scene content, not visible editing, but authenticity cannot be established from A alone."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": true,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "The text is internally inconsistent: it states the bottom-center region has a high probability of BEING MANIPULATED and then concludes from that same fact that the image is likely authentic. No objects are named, so no object check applies; the bottom-center cell does exist and contains the foot of the bed and cardboard floor, but no mask is available to confirm what was flagged."
+}

@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.999.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Detector numeric output; not verifiable from the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "The probability for the central region is 1.0.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported numeric value; the supplied mask is binary and carries no probability values."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The flagged region is central.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "The mask in image C is a giraffe-shaped silhouette whose bulk sits in the middle-center cell, extending into bottom-center and up-right into center-right; image D outlines the same shape with its centroid in the centre cell."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "These measurements suggest significant digital manipulation.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "The outlined centre region in image D contains a giraffe whose torso is replaced by flat saturated cyan/teal/blue and black blocky patches with smeared vertical striations - no reticulated coat, no cast shadow, hard rectangular cut edges, and a body that does not connect coherently to neck or legs. Image B shows an ordinary patterned giraffe in that position."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "partially_supported",
+  "confidence": "high",
+  "notes": "Very short explanation. Its location claim matches the mask and its manipulation conclusion is strongly corroborated by the visible anomaly in D and by the A-vs-B difference. It is scored only partially supported because it names no object and describes none of the actual visual evidence, resting instead on reported detector numbers that cannot be audited."
+}

@@ -1,0 +1,53 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.138.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Numeric forensic-tool output is not observable in the photograph; cannot be verified from image A."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "That score is relatively low.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Interpretive threshold judgement about a tool score; nothing in the photograph bears on it."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "The localized region in the center has a high mean probability of 0.869.",
+      "claim_type": "other",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "A per-region probability value cannot be read off the photograph."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "The localized region referred to is in the center of the image.",
+      "claim_type": "location",
+      "support": "uncertain",
+      "evidence_basis": "visible_real_image",
+      "brief_justification": "The center cell does contain the photograph's main subject (two cattle on a rocky bank), but which region a tool localized cannot be determined from image A."
+    },
+    {
+      "claim_id": "C5",
+      "claim_text": "These measurements indicate high confidence in the authenticity of the image.",
+      "claim_type": "manipulation",
+      "support": "uncertain",
+      "evidence_basis": "none",
+      "brief_justification": "Rests entirely on unverifiable tool numbers; image A shows no feature that confirms or refutes it. Note the cited 'high' region probability is presented as evidence of authenticity without stating the value's direction."
+    }
+  ],
+  "region_correct": "uncertain",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "uncertain",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "uncertain",
+  "confidence": "medium",
+  "notes": "Explanation is almost entirely restatement of forensic-tool numbers, none of which are observable in the photograph. It names no object, so nothing in it is checkable against the visible content of image A (a riverbank with two cattle) beyond the bare existence of a center region."
+}

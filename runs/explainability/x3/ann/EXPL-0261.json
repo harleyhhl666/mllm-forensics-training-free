@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "claim_id": "C1",
+      "claim_text": "The TruFor image-level manipulation score is 0.994.",
+      "claim_type": "other",
+      "support": "not_applicable",
+      "evidence_basis": "none",
+      "brief_justification": "Reported detector score; not checkable against the supplied imagery."
+    },
+    {
+      "claim_id": "C2",
+      "claim_text": "This indicates a high likelihood of digital alteration.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "visible_fake_image",
+      "brief_justification": "Inside the annotated region of IMAGE A the left giraffe's head is covered by an anomalous blue-and-white blob with a faint rectangular halo, and IMAGE B shows that animal (and a third giraffe) with intact heads; content there clearly differs."
+    },
+    {
+      "claim_id": "C3",
+      "claim_text": "There is a localized region in the center of the image.",
+      "claim_type": "location",
+      "support": "supported",
+      "evidence_basis": "gt_mask",
+      "brief_justification": "IMAGE C's white rectangle lies within the middle column and middle row (a small sliver into bottom-centre); IMAGE D's box is in the same place."
+    },
+    {
+      "claim_id": "C4",
+      "claim_text": "That region is a potential manipulation point.",
+      "claim_type": "manipulation",
+      "support": "supported",
+      "evidence_basis": "paired_real",
+      "brief_justification": "The marked region contains the visibly pasted blue-white patch over the giraffe's head, and differs from the corresponding content in IMAGE B."
+    }
+  ],
+  "region_correct": "yes",
+  "object_correct": "not_applicable",
+  "manipulation_claim_supported": "yes",
+  "unsupported_claim_present": false,
+  "contradictory_claim_present": false,
+  "hallucinated_object_present": false,
+  "overall_semantic_support": "supported",
+  "confidence": "high",
+  "notes": "Location matches the annotation and the hedged alteration conclusion is backed by an obvious visible anomaly inside the marked region plus an A-vs-B difference. No object named; the score value itself is unverifiable."
+}
