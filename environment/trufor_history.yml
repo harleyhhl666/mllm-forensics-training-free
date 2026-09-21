@@ -1,0 +1,6 @@
+name: trufor
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+prefix: /home/borui/miniconda3/envs/trufor

@@ -1,0 +1,19 @@
+name: qwen_vl
+channels:
+  - defaults
+dependencies:
+  - libjpeg-turbo
+  - pytorch=2.5
+  - torchaudio=2.5
+  - pip
+  - python=3.10
+  - pandas
+  - libtiff=4.5
+  - matplotlib
+  - tqdm
+  - pytorch-cuda=12.1
+  - zlib
+  - pillow=9.4.0
+  - torchvision=0.20
+  - numpy
+prefix: /home/borui/miniconda3/envs/qwen_vl
