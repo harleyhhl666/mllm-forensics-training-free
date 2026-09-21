@@ -1,0 +1,130 @@
+========================================================================================
+CROSS-CHECK: every number re-derived from artifacts on disk
+========================================================================================
+
+## MODEL SNAPSHOTS (from frozen env / protocol files)
+  32B snapshot  None
+    source: runs/qwen32b/qwen32b_env_frozen.json
+  32B snapshot in final protocol: {"path": "/mnt/disk3/borui/hf_cache/models--Qwen--Qwen2.5-VL-32B-Instruct/snapshots/7cfb30d71a1f4f49a57592323337a4a4727301da", "snapshot": "7cfb30d71a1f4f49a57592323337a4a4727301da", "env": "qwen_vl_3
+  7B  snapshot in semantics protocol: "/home/borui/.cache/huggingface/hub/models--Qwen--Qwen2.5-VL-7B-Instruct/snapshots/cc594898137f460bfe9f0759e9844b3ce807cfb5"
+
+## TRUFOR STANDALONE FEASIBILITY
+  source: /mnt/disk3/borui/fevi/runs/trufor_feasibility/analysis.txt
+  image AUROC                           0.985   target 0.985   OK
+  TPR@FPR<=0.05                         0.955   target 0.955   OK
+  pixel AUROC (mean)                    0.993   target 0.993   OK
+  IoU @map>0.5 (mean)                   0.758   target 0.758   OK
+  pixel F1 @map>0.5 (mean)              0.846   target 0.846   OK
+  checkpoint md5 55d7075dd1ff945e9c0f9437c5df9495  (target 55d7075dd1ff945e9c0f9437c5df9495 OK)
+  protocol sha1  1e11d06ca1cd8461d10140974aabba114e9e9bbe
+
+## 7B FINAL 2x2  (recomputed from raw verdicts)
+  [A0] n_fake=184 n_real=184   src=verdicts.jsonl:S0_score_only
+      recall                            0.837   target 0.837   OK
+      FPR                               0.011   target 0.011   OK
+      Youden J                          0.826   target 0.826   OK
+  [A1] n_fake=184 n_real=184   src=verdicts_A1.jsonl
+      recall                            0.978   target 0.978   OK
+      FPR                               0.082   target 0.082   OK
+      Youden J                          0.897   target 0.897   OK
+  [A2] n_fake=184 n_real=184   src=verdicts.jsonl:D0_baseline
+      recall                            0.114   target 0.114   OK
+      FPR                               0.000   target 0.000   OK
+      Youden J                          0.114   target 0.114   OK
+  [A3] n_fake=184 n_real=184   src=verdicts.jsonl:D1_binary_rule
+      recall                            0.967   target 0.967   OK
+      FPR                               0.065   target 0.065   OK
+      Youden J                          0.902   target 0.902   OK
+
+## 32B FINAL B0-B3  (recomputed from raw verdicts)
+  source: /mnt/disk3/borui/fevi/runs/trufor_32b_final/verdicts.jsonl  total rows 1622
+  conditions present: {'B0_score_only': 368, 'B1_score_rule': 368, 'B2_structured': 368, 'B3_structured_rule': 368, 'B4_mirrored': 150}
+  [B0_score_only] n_fake=184 n_real=184
+      recall                            0.978   target 0.978   OK
+      FPR                               0.060   target 0.060   OK
+      specificity                       0.940   target 0.940   OK
+      Youden J                          0.918   target 0.918   OK
+  [B1_score_rule] n_fake=184 n_real=184
+      recall                            0.989   target 0.989   OK
+      FPR                               0.109   target 0.109   OK
+      specificity                       0.891   target 0.891   OK
+      Youden J                          0.880   target 0.880   OK
+  [B2_structured] n_fake=184 n_real=184
+      recall                            0.978   target 0.978   OK
+      FPR                               0.076   target 0.076   OK
+      specificity                       0.924   target 0.924   OK
+      Youden J                          0.902   target 0.902   OK
+  [B3_structured_rule] n_fake=184 n_real=184
+      recall                            1.000   target 1.000   OK
+      FPR                               0.337   target 0.337   OK
+      specificity                       0.663   target 0.663   OK
+      Youden J                          0.663   target 0.663   OK
+
+## X1 EVIDENCE -> GT
+  source: /mnt/disk3/borui/fevi/runs/explainability/x1_spatial_analysis.json  (recomputing from stored GT + frozen evidence)
+    evidence->GT precision              0.979   target 0.979   OK
+    evidence->GT recall                 0.531   target 0.531   OK
+  n scored 184
+
+## X3 SEMANTIC AUDIT  (recomputed from annotation files)
+  annotations found: 300  (expected 300)
+  [fake 7B] n=100
+      supported                         0.040   target 0.040   OK
+      partial                           0.310   target 0.310   OK
+      unsupported                       0.610   target 0.610   OK
+      uncertain                         0.040   target 0.040   OK
+      manipulation unsupported          0.791   target 0.791   OK
+      n evaluable manipulation claims 196
+  [fake 32B] n=100
+      supported                         0.490   target 0.490   OK
+      partial                           0.500   target 0.500   OK
+      unsupported                       0.010   target 0.010   OK
+      uncertain                         0.000   target 0.000   OK
+      manipulation unsupported          0.044   target 0.044   OK
+      n evaluable manipulation claims 137
+
+## RAW RESULT COUNTS (verdict rows per run directory)
+  directory                     rows  conditions
+  calibration_tgif/calib_raw.jsonl    2484  1 cond: ?
+  mechanism_run/mechanism.jsonl    1200  4 cond: C0, C1, C2, C3
+  mitigation_run/decisions.jsonl    1600  8 cond: B-correct, B-none, B-wrong, M-correct ...
+  mitigation_run/stage_v.jsonl     400  1 cond: ?
+  pilot_stageA/stage_a.jsonl     720  4 cond: fake_correct, fake_notool, fake_wrong, real_own
+  qwen32b_stagev_ablation/stage_v.jsonl     400  4 cond: A_fake_correct, B_fake_donor, C_legacy_real_fakecounterpart, C_own_real_own
+  qwen7b_stagev_cown/stage_v.jsonl     100  1 cond: C_own_real_own
+  readout_tgif/windows_calibration.jsonl    1656  1 cond: ?
+  readout_tgif/windows_test.jsonl    3288  1 cond: ?
+  smoke01/samples.jsonl            4  1 cond: ?
+  smoke02/samples.jsonl            8  1 cond: ?
+  smokeA/stage_a.jsonl            16  4 cond: fake_correct, fake_notool, fake_wrong, real_own
+  smokeB/stage_b.jsonl            12  4 cond: fake_correct, fake_notool, fake_wrong, real_own
+  smokeM/mechanism.jsonl          16  4 cond: C0, C1, C2, C3
+  smokeMit/decisions.jsonl        32  8 cond: B-correct, B-none, B-wrong, M-correct ...
+  smokeMit/stage_v.jsonl           8  1 cond: ?
+  smokeP/stage_a.jsonl             8  4 cond: fake_correct, fake_notool, fake_wrong, real_own
+  smokeTA/stage_a.jsonl           12  6 cond: fake_T0_notool, fake_T1_correct, fake_T2_wrong, real_T0_notool ...
+  smokeTB/stage_b.jsonl           12  6 cond: fake_T0_notool, fake_T1_correct, fake_T2_wrong, real_T0_notool ...
+  smokeV1/stage_a.jsonl           10  5 cond: fake_correct, fake_notool, fake_wrong, real_notool ...
+  smokeV2/stage_b.jsonl           10  5 cond: fake_correct, fake_notool, fake_wrong, real_notool ...
+  trufor_2x2/verdicts_A1.jsonl     368  1 cond: A1_score_rule
+  trufor_32b/verdicts.jsonl      736  4 cond: B0_score_only, B1_own_map, B2_blank_map, B3_shifted_map
+  trufor_32b_final/verdicts.jsonl    1622  5 cond: B0_score_only, B1_score_rule, B2_structured, B3_structured_rule ...
+  trufor_abstraction/verdicts.jsonl    1840  5 cond: E0_score_only, E1_raw_map, E2_structured, E3_both ...
+  trufor_conflict/verdicts.jsonl    1656  9 cond: F1_own, F2_blank, F3_donor, F4_shifted ...
+  trufor_feasibility/scores.jsonl     400  1 cond: ?
+  trufor_fields/verdicts.jsonl    2208  6 cond: S0_score_only, S1_location, S2_area, S3_probability ...
+  trufor_framing/verdicts.jsonl    2208  6 cond: P0_score_only, P1_framing_only, P2_empty_regions, P3_placeholder ...
+  trufor_mllm_stageA/stage_a.jsonl    1104  6 cond: fake_T0_notool, fake_T1_correct, fake_T2_wrong, real_T0_notool ...
+  trufor_mllm_stageB/stage_b.jsonl    1104  6 cond: fake_T0_notool, fake_T1_correct, fake_T2_wrong, real_T0_notool ...
+  trufor_score_map/verdicts.jsonl    1472  4 cond: C00, C01, C10, C11
+  trufor_semantics/verdicts.jsonl    1472  4 cond: D0_baseline, D1_binary_rule, D2_decomposition, D3_presence_first
+  trufor_semantics/verdicts_INVALID_score_dup.jsonl    1472  4 cond: D0_baseline, D1_binary_rule, D2_decomposition, D3_presence_first
+  v4_stageA/stage_a.jsonl       1600  5 cond: fake_correct, fake_notool, fake_wrong, real_notool ...
+  v4_stageB/stage_b.jsonl       1600  5 cond: fake_correct, fake_notool, fake_wrong, real_notool ...
+  validation_primary_stageA/stage_a.jsonl     496  4 cond: fake_correct, fake_notool, fake_wrong, real_own
+  validation_primary_stageB/stage_b.jsonl     496  4 cond: fake_correct, fake_notool, fake_wrong, real_own
+  validation_primary_stageB_probe/stage_b.jsonl     500  4 cond: fake_correct, fake_notool, fake_wrong, real_own
+
+========================================================================================
+MISMATCHES: 0
+Any mismatch above must be investigated, not overwritten.
