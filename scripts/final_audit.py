@@ -259,7 +259,10 @@ def main():
 
     # ---------------- 7 git safety ----------------
     print("\n[7] GIT SAFETY")
-    tracked = [l for l in sh("git ls-files").splitlines() if l.strip()]
+    # core.quotepath=false：否则 git 会把中文文件名转义成 "\346..." 并加引号，
+    # 导致后缀判断（.png 等）全部失效，产生假阴性。
+    tracked = [l for l in sh("git -c core.quotepath=false ls-files").splitlines()
+               if l.strip()]
     if not tracked:
         warn("nothing tracked yet (pre-commit run)")
     BADEXT = (".pth", ".pt", ".ckpt", ".safetensors", ".bin", ".pth.tar")
@@ -282,8 +285,13 @@ def main():
     ok("no raw dataset tracked") if not ds else fail(f"dataset tracked: {ds[:5]}")
     img = [f for f in tracked
            if f.lower().endswith((".png", ".jpg", ".jpeg", ".npz", ".npy"))]
-    ok("no imagery / npz tracked") if not img else \
-        warn(f"{len(img)} image/npz files tracked: {img[:3]}")
+    # reports/figures/ 下的图表是汇报产出物，刻意跟踪；其他图像一律不该进库。
+    report_fig = [f for f in img if f.startswith("reports/figures/")]
+    stray = [f for f in img if not f.startswith("reports/figures/")]
+    if report_fig:
+        ok(f"report figures tracked on purpose: {len(report_fig)}")
+    ok("no dataset imagery / npz tracked") if not stray else \
+        fail(f"{len(stray)} unexpected image/npz files tracked: {stray[:3]}")
 
     pat = re.compile(
         r"(api[_-]?key|secret[_-]?key|aws_secret|aws_access|ghp_[A-Za-z0-9]{20}"

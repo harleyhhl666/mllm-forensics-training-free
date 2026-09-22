@@ -107,3 +107,7 @@ nohup.out
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 汇报材料中的图表与 PPT 是产出物，需要跟踪（覆盖上面的全局图片忽略规则）
+!reports/figures/*.png
+!reports/ppt/*.pptx
